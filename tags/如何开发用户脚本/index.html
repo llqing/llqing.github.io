@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Tag: git; 版本库 | GIS小站</title>
+  <title>Tag: 如何开发用户脚本 | GIS小站</title>
   
   <meta name="keywords" content="GIS,Code">
   
@@ -182,7 +182,7 @@
         <div class='l_main'>
             
     <script>
-        window.subData= { title:'标签 : git; 版本库'}
+        window.subData= { title:'标签 : 如何开发用户脚本'}
     </script>
 
 
@@ -251,9 +251,9 @@
   <div class="meta" id="header-meta">
     
       <h2 class="title">
-          <a href="/2018/08/17/git 命令操作总结/">
+          <a href="/2019/04/06/视频跳过广告和VIP视频解析/">
               
-                  git 命令操作总结
+                  如何开发一个用户脚本系列——脚本1:视频跳过广告和 VIP 视频解析
               
           </a>
       </h2>
@@ -272,7 +272,7 @@
         <div class="new-meta-item date">
           <a class="notlink">
             <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2018-08-17
+            2019-04-06
           </a>
         </div>
       
@@ -280,9 +280,9 @@
         
           
           <div class="new-meta-item category">
-            <a href="/categories/Git/">
+            <a href="/categories/脚本/">
               <i class="fas fa-folder-open" aria-hidden="true"></i>
-              Git
+              脚本
             </a>
           </div>
         
@@ -296,154 +296,26 @@
 
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
-      <h3 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1.安装git"></a>1.安装git</h3><ul>
-<li><p>sudo apt-get intall git</p>
-<blockquote>
-<p>终端输入git 如果有提示证明安装成功</p>
-</blockquote>
-</li>
+      <p>在这篇文章中，我们一起学习脚本 <strong>视频跳过广告和 VIP 视频解析</strong> 的开发。这也是本系列文章的最后一篇，希望完成这个系列的学习之后，你能够掌握编写脚本的方法。在正式开始之前，先说一下我认为开发脚本应该遵循的两个准则:</p>
+<ul>
+<li>功能实现。当你决定要开发一个脚本的时候，你肯定清楚你的脚本要实现什么功能，只有你的脚本实现了你所描述的功能，才会有更多的人安装使用，才会有更多的人给你好评；</li>
+<li>样式实现。什么叫样式实现？就是你在目标网站中添加的元素，要尽量与原网站的配色，样式相一致。这一项是非必须的，但我认为是非常重要的。你想想，如果原网站整体是蓝色，而你添加的按钮是红色，那该有多突兀，有多丑，虽然你的按钮确实突出了，但别人一看就是山寨，看着会很不舒服。而如果你的按钮也用它网站的颜色，这样就会跟原网站已有的元素契合，整体特别自然，做到以假乱真的效果。你的脚本让别人用的舒服，别人才更愿意给你好评。</li>
 </ul>
-<h3 id="2-git单人操作"><a href="#2-git单人操作" class="headerlink" title="2.git单人操作"></a>2.git单人操作</h3><ul>
-<li><p>2.1 创建空的git仓库: git init</p>
-<blockquote>
-<p>提示: git仓库和项目的根路径在一起,用来管理项目</p>
-</blockquote>
-</li>
-<li><p>2.2 配置git提交的用户名,邮箱</p>
-<p>例如: git config user.name ‘zhangsan’</p>
-<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; git config user.email <a href="mailto:&#39;111@qq.com" target="_blank" rel="noopener">&#39;111@qq.com</a>‘</p>
-<blockquote>
-<p>如果没有配置,默认使用的: home/.gitconfig  根目录下的用户信息</p>
-</blockquote>
-</li>
-<li><p>2.3 查看文件状态: git status</p>
-<blockquote>
-<p>红色: 表示新建文件, 或者新修改了文件,目前位于工作区中</p>
-<p>绿色: 表示文件在暂存区</p>
-</blockquote>
-</li>
-<li><p>2.4将工作区代码, 添加到暂存区(工作区–&gt;暂存区)</p>
-</li>
-<li><p>例如: git add .  </p>
-<p> &nbsp; &nbsp; &nbsp; git add xxx.py</p>
-<blockquote>
-<p>点表示添加所有变动,  xxx.py表示指定文件</p>
-</blockquote>
-</li>
-<li><p>2.5将工作区代码,添加到仓库区(工作区—&gt;仓库区)</p>
-</li>
-<li><p>例如: git commit -m ‘注释’</p>
-</li>
-<li><p>2.6将工作区,直接添加到仓库区(工作区–&gt;暂存区—&gt;仓库区)</p>
-</li>
-<li><p>例如: git commit -am ‘注释信息’</p>
-</li>
-<li><p>2.7查看版本历史</p>
-<p>例如: git log</p>
-<p> &nbsp; &nbsp; &nbsp;  git reflog</p>
-<blockquote>
-<p>log查看详细信息, reflog查看简要信息</p>
-</blockquote>
-</li>
-<li><p>2.8回退版本</p>
-<p>例如: git reset –hard HEAD</p>
-<p>或者: git reset –hard 版本号</p>
-<blockquote>
-<p>HEAD表示当前最新版本</p>
-<p>HEAD^表示当前最新版本的,  上一个版本</p>
-<p>HEAD^^表示当前最新版本的, 前两个版本, 依次类推</p>
-<p>HEAD~1 表示当前最新版本的,  上一个版本</p>
-<p>HEAD~2 表示当前最新版本的, 前两个版本, 依次类推</p>
-</blockquote>
-</li>
-<li><p>2.9撤销工作区,暂存区修改</p>
-<p>撤销工作区:  git checkout 文件名</p>
-<p>撤销暂存区: </p>
-<p> &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; git checkout HEAD 文件名 (暂存区-工作区)</p>
-<p> &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; git checkout 文件名</p>
-<blockquote>
-<p>仓库区代码不能撤销</p>
-</blockquote>
-</li>
-<li><p>2.10 版本对比</p>
-<p>例如: git diff HEAD HEAD^ – xxx.py</p>
-<blockquote>
-<p>HEAD表示当前版本,   HEAD^表示上个版本, xxx.py对比的文件</p>
-</blockquote>
-</li>
-<li><p>2.11误删除文件,恢复</p>
-<p>格式1: rm 文件名</p>
-<p>恢复1: git checkout – 文件名</p>
-<p>格式2: git rm 文件名</p>
-<p>恢复2: git reset –hard HEAD^</p>
-</li>
-</ul>
-<h3 id="3-git多人操作"><a href="#3-git多人操作" class="headerlink" title="3.git多人操作"></a>3.git多人操作</h3><ul>
-<li><p>3.1 clone项目到本地</p>
-<p>例如: git clone 项目地址</p>
-</li>
-<li><p>3.2 推送项目到远程仓库</p>
-<p>例如: git push</p>
-<blockquote>
-<p>第一次推送会提示输入账号, 密码</p>
-</blockquote>
-</li>
-<li><p>3.3 配置是否输入登陆密码信息</p>
-<blockquote>
-<p>git config –global  credential.helper cache 十五分钟有效期</p>
-<p>git config  credential.helper ‘cache –timeout==3600’ 一个小时有效期</p>
-<p>git config –global credential.helper store 长期有效</p>
-</blockquote>
-</li>
-<li><p>3.4 拉取远程最新代码到本地</p>
-<p>例如: git pull</p>
-</li>
-</ul>
-<h3 id="4-标签"><a href="#4-标签" class="headerlink" title="4.标签"></a>4.标签</h3><ul>
-<li><p>4.1 设置本地标签</p>
-<p>例如: git tag -a  标签名 -m ‘标签描述’</p>
-</li>
-<li><p>4.2 推送本地标签到远程</p>
-<p>例如: git push origin 标签名</p>
-</li>
-<li><p>4.3 删除本地标签</p>
-<p>例如: git tag -d 标签名</p>
-</li>
-<li><p>4.4 删除远程标签</p>
-<p>例如: git push origin –delete tag 标签名</p>
-</li>
-</ul>
-<h3 id="5-分支"><a href="#5-分支" class="headerlink" title="5.分支"></a>5.分支</h3><ul>
-<li><p>5.1查看当前分支</p>
-<p>例如: git branch</p>
-</li>
-<li><p>5.2创建本地分支,并切换到指定分支</p>
-<p>例如: git checkout -b 分支名</p>
-</li>
-<li><p>5.3推送本地分支,到远程</p>
-<p>例如: git push -u origin 分支名</p>
-</li>
-<li><p>5.4切换分支</p>
-<p>例如: git checkout master / dev</p>
-<blockquote>
-<p>切换到主分支,或者是其他分支</p>
-<p>其他用户第一次pull代码后,切换切换后才能使用git branch查看</p>
-</blockquote>
-</li>
-<li><p>5.5合并子分支到主分支</p>
-<p>例如: git merge 分支</p>
-<blockquote>
-<p>需要在master分支下操作改命令</p>
-</blockquote>
-</li>
-</ul>
+<h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>我们在日常闲暇时间都会看点视频娱乐一下，而现在各大视频网站都推出了会员体系，一个视频网站的年费会员往往需要 200 块左右。然而我们想看的电视剧，电影，通常都不在一个平台上，导致我们就需要开通各个网站的会员。一个网站还好，但多个网站叠加起来，这笔钱也不少。所以有没有什么方法能够不需要开通各个网站的会员就可以看想看的视频呢？网上现在有一些免费公开的接口提供这种解析服务，只需要将视频播放页面的地址作为参数传给接口，接口就能完成解析，然后播放视频。但我们每次都复制视频播放地址给接口，也会很麻烦，这时候就可以写个脚本，在这些视频网站上添加一个按钮，当用户点击按钮的时候，自动获取到当前页面的播放地址，然后传给接口解析播放。HTML 中有个 <code>iframe</code> 标签，可以用来在当前页面中嵌入其他网页，所以使用 <code>iframe</code> 标签就能够实现在原视频网站站内解析播放视频，体验很好。在某视频网站上的效果如下图:<br><a href="https://mofiter-blog.oss-cn-hangzhou.aliyuncs.com/images/%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC6-1.png" target="_blank" rel="noopener"><img src="https://mofiter-blog.oss-cn-hangzhou.aliyuncs.com/images/%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC6-1.png" alt="img"></a></p>
+<h3 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h3><p>视频的解析都是解析接口实现的，脚本本身并不进行视频解析。所以解析接口是否稳定，是否有较高的成功率是很关键的。现在网上有很多解析接口，本文只提供 <a href="https://api.bbbbbb.me/" target="_blank" rel="noopener">思古解析</a>(用于站内解析)和 <a href="http://www.1717yun.com/" target="_blank" rel="noopener">1717yun解析</a>(用于站外解析)作为示例，同时由于视频网站很多，所以本文只选择 <a href="https://v.qq.com/" target="_blank" rel="noopener">腾讯视频</a> 作为运行脚本的示例。腾讯视频某一个视频的具体播放地址形式为 <code>https://v.qq.com/x/cover/xxx</code>，用 <code>@match</code> 匹配。在脚本编写过程中会用到 jQuery，使用 <code>@require</code> 引入 jQuery 库。站外解析需要在新 tab 页中打开链接，所以需要脚本管理器的 <code>GM_openInTab()</code> 函数，我们用 <code>@grant</code> 声明(为了兼容 Greasemonkey，我们还要声明它的函数 <code>GM.openInTab</code>)。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Copy// @require           https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js</span><br><span class="line">// @match             *://v.qq.com/x/cover/*</span><br><span class="line">// @grant             GM_openInTab</span><br><span class="line">// @grant             GM.openInTab</span><br></pre></td></tr></table></figure>
+<p>通过观察原网站可知，功能菜单都是在视频播放窗口下面，当鼠标放在功能按钮上面时，会显示功能面板，当鼠标移出功能按钮时，功能面板隐藏。所以我们将解析按钮加到功能菜单里面，将各个接口添加到功能面板，这样就可以选择不同的接口进行解析，同时使用原网站的样式风格。我们使用一个数组保存接口信息，这样方便遍历添加。由于安全问题，以 https 开头的视频网站内部不能使用 http 开头的接口，所以我们利用接口类型字段来标识接口是用来进行站内解析还是站外解析，如果是站内解析，它应该以 https 开头，如果接口以 http 开头，只能用来站外解析。我们希望将所有的接口以一个列表的形式呈现，所以我们把它放在一个 <code>&lt;ul&gt;</code> 标签里，然后每一个接口放在一个 <code>&lt;li&gt;</code> 标签里面。我们创建一个 <code>&lt;div&gt;</code> 标签，在里面添加一个 <code>&lt;iframe&gt;</code> 标签，用来加载解析结果的网页。在后面进行站内解析的时候，我们用这个 <code>&lt;div&gt;</code> 替换原视频网站播放窗口里面的内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Copyvar originalInterfaceList = [&#123;&quot;name&quot;:&quot;思古解析&quot;,&quot;type&quot;:&quot;站内&quot;,&quot;url&quot;:&quot;https://api.bbbbbb.me/jx/?url=&quot;&#125;,</span><br><span class="line">                             &#123;&quot;name&quot;:&quot;1717yun解析&quot;,&quot;type&quot;:&quot;站外&quot;,&quot;url&quot;:&quot;http://www.1717yun.com/jx/ty.php?url=&quot;&#125;];</span><br><span class="line">    var parseList = &quot;&lt;ul&gt;&quot;;</span><br><span class="line">    parseInterfaceList.forEach((item,index)=&gt;&#123;</span><br><span class="line">        parseList += &quot;&lt;li&gt;&quot; + item.name + &quot;(&quot; + item.type + &quot;)&lt;/li&gt;&quot;;</span><br><span class="line">    &#125;);</span><br><span class="line">    parseList += &quot;&lt;/ul&gt;&quot;;</span><br><span class="line">    var videoPlayer = $(&quot;&lt;div id=&apos;iframe-div&apos; style=&apos;width:100%;height:100%;z-index:2147483647;&apos;&gt;&lt;iframe id=&apos;iframe-player&apos; frameborder=&apos;0&apos; allowfullscreen=&apos;true&apos; width=&apos;100%&apos; height=&apos;100%&apos;&gt;&lt;/iframe&gt;&lt;/div&gt;&quot;);</span><br></pre></td></tr></table></figure>
+<p>准备好解析接口和要替换的内容之后，我们就要去原网站添加解析按钮，并添加点击事件，在点击事件里面，替换播放窗口的内容。通过 <code>location.href</code> 能拿到当前页面的 url，我们使用 <code>indexOf()</code> 方法查看 <code>v.qq.com</code> 的索引值，如果索引值大于 -1 说明当前匹配的网站是腾讯视频，我们再进行处理。我们使用 jQuery 获取到功能菜单的父元素，然后创建解析按钮元素，将解析按钮添加到功能菜单父元素。给解析按钮添加鼠标移入移出操作，来显示和隐藏接口列表的功能面板。在每一个解析接口上面添加点击操作，判断被点击的 <code>&lt;li&gt;</code> 标签的接口类型，如果是站内解析，则替换播放窗口的内容，如果是站外解析，则打开一个新的页面显示解析链接。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">Copyif(location.href.indexOf(&quot;v.qq.com&quot;) &gt; -1)&#123;</span><br><span class="line">        var action_wrap = $(&quot;.action_wrap&quot;);</span><br><span class="line">        var qq_jiexi = $(&quot;&lt;div id=&apos;qq-jiexi-btn&apos; class=&apos;action_item action_jiexi&apos; style=&apos;position:relative;&apos;&gt;&lt;a class=&apos;action_title fn-qq-jiexi-text&apos;&gt;&lt;span&gt;解析&lt;/span&gt;&lt;/a&gt;&lt;div class=&apos;mod_pop_action fn-qq-jiexi&apos; style=&apos;background-color:#fff;width:120px;left:-50px;text-align:center;line-height:25px;&apos;&gt;&quot; + parseList + &quot;&lt;/div&gt;&lt;/div&gt;&quot;);</span><br><span class="line">        action_wrap.append(qq_jiexi);</span><br><span class="line">        document.getElementById(&quot;qq-jiexi-btn&quot;).addEventListener(&quot;mouseover&quot;,()=&gt;&#123;</span><br><span class="line">            $(&quot;.action_jiexi&quot;).toggleClass(&quot;open&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">        document.getElementById(&quot;qq-jiexi-btn&quot;).addEventListener(&quot;mouseout&quot;,()=&gt;&#123;</span><br><span class="line">            $(&quot;.action_jiexi&quot;).toggleClass(&quot;open&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">        $(&quot;.fn-qq-jiexi li&quot;).each((index,item)=&gt;&#123;</span><br><span class="line">            item.addEventListener(&apos;click&apos;,()=&gt;&#123;</span><br><span class="line">                if(parseInterfaceList[index].type == &quot;站内&quot;)&#123;</span><br><span class="line">                    if(document.getElementById(&quot;iframe-player&quot;) == null)&#123;</span><br><span class="line">                        var txp_ad_skip_text = $(&quot;.txp_ad_inner .txp_ad_skip_text&quot;);</span><br><span class="line">                        if(txp_ad_skip_text.text() === &quot;VIP可关闭广告&quot;)&#123;</span><br><span class="line">                            txp_ad_skip_text.click();</span><br><span class="line">                            mod_player = $(&quot;#mod_player&quot;);</span><br><span class="line">                            mod_player.empty();</span><br><span class="line">                            mod_player.append(videoPlayer);</span><br><span class="line">                        &#125;else if(txp_ad_skip_text.text() === &quot;关闭广告&quot;)&#123;</span><br><span class="line">                            txp_ad_skip_text.click();</span><br><span class="line">                        &#125;else if(vipPage === true)&#123;</span><br><span class="line">                            var txp_btn_play = $(&quot;.txp_left_controls .txp_btn_play&quot;);</span><br><span class="line">                            if(txp_btn_play.attr(&quot;data-status&quot;) === &quot;pause&quot;)&#123;</span><br><span class="line">                                txp_btn_play.click();</span><br><span class="line">                            &#125;</span><br><span class="line">                            mod_player = $(&quot;#mod_player&quot;);</span><br><span class="line">                            mod_player.empty();</span><br><span class="line">                            mod_player.append(videoPlayer);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    innerParse(parseInterfaceList[index].url + location.href);</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    GMopenInTab(parseInterfaceList[index].url + location.href,false);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">&#125;</span><br><span class="line">function innerParse(url)&#123; // 站内解析</span><br><span class="line">    $(&quot;#iframe-player&quot;).attr(&quot;src&quot;,url);</span><br><span class="line">&#125;</span><br><span class="line">function GMopenInTab(url,open_in_background)&#123; //站外解析</span><br><span class="line">    if(typeof GM_openInTab === &quot;function&quot;)&#123; // Tampermonkey 和 Violentmonkey 调用 GM_openInTab</span><br><span class="line">        GM_openInTab(url,open_in_background);</span><br><span class="line">    &#125;else&#123; // Greasemonkey GM.openInTab</span><br><span class="line">        GM.openInTab(url,open_in_background);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>至此腾讯视频的解析差不多就完成了，还有些细节和用户体验方面的东西代码里面有写，这里就不再赘述了。其他视频网站的处理和腾讯视频的原理是一样的，都是添加解析按钮，然后给解析按钮添加点击事件，进行站内或站外解析。</p>
 
       
     </div>
     
       <div class="full-width auto-padding tags">
         
-          <a href="/tags/git-版本库/"><i class="fas fa-hashtag fa-fw"></i>git; 版本库</a>
+          <a href="/tags/如何开发用户脚本/"><i class="fas fa-hashtag fa-fw"></i>如何开发用户脚本</a>
         
       </div>
     
