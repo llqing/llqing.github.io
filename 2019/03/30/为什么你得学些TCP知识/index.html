@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>为什么你得学些TCP知识 | GIS小站</title>
+  
+  <meta name="keywords" content="GIS,Code">
+  
+  
+
+  
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+  
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="msapplication-TileColor" content="#1BC3FB">
+  <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml">
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+  
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png">
+  <link rel="mask-icon" color="#1BC3FB" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg">
+  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest">
+  
+
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+  
+
+  
+  <link rel="stylesheet" href="/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+
+<body>
+    <div id="loading-bar-wrapper">
+  <div id="loading-bar" class="pure"></div>
+</div>
+
+    <script>setLoadingBarProgress(20)</script>
+    <header class="l_header pure">
+	<div class="wrapper">
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href="/">
+        
+          GIS小站
+        
+      </a>
+			<div class="menu">
+				<ul class="h-list">
+          
+  					
+  						<li>
+								<a id="https:llqing.github.io" class="nav flat-box" href="https://llqing.github.io/">
+									<i class="fas fa-home fa-fw"></i>&nbsp;主页
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="home" class="nav flat-box" href="/">
+									<i class="fas fa-rss fa-fw"></i>&nbsp;博客
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="archives" class="nav flat-box" href="/archives/">
+									<i class="fas fa-archive fa-fw"></i>&nbsp;归档
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="friends" class="nav flat-box" href="/friends/">
+									<i class="fas fa-users fa-fw"></i>&nbsp;朋友
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="about" class="nav flat-box" href="/about/">
+									<i class=" fa-fw"></i>&nbsp;about
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索">
+						<span class="icon"><i class="fas fa-search fa-fw"></i></span>
+					</form>
+				</div>
+			
+			<ul class="switcher h-list">
+				
+					<li class="s-search"><a class="fas fa-search fa-fw" href="javascript:void(0)"></a></li>
+				
+				<li class="s-menu"><a class="fas fa-bars fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
+
+		<div class="nav-sub container container--flex">
+			<a class="logo flat-box"></a>
+			<ul class="switcher h-list">
+				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
+				<li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu">
+      <ul>
+          
+              
+                  <li>
+										<a id="https:llqing.github.io" class="nav flat-box" href="https://llqing.github.io/">
+											<i class="fas fa-home fa-fw"></i>&nbsp;主页
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="home" class="nav flat-box" href="/">
+											<i class="fas fa-rss fa-fw"></i>&nbsp;博客
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="archives" class="nav flat-box" href="/archives/">
+											<i class="fas fa-archive fa-fw"></i>&nbsp;归档
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="friends" class="nav flat-box" href="/friends/">
+											<i class="fas fa-users fa-fw"></i>&nbsp;朋友
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="about" class="nav flat-box" href="/about/">
+											<i class=" fa-fw"></i>&nbsp;about
+										</a>
+                  </li>
+              
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+    <div class="l_body">
+    <div class='container clearfix'>
+        <div class='l_main'>
+            <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      
+          <h1 class="title">为什么你得学些TCP知识</h1>
+      
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-03-30
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/web基础/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              web基础
+            </a>
+          </div>
+        
+      
+      
+        
+          <div class="new-meta-item browse busuanzi">
+            <a class="notlink">
+              <i class="fas fa-eye" aria-hidden="true"></i>
+              <span id="busuanzi_value_page_pv">
+                <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+              </span>
+            </a>
+          </div>
+        
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <p>这不是指要明白 TCP 的所有东西，也不是说要通读 《TCP/IP 详解》。不过懂一点 TCP 知识是很有必要的。理由如下：</p>
+<p>当我还在 Recurse Center 的时候，我用 Python 写过 TCP 协议栈（还写过一篇文章：如果你用 Python 写 TCP 协议栈会遇到什么？）。这是一次有趣的学习经历，但是也仅此而已。</p>
+<p>一年以后，工作中有人在 Slack 上提到：“嘿，我在向 NSQ 发布消息时，每次要耗费 40 毫秒”。我已经断断续续思考了一个星期，但是没有任何结果。</p>
+<p>一点背景知识：NSQ 是一个消息队列，你通过本地的一个 HTTP 请求向其发布消息。发送本地的一个 HTTP 请求确实不应该花费 40 毫秒，有时候会更差。NSQ 守护进程的负载不高，也没有使用过多的内存，也看不到 GC 停顿。这究竟是为什么呢？神呐，救救我吧！</p>
+<p>突然我记起我一周以前看过的一篇叫做“性能研究（In search of performance）”的文章——我们如何为每个 POST 请求节省 200ms。在这篇文章中，他们说到为什么每个 POST 请求会花费额外的 200 毫秒。就是这个原因。这是该文章中的关键段落：</p>
+<h3 id><a href="#" class="headerlink" title=" "></a> </h3><h3 id="延迟确认（ACK）-与-TCP-NODELAY"><a href="#延迟确认（ACK）-与-TCP-NODELAY" class="headerlink" title="延迟确认（ACK） 与 TCP_NODELAY"></a><strong>延迟确认（ACK） 与 TCP_NODELAY</strong></h3><blockquote>
+<p>Ruby 的 Net::HTTP 会将 POST 请求切分为两个 TCP 包，一个消息头，一个消息体。相反，curl 会将这两者合并为一个包。更糟糕的是，Net::HTTP 在打开 TCP 套接字时不会设置 TCP_NODELAY，这将导致第二个包需要等到第一个包的接收确认通知之后才能发送。这是 Nagle 算法导致的。</p>
+</blockquote>
+<blockquote>
+<p>转换到连接的另一端，HAProxy 需要决定如何确认这两个包。在 1.4.18 版本中（我们正在用的版本），它是通过 TCP 延迟确认通知来实现的。延迟确认对 Nagle 算法有非常糟糕的影响，会导致请求暂停直到服务器延迟确认超时。</p>
+</blockquote>
+<p>现在我们解释这个段落说的内容。</p>
+<ul>
+<li>TCP 是一个通过数据包传输数据的算法</li>
+<li>他们的 HTTP 库将 POST 请求分割成两个小的数据包发送</li>
+</ul>
+<p>接下来，TCP 采用类似如下的步骤进行交互：</p>
+<blockquote>
+<p>application：Hi！这里有一个数据包。<br>HAProxy：（沉默），等待第二个包发送<br>HAProxy：对了，我需要返回一个确认，不过没关系，等会吧<br>application: （沉默）<br>application：好吧，我正在等待确认，可能现在网络延迟比较大<br>HAProxy：好吧，太烦人了，这是一个确认。<br>application：好极了，这是第二个数据包！！！<br>HAProxy：亲，我们已经搞定了。</p>
+</blockquote>
+<p>这个过程是不是应用程序和 HAProxy 都在消极等待另一方发送信息？这就是那额外的 200ms。应用程序这么做的是因为 Nagle 算法，而 HAProxy 消息等待的原因是延迟确认。</p>
+<p>据我所知，延迟确认是所有 Linux 系统的默认行为。所以这不是一个偶然或者异常情况，如果发送 TCP 数据包多一个 1 个，你就会遇到这种情况。</p>
+<h3 id="-1"><a href="#-1" class="headerlink" title=" "></a> </h3><h3 id="现在，我们成为专家了"><a href="#现在，我们成为专家了" class="headerlink" title="现在，我们成为专家了"></a><strong>现在，我们成为专家了</strong></h3><p>读过这篇文章之后我很快就忘了。不过当我被额外的 40 毫秒难住的时候，我又记起来了。</p>
+<p>所以我认为——这不可能是我的问题，可能吗？可能吗？？然后我发了一封邮件给我团队说：“我想我快要疯了，但是这可能是 TCP 的问题”。</p>
+<p>所以我提交了一次修订，将我的应该调整为 TCP_NODELAY，然后问题就“嘣”的一声解决了。</p>
+<p>40 毫秒的延迟立马就消失了。所有的事情都解决了，我就是个天才。</p>
+<h3 id="-2"><a href="#-2" class="headerlink" title=" "></a> </h3><h3 id="我们是否应该完全停止使用延迟确认？"><a href="#我们是否应该完全停止使用延迟确认？" class="headerlink" title="我们是否应该完全停止使用延迟确认？"></a><strong>我们是否应该完全停止使用延迟确认？</strong></h3><p>我刚好在 Hacker News 看到 John Nagle （Nagle 算法的创始人）对 @alicemazzy 提到这个问题的评论。</p>
+<blockquote>
+<p>本质问题是延迟确认。200 毫秒的“延迟确认”是一个非常不好的主意，1985 年中，在伯利克（Berkeley）研究 BSD 的人实际上没有真正明白这个问题。延迟确认是应用层对 200 毫秒内是否响应的一场赌博，但是即便每次它都赌输了，TCP 仍在使用延迟确认。</p>
+</blockquote>
+<p>他继续说到，确认本身是很小并且消耗很低的，延迟确认引起的问题可能比它解决的问题还要多。</p>
+<h3 id="不懂得-TCP-你就无法解决-TCP-问题"><a href="#不懂得-TCP-你就无法解决-TCP-问题" class="headerlink" title="不懂得 TCP 你就无法解决 TCP 问题"></a><strong>不懂得 TCP 你就无法解决 TCP 问题</strong></h3><p>我曾经也认为，TCP 是一个相当底层的问题，我不需要明白。大多数时候你的确不需要明白。但是有的时候，当你在实践中遇到由于 TCP 算法引起的 bug 时，懂点 TCP 知识就变得非常重要了。（正如我们经常在博客中讨论的，许多事情都是这样，比如系统调用和操作系统:) ）</p>
+<p>延迟确认及 TCP_NODELAY 的交互非常不好——这对任何语言实现的 HTTP 请求都有影响。你不需要很深入的去了解，成为系统程序专家。但是了解一点 TCP 是如何运作的，对我的工作的确大有裨益。通过对 TCP 的学习，我才意识到这篇博客所描述的问题也许正好是我所熟悉的领域。我也一直在使用 strace，并且会一直使用下去。</p>
+
+      </div>
+        
+          <section class="meta" id="footer-meta">
+            <hr>
+            <div class="new-meta-box">
+              
+                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-03-30T11:49:22+08:00">
+                  <a class="notlink">
+                    <i class="fas fa-save" aria-hidden="true"></i>
+                    2019-03-30
+                  </a>
+                </div>
+              
+              
+                
+                <div class="new-meta-item meta-tags"><a class="tag" href="/tags/TCP/"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;TCP</a></div>
+              
+              
+                
+  <div class="new-meta-item share -mob-share-list">
+    <i class="fas fa-share-alt" aria-hidden="true"></i>
+    <div class="-mob-share-list share-body">
+      
+        
+          <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/03/30/为什么你得学些TCP知识/&title=为什么你得学些TCP知识 | GIS小站&summary=">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+            
+          </a>
+        
+      
+        
+          <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2019/03/30/为什么你得学些TCP知识/&title=为什么你得学些TCP知识 | GIS小站&summary=">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+            
+          </a>
+        
+      
+        
+          <a class="qrcode" rel="external nofollow noopener noreferrer" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtklEQVR42u3aUW7jMAwE0Nz/0t0LNM4MKbVd4PkrMBLLTwVMdujXKz6+3hzP3393hVd5bH6Lh4eHd4P39Xg83+67M8l2JFvw/DnadDw8PLxrvOeHe1sM2mvmjPz6eHh4eH+HlxeA503JH+54eHh4/y/vmToLDmbfxMPDw/sLvM0jPtmOZGv2YQceHh7ez/A2D+Xf+nxlvoeHh4e3nqonx6wM7Jv16N7w8PDwLvD2rXDeiLeRx+wevrkOHh4e3lHe7NWoPLTNg9e2DESr4OHh4V3jJa9Y7UtC/tBvX2L4kE/j4eHhHeU9N7L78dKpwrN5yQAPDw/vLC9fMl+mDSCivKRs5aNuHQ8PD2/ESxbIF05a5LYFz2PlqLHGw8PDW/Py4dOm5Z1tR3Lmw3Xw8PDwLvM2bfEsqtiEuVHkgYeHh3eBl0cDeUiRt8JJDLF/NQEPDw/vLO8UoJi2lask69YlAQ8PD2/Ba2OIpKlt51CzkVsRneDh4eH9OC+foeUDs1lRyWd6RfXDw8PDG/Fm//bPMHlpmW3oh8YaDw8P7ygvHyklccA+SpjFwcXMDQ8PD2/Em7XOs9cF2rXawvDNWnh4eHgXeG2RyAtJy2g/zxp3PDw8vFO8Weuc7NPm4d5uepSy4OHh4a15bcTwKo/Z9fNWO/q74eHh4R3l5QVgE/62oUbeNEd3iIeHh3eUlw/123C2jYbzVYoXHfDw8PAu8PIHev5Q3gylNr96u4l4eHh4R3lf5XFqcLUZldX/K+Dh4eEd5Z0NGvIzeVybb+gKj4eHh1fy2lvP9yaPHtrotigbeHh4eNd4s8H/7BbzX7VhxNsYFw8PD++XeKfeVmjHZm1AjIeHh/d3ePm7TG382mKKNAUPDw/vGm8/oDpbMFr2h8KAh4eHd5Q3Kx6zZnd2fhbs4uHh4V3g/QNvLRbbHVm4qAAAAABJRU5ErkJggg==">
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+          
+          </a>
+        
+      
+        
+          <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/03/30/为什么你得学些TCP知识/&title=为什么你得学些TCP知识 | GIS小站&summary=">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+            
+          </a>
+        
+      
+        
+          <a class="qrcode" rel="external nofollow noopener noreferrer" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtklEQVR42u3aUW7jMAwE0Nz/0t0LNM4MKbVd4PkrMBLLTwVMdujXKz6+3hzP3393hVd5bH6Lh4eHd4P39Xg83+67M8l2JFvw/DnadDw8PLxrvOeHe1sM2mvmjPz6eHh4eH+HlxeA503JH+54eHh4/y/vmToLDmbfxMPDw/sLvM0jPtmOZGv2YQceHh7ez/A2D+Xf+nxlvoeHh4e3nqonx6wM7Jv16N7w8PDwLvD2rXDeiLeRx+wevrkOHh4e3lHe7NWoPLTNg9e2DESr4OHh4V3jJa9Y7UtC/tBvX2L4kE/j4eHhHeU9N7L78dKpwrN5yQAPDw/vLC9fMl+mDSCivKRs5aNuHQ8PD2/ESxbIF05a5LYFz2PlqLHGw8PDW/Py4dOm5Z1tR3Lmw3Xw8PDwLvM2bfEsqtiEuVHkgYeHh3eBl0cDeUiRt8JJDLF/NQEPDw/vLO8UoJi2lask69YlAQ8PD2/Ba2OIpKlt51CzkVsRneDh4eH9OC+foeUDs1lRyWd6RfXDw8PDG/Fm//bPMHlpmW3oh8YaDw8P7ygvHyklccA+SpjFwcXMDQ8PD2/Em7XOs9cF2rXawvDNWnh4eHgXeG2RyAtJy2g/zxp3PDw8vFO8Weuc7NPm4d5uepSy4OHh4a15bcTwKo/Z9fNWO/q74eHh4R3l5QVgE/62oUbeNEd3iIeHh3eUlw/123C2jYbzVYoXHfDw8PAu8PIHev5Q3gylNr96u4l4eHh4R3lf5XFqcLUZldX/K+Dh4eEd5Z0NGvIzeVybb+gKj4eHh1fy2lvP9yaPHtrotigbeHh4eNd4s8H/7BbzX7VhxNsYFw8PD++XeKfeVmjHZm1AjIeHh/d3ePm7TG382mKKNAUPDw/vGm8/oDpbMFr2h8KAh4eHd5Q3Kx6zZnd2fhbs4uHh4V3g/QNvLRbbHVm4qAAAAABJRU5ErkJggg==">
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+          
+          </a>
+        
+      
+    </div>
+  </div>
+
+
+              
+            </div>
+          </section>
+        
+
+        
+            <div class="prev-next">
+                
+                    <section class="prev">
+                        <span class="art-item-left">
+                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
+                            <h4>
+                                <a href="/2019/03/30/杂谈WebGIS/" rel="prev" title="开篇-杂谈WebGIS">
+                                  
+                                      开篇-杂谈WebGIS
+                                  
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/WebGIS/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>WebGIS</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2019/03/29/深度解密HTTP通信细节/" rel="prev" title="深度解密 HTTP 通信细节">
+                                    
+                                        深度解密 HTTP 通信细节
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/HTTP/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>HTTP</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+
+    </section>
+
+</article>
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+<br>
+
+<!-- 显示推荐文章和评论 -->
+
+
+
+
+
+<script>
+    window.subData = {
+        title: '为什么你得学些TCP知识',
+        tools: true
+    }
+</script>
+
+
+        </div>
+        <aside class='l_side'>
+            
+  
+  
+    
+      
+      
+        <section class="author">
+  <div class="content pure">
+    
+      <div class="avatar">
+        <img class="avatar" src="/medias/avatar.jpg">
+      </div>
+    
+    
+      <div class="text">
+        
+        
+        
+          <p><span id="jinrishici-sentence">柳暗花明又一村</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="mailto:zailushanga@gmail.com" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="https://github.com/llqing" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-github" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=1409711765" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-music" aria-hidden="true"></i></a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+
+      
+    
+  
+    
+      
+      
+        <section class="plain">
+  
+<header class="pure">
+  <div><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;注意啦～</div>
+  
+</header>
+
+  <div class="content pure">
+    <p>小站栏目还在完善中，将不定期分享GIS、Code等内容(看博主心情)，如有特殊需要可以联系博主，超喜欢的话还可以安利给身边的朋友哦～</p>
+
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+  <section class="category">
+    
+<header class="pure">
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;所有分类</div>
+  
+</header>
+
+    <div class="content pure">
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/AI/" href="/categories/AI/"><div class="name">AI</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Blog/" href="/categories/Blog/"><div class="name">Blog</div><div class="badge">(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/GIS/" href="/categories/GIS/"><div class="name">GIS</div><div class="badge">(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Git/" href="/categories/Git/"><div class="name">Git</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/LaTeX/" href="/categories/LaTeX/"><div class="name">LaTeX</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Linux/" href="/categories/Linux/"><div class="name">Linux</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Python/" href="/categories/Python/"><div class="name">Python</div><div class="badge">(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/web基础/" href="/categories/web基础/"><div class="name">web基础</div><div class="badge">(4)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/高数/" href="/categories/高数/"><div class="name">高数</div><div class="badge">(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        
+  <section class="tagcloud">
+    
+<header class="pure">
+  <div><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+</header>
+
+    <div class="content pure">
+      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 24px; color: #555">Markdown</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/TCP/" style="font-size: 24px; color: #555">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a>
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        <section class="list">
+  
+<header class="pure">
+  <div><i class="fas fa-medal fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;精选项目</div>
+  
+</header>
+
+  <div class="content pure">
+    <ul class="entry">
+      
+    </ul>
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        <section class="list">
+  
+<header class="pure">
+  <div><i class="fas fa-link fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;特别链接</div>
+  
+</header>
+
+  <div class="content pure">
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="https://llqing.github.io/about/" href="https://llqing.github.io/about/">
+          <div class="name">
+            
+              <i class="fas fa-comment-dots fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;关于我 / 留言板
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+
+
+  <section class="music">
+    
+<header class="pure">
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
+  
+    <a class="rightBtn" target="_blank" rel="external nofollow noopener noreferrer" href="https://music.163.com/#/user/home?id=1409711765" title="https://music.163.com/#/user/home?id=1409711765">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class="content pure">
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer" data-theme="#1BCDFC" data-mode="circulation" data-server="netease" data-type="playlist" data-id="1409711765" data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+
+      
+    
+  
+
+
+        </aside>
+        <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+    <footer id="footer" class="clearfix">
+  
+    <div class="footer">
+      <p>这里是页脚，谢谢支持。</p>
+
+    </div>
+    <br>
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="mailto:zailushanga@gmail.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="https://github.com/llqing" class="social fab fa-github flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="https://music.163.com/#/user/home?id=1409711765" class="social fas fa-music flat-btn" target="_blank" rel="external"></a>
+        
+      
+    </div>
+  
+  <br>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+  <div>本站使用 <a href target="_blank" class="codename">Material X</a> 作为主题，总访问量为 <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+  </div>
+</footer>
+
+    <script>setLoadingBarProgress(80);</script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+  <!-- fastclick -->
+  <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+  </script>
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/app.js"></script>
+<script src="/js/search.js"></script>
+
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+    <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
