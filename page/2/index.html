@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>GIS小站</title>
+  
+  <meta name="keywords" content="GIS,Code">
+  
+  
+
+  
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+  
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="msapplication-TileColor" content="#1BC3FB">
+  <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml">
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+  
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png">
+  <link rel="mask-icon" color="#1BC3FB" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg">
+  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest">
+  
+
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+  
+
+  
+  <link rel="stylesheet" href="/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+
+<body>
+    <div id="loading-bar-wrapper">
+  <div id="loading-bar" class="pure"></div>
+</div>
+
+    <script>setLoadingBarProgress(20)</script>
+    <header class="l_header pure">
+	<div class="wrapper">
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href="/">
+        
+          GIS小站
+        
+      </a>
+			<div class="menu">
+				<ul class="h-list">
+          
+  					
+  						<li>
+								<a id="https:llqing.github.io" class="nav flat-box" href="https://llqing.github.io/">
+									<i class="fas fa-home fa-fw"></i>&nbsp;主页
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="home" class="nav flat-box" href="/">
+									<i class="fas fa-rss fa-fw"></i>&nbsp;博客
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="archives" class="nav flat-box" href="/archives/">
+									<i class="fas fa-archive fa-fw"></i>&nbsp;归档
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="friends" class="nav flat-box" href="/friends/">
+									<i class="fas fa-users fa-fw"></i>&nbsp;朋友
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="about" class="nav flat-box" href="/about/">
+									<i class=" fa-fw"></i>&nbsp;about
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索">
+						<span class="icon"><i class="fas fa-search fa-fw"></i></span>
+					</form>
+				</div>
+			
+			<ul class="switcher h-list">
+				
+					<li class="s-search"><a class="fas fa-search fa-fw" href="javascript:void(0)"></a></li>
+				
+				<li class="s-menu"><a class="fas fa-bars fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
+
+		<div class="nav-sub container container--flex">
+			<a class="logo flat-box"></a>
+			<ul class="switcher h-list">
+				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
+				<li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu">
+      <ul>
+          
+              
+                  <li>
+										<a id="https:llqing.github.io" class="nav flat-box" href="https://llqing.github.io/">
+											<i class="fas fa-home fa-fw"></i>&nbsp;主页
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="home" class="nav flat-box" href="/">
+											<i class="fas fa-rss fa-fw"></i>&nbsp;博客
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="archives" class="nav flat-box" href="/archives/">
+											<i class="fas fa-archive fa-fw"></i>&nbsp;归档
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="friends" class="nav flat-box" href="/friends/">
+											<i class="fas fa-users fa-fw"></i>&nbsp;朋友
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="about" class="nav flat-box" href="/about/">
+											<i class=" fa-fw"></i>&nbsp;about
+										</a>
+                  </li>
+              
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+    <div class="l_body">
+    <div class='container clearfix'>
+        <div class='l_main'>
+            
+
+
+
+  <section class="post-list">
+      
+
+
+
+      
+
+      
+
+      
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/03/27/什么是HTTPS协议/">
+              
+                  什么是HTTPS协议
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-03-27
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/web基础/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              web基础
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <blockquote>
+<p>作者 | 小   灰</p>
+<p>责编 | 胡巍巍</p>
+</blockquote>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QibiajkGYjaNxI6pTvG3ehic6EktzRvZ4GD9PPsKuwaQLH4jVFbf92Kfdg/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QnIBhBKXbcKDoX44n2YMvdqdHicJQNpyWReyib2PnhMTxSicSDumbWKRpw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QVq4x8hoGTrGwe7dfBCkhwgV9gD81KGQBsl9yPa7ic0uQIibcGxicsAxLw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QmRdRTQTIs9muXtgY77wialvjWV8StsrkOa4hxqjrkia8ngZ2UKwTLkiaQ/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QiaicqJked2A0l9hYpwJVGtGhlV2KwGPUMqt1O1m6jr7FlRfbfC8ib95Jg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9Q6pFlukc21dcoEdfEJvRoyBYA5WJmQW32drgyv0Uw02icmsrKgY5TuOw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QSPn6JHA3Zyickib2fUa1dUwEfpjrcmZnYDXtrD207nibjkHEjVWiaPSwGQ/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QSln0sXSXHqrz7U1P5PQ05HwkBv5hPicWib2ic7qQpfVkhFiaqIf1559JaA/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QImf2zKCHx6OTJZnV2pYARgwUMF53UicibRdgCJNrAowibo3X0cMPeJXFw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p><strong>什么是HTTP协议？</strong></p>
+<p>HTTP协议全称Hyper Text Transfer Protocol，翻译过来就是超文本传输协议，位于TCP/IP四层模型当中的应用层。</p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p>HTTP协议通过请求/响应的方式，在客户端和服务端之间进行通信。</p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p>这一切看起来很美好，但是HTTP协议有一个致命的缺点：不够安全。</p>
+<p>HTTP协议的信息传输完全以明文方式，不做任何加密，相当于是在网络上“裸奔”。这样会导致什么问题呢？让我们打一个比方：</p>
+<p>小灰是客户端，小灰的同事小红是服务端，有一天小灰试图给小红发送请求。</p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p>但是，由于传输信息是明文，这个信息有可能被某个中间人恶意截获甚至篡改。这种行为叫做中间人攻击。</p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p><strong>如何进行加密呢？</strong></p>
+<p>小灰和小红可以事先约定一种对称加密方式，并且约定一个随机生成的密钥。后续的通信中，信息发送方都使用密钥对信息加密，而信息接收方通过同样的密钥对信息解密。</p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p>这样做是不是就绝对安全了呢？并不是。</p>
+<p>虽然我们在后续的通信中对明文进行了加密，但是第一次约定加密方式和密钥的通信仍然是明文，如果第一次通信就已经被拦截了，那么密钥就会泄露给中间人，中间人仍然可以解密后续所有的通信内容。</p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p>这可怎么办呢？别担心，我们可以使用非对称加密，为密钥的传输做一层额外的保护。</p>
+<p>非对称加密的一组秘钥对中，包含一个公钥和一个私钥。明文既可以用公钥加密，用私钥解密；也可以用私钥加密，用公钥解密。</p>
+<p>在小灰和小红建立通信的时候，小红首先把自己的公钥Key1发给小灰：</p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p>收到小红的公钥以后，小灰自己生成一个用于对称加密的密钥Key2，并且用刚才接收的公钥Key1对Key2进行加密（这里有点绕），发送给小红：</p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p>小红利用自己非对称加密的私钥，解开了公钥Key1的加密，获得了Key2的内容。从此以后，两人就可以利用Key2进行对称加密的通信了。</p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p>在通信过程中，即使中间人在一开始就截获了公钥Key1，由于不知道私钥是什么，也无从解密。</p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p>是什么坏主意呢？中间人虽然不知道小红的私钥是什么，但是在截获了小红的公钥Key1之后，却可以偷天换日，自己另外生成一对公钥私钥，把自己的公钥Key3发送给小灰。</p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p>小灰不知道公钥被偷偷换过，以为Key3就是小红的公钥。于是按照先前的流程，用Key3加密了自己生成的对称加密密钥Key2，发送给小红。</p>
+<p>这一次通信再次被中间人截获，中间人先用自己的私钥解开了Key3的加密，获得Key2，然后再用当初小红发来的Key1重新加密，再发给小红。</p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p>这样一来，两个人后续的通信尽管用Key2做了对称加密，但是中间人已经掌握了Key2，所以可以轻松进行解密。</p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p>是什么解决方案呢？难道再把公钥进行一次加密吗？这样只会陷入鸡生蛋蛋生鸡，永无止境的困局。</p>
+<p>这时候，我们有必要引入第三方，一个权威的证书颁发机构（CA）来解决。到底什么是证书呢？证书包含如下信息：</p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p>为了便于说明，我们这里做了简化，只列出了一些关键信息。至于这些证书信息的用处，我们看看具体的通信流程就能够弄明白了。</p>
+<p>流程如下：</p>
+<p>1.作为服务端的小红，首先把自己的公钥发给证书颁发机构，向证书颁发机构申请证书。</p>
+<p><img src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" alt="img"></p>
+<p>2.证书颁发机构自己也有一对公钥私钥。机构利用自己的私钥来加密Key1，并且通过服务端网址等信息生成一个证书签名，证书签名同样经过机构的私钥加密。证书制作完成后，机构把证书发送给了服务端小红。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QmrhYBUv6aQ6RPpbEEWV4jnWURYvnB7QKKkCeLzwMZeicp8lytYms0yg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>3.当小灰向小红请求通信的时候，小红不再直接返回自己的公钥，而是把自己申请的证书返回给小灰。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QjQldYuHCKOcibkUMf7nhX0DD4EasCGcQS0os6suCO7fSxia7FjOYiaOzA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>4.小灰收到证书以后，要做的第一件事情是验证证书的真伪。</p>
+<p>需要说明的是，各大浏览器和操作系统已经维护了所有权威证书机构的名称和公钥。</p>
+<p>所以小灰只需要知道是哪个机构颁布的证书，就可以从本地找到对应的机构公钥，解密出证书签名。</p>
+<p>接下来，小灰按照同样的签名规则，自己也生成一个证书签名，如果两个签名一致，说明证书是有效的。</p>
+<p>验证成功后，小灰就可以放心地再次利用机构公钥，解密出服务端小红的公钥Key1。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QENwxMWjnWv6iaCM0JjG1faFyrEmPC6c1n2tZDIGo3icONyV91INJicAJA/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>5.像之前一样，小灰生成自己的对称加密密钥Key2，并且用服务端公钥Key1加密Key2，发送给小红。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QKLTGwWJXwaHibic78VTbibpEIO5UBGCj1D0cVSFp1W32MKLQRGiaibYcTHg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>6.最后，小红用自己的私钥解开加密，得到对称加密密钥Key2。于是两人开始用Key2进行对称加密的通信。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QxwRCiac136C5VLuNyVjFDG3teRNtwh1GmPvolrtpRcLxc8XeM2ibibyeQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>在这样的流程下，我们不妨想一想，中间人是否还具有使坏的空间呢？</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QXVOiaHUuKTsf5Iqy360ukSZoM3jwPa9KiaMbmiakquh2MvF1Eg52wAbCQ/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QwOLtEPPhJToUf4EaQ6XvtNoJsoc9ibUWBYXJ8VPIl4Xo7ppnuc4icsxA/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9Qy676yjvxP11icXgFDZER6iahoXLggnt84XUlg2nDSRgJdsbWNuRENBfg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9Qc73BXAGJgwvq8HwbU4IzorxmNNUujleX4buaugp3a2X1hUt3cLNSYA/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QOThp6PEtNpia48W7vLtb5viauwJZW2rxfIRVOoNAT4UMXJa2Mo2QkNDQ/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QFibuV1f5f5lCG2ryskiaickbbW88icxFjibZKv7uQglyWcVicgVnicN96R0wQ/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QplvDw2aicOOm3R55rqB8mzO8Gia2l54JIInWnUFhTylD3C9mevf7DqYg/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<p>注：最新推出的TLS协议，是SSL 3.0协议的升级版，和SSL协议的大体原理是相同的。</p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/NtO5sialJZGqYxeicPqnxC3yHlG4zxga9QDg1EJYjK2vZfPbrZfHNy3gibl4vqJGIFsgqD3OK2iaLqFNq3IlTrkH3A/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<blockquote>
+<p>声明：本文为作者投稿，首发于个人公众号程序员小灰，版权归其所有。</p>
+</blockquote>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/HTTPS/"><i class="fas fa-hashtag fa-fw"></i>HTTPS</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/03/18/arcpy开发&关于arcgis中的api arcpy.Describe/">
+              
+                  arcpy开发&关于arcgis中的api arcpy.Describe
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-03-18
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/GIS/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              GIS
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>今天在学习关于工作空间相关知识，用于了下面的函数来实现判断当前输入的要素参数在哪个工作空间。其中主要运用到了arcpy.Describe函数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_workspace</span><span class="params">(featureClass)</span>:</span></span><br><span class="line"> 	catalogPath = os.path.dirname(featureClass.catalogPath)</span><br><span class="line">    <span class="keyword">if</span> arcpy.Describe(catalogPath).dataType == <span class="string">'FeatureDataset'</span>:</span><br><span class="line">        arcpy.env.workspace = arcpy.Describe(catalogPath).path</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        arcpy.env.workspace = featureClass.path</span><br><span class="line">    <span class="keyword">return</span> arcpy.env.workspace</span><br></pre></td></tr></table></figure>
+<p>研究罢了，调试时查阅了Describe相关的参数，于是来看一下esri官方的参考文档，如下所说关于describe的种种：</p>
+<p>Describe 函数返回的 Describe 对象包含多个属性，如数据类型、字段、索引以及许多其他属性。该对象的属性是动态的，这意味着根据所描述的数据类型，会有不同的描述属性可供使用。</p>
+<p>Describe 属性被组织成一系列属性组。任何特定数据集都将至少获取其中一个组的属性。例如，如果要描述一个地理数据库要素类，您可访问 GDB 要素类、要素类、表和数据集属性组中的属性。所有数据，不管是哪种数据类型，总会获取通用 Describe 对象属性。</p>
+<p>好了，说了这么多。我其实想说的是，可以使用describe查看数据的相关信息。比如shapeType、dataType、catalogPath、spatialReference等等相关信息。我们来看一下下面这一段代码。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">input_fc = <span class="string">'D:/Data/中国国界和省界的SHP格式数据/省界/bou2_4p.shp'</span></span><br><span class="line">desc = arcpy.Describe(input_fc)</span><br><span class="line">catalogPath = os.path.dirname(desc.catalogPath)</span><br><span class="line">dataType=arcpy.Describe(catalogPath).dataType</span><br><span class="line">dataType2=desc.dataType</span><br></pre></td></tr></table></figure>
+<p>现在我们把pycharm断点打开，一一窥探该函数会给我们带来什么样的信息。具体如下图所示。</p>
+<p><img src="C:\Users\admin\AppData\Roaming\Typora\typora-user-images\1552917456413.png" alt="1552917456413"></p>
+<p>好了，关于describe的学习就到处为此了。</p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/GIS-arcpy-python/"><i class="fas fa-hashtag fa-fw"></i>GIS; arcpy; python;</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/03/13/myFirstBlog/">
+              
+                  myFirstBlog
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-03-13
+          </a>
+        </div>
+      
+      
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+    </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2018/09/05/一则列表去重的思考/">
+              
+                  一则列表去重的思考
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2018-09-05
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/Python/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              Python
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <pre><code>今天偶得休息,闲来无事悄悄代码,收到了一个这样的问题:
+</code></pre><p>用两种或更多的方法实现对列表list1 = [1,1,2,3,3,5]进行去重。<br>时间紧任务急,博主现只写出了如下四种实现方式供大家参考,后续想到<br>更好的算法了再给大家分享,话不多说上代码,:</p>
+<h3 id="第一种"><a href="#第一种" class="headerlink" title="第一种"></a>第一种</h3><p>list1 = [1,1,2,3,3,5]</p>
+<p>set1 = list(set(list1))</p>
+<p>print(set1)</p>
+<h3 id="第二种"><a href="#第二种" class="headerlink" title="第二种"></a>第二种</h3><p>list2 = []</p>
+<p>for i in range(len(list1)):<br>    if list1.index(list1[i]) == i:<br>        list2.append(list1[i])</p>
+<p>print(list2)</p>
+<h3 id="第三种"><a href="#第三种" class="headerlink" title="第三种"></a>第三种</h3><p>list3 = [1,1,2,3,3,5]<br>for i in list3:<br>    if list3.count(i) 1:<br>        list3.pop(list3.index(i))</p>
+<p>print(list3)</p>
+<h3 id="第四种"><a href="#第四种" class="headerlink" title="第四种"></a>第四种</h3><p>list4 = []</p>
+<p>for i in list1:<br>    if i not in list4:<br>        list4.append(i)</p>
+<p>print(list4)</p>
+<p>乍一看不觉这题难,对于接触过python的朋友来说,随手写出一两个不成问题,<br>但通过此事也意识到了,前面学过的知识还是要勤加复习避免遗忘,不说了博主要去复习了</p>
+
+      
+    </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2018/08/17/git 命令操作总结/">
+              
+                  git 命令操作总结
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2018-08-17
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/Git/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              Git
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h3 id="1-安装git"><a href="#1-安装git" class="headerlink" title="1.安装git"></a>1.安装git</h3><ul>
+<li><p>sudo apt-get intall git</p>
+<blockquote>
+<p>终端输入git 如果有提示证明安装成功</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="2-git单人操作"><a href="#2-git单人操作" class="headerlink" title="2.git单人操作"></a>2.git单人操作</h3><ul>
+<li><p>2.1 创建空的git仓库: git init</p>
+<blockquote>
+<p>提示: git仓库和项目的根路径在一起,用来管理项目</p>
+</blockquote>
+</li>
+<li><p>2.2 配置git提交的用户名,邮箱</p>
+<p>例如: git config user.name ‘zhangsan’</p>
+<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; git config user.email <a href="mailto:&#39;111@qq.com" target="_blank" rel="noopener">&#39;111@qq.com</a>‘</p>
+<blockquote>
+<p>如果没有配置,默认使用的: home/.gitconfig  根目录下的用户信息</p>
+</blockquote>
+</li>
+<li><p>2.3 查看文件状态: git status</p>
+<blockquote>
+<p>红色: 表示新建文件, 或者新修改了文件,目前位于工作区中</p>
+<p>绿色: 表示文件在暂存区</p>
+</blockquote>
+</li>
+<li><p>2.4将工作区代码, 添加到暂存区(工作区–&gt;暂存区)</p>
+</li>
+<li><p>例如: git add .  </p>
+<p> &nbsp; &nbsp; &nbsp; git add xxx.py</p>
+<blockquote>
+<p>点表示添加所有变动,  xxx.py表示指定文件</p>
+</blockquote>
+</li>
+<li><p>2.5将工作区代码,添加到仓库区(工作区—&gt;仓库区)</p>
+</li>
+<li><p>例如: git commit -m ‘注释’</p>
+</li>
+<li><p>2.6将工作区,直接添加到仓库区(工作区–&gt;暂存区—&gt;仓库区)</p>
+</li>
+<li><p>例如: git commit -am ‘注释信息’</p>
+</li>
+<li><p>2.7查看版本历史</p>
+<p>例如: git log</p>
+<p> &nbsp; &nbsp; &nbsp;  git reflog</p>
+<blockquote>
+<p>log查看详细信息, reflog查看简要信息</p>
+</blockquote>
+</li>
+<li><p>2.8回退版本</p>
+<p>例如: git reset –hard HEAD</p>
+<p>或者: git reset –hard 版本号</p>
+<blockquote>
+<p>HEAD表示当前最新版本</p>
+<p>HEAD^表示当前最新版本的,  上一个版本</p>
+<p>HEAD^^表示当前最新版本的, 前两个版本, 依次类推</p>
+<p>HEAD~1 表示当前最新版本的,  上一个版本</p>
+<p>HEAD~2 表示当前最新版本的, 前两个版本, 依次类推</p>
+</blockquote>
+</li>
+<li><p>2.9撤销工作区,暂存区修改</p>
+<p>撤销工作区:  git checkout 文件名</p>
+<p>撤销暂存区: </p>
+<p> &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; git checkout HEAD 文件名 (暂存区-工作区)</p>
+<p> &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; git checkout 文件名</p>
+<blockquote>
+<p>仓库区代码不能撤销</p>
+</blockquote>
+</li>
+<li><p>2.10 版本对比</p>
+<p>例如: git diff HEAD HEAD^ – xxx.py</p>
+<blockquote>
+<p>HEAD表示当前版本,   HEAD^表示上个版本, xxx.py对比的文件</p>
+</blockquote>
+</li>
+<li><p>2.11误删除文件,恢复</p>
+<p>格式1: rm 文件名</p>
+<p>恢复1: git checkout – 文件名</p>
+<p>格式2: git rm 文件名</p>
+<p>恢复2: git reset –hard HEAD^</p>
+</li>
+</ul>
+<h3 id="3-git多人操作"><a href="#3-git多人操作" class="headerlink" title="3.git多人操作"></a>3.git多人操作</h3><ul>
+<li><p>3.1 clone项目到本地</p>
+<p>例如: git clone 项目地址</p>
+</li>
+<li><p>3.2 推送项目到远程仓库</p>
+<p>例如: git push</p>
+<blockquote>
+<p>第一次推送会提示输入账号, 密码</p>
+</blockquote>
+</li>
+<li><p>3.3 配置是否输入登陆密码信息</p>
+<blockquote>
+<p>git config –global  credential.helper cache 十五分钟有效期</p>
+<p>git config  credential.helper ‘cache –timeout==3600’ 一个小时有效期</p>
+<p>git config –global credential.helper store 长期有效</p>
+</blockquote>
+</li>
+<li><p>3.4 拉取远程最新代码到本地</p>
+<p>例如: git pull</p>
+</li>
+</ul>
+<h3 id="4-标签"><a href="#4-标签" class="headerlink" title="4.标签"></a>4.标签</h3><ul>
+<li><p>4.1 设置本地标签</p>
+<p>例如: git tag -a  标签名 -m ‘标签描述’</p>
+</li>
+<li><p>4.2 推送本地标签到远程</p>
+<p>例如: git push origin 标签名</p>
+</li>
+<li><p>4.3 删除本地标签</p>
+<p>例如: git tag -d 标签名</p>
+</li>
+<li><p>4.4 删除远程标签</p>
+<p>例如: git push origin –delete tag 标签名</p>
+</li>
+</ul>
+<h3 id="5-分支"><a href="#5-分支" class="headerlink" title="5.分支"></a>5.分支</h3><ul>
+<li><p>5.1查看当前分支</p>
+<p>例如: git branch</p>
+</li>
+<li><p>5.2创建本地分支,并切换到指定分支</p>
+<p>例如: git checkout -b 分支名</p>
+</li>
+<li><p>5.3推送本地分支,到远程</p>
+<p>例如: git push -u origin 分支名</p>
+</li>
+<li><p>5.4切换分支</p>
+<p>例如: git checkout master / dev</p>
+<blockquote>
+<p>切换到主分支,或者是其他分支</p>
+<p>其他用户第一次pull代码后,切换切换后才能使用git branch查看</p>
+</blockquote>
+</li>
+<li><p>5.5合并子分支到主分支</p>
+<p>例如: git merge 分支</p>
+<blockquote>
+<p>需要在master分支下操作改命令</p>
+</blockquote>
+</li>
+</ul>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/git-版本库/"><i class="fas fa-hashtag fa-fw"></i>git; 版本库</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2018/07/26/LivePreview无法正常工作/">
+              
+                  LivePreview无法正常工作
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2018-07-26
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/Blog/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              Blog
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>2018/7/26 22:28:25</p>
+<p>自从搭建了个人博客,一直以来都是使用 MarkdownPad 2 来写Blog。近日由于重新安装了系统,想着把MarkdownPad 2再重新安装下,安装后却发现提示无法开启渲染预览,这能难道程序员吗?于是开始了bug查找,发现了如下提示:</p>
+<pre><code>LivePreview is not working - it displays an error message stating This view has crashed!
+
+This issue has been specifically observed in Windows 8. You may see an error message as shown here, and no HTML will be rendered when you type in the Markdown Editor pane.
+
+To fix this issue, please try installing the Awesomium 1.6.6 SDK.
+
+If you continue to experience issues, please install Microsoft&apos;s DirectX End-User Runtimes.
+</code></pre><p>读后发现大概意思是需要下载安装Awesomium 1.6.6 SDK，OK,那就先试试 Awesomium 1.6.6 SDK.点击提示页面的下载链接地址，然后安装之后，重新启动MarkdownPad 2就可以正常使用了。</p>
+<p>附带软件下载地址：</p>
+<blockquote>
+<p>MarkdownPad2破解版本地址：链接: <a href="https://pan.baidu.com/s/1dF6C1MT" target="_blank" rel="noopener">https://pan.baidu.com/s/1dF6C1MT</a> 密码: j3cy</p>
+</blockquote>
+<blockquote>
+<p>awesomium软件下载地址：链接: <a href="https://pan.baidu.com/s/1nvRuNaT" target="_blank" rel="noopener">https://pan.baidu.com/s/1nvRuNaT</a> 密码: e7t2 </p>
+</blockquote>
+<p>很多人不太喜欢试用版,试用版功能不全,下面附带注册码激活使用:</p>
+<p>打开markdownpad2 –&gt; 帮助 –&gt;升级为专业版<br>按照如下输入：<br>​</p>
+<blockquote>
+<p>邮箱地址：<a href="mailto:Soar360@live.com" target="_blank" rel="noopener">Soar360@live.com</a></p>
+</blockquote>
+<blockquote>
+<p>授权秘钥：<br>    GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE8qHqNY5QaaRxmO3YSMHxlv2EYpjdwLcPwfeTG7kUdnhKE0vVy4RidP6Y2wZ0q74f47fzsZo45JE2hfQBFi2O9Jldjp1mW8HUpTtLA2a5/sQytXJUQl/QKO0jUQY4pa5CCx20sV1ClOTZtAGngSOJtIOFXK599sBr5aIEFyH0K7H4BoNMiiDMnxt1rD8Vb/ikJdhGMMQr0R4B+L3nWU97eaVPTRKfWGDE8/eAgKzpGwrQQoDh+nzX1xoVQ8NAuH+s4UcSeQ==</p>
+</blockquote>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/Markdown/"><i class="fas fa-hashtag fa-fw"></i>Markdown</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2018/07/26/hexo博客出现command-not-found解决方案/">
+              
+                  hexo博客出现command not found解决方案
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2018-07-26
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/Blog/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              Blog
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>2018/7/26 22:14:17</p>
+<p>自从上次更新了博客后,后来就开始了正式的学习,由于电脑升级的原因考虑到今后需要用到的软件会比较多,现在用的电脑配置有点低了,所以对电脑进行了一次小升级购买了固态后重装了系统,以致于之前的博客文件和配置的环境出现了问题,导致不能正常上传博客文件,后来课程太紧,一拖再拖没有来及解决这个问题.</p>
+<p>今天去网上看了下,发现有很多这样的问题,重装系统后会出现command not found提示,接下来就是一波百度,寻找解决办法,发现个办法都有瑕疵并不能一次完美解决.</p>
+<p>最后决定还是使用最粗暴的办法吧,也避免出现一些环境,插件缺少的问题,于是按照我之前写的教程开始了重新配置,安装完毕之后,首先查看各种工具是否都安装好了，在命令行中输入<code>node -v</code><br>然后再检查<code>npm -v</code>,<br>这些都没有问题的话,接下来检查下环境变量有没有配置,如果发现没有配置的话,可以先去找到这个路径，<code>C:\Users\feng\node_modules\hexo\bin</code>，然后把它添加到环境变量PATH路径的后面。这样基本就配置完成了.</p>
+<p>提示:如果发现安装过程存在,使用淘宝NPM镜像，输入以下命令安装  cnpm, <code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code>,时出错的情况,可以检查下你的git和node的版本,笔者此前出现过因为版本过高而不能正常安装的问题.希望能给大家提供帮助.</p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/hexo/"><i class="fas fa-hashtag fa-fw"></i>hexo</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2018/04/15/Python中if-name-name-main/">
+              
+                  Python中if __name__ == "__main__"是什么作用
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2018-04-15
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/Python/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              Python
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>2018/4/15 22:19:35 </p>
+<hr>
+<ul>
+<li>最近在写毕业论文使用到Python，在查找文献资源中看到了一行代码<br><code>Python中if __name__ == &quot;__main__:&quot;</code>之前练习Python并没有注意这个，也可能太就给忘了，为了搞清这个语句于是开始疯狂百度，各种论坛博客搜索，最终找到了这个语句的作用个人感觉最易懂的解释，分享给大家</li>
+<li>python文件的后缀名是.py，python文件既可以用来直接执行，也可以作为模块被导入。<br>我们在使用python时经常会看到<code>Python中if __name__ == &quot;__main__:&quot;</code>这样一个句子,这是什么呢？<br>其中name是模块的内置属性，而这个内置属性的值取决于这个.py文件的使用方式，即你是作为模块导入还是直接执行。<br>如果你是直接执行，那么这个name的值就是’main’，如果你作为一个模块导入，那么这个内置属性值就取决于这个文件名(不包含路径和文件扩展名)。<br>所以我们在看到一个这样的句子<code>Python中if __name__ == &quot;__main__&quot;:</code>时，就是文件在执行时要执行这个main()函数</li>
+</ul>
+<hr>
+<p>附上一张号称一篇程序覆盖Python基础的代码，基本的结构都涉及到了，看不清的话保存本地放大看吧。<br><img src="https://img-blog.csdn.net/20160511222649275" alt></p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/Python/"><i class="fas fa-hashtag fa-fw"></i>Python</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2018/04/09/用MarkdownX编写博文/">
+              
+                  用MarkdownX编写博文
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2018-04-09
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/Blog/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              Blog
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>2018/4/9 22:19:02    </p>
+<hr>
+<ul>
+<li><p>　博客搭建好后，尽管下午没事用手机查询Markdown教程，可是搜了一圈发现网上的教程参差不齐，还不如直接用html编写博文，可是想到Markdown的初衷就是方便编写博文，于是想会不会有些工具使Markdown的编写自动化了，果然搜到了一篇用MarkdownX的于是下载下来试用一番，发现挺容易入手的。</p>
+</li>
+<li><p>　一个优秀的产品就应该这样让人尽量容易上手，不必拘于太多的条条框框，但Markdown毕竟还是有些功能不易实现，所以下一步准备尝试使用html+css制作一些漂亮的静态页面。</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/Markdown/"><i class="fas fa-hashtag fa-fw"></i>Markdown</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+      
+
+  </section>
+
+
+
+
+
+
+  
+      <br>
+      <div class="prev-next">
+          <div class="prev-next">
+              
+                  <a class="prev" rel="prev" href="/">
+                      <section class="post prev">
+                          <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
+                      </section>
+                  </a>
+              
+              <p class="current">
+                  2 / 2
+              </p>
+              
+
+          </div>
+      </div>
+
+  
+
+  <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+  
+
+  
+
+
+
+
+        </div>
+        <aside class='l_side'>
+            
+  
+  
+    
+      
+      
+        <section class="author">
+  <div class="content pure">
+    
+      <div class="avatar">
+        <img class="avatar" src="/medias/avatar.jpg">
+      </div>
+    
+    
+      <div class="text">
+        
+        
+        
+          <p><span id="jinrishici-sentence">柳暗花明又一村</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="mailto:zailushanga@gmail.com" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="https://github.com/llqing" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-github" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=1409711765" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-music" aria-hidden="true"></i></a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+
+      
+    
+  
+    
+      
+      
+        <section class="plain">
+  
+<header class="pure">
+  <div><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;注意啦～</div>
+  
+</header>
+
+  <div class="content pure">
+    <p>小站栏目还在完善中，将不定期分享GIS、Code等内容(看博主心情)，如有特殊需要可以联系博主，超喜欢的话还可以安利给身边的朋友哦～</p>
+
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+  <section class="category">
+    
+<header class="pure">
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;所有分类</div>
+  
+</header>
+
+    <div class="content pure">
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/AI/" href="/categories/AI/"><div class="name">AI</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Blog/" href="/categories/Blog/"><div class="name">Blog</div><div class="badge">(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/GIS/" href="/categories/GIS/"><div class="name">GIS</div><div class="badge">(2)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Git/" href="/categories/Git/"><div class="name">Git</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/LaTeX/" href="/categories/LaTeX/"><div class="name">LaTeX</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Linux/" href="/categories/Linux/"><div class="name">Linux</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Python/" href="/categories/Python/"><div class="name">Python</div><div class="badge">(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/web基础/" href="/categories/web基础/"><div class="name">web基础</div><div class="badge">(4)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/高数/" href="/categories/高数/"><div class="name">高数</div><div class="badge">(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        
+  <section class="tagcloud">
+    
+<header class="pure">
+  <div><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+</header>
+
+    <div class="content pure">
+      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 24px; color: #555">Markdown</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/TCP/" style="font-size: 24px; color: #555">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a>
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        <section class="list">
+  
+<header class="pure">
+  <div><i class="fas fa-medal fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;精选项目</div>
+  
+</header>
+
+  <div class="content pure">
+    <ul class="entry">
+      
+    </ul>
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        <section class="list">
+  
+<header class="pure">
+  <div><i class="fas fa-link fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;特别链接</div>
+  
+</header>
+
+  <div class="content pure">
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="https://llqing.github.io/about/" href="https://llqing.github.io/about/">
+          <div class="name">
+            
+              <i class="fas fa-comment-dots fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;关于我 / 留言板
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+
+
+  <section class="music">
+    
+<header class="pure">
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
+  
+    <a class="rightBtn" target="_blank" rel="external nofollow noopener noreferrer" href="https://music.163.com/#/user/home?id=1409711765" title="https://music.163.com/#/user/home?id=1409711765">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class="content pure">
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer" data-theme="#1BCDFC" data-mode="circulation" data-server="netease" data-type="playlist" data-id="1409711765" data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+
+      
+    
+  
+
+
+        </aside>
+        <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+    <footer id="footer" class="clearfix">
+  
+    <div class="footer">
+      <p>这里是页脚，谢谢支持。</p>
+
+    </div>
+    <br>
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="mailto:zailushanga@gmail.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="https://github.com/llqing" class="social fab fa-github flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="https://music.163.com/#/user/home?id=1409711765" class="social fas fa-music flat-btn" target="_blank" rel="external"></a>
+        
+      
+    </div>
+  
+  <br>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+  <div>本站使用 <a href target="_blank" class="codename">Material X</a> 作为主题，总访问量为 <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+  </div>
+</footer>
+
+    <script>setLoadingBarProgress(80);</script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+  <!-- fastclick -->
+  <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+  </script>
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/app.js"></script>
+<script src="/js/search.js"></script>
+
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+    <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
