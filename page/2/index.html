@@ -101,7 +101,7 @@
       			
   						<li>
 								<a id="about" class="nav flat-box" href="/about/">
-									<i class="fas fa-fw fa-fw"></i>&nbsp;about
+									<i class="fas fa-archive fa-fw fa-fw"></i>&nbsp;about
 								</a>
 							</li>
       			
@@ -166,7 +166,7 @@
               
                   <li>
 										<a id="about" class="nav flat-box" href="/about/">
-											<i class="fas fa-fw fa-fw"></i>&nbsp;about
+											<i class="fas fa-archive fa-fw fa-fw"></i>&nbsp;about
 										</a>
                   </li>
               
@@ -194,6 +194,110 @@
       
 
       
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/03/30/为什么你得学些TCP知识/">
+              
+                  为什么你得学些TCP知识
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-03-30
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/web基础/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              web基础
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>这不是指要明白 TCP 的所有东西，也不是说要通读 《TCP/IP 详解》。不过懂一点 TCP 知识是很有必要的。理由如下：</p>
+<p>当我还在 Recurse Center 的时候，我用 Python 写过 TCP 协议栈（还写过一篇文章：如果你用 Python 写 TCP 协议栈会遇到什么？）。这是一次有趣的学习经历，但是也仅此而已。</p>
+<p>一年以后，工作中有人在 Slack 上提到：“嘿，我在向 NSQ 发布消息时，每次要耗费 40 毫秒”。我已经断断续续思考了一个星期，但是没有任何结果。</p>
+<p>一点背景知识：NSQ 是一个消息队列，你通过本地的一个 HTTP 请求向其发布消息。发送本地的一个 HTTP 请求确实不应该花费 40 毫秒，有时候会更差。NSQ 守护进程的负载不高，也没有使用过多的内存，也看不到 GC 停顿。这究竟是为什么呢？神呐，救救我吧！</p>
+<p>突然我记起我一周以前看过的一篇叫做“性能研究（In search of performance）”的文章——我们如何为每个 POST 请求节省 200ms。在这篇文章中，他们说到为什么每个 POST 请求会花费额外的 200 毫秒。就是这个原因。这是该文章中的关键段落：</p>
+<h3 id><a href="#" class="headerlink" title=" "></a> </h3><h3 id="延迟确认（ACK）-与-TCP-NODELAY"><a href="#延迟确认（ACK）-与-TCP-NODELAY" class="headerlink" title="延迟确认（ACK） 与 TCP_NODELAY"></a><strong>延迟确认（ACK） 与 TCP_NODELAY</strong></h3><blockquote>
+<p>Ruby 的 Net::HTTP 会将 POST 请求切分为两个 TCP 包，一个消息头，一个消息体。相反，curl 会将这两者合并为一个包。更糟糕的是，Net::HTTP 在打开 TCP 套接字时不会设置 TCP_NODELAY，这将导致第二个包需要等到第一个包的接收确认通知之后才能发送。这是 Nagle 算法导致的。</p>
+</blockquote>
+<blockquote>
+<p>转换到连接的另一端，HAProxy 需要决定如何确认这两个包。在 1.4.18 版本中（我们正在用的版本），它是通过 TCP 延迟确认通知来实现的。延迟确认对 Nagle 算法有非常糟糕的影响，会导致请求暂停直到服务器延迟确认超时。</p>
+</blockquote>
+<p>现在我们解释这个段落说的内容。</p>
+<ul>
+<li>TCP 是一个通过数据包传输数据的算法</li>
+<li>他们的 HTTP 库将 POST 请求分割成两个小的数据包发送</li>
+</ul>
+<p>接下来，TCP 采用类似如下的步骤进行交互：</p>
+<blockquote>
+<p>application：Hi！这里有一个数据包。<br>HAProxy：（沉默），等待第二个包发送<br>HAProxy：对了，我需要返回一个确认，不过没关系，等会吧<br>application: （沉默）<br>application：好吧，我正在等待确认，可能现在网络延迟比较大<br>HAProxy：好吧，太烦人了，这是一个确认。<br>application：好极了，这是第二个数据包！！！<br>HAProxy：亲，我们已经搞定了。</p>
+</blockquote>
+<p>这个过程是不是应用程序和 HAProxy 都在消极等待另一方发送信息？这就是那额外的 200ms。应用程序这么做的是因为 Nagle 算法，而 HAProxy 消息等待的原因是延迟确认。</p>
+<p>据我所知，延迟确认是所有 Linux 系统的默认行为。所以这不是一个偶然或者异常情况，如果发送 TCP 数据包多一个 1 个，你就会遇到这种情况。</p>
+<h3 id="-1"><a href="#-1" class="headerlink" title=" "></a> </h3><h3 id="现在，我们成为专家了"><a href="#现在，我们成为专家了" class="headerlink" title="现在，我们成为专家了"></a><strong>现在，我们成为专家了</strong></h3><p>读过这篇文章之后我很快就忘了。不过当我被额外的 40 毫秒难住的时候，我又记起来了。</p>
+<p>所以我认为——这不可能是我的问题，可能吗？可能吗？？然后我发了一封邮件给我团队说：“我想我快要疯了，但是这可能是 TCP 的问题”。</p>
+<p>所以我提交了一次修订，将我的应该调整为 TCP_NODELAY，然后问题就“嘣”的一声解决了。</p>
+<p>40 毫秒的延迟立马就消失了。所有的事情都解决了，我就是个天才。</p>
+<h3 id="-2"><a href="#-2" class="headerlink" title=" "></a> </h3><h3 id="我们是否应该完全停止使用延迟确认？"><a href="#我们是否应该完全停止使用延迟确认？" class="headerlink" title="我们是否应该完全停止使用延迟确认？"></a><strong>我们是否应该完全停止使用延迟确认？</strong></h3><p>我刚好在 Hacker News 看到 John Nagle （Nagle 算法的创始人）对 @alicemazzy 提到这个问题的评论。</p>
+<blockquote>
+<p>本质问题是延迟确认。200 毫秒的“延迟确认”是一个非常不好的主意，1985 年中，在伯利克（Berkeley）研究 BSD 的人实际上没有真正明白这个问题。延迟确认是应用层对 200 毫秒内是否响应的一场赌博，但是即便每次它都赌输了，TCP 仍在使用延迟确认。</p>
+</blockquote>
+<p>他继续说到，确认本身是很小并且消耗很低的，延迟确认引起的问题可能比它解决的问题还要多。</p>
+<h3 id="不懂得-TCP-你就无法解决-TCP-问题"><a href="#不懂得-TCP-你就无法解决-TCP-问题" class="headerlink" title="不懂得 TCP 你就无法解决 TCP 问题"></a><strong>不懂得 TCP 你就无法解决 TCP 问题</strong></h3><p>我曾经也认为，TCP 是一个相当底层的问题，我不需要明白。大多数时候你的确不需要明白。但是有的时候，当你在实践中遇到由于 TCP 算法引起的 bug 时，懂点 TCP 知识就变得非常重要了。（正如我们经常在博客中讨论的，许多事情都是这样，比如系统调用和操作系统:) ）</p>
+<p>延迟确认及 TCP_NODELAY 的交互非常不好——这对任何语言实现的 HTTP 请求都有影响。你不需要很深入的去了解，成为系统程序专家。但是了解一点 TCP 是如何运作的，对我的工作的确大有裨益。通过对 TCP 的学习，我才意识到这篇博客所描述的问题也许正好是我所熟悉的领域。我也一直在使用 strace，并且会一直使用下去。</p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/TCP/"><i class="fas fa-hashtag fa-fw"></i>TCP</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
         
           
             <div class="post-wrapper">
@@ -1522,85 +1626,6 @@ If you continue to experience issues, please install Microsoft&apos;s DirectX En
             </div>
           
         
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2018/04/15/Python中if-name-name-main/">
-              
-                  Python中if __name__ == "__main__"是什么作用
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2018-04-15
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/Python/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              Python
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>2018/4/15 22:19:35 </p>
-<hr>
-<ul>
-<li>最近在写毕业论文使用到Python，在查找文献资源中看到了一行代码<br><code>Python中if __name__ == &quot;__main__:&quot;</code>之前练习Python并没有注意这个，也可能太就给忘了，为了搞清这个语句于是开始疯狂百度，各种论坛博客搜索，最终找到了这个语句的作用个人感觉最易懂的解释，分享给大家</li>
-<li>python文件的后缀名是.py，python文件既可以用来直接执行，也可以作为模块被导入。<br>我们在使用python时经常会看到<code>Python中if __name__ == &quot;__main__:&quot;</code>这样一个句子,这是什么呢？<br>其中name是模块的内置属性，而这个内置属性的值取决于这个.py文件的使用方式，即你是作为模块导入还是直接执行。<br>如果你是直接执行，那么这个name的值就是’main’，如果你作为一个模块导入，那么这个内置属性值就取决于这个文件名(不包含路径和文件扩展名)。<br>所以我们在看到一个这样的句子<code>Python中if __name__ == &quot;__main__&quot;:</code>时，就是文件在执行时要执行这个main()函数</li>
-</ul>
-<hr>
-<p>附上一张号称一篇程序覆盖Python基础的代码，基本的结构都涉及到了，看不清的话保存本地放大看吧。<br><img src="https://img-blog.csdn.net/20160511222649275" alt></p>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/Python/"><i class="fas fa-hashtag fa-fw"></i>Python</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
       
 
   </section>
@@ -1750,7 +1775,7 @@ If you continue to experience issues, please install Microsoft&apos;s DirectX En
         
           <li><a class="flat-box" title="/categories/web基础/" href="/categories/web基础/"><div class="name">web基础</div><div class="badge">(4)</div></a></li>
         
-          <li><a class="flat-box" title="/categories/常用工具/" href="/categories/常用工具/"><div class="name">常用工具</div><div class="badge">(1)</div></a></li>
+          <li><a class="flat-box" title="/categories/常用工具/" href="/categories/常用工具/"><div class="name">常用工具</div><div class="badge">(2)</div></a></li>
         
           <li><a class="flat-box" title="/categories/脚本/" href="/categories/脚本/"><div class="name">脚本</div><div class="badge">(1)</div></a></li>
         
@@ -1776,7 +1801,7 @@ If you continue to experience issues, please install Microsoft&apos;s DirectX En
 </header>
 
     <div class="content material">
-      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 24px; color: #555">Markdown</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/TCP/" style="font-size: 24px; color: #555">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a>
+      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 24px; color: #555">Markdown</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/TCP/" style="font-size: 24px; color: #555">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
     </div>
   </section>
 

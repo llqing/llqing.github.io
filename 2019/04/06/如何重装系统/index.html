@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Tag: hexo | GIS小站</title>
+  <title>如何重装系统 | GIS小站</title>
   
   <meta name="keywords" content="GIS,Code">
   
@@ -180,87 +180,16 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            
-    <script>
-        window.subData= { title:'标签 : hexo'}
-    </script>
-
-
-
-
-  <section class="post-list">
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-
-
-
-      
-
-      
-
-      
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
+            <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
   
 <section class="meta">
   
   
   <div class="meta" id="header-meta">
     
-      <h2 class="title">
-          <a href="/2018/07/26/hexo博客出现command-not-found解决方案/">
-              
-                  hexo博客出现command not found解决方案
-              
-          </a>
-      </h2>
+      
+          <h1 class="title">如何重装系统</h1>
+      
     
 
     <div class="new-meta-box">
@@ -276,7 +205,7 @@
         <div class="new-meta-item date">
           <a class="notlink">
             <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2018-07-26
+            2019-04-06
           </a>
         </div>
       
@@ -284,13 +213,24 @@
         
           
           <div class="new-meta-item category">
-            <a href="/categories/Blog/">
+            <a href="/categories/常用工具/">
               <i class="fas fa-folder-open" aria-hidden="true"></i>
-              Blog
+              常用工具
             </a>
           </div>
         
       
+      
+        
+          <div class="new-meta-item browse busuanzi">
+            <a class="notlink">
+              <i class="fas fa-eye" aria-hidden="true"></i>
+              <span id="busuanzi_value_page_pv">
+                <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+              </span>
+            </a>
+          </div>
+        
       
       
     </div>
@@ -298,45 +238,208 @@
   </div>
 </section>
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>2018/7/26 22:14:17</p>
-<p>自从上次更新了博客后,后来就开始了正式的学习,由于电脑升级的原因考虑到今后需要用到的软件会比较多,现在用的电脑配置有点低了,所以对电脑进行了一次小升级购买了固态后重装了系统,以致于之前的博客文件和配置的环境出现了问题,导致不能正常上传博客文件,后来课程太紧,一拖再拖没有来及解决这个问题.</p>
-<p>今天去网上看了下,发现有很多这样的问题,重装系统后会出现command not found提示,接下来就是一波百度,寻找解决办法,发现个办法都有瑕疵并不能一次完美解决.</p>
-<p>最后决定还是使用最粗暴的办法吧,也避免出现一些环境,插件缺少的问题,于是按照我之前写的教程开始了重新配置,安装完毕之后,首先查看各种工具是否都安装好了，在命令行中输入<code>node -v</code><br>然后再检查<code>npm -v</code>,<br>这些都没有问题的话,接下来检查下环境变量有没有配置,如果发现没有配置的话,可以先去找到这个路径，<code>C:\Users\feng\node_modules\hexo\bin</code>，然后把它添加到环境变量PATH路径的后面。这样基本就配置完成了.</p>
-<p>提示:如果发现安装过程存在,使用淘宝NPM镜像，输入以下命令安装  cnpm, <code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code>,时出错的情况,可以检查下你的git和node的版本,笔者此前出现过因为版本过高而不能正常安装的问题.希望能给大家提供帮助.</p>
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本来我是不想写这篇文章的<del>因为懒</del>。</p>
+<p>但是有鉴于最近<strong>找我装系统的人太多</strong>了，再加上看见小白被无良商家骗于心不忍，就写篇教程吧-_-。</p>
+<p>我会把装机的主要几个阶段讲一下，但是任何跟着提示稍微理解下就可以无风险走的小步骤就不讲了。</p>
+<h2 id="装系统之前的准备"><a href="#装系统之前的准备" class="headerlink" title="装系统之前的准备"></a>装系统之前的准备</h2><p>首先要有个概念 <code>装系统是一件很简单的事</code>。电脑是一件给人用的 <strong>工具</strong> ，厂商没有理由设置门槛。装机是很简单的，<strong>但是最好不要随意重装系统，文件、软件重新安置太麻烦了</strong>。</p>
+<h2 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h2><ul>
+<li>物理准备<ul>
+<li>一只8G以上U盘</li>
+</ul>
+</li>
+<li>心理准备<ul>
+<li>一小时不到的时间</li>
+<li>一定的理解能力</li>
+</ul>
+</li>
+</ul>
+<h2 id="装机阶段"><a href="#装机阶段" class="headerlink" title="装机阶段"></a>装机阶段</h2><ol>
+<li><p>找到你所用电脑的<strong>主板</strong>厂商（<em>不需要拆机箱，直接用aida64或者别的软件看</em>）以及<strong>型号</strong>，如果是笔记本就直接使用<strong>电脑型号</strong>。</p>
+</li>
+<li><p>搜索 xxxx（<em>你的主板型号</em>） 进入bios的<strong>快捷键</strong>，并记住它。</p>
+</li>
+<li><p>在<a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">msdn 我告诉你</a>，这个网站上找到你要装的系统的 <strong>64位</strong> <strong>最新版本</strong>。</p>
+</li>
+<li><p>下载它。</p>
+</li>
+<li><p><strong>格式化</strong>U盘。</p>
+</li>
+<li><p>把下载的镜像文件用解压软件<strong>解压到U盘</strong>。</p>
+</li>
+<li><p><strong>备份c盘里的文件</strong>，其它盘看你想不想顺便格式化。</p>
+</li>
+<li><p>重启，并在开机的过程中<strong>狂按</strong>你记住的<strong>快捷键</strong>。</p>
+</li>
+<li><p>你将会进入一个蓝蓝白白的界面（bios），请动用你的英语水平进行翻译后使用。</p>
+</li>
+<li><p>你有两个选择</p>
+<ul>
+<li>UEFI路线<ol>
+<li>找到<strong>boot</strong>里面的<strong>UEFI</strong>设置为<strong>ENABLE</strong></li>
+<li><strong>重启</strong>，开机过程中<strong>狂按</strong>快捷键</li>
+<li>会看见弹出一个<strong>对话框</strong>，选择 <strong>WINDOWS</strong> <strong>BOOT</strong> <strong>MANAGER</strong></li>
+</ol>
+</li>
+<li>传统路线<ol>
+<li>找到<strong>boot</strong>里面的<strong>启动顺序</strong></li>
+<li>按照操作指示，把<strong>U盘</strong>放到最上面</li>
+<li>重启</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>在Windows安装指示界面中，按照指示</p>
+<p>操作</p>
+<p>进行操作</p>
+<ul>
+<li>分区格式化请<strong>谨慎</strong></li>
+</ul>
+</li>
+<li><p>开机后联网会<strong>自动</strong>安装驱动</p>
+</li>
+<li><p>在你的显卡的对应官网下载安装<strong>显卡驱动</strong></p>
+</li>
+<li><p>在设备管理器中查看有无设备上有<strong>感叹号标识</strong>，若有，去官网下载驱动。</p>
+</li>
+<li><p>是否安装</p>
+<p>360</p>
+<p>、</p>
+<p>驱动大师</p>
+<p>等软件自行判断</p>
+<ul>
+<li>我推荐ccleaner、火绒</li>
+</ul>
+</li>
+<li><p>重启进入bios，把设置还原为改动之前的</p>
+</li>
+</ol>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>简单的电脑维护其实很简单(<del>废话</del>)，只要不<strong>先入为主</strong>地认为自己不会，<strong>善用搜索引擎</strong>，不懂的东西<strong>稍微研究</strong>一下，一般都没有问题的。</p>
+<p><strong>如果看完本文仍觉得无从下手的话，可以联系QQ:244675854提供技术支持（收辛苦费20~30呦！），嘻嘻</strong></p>
+<blockquote>
+<p>我不对任何本文后果负责，还请读者们自行判断。</p>
+</blockquote>
 
+      </div>
+        
+          <section class="meta" id="footer-meta">
+            <hr>
+            <div class="new-meta-box">
+              
+                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-04-06T15:41:55+08:00">
+                  <a class="notlink">
+                    <i class="fas fa-save" aria-hidden="true"></i>
+                    2019-04-06
+                  </a>
+                </div>
+              
+              
+                
+                <div class="new-meta-item meta-tags"><a class="tag" href="/tags/重装系统/"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;重装系统</a></div>
+              
+              
+                
+  <div class="new-meta-item share -mob-share-list">
+    <i class="fas fa-share-alt" aria-hidden="true"></i>
+    <div class="-mob-share-list share-body">
+      
+        
+          <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/04/06/如何重装系统/&title=如何重装系统 | GIS小站&summary=">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+            
+          </a>
+        
+      
+        
+          <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2019/04/06/如何重装系统/&title=如何重装系统 | GIS小站&summary=">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+            
+          </a>
+        
+      
+        
+          <a class="qrcode" rel="external nofollow noopener noreferrer" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3a224DIQwFwP7/T6dSn1pVS47tTdXA8BTlwjJEsrDNx0c8Hl/j++urd35/evWr/Le3DQwMjLdlPJZjzUgw68Ulz41mw8DAOICRBNk84iXBOt+y9dowMDAw1kF2HToT5Po7GBgYGL2Am0/d+yYGBgbGJIldv58D8nT3Jbk4BgbGGzJ6jYG/ef3y/gYGBsa/ZzxaI09Z83LbaD0YGBhbM/JC2HyJ1RJeXnrDwMA4gVFNaKsbkW9TvujCP4OBgbERI29SVn/Vu2aRl+0wMDD2ZuSHud5FirwZObqEgYGBcQBjfpjrJau3BXcMDIwDGOupC6X5+PG9o+HlOjEwMI5hzMv01ZCaHB+jxgMGBsZhjHzqaiMzD+XlrcHAwDiA0Sv052lwnipX0+YfARcDA2NTRjW05Z/2Zs5Df3TZAgMDY1NGkkDmpf9e0EyOjJcYDAyMAxj3BtnqZa/qAbGwQxgYGG/LmLcBCoe2cYHvSS6OgYGxKaN3JaJa1k/CcTWsY2BgnMYY6VuHwkkBLsqMMTAwtmb0LkNMtiZPXJ/wMDAwtmZMSl35xa/kUFgFYGBgnMB4FEevtTk5hkYhGwMDY2tGPnrl/vwyR7XlUAZgYGC8OWMSZOeXLW4LuBgYGAcwJoEvD8e9tDk6VmJgYGC0movzixo3VAoxMDAOY/TK+nc1DJ48CwMD4wBG3oysprjV+Zsbh4GBsTVj0hhIwPmWTVqhGBgYmzI+AVoYx2U2zcAbAAAAAElFTkSuQmCC">
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+          
+          </a>
+        
+      
+        
+          <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/04/06/如何重装系统/&title=如何重装系统 | GIS小站&summary=">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+            
+          </a>
+        
+      
+        
+          <a class="qrcode" rel="external nofollow noopener noreferrer" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3a224DIQwFwP7/T6dSn1pVS47tTdXA8BTlwjJEsrDNx0c8Hl/j++urd35/evWr/Le3DQwMjLdlPJZjzUgw68Ulz41mw8DAOICRBNk84iXBOt+y9dowMDAw1kF2HToT5Po7GBgYGL2Am0/d+yYGBgbGJIldv58D8nT3Jbk4BgbGGzJ6jYG/ef3y/gYGBsa/ZzxaI09Z83LbaD0YGBhbM/JC2HyJ1RJeXnrDwMA4gVFNaKsbkW9TvujCP4OBgbERI29SVn/Vu2aRl+0wMDD2ZuSHud5FirwZObqEgYGBcQBjfpjrJau3BXcMDIwDGOupC6X5+PG9o+HlOjEwMI5hzMv01ZCaHB+jxgMGBsZhjHzqaiMzD+XlrcHAwDiA0Sv052lwnipX0+YfARcDA2NTRjW05Z/2Zs5Df3TZAgMDY1NGkkDmpf9e0EyOjJcYDAyMAxj3BtnqZa/qAbGwQxgYGG/LmLcBCoe2cYHvSS6OgYGxKaN3JaJa1k/CcTWsY2BgnMYY6VuHwkkBLsqMMTAwtmb0LkNMtiZPXJ/wMDAwtmZMSl35xa/kUFgFYGBgnMB4FEevtTk5hkYhGwMDY2tGPnrl/vwyR7XlUAZgYGC8OWMSZOeXLW4LuBgYGAcwJoEvD8e9tDk6VmJgYGC0movzixo3VAoxMDAOY/TK+nc1DJ48CwMD4wBG3oysprjV+Zsbh4GBsTVj0hhIwPmWTVqhGBgYmzI+AVoYx2U2zcAbAAAAAElFTkSuQmCC">
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+          
+          </a>
+        
       
     </div>
-    
-      <div class="full-width auto-padding tags">
+  </div>
+
+
+              
+            </div>
+          </section>
         
-          <a href="/tags/hexo/"><i class="fas fa-hashtag fa-fw"></i>hexo</a>
+
         
-      </div>
-    
-  </section>
+            <div class="prev-next">
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2019/04/06/一键激活window-office/" rel="prev" title="一键激活window &amp; office">
+                                    
+                                        一键激活window &amp; office
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/激活/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>激活</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+
+    </section>
+
 </article>
 
-            </div>
-          
-        
-      
-
-  </section>
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
 
 
+<br>
+
+<!-- 显示推荐文章和评论 -->
 
 
 
 
-  
 
-  <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-  
-
-  
-
+<script>
+    window.subData = {
+        title: '如何重装系统',
+        tools: true
+    }
+</script>
 
 
         </div>
@@ -391,6 +494,20 @@
       
       
         
+  <section class="toc-wrapper">
+    
+<header class="material">
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章目录</div>
+  
+    <div class="wrapper"><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class="content material">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#装系统之前的准备"><span class="toc-text">装系统之前的准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#准备阶段"><span class="toc-text">准备阶段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#装机阶段"><span class="toc-text">装机阶段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#后记"><span class="toc-text">后记</span></a></li></ol>
+    </div>
+  </section>
+
 
       
     
