@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>为什么你得学些TCP知识 | GIS小站</title>
+  <title>Tag: ArcGIS | GIS小站</title>
   
   <meta name="keywords" content="GIS,Code">
   
@@ -180,16 +180,89 @@
     <div class="l_body">
     <div class='container clearfix'>
         <div class='l_main'>
-            <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+            
+    <script>
+        window.subData= { title:'标签 : ArcGIS'}
+    </script>
+
+
+
+
+  <section class="post-list">
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+
+
+
+      
+
+      
+
+      
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
   
 <section class="meta">
   
   
   <div class="meta" id="header-meta">
     
-      
-          <h1 class="title">为什么你得学些TCP知识</h1>
-      
+      <h2 class="title">
+          <a href="/2019/04/07/ArcGIS-API-for-JavaScript入门教程-1-前戏/">
+              
+                  ArcGIS API for JavaScript入门教程(1)-前戏
+              
+          </a>
+      </h2>
     
 
     <div class="new-meta-box">
@@ -205,7 +278,7 @@
         <div class="new-meta-item date">
           <a class="notlink">
             <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-03-30
+            2019-04-07
           </a>
         </div>
       
@@ -213,24 +286,13 @@
         
           
           <div class="new-meta-item category">
-            <a href="/categories/web基础/">
+            <a href="/categories/GIS/">
               <i class="fas fa-folder-open" aria-hidden="true"></i>
-              web基础
+              GIS
             </a>
           </div>
         
       
-      
-        
-          <div class="new-meta-item browse busuanzi">
-            <a class="notlink">
-              <i class="fas fa-eye" aria-hidden="true"></i>
-              <span id="busuanzi_value_page_pv">
-                <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
-              </span>
-            </a>
-          </div>
-        
       
       
     </div>
@@ -238,180 +300,99 @@
   </div>
 </section>
 
-    <section class="article typo">
-      <div class="article-entry" itemprop="articleBody">
-        <p>这不是指要明白 TCP 的所有东西，也不是说要通读 《TCP/IP 详解》。不过懂一点 TCP 知识是很有必要的。理由如下：</p>
-<p>当我还在 Recurse Center 的时候，我用 Python 写过 TCP 协议栈（还写过一篇文章：如果你用 Python 写 TCP 协议栈会遇到什么？）。这是一次有趣的学习经历，但是也仅此而已。</p>
-<p>一年以后，工作中有人在 Slack 上提到：“嘿，我在向 NSQ 发布消息时，每次要耗费 40 毫秒”。我已经断断续续思考了一个星期，但是没有任何结果。</p>
-<p>一点背景知识：NSQ 是一个消息队列，你通过本地的一个 HTTP 请求向其发布消息。发送本地的一个 HTTP 请求确实不应该花费 40 毫秒，有时候会更差。NSQ 守护进程的负载不高，也没有使用过多的内存，也看不到 GC 停顿。这究竟是为什么呢？神呐，救救我吧！</p>
-<p>突然我记起我一周以前看过的一篇叫做“性能研究（In search of performance）”的文章——我们如何为每个 POST 请求节省 200ms。在这篇文章中，他们说到为什么每个 POST 请求会花费额外的 200 毫秒。就是这个原因。这是该文章中的关键段落：</p>
-<h3 id><a href="#" class="headerlink" title=" "></a> </h3><h3 id="延迟确认（ACK）-与-TCP-NODELAY"><a href="#延迟确认（ACK）-与-TCP-NODELAY" class="headerlink" title="延迟确认（ACK） 与 TCP_NODELAY"></a><strong>延迟确认（ACK） 与 TCP_NODELAY</strong></h3><blockquote>
-<p>Ruby 的 Net::HTTP 会将 POST 请求切分为两个 TCP 包，一个消息头，一个消息体。相反，curl 会将这两者合并为一个包。更糟糕的是，Net::HTTP 在打开 TCP 套接字时不会设置 TCP_NODELAY，这将导致第二个包需要等到第一个包的接收确认通知之后才能发送。这是 Nagle 算法导致的。</p>
-</blockquote>
-<blockquote>
-<p>转换到连接的另一端，HAProxy 需要决定如何确认这两个包。在 1.4.18 版本中（我们正在用的版本），它是通过 TCP 延迟确认通知来实现的。延迟确认对 Nagle 算法有非常糟糕的影响，会导致请求暂停直到服务器延迟确认超时。</p>
-</blockquote>
-<p>现在我们解释这个段落说的内容。</p>
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <blockquote>
 <ul>
-<li>TCP 是一个通过数据包传输数据的算法</li>
-<li>他们的 HTTP 库将 POST 请求分割成两个小的数据包发送</li>
+<li>-&gt;对于萌新，你可能需要了解一下这个东西是什么</li>
+<li>-&gt;对于已经知道要用这个东西的开发者，你可能需要了解一下它的底层机制</li>
+<li>不针对大牛。龟速更新ing.</li>
 </ul>
-<p>接下来，TCP 采用类似如下的步骤进行交互：</p>
-<blockquote>
-<p>application：Hi！这里有一个数据包。<br>HAProxy：（沉默），等待第二个包发送<br>HAProxy：对了，我需要返回一个确认，不过没关系，等会吧<br>application: （沉默）<br>application：好吧，我正在等待确认，可能现在网络延迟比较大<br>HAProxy：好吧，太烦人了，这是一个确认。<br>application：好极了，这是第二个数据包！！！<br>HAProxy：亲，我们已经搞定了。</p>
 </blockquote>
-<p>这个过程是不是应用程序和 HAProxy 都在消极等待另一方发送信息？这就是那额外的 200ms。应用程序这么做的是因为 Nagle 算法，而 HAProxy 消息等待的原因是延迟确认。</p>
-<p>据我所知，延迟确认是所有 Linux 系统的默认行为。所以这不是一个偶然或者异常情况，如果发送 TCP 数据包多一个 1 个，你就会遇到这种情况。</p>
-<h3 id="-1"><a href="#-1" class="headerlink" title=" "></a> </h3><h3 id="现在，我们成为专家了"><a href="#现在，我们成为专家了" class="headerlink" title="现在，我们成为专家了"></a><strong>现在，我们成为专家了</strong></h3><p>读过这篇文章之后我很快就忘了。不过当我被额外的 40 毫秒难住的时候，我又记起来了。</p>
-<p>所以我认为——这不可能是我的问题，可能吗？可能吗？？然后我发了一封邮件给我团队说：“我想我快要疯了，但是这可能是 TCP 的问题”。</p>
-<p>所以我提交了一次修订，将我的应该调整为 TCP_NODELAY，然后问题就“嘣”的一声解决了。</p>
-<p>40 毫秒的延迟立马就消失了。所有的事情都解决了，我就是个天才。</p>
-<h3 id="-2"><a href="#-2" class="headerlink" title=" "></a> </h3><h3 id="我们是否应该完全停止使用延迟确认？"><a href="#我们是否应该完全停止使用延迟确认？" class="headerlink" title="我们是否应该完全停止使用延迟确认？"></a><strong>我们是否应该完全停止使用延迟确认？</strong></h3><p>我刚好在 Hacker News 看到 John Nagle （Nagle 算法的创始人）对 @alicemazzy 提到这个问题的评论。</p>
-<blockquote>
-<p>本质问题是延迟确认。200 毫秒的“延迟确认”是一个非常不好的主意，1985 年中，在伯利克（Berkeley）研究 BSD 的人实际上没有真正明白这个问题。延迟确认是应用层对 200 毫秒内是否响应的一场赌博，但是即便每次它都赌输了，TCP 仍在使用延迟确认。</p>
-</blockquote>
-<p>他继续说到，确认本身是很小并且消耗很低的，延迟确认引起的问题可能比它解决的问题还要多。</p>
-<h3 id="不懂得-TCP-你就无法解决-TCP-问题"><a href="#不懂得-TCP-你就无法解决-TCP-问题" class="headerlink" title="不懂得 TCP 你就无法解决 TCP 问题"></a><strong>不懂得 TCP 你就无法解决 TCP 问题</strong></h3><p>我曾经也认为，TCP 是一个相当底层的问题，我不需要明白。大多数时候你的确不需要明白。但是有的时候，当你在实践中遇到由于 TCP 算法引起的 bug 时，懂点 TCP 知识就变得非常重要了。（正如我们经常在博客中讨论的，许多事情都是这样，比如系统调用和操作系统:) ）</p>
-<p>延迟确认及 TCP_NODELAY 的交互非常不好——这对任何语言实现的 HTTP 请求都有影响。你不需要很深入的去了解，成为系统程序专家。但是了解一点 TCP 是如何运作的，对我的工作的确大有裨益。通过对 TCP 的学习，我才意识到这篇博客所描述的问题也许正好是我所熟悉的领域。我也一直在使用 strace，并且会一直使用下去。</p>
+<h1 id="1-是什么【萌新别跳这一步】"><a href="#1-是什么【萌新别跳这一步】" class="headerlink" title="1. 是什么【萌新别跳这一步】"></a>1. 是什么【萌新别跳这一步】</h1><p><em>如果非萌新，可以跳过这一段文字。</em></p>
+<p>想要知道ArcGIS API for JavaScript是什么，我大概用以下几条条目描述：</p>
+<ul>
+<li>是一个WebGIS二次开发（如果不知道什么是WebGIS请用搜索引擎···）的前端开发包，使用JavaScript语言</li>
+<li>出自美国Esri公司</li>
+<li>是Esri的ArcGIS Runtime SDK家族中的一员</li>
+<li>它不是纯Js写的库</li>
+</ul>
+<p>能说明什么呢？</p>
+<ol>
+<li>它能制作在线地理信息系统平台，能做数据分析、空间分析、数据展示等；</li>
+<li>歪果仁写的，英文资料多，虽然中文也有一定数量的资料（博客、书籍等），但是呢，由于Esri更新贼快，一年三四更的，中文资料不一定跟得上速度；</li>
+<li>你可能需要学很多附属的东西，这个API很庞大、很笨重，入门门槛其实不高，但是深入难，前端上，你得知道造这个API的基础——Dojo框架，而Dojo框架由于历史渊源，又来自从属AMD（异步模块定义）规范的RequireJs，要想了解AMD，又不得不去看一些前端和后端的发展史，甚至不可避免要学一些基础的后端。</li>
+</ol>
+<p>如果你做好了这些准备，继续。</p>
+<p>哦对了，这个API当前有两个大支线，一个是3.x版本，一个是4.x版本；</p>
+<p>3.x版本已经很成熟，用于2D的WebGIS二次开发很完美，如果你用的是ArcGIS整套产品；</p>
+<p>我重点讲一下类和模块经过重新构造、较为简单的4.x版本，因为它最大的特征是数据视图分离、支持3D，旗帜鲜明对接ArcGIS Pro.</p>
+<h1 id="2-我必须学它吗？"><a href="#2-我必须学它吗？" class="headerlink" title="2. 我必须学它吗？"></a>2. 我必须学它吗？</h1><p>如果你的项目需求很大，大量用到空间分析、三维展示，频繁交互ArcGIS家族的产品（Server、ArcGIS Desktop等），请学；</p>
+<p>如果你的项目需求比较小，也可以学，当然也可以有别的选择：</p>
+<ul>
+<li>开源解决方案：Openlayers/Leaflets替代JsAPI。</li>
+</ul>
+<p>Openlayers和Leaflets同样是WebGIS二次开发工具包，排名很靠前，二者区别是ol自己提供了封装好的功能模块，而lf则支持插件式，它的插件很多。他们都支持npm方式引入。</p>
+<ul>
+<li>当然，为了实现简单的三维GIS，Cesium了解一下；</li>
+<li>如果只是3D数据展示，ThreeJs了解一下；</li>
+<li>如果数据源缺乏，不想自己做数据服务，对WebGIS标准缺少耐心，可以试试高德地图API、百度地图API等。</li>
+<li>如果想全开源，就目前而言3DGIS还是ArcGIS最强外，传统二维WebGIS可以用QGIS代替ArcGIS Desktop、用PostgreSQL代替Geodatabase、用GeoServer代替ArcGIS for Server。</li>
+</ul>
+<p>使用JsAPI最强大的特征就是真三维空间分析+无比强大的ArcTools工具箱了。</p>
+<h1 id="3-学习此API需要些什么"><a href="#3-学习此API需要些什么" class="headerlink" title="3. 学习此API需要些什么"></a>3. 学习此API需要些什么</h1><p>熟练HTML 5的学习方式、熟练CSS 3的学习方式、能自我学习JavaScript，最好有一定的GIS基础知识、一定的数学知识。</p>
+<p>我们在这里约定</p>
+<p>ArcGIS API for JavaScript = jsapi/JsAPI/jsAPI…</p>
+<p>你可能还要学习的是：</p>
+<ul>
+<li>NodeJs与npm（在4.7及3.24版本后可能要用npm下载）——作备选项，不学也无所谓</li>
+<li>webpack——上面那俩如果你学了，这个肯定要学了。</li>
+<li>英语</li>
+</ul>
+<p>对了，你不需要学怎么配置本地环境（就是说用官方的在线API进行学习就好了），我觉得那些东西网上太多了，查一下就行。有可能遇到跨域的问题，你也可以问搜索引擎，这里更关注的是“入门”而不是全面、细节，我需要把你快速带入门，之后看你的造化。</p>
+<h1 id="4-它怎么来的"><a href="#4-它怎么来的" class="headerlink" title="4. 它怎么来的"></a>4. 它怎么来的</h1><p>它基于一个更复杂的前端框架，Dojo.js。</p>
+<p>除了当前两条支线3.x和4.x，其实早些年还有过ArcGIS API for Sliverlight和ArcGIS API for Flex，当然他们已经退休了。</p>
+<p>JavaScript那么火热，自然而然选他啦。</p>
+<p>由于GIS数据模型的复杂性，和普通的Web信息系统不同，面向对象的机制更合适去描述GIS数据和GIS分析。当时，没有别的好选择，只能选Dojo，因为它支持许多符合WebGIS的特性，如异步操作、面向对象等。</p>
+<p>现如今，基于Node的包管理模式的前端开发早已不是什么难事，甚至还冒出了MVVM框架的一大堆火热框架。老迈的Dojo框架不能很好地融入其中，这让人很无奈。</p>
+<p>在JsAPI中，地图可以是一个模块，图层可以是一个模块，一个用于空间分析的“东西”也可以是一个模块。类似于桌面编程中的类、继承机制，AMD规范下的RequireJs就产生了。Dojo基于此，定制了一大批的有用模块，能做图表，能做页面，能读写DOM，能做动画，当然是你需要什么模块就调用什么模块，并不需要一次性全部加载。JsAPI基于Dojo，定制了各个方面的模块，从而向开发者提供了一套强大的WebGIS二次开发包。</p>
+<p>——————————</p>
+<p>好了，可以开始讲了。</p>
+<p>哦对了，我学的也不深，请不要用教程二字绑架我，认为我什么都会，我也在学习，希望一起交流，一起进步。</p>
 
-      </div>
-        
-          <section class="meta" id="footer-meta">
-            <hr>
-            <div class="new-meta-box">
-              
-                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-03-30T11:49:22+08:00">
-                  <a class="notlink">
-                    <i class="fas fa-save" aria-hidden="true"></i>
-                    2019-03-30
-                  </a>
-                </div>
-              
-              
-                
-                <div class="new-meta-item meta-tags"><a class="tag" href="/tags/TCP/"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;TCP</a></div>
-              
-              
-                
-  <div class="new-meta-item share -mob-share-list">
-    <i class="fas fa-share-alt" aria-hidden="true"></i>
-    <div class="-mob-share-list share-body">
-      
-        
-          <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/03/30/为什么你得学些TCP知识/&title=为什么你得学些TCP知识 | GIS小站&summary=">
-            
-              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
-            
-          </a>
-        
-      
-        
-          <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2019/03/30/为什么你得学些TCP知识/&title=为什么你得学些TCP知识 | GIS小站&summary=">
-            
-              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
-            
-          </a>
-        
-      
-        
-          <a class="qrcode" rel="external nofollow noopener noreferrer" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtklEQVR42u3aUW7jMAwE0Nz/0t0LNM4MKbVd4PkrMBLLTwVMdujXKz6+3hzP3393hVd5bH6Lh4eHd4P39Xg83+67M8l2JFvw/DnadDw8PLxrvOeHe1sM2mvmjPz6eHh4eH+HlxeA503JH+54eHh4/y/vmToLDmbfxMPDw/sLvM0jPtmOZGv2YQceHh7ez/A2D+Xf+nxlvoeHh4e3nqonx6wM7Jv16N7w8PDwLvD2rXDeiLeRx+wevrkOHh4e3lHe7NWoPLTNg9e2DESr4OHh4V3jJa9Y7UtC/tBvX2L4kE/j4eHhHeU9N7L78dKpwrN5yQAPDw/vLC9fMl+mDSCivKRs5aNuHQ8PD2/ESxbIF05a5LYFz2PlqLHGw8PDW/Py4dOm5Z1tR3Lmw3Xw8PDwLvM2bfEsqtiEuVHkgYeHh3eBl0cDeUiRt8JJDLF/NQEPDw/vLO8UoJi2lask69YlAQ8PD2/Ba2OIpKlt51CzkVsRneDh4eH9OC+foeUDs1lRyWd6RfXDw8PDG/Fm//bPMHlpmW3oh8YaDw8P7ygvHyklccA+SpjFwcXMDQ8PD2/Em7XOs9cF2rXawvDNWnh4eHgXeG2RyAtJy2g/zxp3PDw8vFO8Weuc7NPm4d5uepSy4OHh4a15bcTwKo/Z9fNWO/q74eHh4R3l5QVgE/62oUbeNEd3iIeHh3eUlw/123C2jYbzVYoXHfDw8PAu8PIHev5Q3gylNr96u4l4eHh4R3lf5XFqcLUZldX/K+Dh4eEd5Z0NGvIzeVybb+gKj4eHh1fy2lvP9yaPHtrotigbeHh4eNd4s8H/7BbzX7VhxNsYFw8PD++XeKfeVmjHZm1AjIeHh/d3ePm7TG382mKKNAUPDw/vGm8/oDpbMFr2h8KAh4eHd5Q3Kx6zZnd2fhbs4uHh4V3g/QNvLRbbHVm4qAAAAABJRU5ErkJggg==">
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
-          
-          </a>
-        
-      
-        
-          <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/03/30/为什么你得学些TCP知识/&title=为什么你得学些TCP知识 | GIS小站&summary=">
-            
-              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
-            
-          </a>
-        
-      
-        
-          <a class="qrcode" rel="external nofollow noopener noreferrer" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACtklEQVR42u3aUW7jMAwE0Nz/0t0LNM4MKbVd4PkrMBLLTwVMdujXKz6+3hzP3393hVd5bH6Lh4eHd4P39Xg83+67M8l2JFvw/DnadDw8PLxrvOeHe1sM2mvmjPz6eHh4eH+HlxeA503JH+54eHh4/y/vmToLDmbfxMPDw/sLvM0jPtmOZGv2YQceHh7ez/A2D+Xf+nxlvoeHh4e3nqonx6wM7Jv16N7w8PDwLvD2rXDeiLeRx+wevrkOHh4e3lHe7NWoPLTNg9e2DESr4OHh4V3jJa9Y7UtC/tBvX2L4kE/j4eHhHeU9N7L78dKpwrN5yQAPDw/vLC9fMl+mDSCivKRs5aNuHQ8PD2/ESxbIF05a5LYFz2PlqLHGw8PDW/Py4dOm5Z1tR3Lmw3Xw8PDwLvM2bfEsqtiEuVHkgYeHh3eBl0cDeUiRt8JJDLF/NQEPDw/vLO8UoJi2lask69YlAQ8PD2/Ba2OIpKlt51CzkVsRneDh4eH9OC+foeUDs1lRyWd6RfXDw8PDG/Fm//bPMHlpmW3oh8YaDw8P7ygvHyklccA+SpjFwcXMDQ8PD2/Em7XOs9cF2rXawvDNWnh4eHgXeG2RyAtJy2g/zxp3PDw8vFO8Weuc7NPm4d5uepSy4OHh4a15bcTwKo/Z9fNWO/q74eHh4R3l5QVgE/62oUbeNEd3iIeHh3eUlw/123C2jYbzVYoXHfDw8PAu8PIHev5Q3gylNr96u4l4eHh4R3lf5XFqcLUZldX/K+Dh4eEd5Z0NGvIzeVybb+gKj4eHh1fy2lvP9yaPHtrotigbeHh4eNd4s8H/7BbzX7VhxNsYFw8PD++XeKfeVmjHZm1AjIeHh/d3ePm7TG382mKKNAUPDw/vGm8/oDpbMFr2h8KAh4eHd5Q3Kx6zZnd2fhbs4uHh4V3g/QNvLRbbHVm4qAAAAABJRU5ErkJggg==">
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
-          
-          </a>
-        
       
     </div>
-  </div>
-
-
-              
-            </div>
-          </section>
+    
+      <div class="full-width auto-padding tags">
         
-
+          <a href="/tags/ArcGIS/"><i class="fas fa-hashtag fa-fw"></i>ArcGIS</a>
         
-            <div class="prev-next">
-                
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
-                            <h4>
-                                <a href="/2019/03/30/杂谈WebGIS/" rel="prev" title="开篇-杂谈WebGIS">
-                                  
-                                      开篇-杂谈WebGIS
-                                  
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/WebGIS/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>WebGIS</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
-                
-                    <section class="next">
-                        <span class="art-item-right" aria-hidden="true">
-                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
-                            <h4>
-                                <a href="/2019/03/29/深度解密HTTP通信细节/" rel="prev" title="深度解密 HTTP 通信细节">
-                                    
-                                        深度解密 HTTP 通信细节
-                                    
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/HTTP/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>HTTP</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
-            </div>
+          <a href="/tags/API/"><i class="fas fa-hashtag fa-fw"></i>API</a>
         
-
-    </section>
-
+      </div>
+    
+  </section>
 </article>
 
-<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+            </div>
+          
+        
+      
+
+  </section>
 
 
-<br>
-
-<!-- 显示推荐文章和评论 -->
 
 
 
 
+  
 
-<script>
-    window.subData = {
-        title: '为什么你得学些TCP知识',
-        tools: true
-    }
-</script>
+  <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+  
+
+  
+
 
 
         </div>
