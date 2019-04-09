@@ -205,6 +205,126 @@
   <div class="meta" id="header-meta">
     
       <h2 class="title">
+          <a href="/2019/03/30/LaTeX初识/">
+              
+                  LaTeX初识
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-03-30
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/LaTeX/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              LaTeX
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>闲来无事，想起了自己当年的毕业论文，想拿来再次修改修改，看到网上很多专业人士都是使用LaTeX来写论文，似乎很流弊的样子，天呐，想想当年我还是使用的Word，就修改格式都用了大半天的时间，太可怕了，难道这就是专业人士和我们这些业余的区别！老衲怎能轻言放弃，于是乎就一顿Google，百度，看看是何方技能！传播与众人</p>
+<h1 id="LaTeX简介"><a href="#LaTeX简介" class="headerlink" title="LaTeX简介"></a>LaTeX简介</h1><h2 id="什么是TeX"><a href="#什么是TeX" class="headerlink" title="什么是TeX"></a>什么是TeX</h2><p>电子排版系统的出现给印刷出版业带来了一场革命，利用电子计算机及各种辅助设备，可以完成从文稿、图表的录入、编辑、修改、组版，直至得到各种不同 用途、不同质量的输出结果。利用电子排版系统，可以减轻劳动强度，缩短出版周期。</p>
+<p>目前世界上有许多电子排版系统。这些系统各有特点，也各有自己的适用范围。TeX 就是一种优秀的电子排版系统。</p>
+<p>TeX 提供了一套功能强大并且十分灵活的排版语言，它多达 900 多条指令，并且 TeX 有宏功能，用户可以不断地定义自己适用的新命令来扩展 TeX 系统的功能。许多人利用 TeX 提供的宏定义功能对 TeX 进行了二次开发，其中比较著名的有美国数学学会推荐的非常适合于数学家使用的 AMS-TeX 以及适合于一般文章、报告、书籍的 LaTeX 系统。</p>
+<p>TeX 系统是公认的数学公式排得最好的系统。<a href="http://www.ams.org/" target="_blank" rel="noopener">美国数学学会 （AMS）</a> 鼓励数学家们使用 TeX 系统向它的期刊投稿。世界上许多一流的出版社如 Kluwer、Addison-Wesley、牛津大学出版社等也利用 TeX 系统出版书籍和期刊。</p>
+<p>大部分的 TeX 系统都是免费的。Knuth 教授还公开了他的全部源程序。TeX 系统目前已经在数百种计算机系统上得到实现。TeX 系统的排版结果 DVI（DeVice Independent）文件与输出设备无关。DVI 文件可以显示、打印、照排，几乎可以在所有的输出设备上输出。TeX 排版源文件及结果在各种计算机系统上互相兼容。</p>
+<h2 id="TeX-的历史"><a href="#TeX-的历史" class="headerlink" title="TeX 的历史"></a>TeX 的历史</h2><p>七十年代末，<a href="http://www-cs-faculty.stanford.edu/~knuth/" target="_blank" rel="noopener">Donald E. Knuth（高德纳）</a> 在看到其多卷巨著“The Art of Computer Programming”第二卷的校样时，对由计算机排版的校样的低质量感到无法忍受。因此决定自己来开发一个高质量的计算机排版系统，这样就有了 TeX 。</p>
+<p>TeX 的名字是由大写的希腊字母“tec”(tau, epsilon, chi)组成。在希腊语中这个词的意思是“科技”和“艺术”，这也解释了它的发音。“T”和“E”就像在“technology”中的发音一样，而“x” 的发音类似于苏格兰语单词“loch”或德语单词“ach”中的“ch”，也类似于西班牙语中的“j”或俄语中的“kh”。TeX 标志为 TEX ，这三个字母相靠得很近，而且中间的那个 E 有点儿下沉。但在无格式文件中，就写为 TeX 。</p>
+<p>TeX 的第一版于 1978 年面世。在经过了不断的改进后，1982 年版的 TeX 是一个十分稳定的版本。从此以后，TeX 没有较大的变动，只有很少部分的改进和错误修正。现在几乎所有的操作系统平台下，都有相应的 TeX 软件，而且用它们排版同一个文件得到的输出结果是相同的。TeX 目前的版本是 3.141592，很接近圆周率π。每有一新的版本，就会加上一个π的小数点后的数。所以我们已经知道下一版本的 TeX 是 3.1415926，最终将收敛到π。这也代表了 TeX 不断追求完美的理想。</p>
+<p>TeX 的源程序是用 Pascal 写成的，原因是 Knuth 希望 TeX 尽可能方便地移植到其它的操作系统中去。当时 Pascal 是最适合于这一要求的编程语言。这也使得 TeX 现在已经在几乎所有的计算机系统中得到实现。</p>
+<p>TeX 的另一个重要的特征就是它的输出是与设备无关的。TeX 的输出文件称为 DVI 文件，即是“Device Independent”。一旦 TeX 处理了你的文件，你所得到的 DVI 文件就可以被送到任何输出设备如打印机，屏幕等并且总会得到相同的结果，而这与这些输出设备的限制没有任何关系。这说明 DVI 文件中所有的元素，从页面设置到文本中字符的位置都被固定，不能更改。</p>
+<p>TeX 现在已经被它的开发者 Knuth 所“冰封”(frozen)，新版本的 TeX 只有少许改进和错误修正。这些变动必须保证不会使得即使是写于 1982 年的 TeX 文档无法编译，TeX 自带了测试文件来确保这一点。如果测试文件文件的输出结果不同于预定的结果，那么这个排版系统就不能够被称为“TeX”。所以像一些对 TeX 有很大改进的软件，如“Omega”等将不能被称为“TeX”，尽管它也是基于“TeX”的。</p>
+<p>在设计 TeX 的同时，Knuth 还设计了一个字体生成程序 MetaFont。MetaFont 是独立于 TeX 之外的，但又与 TeX 有着非常密切的联系。MetaFont 生成的只是位图字体，当对字体进行缩放时的效果不佳。对于如何得到像 Type1 字体一样的轮廓字体，现在还在研究之中。与 TeX 一样，Knuth 也“冰封”了 MetaFont 。所以 MetaFont 的进一步的改进和发展将会由其他人来完成，而且名字也将不再是 MetaFont 。</p>
+<h2 id="TeX-的未来"><a href="#TeX-的未来" class="headerlink" title="TeX 的未来"></a>TeX 的未来</h2><p>虽然 TeX 在过去的二十多年中没有大的变化，但这并不意味着 TeX 是一个僵化的系统。恰恰相反，TeX 开放的设计使得它能够很容易的适应新的要求。例如，在没有改动内核的情形下，TeX 很容易地实现了对 PostScript 字体和外部图形的支持。TeX 还是第一个能够自动生成 HTML 的字处理软件。最近，TeX 又开始增加了在不借助其它工具（如 Adobe Distiller）的条件下生成 PDF 的扩展功能。下面列出的几个项目都是正在进行中，对 TeX 的功能进行了扩展。</p>
+<h3 id="PDFTeX"><a href="#PDFTeX" class="headerlink" title="PDFTeX"></a>PDFTeX</h3><p>完全兼容标准的 TeX ，但能够给出 PDF 输出。它也可以输出标准的 DVI 。</p>
+<h3 id="e-TeX"><a href="#e-TeX" class="headerlink" title="e-TeX"></a>e-TeX</h3><p>不仅完全兼容标准的 TeX ，还支持一种“扩展模式”。在“扩展模式”中引入了许多新的特性和增强功能。这些新的特性和增强功能提供了更好的编程工具和对输出的控制。</p>
+<h3 id="Omega"><a href="#Omega" class="headerlink" title="Omega"></a>Omega</h3><p>这是一个几乎是完全重新写过的，支持 Unicode 的 TeX 程序。Omega 有很多特征都超出了 Knuth 对 TeX 的原始设想。它采用了与 TeX 不同的方法来处理字符，使得可以处理非拉丁语系的文本。也支持从右到左，从上到下的排版方式。</p>
+<h3 id="NTS"><a href="#NTS" class="headerlink" title="NTS"></a>NTS</h3><p>NTS 代表“New Typesetting System”。Knuth 已经停止发展 TeX，并决定任何超越 TeX 的扩展都不能被称为 TeX 。NTS 只是一些对于 TeX 的后续继承者的设想和概念的集合，还不是一个实际上的系统。该项目的第一个公布的产品就是 e-TeX。后来不知什么缘故，NTS的开发就停止了。直到 2002 年左右，一些 TeX 专家，想用 Java 开发 TeX，于是把中途夭折的 NTS 项目捡了起来，搞出了一个叫做 ExTeX 的东西，但是并没有普遍应用。</p>
+<h3 id="MLTeX"><a href="#MLTeX" class="headerlink" title="MLTeX"></a>MLTeX</h3><p>这个 TeX 的扩展引入了命令 \charsubdef，使得可以更为简单方便的使用 8 bit 字符。不过，与 e-TeX 相比，这只是一个微小的改进。</p>
+<h3 id="XeTeX"><a href="#XeTeX" class="headerlink" title="XeTeX"></a>XeTeX</h3><p>Jonathan Kew 在 e-TeX 基础上添加 Unicode 支持，并且连接 Mac OS X 的各种技术，比如ATT,Quartz,QuickTime，产生了一个重要的TeX分支，叫做XeTeX.XeTeX在2005/6年陆续发布了它的 Windows 和 Linux版本，最终集成在 TeXLive 2007 当中，标志着它被广泛地认可。在 XeTeX 中，使用多国语言，变得非常轻松，并且可以方便地使用系统的 TrueType 和 OpenType 字体，因此得到许多 TeX Guru 的喜爱。</p>
+<h3 id="LuaTeX"><a href="#LuaTeX" class="headerlink" title="LuaTeX"></a>LuaTeX</h3><p>尽管 Omega 项目在开始时看上去很有希望，但是它的开发进展缓慢并且功能上也非常不稳定（基本上可以认为这个项目已经死亡）。于是，Giuseppe Bilotta 等人启动了 Aleph 项目，目的是让 Omega 稳定并且引入了 e-TeX 的扩展功能。后来 Aleph 项目现在也停止了，不过它的大部分功能都被集成到了 <a href="http://wiki.ctex.org/index.php?title=LuaTeX&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener">LuaTeX</a> 中。<a href="http://wiki.ctex.org/index.php?title=LuaTeX&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener">LuaTeX</a> 是一个新的 TeX 引擎项目，由科罗拉多州立大学（Idris Samawi Hamid 的东方 TeX 项目）和 NTG 资助，该项目于 2006 年启动，于 2007 年夏季发布首个 beta 版本。</p>
+<p>LuaTeX 是 Aleph 与 pdfTeX 项目的继任者，主要由 Taco Hoekwater 开发。除了兼有 Aleph 和 pdfTeX 的功能之外，LuaTeX还具有以下特点：</p>
+<ul>
+<li>内部集成了轻量级的动态编程语言 Lua，可以采用该语言扩展 LuaTeX 功能或宏包；</li>
+<li>提供了 OpenType 字体的本地支持，与 XeTeX 做法不同的是，LuaTeX 没有使用操作系统自带的字体库来访问字体，而是使用了 FontForge库；</li>
+<li>内部集成了 MPLib（一个扩展的 MetaPost 库模块）。</li>
+</ul>
+<h2 id="TeX-的优点"><a href="#TeX-的优点" class="headerlink" title="TeX 的优点"></a>TeX 的优点</h2><p>在一个充斥着“所见即所得”(WYSIWSG)桌面出版软件的情况下来使用 TeX 确是有点令人奇怪。但是，在某些情形下，你会感到 TeX 是最好的，甚至是唯一适合的系统。</p>
+<p>首先我们来看一下 TeX 的优势所在：</p>
+<ul>
+<li><strong>高质量的输出</strong> TeX 遵循传统的排版规则，以排版的质量为最重要的目标。如果你把 TeX 的输出结果和用其它的排版软件排版相同的文本所得到的结果加以比较，你就会发现其中的区别。</li>
+<li><strong>超常的稳定性</strong> 自从 TeX 出现以来，只有一些微小的改动。也就是说，十几年前的 TeX 文件用现在的 TeX 系统排版得到的结果与十几年前得到的结果是一样的。稳定性还体现在 TeX 系统极少会崩溃，可以处理任意大小的文件，即使你的计算机的内存很少，TeX 也可自如的工作。</li>
+<li></li>
+<li><p><strong>TeX 是可编程的</strong> TeX 是一种宏命令编程语言。你可以用很少的命令来完成非常复杂的工作。如果需要的话，你也可以重新定义 TeX 的所有命令来得到特殊的效果。</p>
+</li>
+<li><strong>高度的灵活性</strong> TeX 自从出现以来其内核只有微小的改动。但是由于其内核的设计方式，世界上的 TeX 使用者可以让 TeX 做几乎任何工作。你可以用 TeX 来排版英文文本，也可以排版德文，俄文，中文等多种语言。你还可以用 TeX 来排版乐谱，象棋，围棋棋谱等等。</li>
+<li><strong>简单方便</strong> TeX 文档是 ASCII 码的文本文件。因此，即使你手边没有 TeX 系统，你也可以看懂绝大部分的内容。TeX 文件的这种特点使得它占用很少的存储空间，也可以很方便的用 email 来传输。</li>
+<li><strong>良好的通用性</strong> 目前为止，TeX 几乎在所有的计算机操作系统平台上得到实现。如：Atari，Apple，Macintosh，Unix，VMS，MS-DOS，MS-Windows 和 OS/2 等等。TeX 的源文件可在不同的平台之间自由的交换，而得到的输出是完全相同的。</li>
+<li><strong>低廉的价格</strong> TeX 是免费软件，它的源程序也是免费的。你可能仅仅需要支付邮费，甚至于一分不花地得到适合你的 TeX 系统。世界上有很多非常好的 TeX 免费软件如：teTeX，MikTeX，fpTeX 等等。同时也有一些具有各自特点（如或多或少的所见即所得特性的）和提供专家级帮助系统的商业版本。</li>
+<li><strong>超级技术支持</strong> 由于 TeX 并不是被某个公司所垄断开发，所以世界各地的使用者设计了统一的技术支持的方式。这通常是通过因特网以 email, WWW, Usenet 或 Ftp 的方式来提供，有时也可能通过电话或传真的方式。绝大多数情况下这些技术支持都是免费的，这也是 TeX 的精神。</li>
+<li><strong>TeX 是一种乐趣</strong> 使用 TeX 不仅仅是一种工作手段，也是一种乐趣。它有挑战，也有荣誉。很多人在熟悉了 TeX 之后都开始把使用 TeX 作为一种爱好，而不是一件枯燥无味的劳动。</li>
+</ul>
+<h2 id="TeX-的不足"><a href="#TeX-的不足" class="headerlink" title="TeX 的不足"></a>TeX 的不足</h2><p>在展示了 TeX 的优秀之处后，也得承认 TeX 也有一些不足的地方：</p>
+<ol>
+<li>TeX 不是在一个下午就能完全学会的，除非你是一个真正的天才。当你开始学习并使用它的时候，你将会不停的去翻看 TeX 的参考手册来寻找一个 TeX 命令。你也会发现 TeX 常常不理会你键入的命令，还给出一个让你感到迷惑的错误讯息。这一切都说明了掌握 TeX 需要一个比较长而且艰难的学习过程。TeX 的一些扩展如 LaTeX、ConTeXt 则要相对简单的多，使用起来也比 TeX 方便，一个新手完全可以在一个下午或者更短的时间内学会开始使用 LaTeX 或 ConTeXt。</li>
+<li>当发生错误的时候，TeX 会给出一些信息来提示你。但很多情况下并不足以是你迅速准确的找到错误之所在。尤其对刚刚开始学习的新手来说更是如此。</li>
+<li>像 TeX 这种宏语言不同于其它的计算机语言，如 C，Pascal 等，大多数人并不了解。因此，当你想要写自己的宏命令时，你需要对 TeX 有比较深入的了解才能写出牢固可靠的宏命令。</li>
+<li>TeX 不是所见即所得的。尽管市场上有些近似于所见即所得的自由/开源软件（如 <a href="http://www.lyx.org/" target="_blank" rel="noopener">LyX</a>）或商业软件，但即使与最普通的字处理软件比，也 还是有不小的差距。</li>
+</ol>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/LaTeX/"><i class="fas fa-hashtag fa-fw"></i>LaTeX</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
           <a href="/2019/03/30/杂谈WebGIS/">
               
                   开篇-杂谈WebGIS
@@ -1556,102 +1676,6 @@
             </div>
           
         
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2018/07/26/LivePreview无法正常工作/">
-              
-                  LivePreview无法正常工作
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2018-07-26
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/Blog/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              Blog
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>2018/7/26 22:28:25</p>
-<p>自从搭建了个人博客,一直以来都是使用 MarkdownPad 2 来写Blog。近日由于重新安装了系统,想着把MarkdownPad 2再重新安装下,安装后却发现提示无法开启渲染预览,这能难道程序员吗?于是开始了bug查找,发现了如下提示:</p>
-<pre><code>LivePreview is not working - it displays an error message stating This view has crashed!
-
-This issue has been specifically observed in Windows 8. You may see an error message as shown here, and no HTML will be rendered when you type in the Markdown Editor pane.
-
-To fix this issue, please try installing the Awesomium 1.6.6 SDK.
-
-If you continue to experience issues, please install Microsoft&apos;s DirectX End-User Runtimes.
-</code></pre><p>读后发现大概意思是需要下载安装Awesomium 1.6.6 SDK，OK,那就先试试 Awesomium 1.6.6 SDK.点击提示页面的下载链接地址，然后安装之后，重新启动MarkdownPad 2就可以正常使用了。</p>
-<p>附带软件下载地址：</p>
-<blockquote>
-<p>MarkdownPad2破解版本地址：链接: <a href="https://pan.baidu.com/s/1dF6C1MT" target="_blank" rel="noopener">https://pan.baidu.com/s/1dF6C1MT</a> 密码: j3cy</p>
-</blockquote>
-<blockquote>
-<p>awesomium软件下载地址：链接: <a href="https://pan.baidu.com/s/1nvRuNaT" target="_blank" rel="noopener">https://pan.baidu.com/s/1nvRuNaT</a> 密码: e7t2 </p>
-</blockquote>
-<p>很多人不太喜欢试用版,试用版功能不全,下面附带注册码激活使用:</p>
-<p>打开markdownpad2 –&gt; 帮助 –&gt;升级为专业版<br>按照如下输入：<br>​</p>
-<blockquote>
-<p>邮箱地址：<a href="mailto:Soar360@live.com" target="_blank" rel="noopener">Soar360@live.com</a></p>
-</blockquote>
-<blockquote>
-<p>授权秘钥：<br>    GBPduHjWfJU1mZqcPM3BikjYKF6xKhlKIys3i1MU2eJHqWGImDHzWdD6xhMNLGVpbP2M5SN6bnxn2kSE8qHqNY5QaaRxmO3YSMHxlv2EYpjdwLcPwfeTG7kUdnhKE0vVy4RidP6Y2wZ0q74f47fzsZo45JE2hfQBFi2O9Jldjp1mW8HUpTtLA2a5/sQytXJUQl/QKO0jUQY4pa5CCx20sV1ClOTZtAGngSOJtIOFXK599sBr5aIEFyH0K7H4BoNMiiDMnxt1rD8Vb/ikJdhGMMQr0R4B+L3nWU97eaVPTRKfWGDE8/eAgKzpGwrQQoDh+nzX1xoVQ8NAuH+s4UcSeQ==</p>
-</blockquote>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/Markdown/"><i class="fas fa-hashtag fa-fw"></i>Markdown</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
       
 
   </section>
@@ -1789,7 +1813,7 @@ If you continue to experience issues, please install Microsoft&apos;s DirectX En
         
           <li><a class="flat-box" title="/categories/Blog/" href="/categories/Blog/"><div class="name">Blog</div><div class="badge">(3)</div></a></li>
         
-          <li><a class="flat-box" title="/categories/GIS/" href="/categories/GIS/"><div class="name">GIS</div><div class="badge">(3)</div></a></li>
+          <li><a class="flat-box" title="/categories/GIS/" href="/categories/GIS/"><div class="name">GIS</div><div class="badge">(4)</div></a></li>
         
           <li><a class="flat-box" title="/categories/Git/" href="/categories/Git/"><div class="name">Git</div><div class="badge">(1)</div></a></li>
         
@@ -1827,7 +1851,7 @@ If you continue to experience issues, please install Microsoft&apos;s DirectX En
 </header>
 
     <div class="content material">
-      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/API/" style="font-size: 14px; color: #999">API</a> <a href="/tags/ArcGIS/" style="font-size: 14px; color: #999">ArcGIS</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 24px; color: #555">Markdown</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/TCP/" style="font-size: 24px; color: #555">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
+      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/API/" style="font-size: 24px; color: #555">API</a> <a href="/tags/ArcGIS/" style="font-size: 24px; color: #555">ArcGIS</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 24px; color: #555">Markdown</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/TCP/" style="font-size: 24px; color: #555">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
     </div>
   </section>
 
