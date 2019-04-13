@@ -240,6 +240,8 @@
         
           
         
+          
+        
       
 
 
@@ -249,6 +251,150 @@
       
 
       
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/04/13/ArcGIS-API-for-JavaScript入门教程-3-你看得到：数据与视图分离/">
+              
+                  ArcGIS API for JavaScript 入门教程(3)-你看得到：数据与视图分离
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-04-13
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/GIS/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              GIS
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <blockquote>
+<p>这篇开始正式讲API。</p>
+<p>数据和视图分离不是什么奇怪的事情了，这是一个著名的设计——数据与视图分开。</p>
+</blockquote>
+<p>请跟我做，把以下折叠的代码复制到新建的html文件中，并双击打开。</p>
+<p><a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a>;)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">  &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1,maximum-scale=1,user-scalable=no&quot;&gt;</span><br><span class="line">  &lt;title&gt;Intro to MapView - Create a 2D map - 4.7&lt;/title&gt;</span><br><span class="line">  &lt;style&gt;</span><br><span class="line">    html,</span><br><span class="line">    body,</span><br><span class="line">    #viewDiv &#123;</span><br><span class="line">      padding: 0; margin: 0;</span><br><span class="line">      height: 100%; width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/style&gt;</span><br><span class="line"></span><br><span class="line">  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://js.arcgis.com/4.7/esri/css/main.css&quot;&gt;</span><br><span class="line">  &lt;script src=&quot;https://js.arcgis.com/4.7/&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    require([</span><br><span class="line">      &quot;esri/Map&quot;,&quot;esri/views/MapView&quot;,&quot;dojo/domReady!&quot;</span><br><span class="line">    ], function(Map, MapView) &#123;</span><br><span class="line"></span><br><span class="line">      var map = new Map(&#123;</span><br><span class="line">        basemap: &quot;streets&quot;</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      var view = new MapView(&#123;</span><br><span class="line">        container: &quot;viewDiv&quot;,</span><br><span class="line">        map: map,</span><br><span class="line">        zoom: 4,</span><br><span class="line">        center: [15, 65] // longitude, latitude</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;viewDiv&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p><a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a>;)</p>
+<p>大概是这样：</p>
+<p><img src="https://images2018.cnblogs.com/blog/1097074/201805/1097074-20180523235618331-1247825520.png" alt="img"></p>
+<p>打开后是这样的：</p>
+<p>（环境说明：Chrome 65浏览器）</p>
+<p><img src="https://images2018.cnblogs.com/blog/1097074/201805/1097074-20180523235659575-1878304213.png" alt="img"></p>
+<p>那我们再复制另一个代码：</p>
+<p><a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a>;)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">  &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1,maximum-scale=1,user-scalable=no&quot;&gt;</span><br><span class="line">  &lt;title&gt;Intro to SceneView - Create a 3D map - 4.7&lt;/title&gt;</span><br><span class="line">  &lt;style&gt;</span><br><span class="line">    html,</span><br><span class="line">    body,</span><br><span class="line">    #viewDiv &#123;</span><br><span class="line">      padding: 0;</span><br><span class="line">      margin: 0;</span><br><span class="line">      height: 100%;</span><br><span class="line">      width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/style&gt;</span><br><span class="line"></span><br><span class="line">  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://js.arcgis.com/4.7/esri/css/main.css&quot;&gt;</span><br><span class="line">  &lt;script src=&quot;https://js.arcgis.com/4.7/&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    require([</span><br><span class="line">      &quot;esri/Map&quot;,</span><br><span class="line">      &quot;esri/views/SceneView&quot;,</span><br><span class="line">      &quot;dojo/domReady!&quot;</span><br><span class="line">    ], function(Map, SceneView) &#123;</span><br><span class="line"></span><br><span class="line">      var map = new Map(&#123;</span><br><span class="line">        basemap: &quot;streets&quot;,</span><br><span class="line">        ground: &quot;world-elevation&quot;</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      var view = new SceneView(&#123;</span><br><span class="line">        container: &quot;viewDiv&quot;,</span><br><span class="line">        map: map,</span><br><span class="line">        scale: 50000000,</span><br><span class="line">        center: [-101.17, 21.78]</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;viewDiv&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p><a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a>;)</p>
+<p>得到的结果是：</p>
+<p><img src="https://images2018.cnblogs.com/blog/1097074/201805/1097074-20180523235927632-1266833964.png" alt="img"></p>
+<h1 id="1-解释"><a href="#1-解释" class="headerlink" title="1. 解释"></a>1. 解释</h1><p>本着能不解释代码就不解释代码的精神，我先给大家讲一下我讲这个JsAPI的思路。</p>
+<p>它分五个主要学习的部分：</p>
+<ul>
+<li>数据</li>
+<li>视图</li>
+<li>空间分析</li>
+<li>符号渲染</li>
+<li>小部件</li>
+</ul>
+<p>其他不说不代表不会用到，但是相对于入门而言，这五个部分足够了。其重点讲解前三部分。</p>
+<p>如果看文字不舒服，那么上个结构图：</p>
+<p><img src="https://images2018.cnblogs.com/blog/1097074/201805/1097074-20180524193502413-859382166.png" alt="img"></p>
+<p>而上面两个案例，拿同一份数据结合二三维视图作了展示。</p>
+<p>抛开代码细节（如入口、引用、页面组织、样式等）不谈，我首先把代码中用于表示“数据”和“视图”的Js代码抽取出来：</p>
+<p><img src="https://images2018.cnblogs.com/blog/1097074/201805/1097074-20180524194308611-2083837347.png" alt="img"></p>
+<p>左边是二维的，右边是三维的。</p>
+<p>分别用两个对象来描述“数据”和“视图”，</p>
+<p><strong>用Map类实例出来的【map对象】以描述数据；用MapView类、SceneView类实例出来的【view对象】以描述视图</strong>。</p>
+<p>那么你可能会问了，倘若已经在代码里做出来了数据与视图，有什么桥梁可以连接它们呢？我们把view的代码展开。</p>
+<p><img src="https://images2018.cnblogs.com/blog/1097074/201805/1097074-20180524194641686-280020319.png" alt="img"></p>
+<p>我们知道，在Js中通过new关键字实例化一个类，SceneView类的构造函数指定了一个Js中的Object对象作为参数，这个Object对象是这样的：</p>
+<p><a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a>;)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    container: &quot;viewDiv&quot;,</span><br><span class="line">    map: map,</span><br><span class="line">    scale: 50000000,</span><br><span class="line">    center: [-101.17, 21.78]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a>;)</p>
+<p>其中，就有一个Map类型的属性叫map，将上面实例化的map对象赋予给它就实现了视图（SceneView、MapView）与数据（Map）的连接。</p>
+<p>其他的属性我们暂且不管，至少，在Js代码中，我们知道了哪些代码用于构造地理数据——用Map类、我们知道了哪些代码用于构造视图——View类。</p>
+<blockquote>
+<p>哦对了，SceneView和MapView都继承自View类。虽然我们知道Js是弱类型的语言，但是Dojo帮我们做了一些面向对象的工作。</p>
+<p>在这里，我沿用更广泛的说法，那就是用“类”这个称呼去替代官方的“模块”这个称呼，其实MapView、Map、SceneView都是模块，它们存在于js包里面。</p>
+</blockquote>
+<h1 id="2-补充"><a href="#2-补充" class="headerlink" title="2. 补充"></a>2. 补充</h1><p>如果上面看得懂，这里可以作为补充材料来阅读。</p>
+<h2 id="2-1-数据如何组织"><a href="#2-1-数据如何组织" class="headerlink" title="2.1 数据如何组织"></a>2.1 数据如何组织</h2><p>相信肯定有筒子开始疑问Map对象的构造参数中应该如何组织属性了吧，这个时候就需要去查示例代码和官方API参考了。</p>
+<p>我可以简单说一说。先看一下这个类的继承关系图：</p>
+<p><img src="https://images2018.cnblogs.com/blog/1097074/201805/1097074-20180524200353650-538894986.png" alt="img"></p>
+<p>清晰看到Map类的位置。</p>
+<p>有趣的是，Map有WebMap和WebScene两个子类，由于继承和多态的特征，说明视图中map属性也可以设为WebMap和WebScene。</p>
+<p>这有什么区别呢？暂且不说后期展开。</p>
+<p>再展开Map类的属性：</p>
+<p><img src="https://images2018.cnblogs.com/blog/1097074/201805/1097074-20180524205007659-924807109.png" alt="img"></p>
+<p>常用的有三个属性，底图、可操作图层集合、地形图层。</p>
+<ol>
+<li>basemap属性可使用预置的底图，也可以使用自定义的Basemap对象；</li>
+<li><strong>[★]</strong>layers属性是<strong>可操作的Layer对象</strong>的集合，Layer类有很多子类，如几何图层、地图图层、要素图层等，这些到以后会讲，这些<strong>都是赤果果的数据组成啊</strong>！</li>
+<li>ground属性表示地图高程，可以用预置的世界高程数据，也可以自定义高程图层，后期会讲。</li>
+</ol>
+<p>哦对了，对<strong>数据的在线简单编辑、绘制</strong>，也是由数据部分组织的，后面展开。</p>
+<h2 id="2-2-视图有什么用"><a href="#2-2-视图有什么用" class="headerlink" title="2.2 视图有什么用"></a>2.2 视图有什么用</h2><p>视图是管理“看得到”的东西的。</p>
+<p>其一，我们看得到的二三维地图、场景都是由它渲染的；</p>
+<p>其二，我们需要对数据进行展示时，是由它进行弹窗（Popup）展示的；</p>
+<p>这些业务和数据无关，任何一份数据都可以由视图进行前端渲染、数据展示，所以被抽取出来了，做到了高内聚低耦合、数据视图分离。</p>
+<hr>
+<p>好啦，到这里，“数据”与“视图”已经有了个大概的了解了，下一篇将开始讲解如何代码入门，可以学一下Dojo用于预习，尤其是Dojo的模块化。</p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/ArcGIS/"><i class="fas fa-hashtag fa-fw"></i>ArcGIS</a>
+        
+          <a href="/tags/API/"><i class="fas fa-hashtag fa-fw"></i>API</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
         
           
             <div class="post-wrapper">
@@ -626,79 +772,6 @@
   <div class="meta" id="header-meta">
     
       <h2 class="title">
-          <a href="/2019/04/06/一键激活window-office/">
-              
-                  一键激活window & office
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-06
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/常用工具/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              常用工具
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h1 id="一键激活windows-amp-office"><a href="#一键激活windows-amp-office" class="headerlink" title="一键激活windows&amp;office"></a>一键激活windows&amp;office</h1><p>自建的激活服务器，可以一键激活VOL版的window和office。</p>
-<p>推荐去<a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">https://msdn.itellyou.cn/</a> 下载安装正版的window和office。</p>
-<h2 id="单击下载-一键激活window-amp-office-bat"><a href="#单击下载-一键激活window-amp-office-bat" class="headerlink" title="单击下载 一键激活window&amp;office.bat"></a>单击下载 <a href="https://tohot.top/download/%E4%B8%80%E9%94%AE%E6%BF%80%E6%B4%BBwindow&amp;office.bat" target="_blank" rel="noopener">一键激活window&amp;office.bat</a></h2>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/激活/"><i class="fas fa-hashtag fa-fw"></i>激活</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
           <a href="/2019/04/06/视频跳过广告和VIP视频解析/">
               
                   如何开发一个用户脚本系列——脚本1:视频跳过广告和 VIP 视频解析
@@ -764,6 +837,79 @@
       <div class="full-width auto-padding tags">
         
           <a href="/tags/如何开发用户脚本/"><i class="fas fa-hashtag fa-fw"></i>如何开发用户脚本</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/04/06/一键激活window-office/">
+              
+                  一键激活window & office
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-04-06
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/常用工具/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              常用工具
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h1 id="一键激活windows-amp-office"><a href="#一键激活windows-amp-office" class="headerlink" title="一键激活windows&amp;office"></a>一键激活windows&amp;office</h1><p>自建的激活服务器，可以一键激活VOL版的window和office。</p>
+<p>推荐去<a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">https://msdn.itellyou.cn/</a> 下载安装正版的window和office。</p>
+<h2 id="单击下载-一键激活window-amp-office-bat"><a href="#单击下载-一键激活window-amp-office-bat" class="headerlink" title="单击下载 一键激活window&amp;office.bat"></a>单击下载 <a href="https://tohot.top/download/%E4%B8%80%E9%94%AE%E6%BF%80%E6%B4%BBwindow&amp;office.bat" target="_blank" rel="noopener">一键激活window&amp;office.bat</a></h2>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/激活/"><i class="fas fa-hashtag fa-fw"></i>激活</a>
         
       </div>
     
@@ -1200,134 +1346,6 @@
             </div>
           
         
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/03/31/15行python代码搞定网易云热门歌单/">
-              
-                  零基础15行python代码搞定网易云热门歌单
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-03-31
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/Python/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              Python
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <blockquote>
-<p>健身、吃饭、敲代码；等车、撸猫、下午茶……若能佐以合适的音乐当“配餐”，总是惬意非常。本文就将带你爬一爬网易云的那些热门歌单！</p>
-</blockquote>
-<p>心情好或心情坏，点一首歌抚慰你受伤或躁动的心灵——下面教你用 15 行代码搞定热门歌单！</p>
-<p>本文使用的是 Selenium 模块，它是一个自动化测试工具，利用它我们可以驱动浏览器执行特定的动作，如点击、下拉等操作，对于一些 JavaScript 渲染的页面来说，此种抓取方式非常有效。</p>
-<p>采用了 Chrome 浏览器配合 Selenium 工作，本文的 Python 版本是 3.7.2。</p>
-<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a><strong>准备工作</strong></h1><ol>
-<li>若你的环境中没有 Selenium 模块，直接使用 pip 安装即可：</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install selenium</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li><p>打开谷歌浏览器，检查Chrome的版本：在浏览器地址中输入 chrome://settings/help 回车即可看到：</p>
-<p><img src="https://img.vim-cn.com/ac/4ed0c338deb650848bbc8e56ea2c6147b1bf17.png" alt="02.png"></p>
-</li>
-<li><p>打开 ChromeDriver 的官方网站（<a href="https://sites.google.com/a/chromium.org/chromedriver/downloads），寻找与你当前浏览器版本相对应的" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/downloads），寻找与你当前浏览器版本相对应的</a> ChromeDriver 下载：</p>
-<p><img src="https://img.vim-cn.com/05/758873fffa1036762e388ecff28eead7b0be1f.png" alt="03.png"></p>
-</li>
-<li><p>选择你自己的操作系统类型进行下载即可：</p>
-<p><img src="https://img.vim-cn.com/d1/7821da501ffe292bc5e376857e402582d194e0.png" alt="04.png"></p>
-</li>
-<li><p>以 Windows 为例，下载结束后，将 ChromeDriver 放置在 Python 安装目录下的 Scripts 文件夹即可：</p>
-<p><img src="https://img.vim-cn.com/1b/5ca9231635c8c93f78b4c1a051573209cefdf6.png" alt="05.png"></p>
-</li>
-</ol>
-<p>准备工作完成，代码写起来吧~</p>
-<h1 id="迷你爬虫的实现"><a href="#迷你爬虫的实现" class="headerlink" title="迷你爬虫的实现"></a><strong>迷你爬虫的实现</strong></h1><p>我们这次的目标是爬取热门歌单，比如网易云音乐中播放量大于 1000万 的歌单信息（歌单名称、链接）。</p>
-<ol>
-<li><p>先来打开网易云的歌单第一页：    </p>
-<p><a href="https://music.163.com/#/discover/playlist/" target="_blank" rel="noopener">https://music.163.com/#/discover/playlist/</a></p>
-</li>
-<li><p>使用 Chrome 的开发者工具 <f12> 进行分析：</f12></p>
-<p><img src="https://img.vim-cn.com/f8/79c7e9ee5bb3083922c40acec3cf36cf3818ad.png" alt="02-2.png"></p>
-</li>
-</ol>
-<p>我们想要拿的信息全在这里：</p>
-<p>msk，封面 [mask]：有歌单的名称及链接</p>
-<p>nb，播放数 [number broadcast]：135万</p>
-<ol start="3">
-<li><p>我们还需要遍历所有的页，使用工具继续分析，找到“下一页”的 URL：</p>
-<p><img src="https://img.vim-cn.com/d3/6bef2ed87892bb9d6d86935cc23cab4afb5c87.png" alt="02-3.png"></p>
-</li>
-<li><p>切换至最后一页，拿到最后一页的 URL：</p>
-<p><img src="https://img.vim-cn.com/1f/9ec15c2bd641cce2ea5d1dbba8a3c8de3885c7.png" alt="02-4.png"></p>
-</li>
-<li><p>等我们爬取完所有符合的歌单信息后，将其保存在本地；</p>
-</li>
-<li><p>全部工作结束，最后再通过下面的伪代码回顾下整体思路：</p>
-<p><img src="https://img.vim-cn.com/3f/b955a96ab865b20641f7498479a9a2441e3707.png" alt="02-6.png"></p>
-</li>
-<li><p>爬取的效果如下：</p>
-<p><img src="https://img.vim-cn.com/46/826692648fd04b345d5754c9125e5f1ec9fe60.png" alt="02-7.png"></p>
-</li>
-</ol>
-<p>另附源码：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line"><span class="comment"># 网易云音乐歌单列表第一页地址</span></span><br><span class="line">url = <span class="string">'https://music.163.com/#/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=0'</span></span><br><span class="line"><span class="comment"># 用Chrome接口创建一个Selenium的WebDriver</span></span><br><span class="line">browser = webdriver.Chrome()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 逐页解析，直至歌单列表的最后一页</span></span><br><span class="line"><span class="keyword">while</span> url != <span class="string">'javacript:void(0)'</span>:</span><br><span class="line">    <span class="comment"># 用WebDriver加载页面</span></span><br><span class="line">    browser.get(url)</span><br><span class="line">    <span class="comment"># 切换至内容的iframe</span></span><br><span class="line">    browser.switch_to.frame(<span class="string">"contentFrame"</span>)</span><br><span class="line">    <span class="comment"># 定位歌单标签</span></span><br><span class="line">    data = browser.find_element_by_id(<span class="string">"m-pl-container"</span>).find_elements_by_tag_name(<span class="string">"li"</span>)</span><br><span class="line">    <span class="comment"># 解析当前页中所有的歌单详情</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(data)):</span><br><span class="line">        <span class="comment"># 获取歌单的播放量</span></span><br><span class="line">        num = data[i].find_element_by_class_name(<span class="string">"nb"</span>).text</span><br><span class="line">        <span class="keyword">if</span> <span class="string">'万'</span> <span class="keyword">in</span> num <span class="keyword">and</span> int(num.split(<span class="string">'万'</span>)[<span class="number">0</span>]) &gt; <span class="number">1000</span>:</span><br><span class="line">            <span class="comment"># 获取播放量大于1000万的歌单封面</span></span><br><span class="line">            msk = data[i].find_element_by_css_selector(<span class="string">"a.msk"</span>)</span><br><span class="line">            <span class="comment"># 把歌单封面中的标题、链接以及播放量，存储在TXT文件中</span></span><br><span class="line">            <span class="keyword">with</span> open(<span class="string">"163playlist.txt"</span>, <span class="string">'a'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">                f.write(<span class="string">' '</span>.join([msk.get_attribute(<span class="string">'title'</span>), num, msk.get_attribute(<span class="string">"href"</span>)]) + <span class="string">'\n'</span> + <span class="string">'='</span> * <span class="number">50</span> + <span class="string">'\n'</span>)</span><br><span class="line">    <span class="comment"># 定位'下一页'的URL</span></span><br><span class="line">    url = browser.find_element_by_css_selector(<span class="string">"a.zbtn.znxt"</span>).get_attribute(<span class="string">"href"</span>) </span><br><span class="line">    </span><br><span class="line"><span class="comment"># 结束调用</span></span><br><span class="line">browser.close()</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/music/"><i class="fas fa-hashtag fa-fw"></i>music</a>
-        
-          <a href="/tags/网易/"><i class="fas fa-hashtag fa-fw"></i>网易</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
       
 
   </section>
@@ -1465,7 +1483,7 @@
         
           <li><a class="flat-box" title="/categories/Blog/" href="/categories/Blog/"><div class="name">Blog</div><div class="badge">(3)</div></a></li>
         
-          <li><a class="flat-box" title="/categories/GIS/" href="/categories/GIS/"><div class="name">GIS</div><div class="badge">(4)</div></a></li>
+          <li><a class="flat-box" title="/categories/GIS/" href="/categories/GIS/"><div class="name">GIS</div><div class="badge">(5)</div></a></li>
         
           <li><a class="flat-box" title="/categories/Git/" href="/categories/Git/"><div class="name">Git</div><div class="badge">(1)</div></a></li>
         
@@ -1503,7 +1521,7 @@
 </header>
 
     <div class="content material">
-      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/API/" style="font-size: 24px; color: #555">API</a> <a href="/tags/ArcGIS/" style="font-size: 24px; color: #555">ArcGIS</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 24px; color: #555">Markdown</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/TCP/" style="font-size: 24px; color: #555">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
+      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/API/" style="font-size: 24px; color: #555">API</a> <a href="/tags/ArcGIS/" style="font-size: 24px; color: #555">ArcGIS</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 19px; color: #777">Markdown</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/TCP/" style="font-size: 19px; color: #777">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
     </div>
   </section>
 

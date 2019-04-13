@@ -210,6 +210,134 @@
   <div class="meta" id="header-meta">
     
       <h2 class="title">
+          <a href="/2019/03/31/15行python代码搞定网易云热门歌单/">
+              
+                  零基础15行python代码搞定网易云热门歌单
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-03-31
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/Python/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              Python
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <blockquote>
+<p>健身、吃饭、敲代码；等车、撸猫、下午茶……若能佐以合适的音乐当“配餐”，总是惬意非常。本文就将带你爬一爬网易云的那些热门歌单！</p>
+</blockquote>
+<p>心情好或心情坏，点一首歌抚慰你受伤或躁动的心灵——下面教你用 15 行代码搞定热门歌单！</p>
+<p>本文使用的是 Selenium 模块，它是一个自动化测试工具，利用它我们可以驱动浏览器执行特定的动作，如点击、下拉等操作，对于一些 JavaScript 渲染的页面来说，此种抓取方式非常有效。</p>
+<p>采用了 Chrome 浏览器配合 Selenium 工作，本文的 Python 版本是 3.7.2。</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a><strong>准备工作</strong></h1><ol>
+<li>若你的环境中没有 Selenium 模块，直接使用 pip 安装即可：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install selenium</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><p>打开谷歌浏览器，检查Chrome的版本：在浏览器地址中输入 chrome://settings/help 回车即可看到：</p>
+<p><img src="https://img.vim-cn.com/ac/4ed0c338deb650848bbc8e56ea2c6147b1bf17.png" alt="02.png"></p>
+</li>
+<li><p>打开 ChromeDriver 的官方网站（<a href="https://sites.google.com/a/chromium.org/chromedriver/downloads），寻找与你当前浏览器版本相对应的" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/downloads），寻找与你当前浏览器版本相对应的</a> ChromeDriver 下载：</p>
+<p><img src="https://img.vim-cn.com/05/758873fffa1036762e388ecff28eead7b0be1f.png" alt="03.png"></p>
+</li>
+<li><p>选择你自己的操作系统类型进行下载即可：</p>
+<p><img src="https://img.vim-cn.com/d1/7821da501ffe292bc5e376857e402582d194e0.png" alt="04.png"></p>
+</li>
+<li><p>以 Windows 为例，下载结束后，将 ChromeDriver 放置在 Python 安装目录下的 Scripts 文件夹即可：</p>
+<p><img src="https://img.vim-cn.com/1b/5ca9231635c8c93f78b4c1a051573209cefdf6.png" alt="05.png"></p>
+</li>
+</ol>
+<p>准备工作完成，代码写起来吧~</p>
+<h1 id="迷你爬虫的实现"><a href="#迷你爬虫的实现" class="headerlink" title="迷你爬虫的实现"></a><strong>迷你爬虫的实现</strong></h1><p>我们这次的目标是爬取热门歌单，比如网易云音乐中播放量大于 1000万 的歌单信息（歌单名称、链接）。</p>
+<ol>
+<li><p>先来打开网易云的歌单第一页：    </p>
+<p><a href="https://music.163.com/#/discover/playlist/" target="_blank" rel="noopener">https://music.163.com/#/discover/playlist/</a></p>
+</li>
+<li><p>使用 Chrome 的开发者工具 <f12> 进行分析：</f12></p>
+<p><img src="https://img.vim-cn.com/f8/79c7e9ee5bb3083922c40acec3cf36cf3818ad.png" alt="02-2.png"></p>
+</li>
+</ol>
+<p>我们想要拿的信息全在这里：</p>
+<p>msk，封面 [mask]：有歌单的名称及链接</p>
+<p>nb，播放数 [number broadcast]：135万</p>
+<ol start="3">
+<li><p>我们还需要遍历所有的页，使用工具继续分析，找到“下一页”的 URL：</p>
+<p><img src="https://img.vim-cn.com/d3/6bef2ed87892bb9d6d86935cc23cab4afb5c87.png" alt="02-3.png"></p>
+</li>
+<li><p>切换至最后一页，拿到最后一页的 URL：</p>
+<p><img src="https://img.vim-cn.com/1f/9ec15c2bd641cce2ea5d1dbba8a3c8de3885c7.png" alt="02-4.png"></p>
+</li>
+<li><p>等我们爬取完所有符合的歌单信息后，将其保存在本地；</p>
+</li>
+<li><p>全部工作结束，最后再通过下面的伪代码回顾下整体思路：</p>
+<p><img src="https://img.vim-cn.com/3f/b955a96ab865b20641f7498479a9a2441e3707.png" alt="02-6.png"></p>
+</li>
+<li><p>爬取的效果如下：</p>
+<p><img src="https://img.vim-cn.com/46/826692648fd04b345d5754c9125e5f1ec9fe60.png" alt="02-7.png"></p>
+</li>
+</ol>
+<p>另附源码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line"><span class="comment"># 网易云音乐歌单列表第一页地址</span></span><br><span class="line">url = <span class="string">'https://music.163.com/#/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=0'</span></span><br><span class="line"><span class="comment"># 用Chrome接口创建一个Selenium的WebDriver</span></span><br><span class="line">browser = webdriver.Chrome()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 逐页解析，直至歌单列表的最后一页</span></span><br><span class="line"><span class="keyword">while</span> url != <span class="string">'javacript:void(0)'</span>:</span><br><span class="line">    <span class="comment"># 用WebDriver加载页面</span></span><br><span class="line">    browser.get(url)</span><br><span class="line">    <span class="comment"># 切换至内容的iframe</span></span><br><span class="line">    browser.switch_to.frame(<span class="string">"contentFrame"</span>)</span><br><span class="line">    <span class="comment"># 定位歌单标签</span></span><br><span class="line">    data = browser.find_element_by_id(<span class="string">"m-pl-container"</span>).find_elements_by_tag_name(<span class="string">"li"</span>)</span><br><span class="line">    <span class="comment"># 解析当前页中所有的歌单详情</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(data)):</span><br><span class="line">        <span class="comment"># 获取歌单的播放量</span></span><br><span class="line">        num = data[i].find_element_by_class_name(<span class="string">"nb"</span>).text</span><br><span class="line">        <span class="keyword">if</span> <span class="string">'万'</span> <span class="keyword">in</span> num <span class="keyword">and</span> int(num.split(<span class="string">'万'</span>)[<span class="number">0</span>]) &gt; <span class="number">1000</span>:</span><br><span class="line">            <span class="comment"># 获取播放量大于1000万的歌单封面</span></span><br><span class="line">            msk = data[i].find_element_by_css_selector(<span class="string">"a.msk"</span>)</span><br><span class="line">            <span class="comment"># 把歌单封面中的标题、链接以及播放量，存储在TXT文件中</span></span><br><span class="line">            <span class="keyword">with</span> open(<span class="string">"163playlist.txt"</span>, <span class="string">'a'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">                f.write(<span class="string">' '</span>.join([msk.get_attribute(<span class="string">'title'</span>), num, msk.get_attribute(<span class="string">"href"</span>)]) + <span class="string">'\n'</span> + <span class="string">'='</span> * <span class="number">50</span> + <span class="string">'\n'</span>)</span><br><span class="line">    <span class="comment"># 定位'下一页'的URL</span></span><br><span class="line">    url = browser.find_element_by_css_selector(<span class="string">"a.zbtn.znxt"</span>).get_attribute(<span class="string">"href"</span>) </span><br><span class="line">    </span><br><span class="line"><span class="comment"># 结束调用</span></span><br><span class="line">browser.close()</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/music/"><i class="fas fa-hashtag fa-fw"></i>music</a>
+        
+          <a href="/tags/网易/"><i class="fas fa-hashtag fa-fw"></i>网易</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
           <a href="/2019/03/30/LaTeX初识/">
               
                   LaTeX初识
@@ -1527,7 +1655,7 @@
         
           <li><a class="flat-box" title="/categories/Blog/" href="/categories/Blog/"><div class="name">Blog</div><div class="badge">(3)</div></a></li>
         
-          <li><a class="flat-box" title="/categories/GIS/" href="/categories/GIS/"><div class="name">GIS</div><div class="badge">(4)</div></a></li>
+          <li><a class="flat-box" title="/categories/GIS/" href="/categories/GIS/"><div class="name">GIS</div><div class="badge">(5)</div></a></li>
         
           <li><a class="flat-box" title="/categories/Git/" href="/categories/Git/"><div class="name">Git</div><div class="badge">(1)</div></a></li>
         
@@ -1565,7 +1693,7 @@
 </header>
 
     <div class="content material">
-      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/API/" style="font-size: 24px; color: #555">API</a> <a href="/tags/ArcGIS/" style="font-size: 24px; color: #555">ArcGIS</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 24px; color: #555">Markdown</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/TCP/" style="font-size: 24px; color: #555">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
+      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/API/" style="font-size: 24px; color: #555">API</a> <a href="/tags/ArcGIS/" style="font-size: 24px; color: #555">ArcGIS</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 19px; color: #777">Markdown</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/TCP/" style="font-size: 19px; color: #777">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
     </div>
   </section>
 
