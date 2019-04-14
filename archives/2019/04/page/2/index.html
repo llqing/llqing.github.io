@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Category: 脚本 | GIS小站</title>
+  <title>Archives: 2019/4 | GIS小站</title>
   
   <meta name="keywords" content="GIS,Code">
   
@@ -181,68 +181,15 @@
     <div class='container clearfix'>
         <div class='l_main'>
             
+	
     <script>
-        window.subData= { title:'分类 : 脚本'}
+        window.subData= { title:'year : 2019.4'}
     </script>
 
 
 
 
   <section class="post-list">
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
       
 
 
@@ -263,9 +210,9 @@
   <div class="meta" id="header-meta">
     
       <h2 class="title">
-          <a href="/2019/04/06/视频跳过广告和VIP视频解析/">
+          <a href="/2019/04/03/啥是人工智能/">
               
-                  如何开发一个用户脚本系列——脚本1:视频跳过广告和 VIP 视频解析
+                  啥是人工智能
               
           </a>
       </h2>
@@ -284,7 +231,7 @@
         <div class="new-meta-item date">
           <a class="notlink">
             <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-06
+            2019-04-03
           </a>
         </div>
       
@@ -292,9 +239,9 @@
         
           
           <div class="new-meta-item category">
-            <a href="/categories/脚本/">
+            <a href="/categories/AI/">
               <i class="fas fa-folder-open" aria-hidden="true"></i>
-              脚本
+              AI
             </a>
           </div>
         
@@ -308,26 +255,43 @@
 
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
-      <p>在这篇文章中，我们一起学习脚本 <strong>视频跳过广告和 VIP 视频解析</strong> 的开发。这也是本系列文章的最后一篇，希望完成这个系列的学习之后，你能够掌握编写脚本的方法。在正式开始之前，先说一下我认为开发脚本应该遵循的两个准则:</p>
-<ul>
-<li>功能实现。当你决定要开发一个脚本的时候，你肯定清楚你的脚本要实现什么功能，只有你的脚本实现了你所描述的功能，才会有更多的人安装使用，才会有更多的人给你好评；</li>
-<li>样式实现。什么叫样式实现？就是你在目标网站中添加的元素，要尽量与原网站的配色，样式相一致。这一项是非必须的，但我认为是非常重要的。你想想，如果原网站整体是蓝色，而你添加的按钮是红色，那该有多突兀，有多丑，虽然你的按钮确实突出了，但别人一看就是山寨，看着会很不舒服。而如果你的按钮也用它网站的颜色，这样就会跟原网站已有的元素契合，整体特别自然，做到以假乱真的效果。你的脚本让别人用的舒服，别人才更愿意给你好评。</li>
-</ul>
-<h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>我们在日常闲暇时间都会看点视频娱乐一下，而现在各大视频网站都推出了会员体系，一个视频网站的年费会员往往需要 200 块左右。然而我们想看的电视剧，电影，通常都不在一个平台上，导致我们就需要开通各个网站的会员。一个网站还好，但多个网站叠加起来，这笔钱也不少。所以有没有什么方法能够不需要开通各个网站的会员就可以看想看的视频呢？网上现在有一些免费公开的接口提供这种解析服务，只需要将视频播放页面的地址作为参数传给接口，接口就能完成解析，然后播放视频。但我们每次都复制视频播放地址给接口，也会很麻烦，这时候就可以写个脚本，在这些视频网站上添加一个按钮，当用户点击按钮的时候，自动获取到当前页面的播放地址，然后传给接口解析播放。HTML 中有个 <code>iframe</code> 标签，可以用来在当前页面中嵌入其他网页，所以使用 <code>iframe</code> 标签就能够实现在原视频网站站内解析播放视频，体验很好。在某视频网站上的效果如下图:<br><a href="https://mofiter-blog.oss-cn-hangzhou.aliyuncs.com/images/%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC6-1.png" target="_blank" rel="noopener"><img src="https://mofiter-blog.oss-cn-hangzhou.aliyuncs.com/images/%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC6-1.png" alt="img"></a></p>
-<h3 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h3><p>视频的解析都是解析接口实现的，脚本本身并不进行视频解析。所以解析接口是否稳定，是否有较高的成功率是很关键的。现在网上有很多解析接口，本文只提供 <a href="https://api.bbbbbb.me/" target="_blank" rel="noopener">思古解析</a>(用于站内解析)和 <a href="http://www.1717yun.com/" target="_blank" rel="noopener">1717yun解析</a>(用于站外解析)作为示例，同时由于视频网站很多，所以本文只选择 <a href="https://v.qq.com/" target="_blank" rel="noopener">腾讯视频</a> 作为运行脚本的示例。腾讯视频某一个视频的具体播放地址形式为 <code>https://v.qq.com/x/cover/xxx</code>，用 <code>@match</code> 匹配。在脚本编写过程中会用到 jQuery，使用 <code>@require</code> 引入 jQuery 库。站外解析需要在新 tab 页中打开链接，所以需要脚本管理器的 <code>GM_openInTab()</code> 函数，我们用 <code>@grant</code> 声明(为了兼容 Greasemonkey，我们还要声明它的函数 <code>GM.openInTab</code>)。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Copy// @require           https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js</span><br><span class="line">// @match             *://v.qq.com/x/cover/*</span><br><span class="line">// @grant             GM_openInTab</span><br><span class="line">// @grant             GM.openInTab</span><br></pre></td></tr></table></figure>
-<p>通过观察原网站可知，功能菜单都是在视频播放窗口下面，当鼠标放在功能按钮上面时，会显示功能面板，当鼠标移出功能按钮时，功能面板隐藏。所以我们将解析按钮加到功能菜单里面，将各个接口添加到功能面板，这样就可以选择不同的接口进行解析，同时使用原网站的样式风格。我们使用一个数组保存接口信息，这样方便遍历添加。由于安全问题，以 https 开头的视频网站内部不能使用 http 开头的接口，所以我们利用接口类型字段来标识接口是用来进行站内解析还是站外解析，如果是站内解析，它应该以 https 开头，如果接口以 http 开头，只能用来站外解析。我们希望将所有的接口以一个列表的形式呈现，所以我们把它放在一个 <code>&lt;ul&gt;</code> 标签里，然后每一个接口放在一个 <code>&lt;li&gt;</code> 标签里面。我们创建一个 <code>&lt;div&gt;</code> 标签，在里面添加一个 <code>&lt;iframe&gt;</code> 标签，用来加载解析结果的网页。在后面进行站内解析的时候，我们用这个 <code>&lt;div&gt;</code> 替换原视频网站播放窗口里面的内容。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Copyvar originalInterfaceList = [&#123;&quot;name&quot;:&quot;思古解析&quot;,&quot;type&quot;:&quot;站内&quot;,&quot;url&quot;:&quot;https://api.bbbbbb.me/jx/?url=&quot;&#125;,</span><br><span class="line">                             &#123;&quot;name&quot;:&quot;1717yun解析&quot;,&quot;type&quot;:&quot;站外&quot;,&quot;url&quot;:&quot;http://www.1717yun.com/jx/ty.php?url=&quot;&#125;];</span><br><span class="line">    var parseList = &quot;&lt;ul&gt;&quot;;</span><br><span class="line">    parseInterfaceList.forEach((item,index)=&gt;&#123;</span><br><span class="line">        parseList += &quot;&lt;li&gt;&quot; + item.name + &quot;(&quot; + item.type + &quot;)&lt;/li&gt;&quot;;</span><br><span class="line">    &#125;);</span><br><span class="line">    parseList += &quot;&lt;/ul&gt;&quot;;</span><br><span class="line">    var videoPlayer = $(&quot;&lt;div id=&apos;iframe-div&apos; style=&apos;width:100%;height:100%;z-index:2147483647;&apos;&gt;&lt;iframe id=&apos;iframe-player&apos; frameborder=&apos;0&apos; allowfullscreen=&apos;true&apos; width=&apos;100%&apos; height=&apos;100%&apos;&gt;&lt;/iframe&gt;&lt;/div&gt;&quot;);</span><br></pre></td></tr></table></figure>
-<p>准备好解析接口和要替换的内容之后，我们就要去原网站添加解析按钮，并添加点击事件，在点击事件里面，替换播放窗口的内容。通过 <code>location.href</code> 能拿到当前页面的 url，我们使用 <code>indexOf()</code> 方法查看 <code>v.qq.com</code> 的索引值，如果索引值大于 -1 说明当前匹配的网站是腾讯视频，我们再进行处理。我们使用 jQuery 获取到功能菜单的父元素，然后创建解析按钮元素，将解析按钮添加到功能菜单父元素。给解析按钮添加鼠标移入移出操作，来显示和隐藏接口列表的功能面板。在每一个解析接口上面添加点击操作，判断被点击的 <code>&lt;li&gt;</code> 标签的接口类型，如果是站内解析，则替换播放窗口的内容，如果是站外解析，则打开一个新的页面显示解析链接。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">Copyif(location.href.indexOf(&quot;v.qq.com&quot;) &gt; -1)&#123;</span><br><span class="line">        var action_wrap = $(&quot;.action_wrap&quot;);</span><br><span class="line">        var qq_jiexi = $(&quot;&lt;div id=&apos;qq-jiexi-btn&apos; class=&apos;action_item action_jiexi&apos; style=&apos;position:relative;&apos;&gt;&lt;a class=&apos;action_title fn-qq-jiexi-text&apos;&gt;&lt;span&gt;解析&lt;/span&gt;&lt;/a&gt;&lt;div class=&apos;mod_pop_action fn-qq-jiexi&apos; style=&apos;background-color:#fff;width:120px;left:-50px;text-align:center;line-height:25px;&apos;&gt;&quot; + parseList + &quot;&lt;/div&gt;&lt;/div&gt;&quot;);</span><br><span class="line">        action_wrap.append(qq_jiexi);</span><br><span class="line">        document.getElementById(&quot;qq-jiexi-btn&quot;).addEventListener(&quot;mouseover&quot;,()=&gt;&#123;</span><br><span class="line">            $(&quot;.action_jiexi&quot;).toggleClass(&quot;open&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">        document.getElementById(&quot;qq-jiexi-btn&quot;).addEventListener(&quot;mouseout&quot;,()=&gt;&#123;</span><br><span class="line">            $(&quot;.action_jiexi&quot;).toggleClass(&quot;open&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">        $(&quot;.fn-qq-jiexi li&quot;).each((index,item)=&gt;&#123;</span><br><span class="line">            item.addEventListener(&apos;click&apos;,()=&gt;&#123;</span><br><span class="line">                if(parseInterfaceList[index].type == &quot;站内&quot;)&#123;</span><br><span class="line">                    if(document.getElementById(&quot;iframe-player&quot;) == null)&#123;</span><br><span class="line">                        var txp_ad_skip_text = $(&quot;.txp_ad_inner .txp_ad_skip_text&quot;);</span><br><span class="line">                        if(txp_ad_skip_text.text() === &quot;VIP可关闭广告&quot;)&#123;</span><br><span class="line">                            txp_ad_skip_text.click();</span><br><span class="line">                            mod_player = $(&quot;#mod_player&quot;);</span><br><span class="line">                            mod_player.empty();</span><br><span class="line">                            mod_player.append(videoPlayer);</span><br><span class="line">                        &#125;else if(txp_ad_skip_text.text() === &quot;关闭广告&quot;)&#123;</span><br><span class="line">                            txp_ad_skip_text.click();</span><br><span class="line">                        &#125;else if(vipPage === true)&#123;</span><br><span class="line">                            var txp_btn_play = $(&quot;.txp_left_controls .txp_btn_play&quot;);</span><br><span class="line">                            if(txp_btn_play.attr(&quot;data-status&quot;) === &quot;pause&quot;)&#123;</span><br><span class="line">                                txp_btn_play.click();</span><br><span class="line">                            &#125;</span><br><span class="line">                            mod_player = $(&quot;#mod_player&quot;);</span><br><span class="line">                            mod_player.empty();</span><br><span class="line">                            mod_player.append(videoPlayer);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    innerParse(parseInterfaceList[index].url + location.href);</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    GMopenInTab(parseInterfaceList[index].url + location.href,false);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">&#125;</span><br><span class="line">function innerParse(url)&#123; // 站内解析</span><br><span class="line">    $(&quot;#iframe-player&quot;).attr(&quot;src&quot;,url);</span><br><span class="line">&#125;</span><br><span class="line">function GMopenInTab(url,open_in_background)&#123; //站外解析</span><br><span class="line">    if(typeof GM_openInTab === &quot;function&quot;)&#123; // Tampermonkey 和 Violentmonkey 调用 GM_openInTab</span><br><span class="line">        GM_openInTab(url,open_in_background);</span><br><span class="line">    &#125;else&#123; // Greasemonkey GM.openInTab</span><br><span class="line">        GM.openInTab(url,open_in_background);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>至此腾讯视频的解析差不多就完成了，还有些细节和用户体验方面的东西代码里面有写，这里就不再赘述了。其他视频网站的处理和腾讯视频的原理是一样的，都是添加解析按钮，然后给解析按钮添加点击事件，进行站内或站外解析。</p>
+      <p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZukIrsq7161xeGvkFcNun46boShNiatq5JZvqdjX5XjVlR6ToY48GAxQ/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<blockquote>
+<p>作者：武博士、宋知达、袁雪瑶、聂文韬</p>
+</blockquote>
+<p>本节我们会以生动有趣的漫画来介绍关于人工智能（AI）相关的故事，你将会学习到： <strong>人工智能的基本概念</strong></p>
+<p><strong>1.1 啥是人工智能</strong><br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZWzSukZqmRVrdvVemO9siatS9tjtGR81eAGYv7NWSyWITibOOrTf2xK9w/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"><br>当有人问我，Dr.Wu 你的研究方向是什么？我回答：人工智能。 接着大约会得到以下四种问题： </p>
+<p><strong>哇，好酷！是不是很难呢？</strong> </p>
+<p><strong>是不是制造机器人帮助我们呢？</strong> </p>
+<p><strong>AI和人工智能有什么区别？</strong> </p>
+<p><strong>究竟啥是人工之智能？</strong> </p>
+<p>接下来，我会带大家一一解惑。</p>
+<p><strong>1.1.1 人的智慧和人工智能</strong></p>
+<p>究竟什么是人工智能，什么是AI，接下来，由我为大家解答。 媒体上几乎每天都有AI和人工智能的词汇，总给人一种深奥神秘的感觉。人工智能顾名思义就是人类制造的智慧，英文叫Artificial Intelligence（AI），所以人工智能=AI。 </p>
+<p>那么问题又来了，智慧究竟是什么？我们要以何种方式去制造智慧？要回答这个问题，就必须从人与人造物的 区别和人的智慧说起。 </p>
+<p>对于人工智能的研究人员来说，目标并不是研究人类智慧的来源，而是以工程技术手段制造出类似人类智慧的 产品。  </p>
+<p>人类和人工智能最大的差异是，肉体的有无。<br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZSbYzsu8L847X5pXuYGvEiaVvNfatNdYJBwXpzhE2JG29x9wSLnVpRuw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"><br>人类可以通过身体获得外界资讯。透过感觉器官，我们可以感觉到声音、外观、触感、气味等，让我们觉得舒服或者讨厌，进而产生感情。 </p>
+<p>不过人工智能并没有人类的身体，因此无法像人类一样通过肉体感觉器官来积累感觉经验，也无法借此获得知识。 </p>
+<p>人工智能必须依赖人类，将人类通过鼻子、眼睛、嘴巴、皮肤…获得的外界资讯，以某种形式”输入“到人工智能，人工智能才可以加工和处理这些信息。 具体输入方式我们未来讨论。</p>
+<p><strong>1.1.2 图灵测试：哪个一边是人？</strong></p>
+<p>英国数学家，Dr.Wu 认为二十世纪最聪明的人三个人（爱因斯坦、图灵、冯诺依曼）之一，艾伦.图灵（Alan Turing：1912-1954）定义了一种方法，来判断人工智能是否成功，这种方法是：和自己对话的对象是人类还是人工智能？ </p>
+<p>这种方法就是大名鼎鼎的图灵测试。<br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZZhXpn1212YWcQFkmNibWOfmjIC6gvgJPcb5TL2ykLTs2ykXX2CwRnAw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"><br>只要三成以上的研究员将人工智能误以为是人类，就算通过图灵测试。 </p>
+<p>但是由于计算机很难做到与人类接近的对话，所以很长一段时间都没有任何人工智能通过图灵测试。反而人类在不断学习计算机语言，这就是大量程序员的工作，和计算机对话。 </p>
+<p>图灵测试又叫做模仿游戏‘Imitation Game’，一部描绘图灵一生的自传电影一样也叫模仿游戏，我觉得很好看哦。 Imitation 即为模仿。 </p>
+<p>除了这部电影之外，《黑客帝国》、《终结者》、《全面进化》等描述人工智能的电影中，大多提到人工智能会威胁到人类生活，而不是给人类带来幸福，这让很多人谈到人工智能都会感到恐慌。 </p>
+<p>但是，事实上，目前还没有做出公认通过图灵测试的人工智能。所以大家也不必恐慌哦。</p>
+<p><strong>1.1.3 人工智能会思考吗？</strong></p>
+<p>“思考”，大多数人会想到计算，应该是人工智能的专长。但事实上，要想像人类一样思考其实是一件非常困难的事情。 </p>
+<p>人工智能需要以各种输入数据案例为基础，通过这些数据案例获取经验和知识，然后进行预测和判断。如果输入的案例太少，就无法做出判断。 情况相反，人类即使遇到过去未曾遇到的状况，也可以以弹性的方式面对各种状况。 </p>
+<p>例如，人工智能需要看过上万张猫狗的图片才可以相对准确的识别猫狗图片，但是人类3岁左右的小朋友，只需要见过几次，就可以识别。差距还是巨大的。<br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZTfZic3rXM0eic33pYlPM6y45wP2gefKMfsysGPAgLShCPIOeqnIKgGGg/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"><br>但是，人类对于人类来说很难解决的问题，人工智能却能够迅速解决。例如：训练好的人工智能在图片识别过程中，效率远远高于人类，给他们10万张图片，他们会很快的为人类做好分类工作，无怨无悔，而且在工作过程中，人工智能本来的”智慧”也在提升。<br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZic88PlEGsls1K27E2XaOIaylGaP5yicPeRlOIvPtQkwVQmrjFd0lyXbA/640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"><br>我们将在未来的章节提到，目前具有一定“智能”的AI，可以用什么样的方式来解决什么样的问题。明白人工智能的擅长之处与不擅长之处，是未来社会我们能够幸福生活的关键。</p>
+<p>（未完待续…）</p>
 
       
     </div>
     
       <div class="full-width auto-padding tags">
         
-          <a href="/tags/如何开发用户脚本/"><i class="fas fa-hashtag fa-fw"></i>如何开发用户脚本</a>
+          <a href="/tags/AI/"><i class="fas fa-hashtag fa-fw"></i>AI</a>
         
       </div>
     
@@ -347,11 +311,36 @@
 
 
   
+      <br>
+      <div class="prev-next">
+          <div class="prev-next">
+              
+                  <a class="prev" rel="prev" href="/archives/2019/04/">
+                      <section class="post prev">
+                          <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
+                      </section>
+                  </a>
+              
+              <p class="current">
+                  2 / 2
+              </p>
+              
+
+          </div>
+      </div>
+
+  
 
   <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
   
 
   
+
+
+
+
+
+<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
 
 
 
