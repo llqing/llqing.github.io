@@ -210,6 +210,153 @@
   <div class="meta" id="header-meta">
     
       <h2 class="title">
+          <a href="/2019/04/03/Linux文件系统结构/">
+              
+                  Linux文件系统结构
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-04-03
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/Linux/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              Linux
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h3 id="Linux-文件系统"><a href="#Linux-文件系统" class="headerlink" title="Linux 文件系统"></a>Linux 文件系统</h3><p>在 Linux 操作系统, 我们是看不到这些驱动器盘符, 而是文件夹(目录):</p>
+<p><img src="https://ws3.sinaimg.cn/large/005BYqpggy1g1poi8yj5tj30ku07ndhn.jpg" alt="Linux文件目录示意图"><br>​                                <strong><em>Linux文件目录示意图</em></strong></p>
+<p>Ubuntu 没有盘符概念, 只有一个根目录 <strong>/</strong>, 所有文件都在它下面.</p>
+<p><img src="https://ws3.sinaimg.cn/large/005BYqpgly1g1poizwgvjj30ip0bfaa7.jpg" alt="Linux 目录结构示意图"></p>
+<p>​                                <strong><em>Linux 目录结构示意图</em></strong></p>
+<h3 id="Linux-主要目录速查表"><a href="#Linux-主要目录速查表" class="headerlink" title="Linux 主要目录速查表"></a>Linux 主要目录速查表</h3><ul>
+<li><p>/：根目录，</p>
+<p>一般根目录下只存放目录</p>
+<p>，在 linux 下有且只有一个根目录，所有的东西都是从这里开始</p>
+<ul>
+<li>当在终端里输入 <code>/home</code>，其实是在告诉电脑，先从 <code>/</code>（根目录）开始，再进入到 <code>home</code> 目录</li>
+</ul>
+</li>
+<li><p>/bin、/usr/bin：可执行二进制文件的目录，如常用的命令 ls、tar、mv、cat 等</p>
+</li>
+<li><p>/boot：放置 linux 系统启动时用到的一些文件，如 linux 的内核文件：<code>/boot/vmlinuz</code>，系统引导管理器：<code>/boot/grub</code></p>
+</li>
+<li><p>/dev：存放linux系统下的设备文件，访问该目录下某个文件，相当于访问某个设备，常用的是挂载光驱<code>mount /dev/cdrom /mnt</code></p>
+</li>
+<li><p>/etc：系统配置文件存放的目录，不建议在此目录下存放可执行文件，重要的配置文件有</p>
+<ul>
+<li>/etc/inittab</li>
+<li>/etc/fstab</li>
+<li>/etc/init.d</li>
+<li>/etc/X11</li>
+<li>/etc/sysconfig</li>
+<li>/etc/xinetd.d</li>
+</ul>
+</li>
+<li><p>/home：系统默认的用户家目录，新增用户账号时，用户的家目录都存放在此目录下</p>
+<ul>
+<li><code>~</code> 表示当前用户的家目录</li>
+<li><code>~edu</code> 表示用户 <code>edu</code> 的家目录</li>
+</ul>
+</li>
+<li><p>/lib、/usr/lib、/usr/local/lib：系统使用的函数库的目录，程序在执行过程中，需要调用一些额外的参数时需要函数库的协助</p>
+</li>
+<li><p>/lost+fount：系统异常产生错误时，会将一些遗失的片段放置于此目录下</p>
+</li>
+<li><p>/mnt: /media：光盘默认挂载点，通常光盘挂载于 /mnt/cdrom 下，也不一定，可以选择任意位置进行挂载</p>
+</li>
+<li><p>/opt：给主机额外安装软件所摆放的目录</p>
+</li>
+<li><p>/proc：此目录的数据都在内存中，如系统核心，外部设备，网络状态，由于数据都存放于内存中，所以不占用磁盘空间，比较重要的文件有：/proc/cpuinfo、/proc/interrupts、/proc/dma、/proc/ioports、/proc/net/* 等</p>
+</li>
+<li><p>/root：系统管理员root的家目录</p>
+</li>
+<li><p>/sbin、/usr/sbin、/usr/local/sbin：放置系统管理员使用的可执行命令，如 fdisk、shutdown、mount 等。与 /bin 不同的是，这几个目录是给系统管理员 root 使用的命令，一般用户只能”查看”而不能设置和使用</p>
+</li>
+<li><p>/tmp：一般用户或正在执行的程序临时存放文件的目录，任何人都可以访问，重要数据不可放置在此目录下</p>
+</li>
+<li><p>/srv：服务启动之后需要访问的数据目录，如 www 服务需要访问的网页数据存放在 /srv/www 内</p>
+</li>
+<li><p>/usr：应用程序存放目录</p>
+<ul>
+<li>/usr/bin：存放应用程序可执行二进制文件的目录</li>
+<li>/usr/share：存放共享数据</li>
+<li>/usr/lib：存放不能直接运行的，却是许多程序运行所必需的一些函数库文件</li>
+<li>/usr/local：存放软件升级包</li>
+<li>/usr/share/doc：系统说明文件存放目录</li>
+<li>/usr/share/man：程序说明文件存放目录</li>
+</ul>
+</li>
+<li><p>/var：放置系统执行过程中经常变化的文件</p>
+<ul>
+<li>/var/log：随时更改的日志文件</li>
+<li>/var/spool/mail：邮件存放的目录</li>
+<li>/var/run：程序或服务启动后，其 PID 存放在该目录下</li>
+</ul>
+</li>
+</ul>
+<p><strong>重点:</strong> <strong>/home/用户名</strong> 是用户的家目录.</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ol>
+<li>Linux 和 Windows 文件系统的区别<br> 1.1 Linux 文件系统只有一个根目录(<strong>/</strong>)<br> 1.2 Windows 文件系统会有可能会有多个盘符(例如C、D、E…)</li>
+<li><strong>/home/用户名</strong> 是用户的家目录, 是经常使用的目录.</li>
+</ol>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/linux/"><i class="fas fa-hashtag fa-fw"></i>linux</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
           <a href="/2019/04/03/啥是人工智能/">
               
                   啥是人工智能
@@ -1562,63 +1709,6 @@
             </div>
           
         
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/03/13/myFirstBlog/">
-              
-                  myFirstBlog
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-03-13
-          </a>
-        </div>
-      
-      
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-    </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
       
 
   </section>
@@ -1640,8 +1730,14 @@
                   </a>
               
               <p class="current">
-                  2 / 2
+                  2 / 3
               </p>
+              
+                  <a class="next" rel="next" href="/archives/2019/page/3/">
+                      <section class="post next">
+                          &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
+                      </section>
+                  </a>
               
 
           </div>
@@ -1770,6 +1866,8 @@
         
           <li><a class="flat-box" title="/categories/常用工具/" href="/categories/常用工具/"><div class="name">常用工具</div><div class="badge">(2)</div></a></li>
         
+          <li><a class="flat-box" title="/categories/数据结构与算法/" href="/categories/数据结构与算法/"><div class="name">数据结构与算法</div><div class="badge">(1)</div></a></li>
+        
           <li><a class="flat-box" title="/categories/脚本/" href="/categories/脚本/"><div class="name">脚本</div><div class="badge">(1)</div></a></li>
         
           <li><a class="flat-box" title="/categories/高数/" href="/categories/高数/"><div class="name">高数</div><div class="badge">(1)</div></a></li>
@@ -1794,7 +1892,7 @@
 </header>
 
     <div class="content material">
-      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/API/" style="font-size: 24px; color: #555">API</a> <a href="/tags/ArcGIS/" style="font-size: 24px; color: #555">ArcGIS</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 19px; color: #777">Markdown</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/TCP/" style="font-size: 19px; color: #777">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/属性/" style="font-size: 14px; color: #999">属性</a> <a href="/tags/方法/" style="font-size: 14px; color: #999">方法</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
+      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/API/" style="font-size: 24px; color: #555">API</a> <a href="/tags/ArcGIS/" style="font-size: 24px; color: #555">ArcGIS</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 19px; color: #777">Markdown</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/TCP/" style="font-size: 19px; color: #777">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/属性/" style="font-size: 14px; color: #999">属性</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/方法/" style="font-size: 14px; color: #999">方法</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/算法/" style="font-size: 14px; color: #999">算法</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
     </div>
   </section>
 

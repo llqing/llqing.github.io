@@ -244,6 +244,8 @@
         
           
         
+          
+        
       
 
 
@@ -253,6 +255,119 @@
       
 
       
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/04/14/经典排序算法（1）——冒泡排序算法详解/">
+              
+                  经典排序算法（1）——冒泡排序算法详解
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-04-14
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/数据结构与算法/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              数据结构与算法
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <ol>
+<li><strong>基本思想</strong></li>
+</ol>
+<p>冒泡排序的基本思想就是：从无序序列头部开始，进行两两比较，根据大小交换位置，直到最后将最大（小）的数据元素交换到了无序队列的队尾，从而成为有序序列的一部分；下一次继续这个过程，直到所有数据元素都排好序。</p>
+<p>算法的核心在于每次通过两两比较交换位置，选出剩余无序序列里最大（小）的数据元素放到队尾。</p>
+<ol start="2">
+<li><strong>运行过程</strong></li>
+</ol>
+<p>冒泡排序算法的运作如下：</p>
+<p>1、比较相邻的元素。如果第一个比第二个大（小），就交换他们两个。</p>
+<p>2、对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。这步做完后，最后的元素会是最大（小）的数。</p>
+<p>3、针对所有的元素重复以上的步骤，除了最后已经选出的元素（有序）。</p>
+<p>4、持续每次对越来越少的元素（无序元素）重复上面的步骤，直到没有任何一对数字需要比较，则序列最终有序。</p>
+<p><img src="https://img-blog.csdn.net/20160316103848750" alt="img"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python3</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bubble_sort</span><span class="params">(nums)</span>:</span></span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums) - <span class="number">1</span>):  <span class="comment"># 这个循环负责设置冒泡排序进行的次数</span></span><br><span class="line">		<span class="keyword">for</span> j <span class="keyword">in</span> range(len(nums) - i - <span class="number">1</span>):  <span class="comment"># j为列表下标</span></span><br><span class="line">			<span class="keyword">if</span> nums[j] &gt; nums[j + <span class="number">1</span>]:</span><br><span class="line">				nums[j], nums[j + <span class="number">1</span>] = nums[j + <span class="number">1</span>], nums[j]</span><br><span class="line">				<span class="keyword">return</span> nums</span><br><span class="line"></span><br><span class="line">print(bubble_sort([<span class="number">45</span>, <span class="number">32</span>, <span class="number">8</span>, <span class="number">33</span>, <span class="number">12</span>, <span class="number">22</span>, <span class="number">19</span>, <span class="number">97</span>]))</span><br><span class="line"><span class="comment"># 输出：[8, 12, 19, 22, 32, 33, 45, 97]</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><strong>算法变种</strong></li>
+</ol>
+<p>鸡尾酒排序又叫定向冒泡排序，搅拌排序、来回排序等，是冒泡排序的一种变形。此算法与冒泡排序的不同处在于排序时是以双向在序列中进行排序。</p>
+<p>鸡尾酒排序在于排序过程是先从低到高，然后从高到低；而冒泡排序则仅从低到高去比较序列里的每个元素。它可以得到比冒泡排序稍微好一点的效能，原因是冒泡排序只从一个方向进行比对（由低到高），每次循环只移动一个项目。</p>
+<p>以序列(2,3,4,5,1)为例，鸡尾酒排序只需要从低到高，然后从高到低就可以完成排序，但如果使用冒泡排序则需要四次。</p>
+<p>但是在乱数序列的状态下，鸡尾酒排序与冒泡排序的效率都很差劲。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C语言</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">cocktail_sort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> len)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> j, left = <span class="number">0</span>, right = len - <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">		<span class="keyword">for</span> (j = left; j &lt; right; j++)</span><br><span class="line">			<span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>])</span><br><span class="line">				swap(arr[j], arr[j + <span class="number">1</span>]);</span><br><span class="line">		right--;</span><br><span class="line">		<span class="keyword">for</span> (j = right; j &gt; left; j--)</span><br><span class="line">			<span class="keyword">if</span> (arr[j - <span class="number">1</span>] &gt; arr[j])</span><br><span class="line">				swap(arr[j - <span class="number">1</span>], arr[j]);</span><br><span class="line">		left++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><strong>性能分析</strong></li>
+</ol>
+<ul>
+<li><p>时间复杂度</p>
+<p>在设置标志变量之后：</p>
+<p>当原始序列“正序”排列时，冒泡排序总的比较次数为n-1，移动次数为0，也就是说冒泡排序在最好情况下的时间复杂度为O(n)；</p>
+<p>当原始序列“逆序”排序时，冒泡排序总的比较次数为n(n-1)/2，移动次数为3n(n-1)/2次，所以冒泡排序在最坏情况下的时间复杂度为O(n^2)；</p>
+<p>当原始序列杂乱无序时，冒泡排序的平均时间复杂度为O(n^2)。</p>
+</li>
+<li><p>空间复杂度</p>
+<p>冒泡排序排序过程中需要一个临时变量进行两两交换，所需要的额外空间为1，因此空间复杂度为O(1)。</p>
+</li>
+<li><p>稳定性</p>
+<p>冒泡排序在排序过程中，元素两两交换时，相同元素的前后顺序并没有改变，所以冒泡排序是一种稳定排序算法。</p>
+</li>
+</ul>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/排序/"><i class="fas fa-hashtag fa-fw"></i>排序</a>
+        
+          <a href="/tags/算法/"><i class="fas fa-hashtag fa-fw"></i>算法</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
         
           
             <div class="post-wrapper">
@@ -847,79 +962,6 @@
   <div class="meta" id="header-meta">
     
       <h2 class="title">
-          <a href="/2019/04/06/一键激活window-office/">
-              
-                  一键激活window & office
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-06
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/常用工具/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              常用工具
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h1 id="一键激活windows-amp-office"><a href="#一键激活windows-amp-office" class="headerlink" title="一键激活windows&amp;office"></a>一键激活windows&amp;office</h1><p>自建的激活服务器，可以一键激活VOL版的window和office。</p>
-<p>推荐去<a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">https://msdn.itellyou.cn/</a> 下载安装正版的window和office。</p>
-<h2 id="单击下载-一键激活window-amp-office-bat"><a href="#单击下载-一键激活window-amp-office-bat" class="headerlink" title="单击下载 一键激活window&amp;office.bat"></a>单击下载 <a href="https://tohot.top/download/%E4%B8%80%E9%94%AE%E6%BF%80%E6%B4%BBwindow&amp;office.bat" target="_blank" rel="noopener">一键激活window&amp;office.bat</a></h2>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/激活/"><i class="fas fa-hashtag fa-fw"></i>激活</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
           <a href="/2019/04/06/视频跳过广告和VIP视频解析/">
               
                   如何开发一个用户脚本系列——脚本1:视频跳过广告和 VIP 视频解析
@@ -985,6 +1027,79 @@
       <div class="full-width auto-padding tags">
         
           <a href="/tags/如何开发用户脚本/"><i class="fas fa-hashtag fa-fw"></i>如何开发用户脚本</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/04/06/一键激活window-office/">
+              
+                  一键激活window & office
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-04-06
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/常用工具/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              常用工具
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h1 id="一键激活windows-amp-office"><a href="#一键激活windows-amp-office" class="headerlink" title="一键激活windows&amp;office"></a>一键激活windows&amp;office</h1><p>自建的激活服务器，可以一键激活VOL版的window和office。</p>
+<p>推荐去<a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">https://msdn.itellyou.cn/</a> 下载安装正版的window和office。</p>
+<h2 id="单击下载-一键激活window-amp-office-bat"><a href="#单击下载-一键激活window-amp-office-bat" class="headerlink" title="单击下载 一键激活window&amp;office.bat"></a>单击下载 <a href="https://tohot.top/download/%E4%B8%80%E9%94%AE%E6%BF%80%E6%B4%BBwindow&amp;office.bat" target="_blank" rel="noopener">一键激活window&amp;office.bat</a></h2>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/激活/"><i class="fas fa-hashtag fa-fw"></i>激活</a>
         
       </div>
     
@@ -1173,153 +1288,6 @@
             </div>
           
         
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/03/Linux文件系统结构/">
-              
-                  Linux文件系统结构
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-03
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/Linux/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              Linux
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h3 id="Linux-文件系统"><a href="#Linux-文件系统" class="headerlink" title="Linux 文件系统"></a>Linux 文件系统</h3><p>在 Linux 操作系统, 我们是看不到这些驱动器盘符, 而是文件夹(目录):</p>
-<p><img src="https://ws3.sinaimg.cn/large/005BYqpggy1g1poi8yj5tj30ku07ndhn.jpg" alt="Linux文件目录示意图"><br>​                                <strong><em>Linux文件目录示意图</em></strong></p>
-<p>Ubuntu 没有盘符概念, 只有一个根目录 <strong>/</strong>, 所有文件都在它下面.</p>
-<p><img src="https://ws3.sinaimg.cn/large/005BYqpgly1g1poizwgvjj30ip0bfaa7.jpg" alt="Linux 目录结构示意图"></p>
-<p>​                                <strong><em>Linux 目录结构示意图</em></strong></p>
-<h3 id="Linux-主要目录速查表"><a href="#Linux-主要目录速查表" class="headerlink" title="Linux 主要目录速查表"></a>Linux 主要目录速查表</h3><ul>
-<li><p>/：根目录，</p>
-<p>一般根目录下只存放目录</p>
-<p>，在 linux 下有且只有一个根目录，所有的东西都是从这里开始</p>
-<ul>
-<li>当在终端里输入 <code>/home</code>，其实是在告诉电脑，先从 <code>/</code>（根目录）开始，再进入到 <code>home</code> 目录</li>
-</ul>
-</li>
-<li><p>/bin、/usr/bin：可执行二进制文件的目录，如常用的命令 ls、tar、mv、cat 等</p>
-</li>
-<li><p>/boot：放置 linux 系统启动时用到的一些文件，如 linux 的内核文件：<code>/boot/vmlinuz</code>，系统引导管理器：<code>/boot/grub</code></p>
-</li>
-<li><p>/dev：存放linux系统下的设备文件，访问该目录下某个文件，相当于访问某个设备，常用的是挂载光驱<code>mount /dev/cdrom /mnt</code></p>
-</li>
-<li><p>/etc：系统配置文件存放的目录，不建议在此目录下存放可执行文件，重要的配置文件有</p>
-<ul>
-<li>/etc/inittab</li>
-<li>/etc/fstab</li>
-<li>/etc/init.d</li>
-<li>/etc/X11</li>
-<li>/etc/sysconfig</li>
-<li>/etc/xinetd.d</li>
-</ul>
-</li>
-<li><p>/home：系统默认的用户家目录，新增用户账号时，用户的家目录都存放在此目录下</p>
-<ul>
-<li><code>~</code> 表示当前用户的家目录</li>
-<li><code>~edu</code> 表示用户 <code>edu</code> 的家目录</li>
-</ul>
-</li>
-<li><p>/lib、/usr/lib、/usr/local/lib：系统使用的函数库的目录，程序在执行过程中，需要调用一些额外的参数时需要函数库的协助</p>
-</li>
-<li><p>/lost+fount：系统异常产生错误时，会将一些遗失的片段放置于此目录下</p>
-</li>
-<li><p>/mnt: /media：光盘默认挂载点，通常光盘挂载于 /mnt/cdrom 下，也不一定，可以选择任意位置进行挂载</p>
-</li>
-<li><p>/opt：给主机额外安装软件所摆放的目录</p>
-</li>
-<li><p>/proc：此目录的数据都在内存中，如系统核心，外部设备，网络状态，由于数据都存放于内存中，所以不占用磁盘空间，比较重要的文件有：/proc/cpuinfo、/proc/interrupts、/proc/dma、/proc/ioports、/proc/net/* 等</p>
-</li>
-<li><p>/root：系统管理员root的家目录</p>
-</li>
-<li><p>/sbin、/usr/sbin、/usr/local/sbin：放置系统管理员使用的可执行命令，如 fdisk、shutdown、mount 等。与 /bin 不同的是，这几个目录是给系统管理员 root 使用的命令，一般用户只能”查看”而不能设置和使用</p>
-</li>
-<li><p>/tmp：一般用户或正在执行的程序临时存放文件的目录，任何人都可以访问，重要数据不可放置在此目录下</p>
-</li>
-<li><p>/srv：服务启动之后需要访问的数据目录，如 www 服务需要访问的网页数据存放在 /srv/www 内</p>
-</li>
-<li><p>/usr：应用程序存放目录</p>
-<ul>
-<li>/usr/bin：存放应用程序可执行二进制文件的目录</li>
-<li>/usr/share：存放共享数据</li>
-<li>/usr/lib：存放不能直接运行的，却是许多程序运行所必需的一些函数库文件</li>
-<li>/usr/local：存放软件升级包</li>
-<li>/usr/share/doc：系统说明文件存放目录</li>
-<li>/usr/share/man：程序说明文件存放目录</li>
-</ul>
-</li>
-<li><p>/var：放置系统执行过程中经常变化的文件</p>
-<ul>
-<li>/var/log：随时更改的日志文件</li>
-<li>/var/spool/mail：邮件存放的目录</li>
-<li>/var/run：程序或服务启动后，其 PID 存放在该目录下</li>
-</ul>
-</li>
-</ul>
-<p><strong>重点:</strong> <strong>/home/用户名</strong> 是用户的家目录.</p>
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ol>
-<li>Linux 和 Windows 文件系统的区别<br> 1.1 Linux 文件系统只有一个根目录(<strong>/</strong>)<br> 1.2 Windows 文件系统会有可能会有多个盘符(例如C、D、E…)</li>
-<li><strong>/home/用户名</strong> 是用户的家目录, 是经常使用的目录.</li>
-</ol>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/linux/"><i class="fas fa-hashtag fa-fw"></i>linux</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
       
 
   </section>
@@ -1335,7 +1303,7 @@
           <div class="prev-next">
               
               <p class="current">
-                  1 / 2
+                  1 / 3
               </p>
               
                   <a class="next" rel="next" href="/archives/2019/page/2/">
@@ -1471,6 +1439,8 @@
         
           <li><a class="flat-box" title="/categories/常用工具/" href="/categories/常用工具/"><div class="name">常用工具</div><div class="badge">(2)</div></a></li>
         
+          <li><a class="flat-box" title="/categories/数据结构与算法/" href="/categories/数据结构与算法/"><div class="name">数据结构与算法</div><div class="badge">(1)</div></a></li>
+        
           <li><a class="flat-box" title="/categories/脚本/" href="/categories/脚本/"><div class="name">脚本</div><div class="badge">(1)</div></a></li>
         
           <li><a class="flat-box" title="/categories/高数/" href="/categories/高数/"><div class="name">高数</div><div class="badge">(1)</div></a></li>
@@ -1495,7 +1465,7 @@
 </header>
 
     <div class="content material">
-      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/API/" style="font-size: 24px; color: #555">API</a> <a href="/tags/ArcGIS/" style="font-size: 24px; color: #555">ArcGIS</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 19px; color: #777">Markdown</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/TCP/" style="font-size: 19px; color: #777">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/属性/" style="font-size: 14px; color: #999">属性</a> <a href="/tags/方法/" style="font-size: 14px; color: #999">方法</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
+      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/API/" style="font-size: 24px; color: #555">API</a> <a href="/tags/ArcGIS/" style="font-size: 24px; color: #555">ArcGIS</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 19px; color: #777">Markdown</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/TCP/" style="font-size: 19px; color: #777">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/属性/" style="font-size: 14px; color: #999">属性</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/方法/" style="font-size: 14px; color: #999">方法</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/算法/" style="font-size: 14px; color: #999">算法</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
     </div>
   </section>
 

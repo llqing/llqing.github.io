@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
-  <title>Archives: 2018/4 | GIS小站</title>
+  <title>Tag: 排序 | GIS小站</title>
   
   <meta name="keywords" content="GIS,Code">
   
@@ -181,9 +181,8 @@
     <div class='container clearfix'>
         <div class='l_main'>
             
-	
     <script>
-        window.subData= { title:'year : 2018.4'}
+        window.subData= { title:'标签 : 排序'}
     </script>
 
 
@@ -266,88 +265,9 @@
   <div class="meta" id="header-meta">
     
       <h2 class="title">
-          <a href="/2018/04/15/Python中if-name-name-main/">
+          <a href="/2019/04/14/经典排序算法（1）——冒泡排序算法详解/">
               
-                  Python中if __name__ == "__main__"是什么作用
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2018-04-15
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/Python/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              Python
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>2018/4/15 22:19:35 </p>
-<hr>
-<ul>
-<li>最近在写毕业论文使用到Python，在查找文献资源中看到了一行代码<br><code>Python中if __name__ == &quot;__main__:&quot;</code>之前练习Python并没有注意这个，也可能太就给忘了，为了搞清这个语句于是开始疯狂百度，各种论坛博客搜索，最终找到了这个语句的作用个人感觉最易懂的解释，分享给大家</li>
-<li>python文件的后缀名是.py，python文件既可以用来直接执行，也可以作为模块被导入。<br>我们在使用python时经常会看到<code>Python中if __name__ == &quot;__main__:&quot;</code>这样一个句子,这是什么呢？<br>其中name是模块的内置属性，而这个内置属性的值取决于这个.py文件的使用方式，即你是作为模块导入还是直接执行。<br>如果你是直接执行，那么这个name的值就是’main’，如果你作为一个模块导入，那么这个内置属性值就取决于这个文件名(不包含路径和文件扩展名)。<br>所以我们在看到一个这样的句子<code>Python中if __name__ == &quot;__main__&quot;:</code>时，就是文件在执行时要执行这个main()函数</li>
-</ul>
-<hr>
-<p>附上一张号称一篇程序覆盖Python基础的代码，基本的结构都涉及到了，看不清的话保存本地放大看吧。<br><img src="https://img-blog.csdn.net/20160511222649275" alt></p>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/Python/"><i class="fas fa-hashtag fa-fw"></i>Python</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2018/04/09/用MarkdownX编写博文/">
-              
-                  用MarkdownX编写博文
+                  经典排序算法（1）——冒泡排序算法详解
               
           </a>
       </h2>
@@ -366,7 +286,7 @@
         <div class="new-meta-item date">
           <a class="notlink">
             <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2018-04-09
+            2019-04-14
           </a>
         </div>
       
@@ -374,9 +294,9 @@
         
           
           <div class="new-meta-item category">
-            <a href="/categories/Blog/">
+            <a href="/categories/数据结构与算法/">
               <i class="fas fa-folder-open" aria-hidden="true"></i>
-              Blog
+              数据结构与算法
             </a>
           </div>
         
@@ -390,12 +310,44 @@
 
   <section class="article typo">
     <div class="article-entry" itemprop="articleBody">
-      <p>2018/4/9 22:19:02    </p>
-<hr>
+      <ol>
+<li><strong>基本思想</strong></li>
+</ol>
+<p>冒泡排序的基本思想就是：从无序序列头部开始，进行两两比较，根据大小交换位置，直到最后将最大（小）的数据元素交换到了无序队列的队尾，从而成为有序序列的一部分；下一次继续这个过程，直到所有数据元素都排好序。</p>
+<p>算法的核心在于每次通过两两比较交换位置，选出剩余无序序列里最大（小）的数据元素放到队尾。</p>
+<ol start="2">
+<li><strong>运行过程</strong></li>
+</ol>
+<p>冒泡排序算法的运作如下：</p>
+<p>1、比较相邻的元素。如果第一个比第二个大（小），就交换他们两个。</p>
+<p>2、对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。这步做完后，最后的元素会是最大（小）的数。</p>
+<p>3、针对所有的元素重复以上的步骤，除了最后已经选出的元素（有序）。</p>
+<p>4、持续每次对越来越少的元素（无序元素）重复上面的步骤，直到没有任何一对数字需要比较，则序列最终有序。</p>
+<p><img src="https://img-blog.csdn.net/20160316103848750" alt="img"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python3</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bubble_sort</span><span class="params">(nums)</span>:</span></span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums) - <span class="number">1</span>):  <span class="comment"># 这个循环负责设置冒泡排序进行的次数</span></span><br><span class="line">		<span class="keyword">for</span> j <span class="keyword">in</span> range(len(nums) - i - <span class="number">1</span>):  <span class="comment"># j为列表下标</span></span><br><span class="line">			<span class="keyword">if</span> nums[j] &gt; nums[j + <span class="number">1</span>]:</span><br><span class="line">				nums[j], nums[j + <span class="number">1</span>] = nums[j + <span class="number">1</span>], nums[j]</span><br><span class="line">				<span class="keyword">return</span> nums</span><br><span class="line"></span><br><span class="line">print(bubble_sort([<span class="number">45</span>, <span class="number">32</span>, <span class="number">8</span>, <span class="number">33</span>, <span class="number">12</span>, <span class="number">22</span>, <span class="number">19</span>, <span class="number">97</span>]))</span><br><span class="line"><span class="comment"># 输出：[8, 12, 19, 22, 32, 33, 45, 97]</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><strong>算法变种</strong></li>
+</ol>
+<p>鸡尾酒排序又叫定向冒泡排序，搅拌排序、来回排序等，是冒泡排序的一种变形。此算法与冒泡排序的不同处在于排序时是以双向在序列中进行排序。</p>
+<p>鸡尾酒排序在于排序过程是先从低到高，然后从高到低；而冒泡排序则仅从低到高去比较序列里的每个元素。它可以得到比冒泡排序稍微好一点的效能，原因是冒泡排序只从一个方向进行比对（由低到高），每次循环只移动一个项目。</p>
+<p>以序列(2,3,4,5,1)为例，鸡尾酒排序只需要从低到高，然后从高到低就可以完成排序，但如果使用冒泡排序则需要四次。</p>
+<p>但是在乱数序列的状态下，鸡尾酒排序与冒泡排序的效率都很差劲。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C语言</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">cocktail_sort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> len)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> j, left = <span class="number">0</span>, right = len - <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">		<span class="keyword">for</span> (j = left; j &lt; right; j++)</span><br><span class="line">			<span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>])</span><br><span class="line">				swap(arr[j], arr[j + <span class="number">1</span>]);</span><br><span class="line">		right--;</span><br><span class="line">		<span class="keyword">for</span> (j = right; j &gt; left; j--)</span><br><span class="line">			<span class="keyword">if</span> (arr[j - <span class="number">1</span>] &gt; arr[j])</span><br><span class="line">				swap(arr[j - <span class="number">1</span>], arr[j]);</span><br><span class="line">		left++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li><strong>性能分析</strong></li>
+</ol>
 <ul>
-<li><p>　博客搭建好后，尽管下午没事用手机查询Markdown教程，可是搜了一圈发现网上的教程参差不齐，还不如直接用html编写博文，可是想到Markdown的初衷就是方便编写博文，于是想会不会有些工具使Markdown的编写自动化了，果然搜到了一篇用MarkdownX的于是下载下来试用一番，发现挺容易入手的。</p>
+<li><p>时间复杂度</p>
+<p>在设置标志变量之后：</p>
+<p>当原始序列“正序”排列时，冒泡排序总的比较次数为n-1，移动次数为0，也就是说冒泡排序在最好情况下的时间复杂度为O(n)；</p>
+<p>当原始序列“逆序”排序时，冒泡排序总的比较次数为n(n-1)/2，移动次数为3n(n-1)/2次，所以冒泡排序在最坏情况下的时间复杂度为O(n^2)；</p>
+<p>当原始序列杂乱无序时，冒泡排序的平均时间复杂度为O(n^2)。</p>
 </li>
-<li><p>　一个优秀的产品就应该这样让人尽量容易上手，不必拘于太多的条条框框，但Markdown毕竟还是有些功能不易实现，所以下一步准备尝试使用html+css制作一些漂亮的静态页面。</p>
+<li><p>空间复杂度</p>
+<p>冒泡排序排序过程中需要一个临时变量进行两两交换，所需要的额外空间为1，因此空间复杂度为O(1)。</p>
+</li>
+<li><p>稳定性</p>
+<p>冒泡排序在排序过程中，元素两两交换时，相同元素的前后顺序并没有改变，所以冒泡排序是一种稳定排序算法。</p>
 </li>
 </ul>
 
@@ -404,7 +356,9 @@
     
       <div class="full-width auto-padding tags">
         
-          <a href="/tags/Markdown/"><i class="fas fa-hashtag fa-fw"></i>Markdown</a>
+          <a href="/tags/排序/"><i class="fas fa-hashtag fa-fw"></i>排序</a>
+        
+          <a href="/tags/算法/"><i class="fas fa-hashtag fa-fw"></i>算法</a>
         
       </div>
     
@@ -429,13 +383,6 @@
   
 
   
-
-
-
-
-
-<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-
 
 
 
