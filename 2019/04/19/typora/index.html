@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>typora的简单入门(Markdown基本语法) | GIS小站</title>
+  
+  <meta name="keywords" content="GIS,Code">
+  
+  
+
+  
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+  
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="msapplication-TileColor" content="#1BC3FB">
+  <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml">
+  
+
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+  
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png">
+  <link rel="mask-icon" color="#1BC3FB" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg">
+  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest">
+  
+
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+  
+
+  
+  <link rel="stylesheet" href="/style.css">
+  
+
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
+    }
+  </script>
+
+  
+  
+</head>
+
+
+<body>
+    <div id="loading-bar-wrapper">
+  <div id="loading-bar" class="material"></div>
+</div>
+
+    <script>setLoadingBarProgress(20)</script>
+    <header class="l_header material">
+	<div class="wrapper">
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href="/">
+        
+          GIS小站
+        
+      </a>
+			<div class="menu">
+				<ul class="h-list">
+          
+  					
+  						<li>
+								<a id="https:llqing.github.io" class="nav flat-box" href="https://llqing.github.io/">
+									<i class="fas fa-home fa-fw"></i>&nbsp;主页
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="home" class="nav flat-box" href="/">
+									<i class="fas fa-rss fa-fw"></i>&nbsp;博客
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="archives" class="nav flat-box" href="/archives/">
+									<i class="fas fa-archive fa-fw"></i>&nbsp;归档
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="friends" class="nav flat-box" href="/friends/">
+									<i class="fas fa-users fa-fw"></i>&nbsp;朋友
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="about" class="nav flat-box" href="/about/">
+									<i class="fas fa-address-card fa-fw"></i>&nbsp;关于
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索">
+						<span class="icon"><i class="fas fa-search fa-fw"></i></span>
+					</form>
+				</div>
+			
+			<ul class="switcher h-list">
+				
+					<li class="s-search"><a class="fas fa-search fa-fw" href="javascript:void(0)"></a></li>
+				
+				<li class="s-menu"><a class="fas fa-bars fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
+
+		<div class="nav-sub container container--flex">
+			<a class="logo flat-box"></a>
+			<ul class="switcher h-list">
+				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
+				<li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu">
+      <ul>
+          
+              
+                  <li>
+										<a id="https:llqing.github.io" class="nav flat-box" href="https://llqing.github.io/">
+											<i class="fas fa-home fa-fw"></i>&nbsp;主页
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="home" class="nav flat-box" href="/">
+											<i class="fas fa-rss fa-fw"></i>&nbsp;博客
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="archives" class="nav flat-box" href="/archives/">
+											<i class="fas fa-archive fa-fw"></i>&nbsp;归档
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="friends" class="nav flat-box" href="/friends/">
+											<i class="fas fa-users fa-fw"></i>&nbsp;朋友
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="about" class="nav flat-box" href="/about/">
+											<i class="fas fa-address-card fa-fw"></i>&nbsp;关于
+										</a>
+                  </li>
+              
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+    <div class="l_body">
+    <div class='container clearfix'>
+        <div class='l_main'>
+            <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      
+          <h1 class="title">typora的简单入门(Markdown基本语法)</h1>
+      
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-04-19
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/常用工具/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              常用工具
+            </a>
+          </div>
+        
+      
+      
+        
+          <div class="new-meta-item browse busuanzi">
+            <a class="notlink">
+              <i class="fas fa-eye" aria-hidden="true"></i>
+              <span id="busuanzi_value_page_pv">
+                <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+              </span>
+            </a>
+          </div>
+        
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+    <section class="article typo">
+      <div class="article-entry" itemprop="articleBody">
+        <ul>
+<li><ul>
+<li>标题的使用<ul>
+<li><a href>标题的使用格式</a></li>
+<li><a href>标题Typora显示形式是</a></li>
+</ul>
+</li>
+<li>文本居中<ul>
+<li><a href>文本居中使用格式</a></li>
+<li><a href>文本居中在Typora中显示形式是</a></li>
+</ul>
+</li>
+<li>下划线<ul>
+<li><a href>下划线使用格式</a></li>
+<li><a href>下划线在Typora显示形式是</a></li>
+</ul>
+</li>
+<li>删除线<ul>
+<li><a href>删除线使用格式</a></li>
+<li><a href>删除线在Typora显示形式是</a></li>
+</ul>
+</li>
+<li>字体加粗<ul>
+<li><a href>字体加粗使用格式</a></li>
+<li><a href>字体加粗在Typora显示形式是</a></li>
+</ul>
+</li>
+<li>字体倾斜<ul>
+<li><a href>字体倾斜使用格式</a></li>
+<li><a href>字体倾斜在Typora的显示形式</a></li>
+</ul>
+</li>
+<li><a href>图片的插入</a></li>
+<li>超链接<ul>
+<li><a href>超链接使用格式</a></li>
+<li><a href>超链接在Typora显示形式是必须以http开头</a></li>
+</ul>
+</li>
+<li>代码区域<ul>
+<li><a href>代码区域的使用格式</a></li>
+<li><a href>代码区域在typora中显示形式</a></li>
+</ul>
+</li>
+<li>表格的使用<ul>
+<li><a href>表格的二种使用格式</a></li>
+<li><a href>表格在typora中显示形式</a></li>
+</ul>
+</li>
+<li>任务列表<ul>
+<li><a href>任务列表使用格式</a></li>
+<li><a href>任务列表在typora中的显示形式</a></li>
+</ul>
+</li>
+<li>列表<ul>
+<li><a href>列表的使用格式</a></li>
+<li><a href>列表在typora中的显示形式</a></li>
+</ul>
+</li>
+<li><a href>数学表达式</a></li>
+<li>水平分割线<ul>
+<li><a href>水平分割线的使用格式</a></li>
+<li><a href>水平分割线在typora中显示形式</a></li>
+</ul>
+</li>
+<li>引用<ul>
+<li><a href>引用的使用格式</a></li>
+<li><a href>引用在typora中的显示形式</a></li>
+</ul>
+</li>
+<li>注释<ul>
+<li><a href>注释的使用格式</a></li>
+<li><a href>注释在typora中显示形式</a></li>
+</ul>
+</li>
+<li>表情<ul>
+<li><a href>表情的使用格式</a></li>
+<li><a href>表情在typora中的显示形式</a></li>
+</ul>
+</li>
+<li><a href>Typora快捷键</a></li>
+</ul>
+</li>
+</ul>
+<p>Typora可以根据当前文档的标题层级，自动生成并显示大纲，窗口的右下角并有字数显示。</p>
+<h2 id="标题的使用"><a href="#标题的使用" class="headerlink" title="标题的使用"></a>标题的使用</h2><h3 id="标题的使用格式"><a href="#标题的使用格式" class="headerlink" title="标题的使用格式"></a>标题的使用格式</h3><p># 一阶标题 或者快捷键Ctrl+1</p>
+<p>##二阶标题 或者快捷键Ctrl+2</p>
+<p>###三阶标题 或者快捷键Ctrl+3</p>
+<p>####四阶标题 或者快捷键Ctrl+4</p>
+<p>#####五阶标题 或者快捷键Ctrl+5</p>
+<p>######六阶标题 或者快捷键Ctrl+6</p>
+<h3 id="标题Typora显示形式是"><a href="#标题Typora显示形式是" class="headerlink" title="标题Typora显示形式是"></a>标题Typora显示形式是</h3><p><img src="https://img-blog.csdn.net/20180108112546034?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvU0lNQkExOTQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<h2 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h2><h3 id="文本居中使用格式"><a href="#文本居中使用格式" class="headerlink" title="文本居中使用格式"></a>文本居中使用格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\&lt;center\&gt;这是要居中的文本内容\&lt;/center\&gt;1</span><br></pre></td></tr></table></figure>
+<h3 id="文本居中在Typora中显示形式是"><a href="#文本居中在Typora中显示形式是" class="headerlink" title="文本居中在Typora中显示形式是"></a>文本居中在Typora中显示形式是</h3><p>这是要居中的文本</p>
+<p>注：Typora目前并不会直接预览居中效果——相应的效果只有输出文本的时候才会显现。</p>
+<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><h3 id="下划线使用格式"><a href="#下划线使用格式" class="headerlink" title="下划线使用格式"></a>下划线使用格式</h3><p>\下划线的内容\&lt;\u&gt; 或者快捷键Ctrl+U</p>
+<h3 id="下划线在Typora显示形式是"><a href="#下划线在Typora显示形式是" class="headerlink" title="下划线在Typora显示形式是"></a>下划线在Typora显示形式是</h3><p>这就是我亲测的下划线</p>
+<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><h3 id="删除线使用格式"><a href="#删除线使用格式" class="headerlink" title="删除线使用格式"></a>删除线使用格式</h3><p>~~删除线的内容~~</p>
+<h3 id="删除线在Typora显示形式是"><a href="#删除线在Typora显示形式是" class="headerlink" title="删除线在Typora显示形式是"></a>删除线在Typora显示形式是</h3><p><del>这是删除线的内容</del></p>
+<h2 id="字体加粗"><a href="#字体加粗" class="headerlink" title="字体加粗"></a>字体加粗</h2><h3 id="字体加粗使用格式"><a href="#字体加粗使用格式" class="headerlink" title="字体加粗使用格式"></a>字体加粗使用格式</h3><p><strong>加粗字体</strong> 或者快捷键Ctrl+B</p>
+<h3 id="字体加粗在Typora显示形式是"><a href="#字体加粗在Typora显示形式是" class="headerlink" title="字体加粗在Typora显示形式是"></a>字体加粗在Typora显示形式是</h3><p><strong>加粗字体 This is a bold font</strong></p>
+<h2 id="字体倾斜"><a href="#字体倾斜" class="headerlink" title="字体倾斜"></a>字体倾斜</h2><h3 id="字体倾斜使用格式"><a href="#字体倾斜使用格式" class="headerlink" title="字体倾斜使用格式"></a>字体倾斜使用格式</h3><p><em>字体倾斜了</em> 或者快捷键Ctrl+I</p>
+<h3 id="字体倾斜在Typora的显示形式"><a href="#字体倾斜在Typora的显示形式" class="headerlink" title="字体倾斜在Typora的显示形式"></a>字体倾斜在Typora的显示形式</h3><p><em>字体倾斜了 This is a alanted font</em></p>
+<h2 id="图片的插入"><a href="#图片的插入" class="headerlink" title="图片的插入"></a>图片的插入</h2><p>最简单粗暴的图片插入方式如图：</p>
+<p><img src="https://img-blog.csdn.net/20180108113042939?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvU0lNQkExOTQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>图片来源<a href="http://support.typora.io/Images" target="_blank" rel="noopener">http://support.typora.io/Images</a></p>
+<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><h3 id="超链接使用格式"><a href="#超链接使用格式" class="headerlink" title="超链接使用格式"></a>超链接使用格式</h3><p>第一种：[<a href="http://www.simba.com\](http://www.simba.com/)" target="_blank" rel="noopener">http://www.simba.com\](http://www.simba.com/)</a></p>
+<p>第二种：快捷键Ctrl+K</p>
+<p><a href="超链接地址">自定义内容</a> 例如：<a href="www.baidu.com">百度一下</a></p>
+<h3 id="超链接在Typora显示形式是：（必须以http开头）"><a href="#超链接在Typora显示形式是：（必须以http开头）" class="headerlink" title="超链接在Typora显示形式是：（必须以http开头）"></a>超链接在Typora显示形式是：（必须以http开头）</h3><p>第一种：<a href="http://www.simba.com/" target="_blank" rel="noopener">http://www.simba.com</a></p>
+<p>第二种：<a href="https://blog.csdn.net/SIMBA1949/article/details/www.baidu.com" target="_blank" rel="noopener">百度一下</a></p>
+<p>按住Ctrl键+点击上面链接就可以直接访问该链接</p>
+<h2 id="代码区域"><a href="#代码区域" class="headerlink" title="代码区域"></a>代码区域</h2><p>Typora支持对多种语言的代码区域进行<strong>语法高亮</strong>。这些语言可以说是<strong>涵盖了绝大部分经常使用的编程语言</strong>，包括C++，Python，MATLAB，甚至包含spreadsheet（也就是Excel电子表格）。用Typora记编程笔记，看起来一清二楚。如果设置代码语言为flow，那么可以直接画出一个流程图；还可以使用相应的方法画出时序图等图表。</p>
+<h3 id="代码区域的使用格式"><a href="#代码区域的使用格式" class="headerlink" title="代码区域的使用格式"></a>代码区域的使用格式</h3><p><code></code> <code>+编程语言：例如java代码：</code> <code></code>java</p>
+<h3 id="代码区域在typora中显示形式"><a href="#代码区域在typora中显示形式" class="headerlink" title="代码区域在typora中显示形式"></a>代码区域在typora中显示形式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">simba</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"我爱你，中国"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;<span class="number">12345</span></span><br></pre></td></tr></table></figure>
+<h2 id="表格的使用"><a href="#表格的使用" class="headerlink" title="表格的使用"></a>表格的使用</h2><h3 id="表格的二种使用格式"><a href="#表格的二种使用格式" class="headerlink" title="表格的二种使用格式"></a>表格的二种使用格式</h3><p>第一种：快捷键<strong>Ctrl+T</strong>，会自动跳出设置行和列的设置框，如下图</p>
+<p><img src="https://img-blog.csdn.net/20180108113324218?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvU0lNQkExOTQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>第二种：</p>
+<p>|国籍|省份|市区|</p>
+<h3 id="表格在typora中显示形式"><a href="#表格在typora中显示形式" class="headerlink" title="表格在typora中显示形式"></a>表格在typora中显示形式</h3><p>第一种：</p>
+<table>
+<thead>
+<tr>
+<th>国籍</th>
+<th>省份</th>
+<th>市区</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>中国</td>
+<td>北京</td>
+<td>东城区</td>
+</tr>
+</tbody>
+</table>
+<p>第二种：</p>
+<table>
+<thead>
+<tr>
+<th>国籍</th>
+<th>省份</th>
+<th>市区</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><h3 id="任务列表使用格式"><a href="#任务列表使用格式" class="headerlink" title="任务列表使用格式"></a>任务列表使用格式</h3><p>- [ ] 文字 （注：注意用空格隔开）</p>
+<h3 id="任务列表在typora中的显示形式"><a href="#任务列表在typora中的显示形式" class="headerlink" title="任务列表在typora中的显示形式"></a>任务列表在typora中的显示形式</h3><ul>
+<li style="list-style: none"><input type="checkbox" checked> JAVA</li>
+<li style="list-style: none"><input type="checkbox"> C</li>
+<li style="list-style: none"><input type="checkbox"> C++</li>
+<li style="list-style: none"><input type="checkbox"> Python</li>
+</ul>
+<p>（注意：在CSDN博客上未显示，但是在Typora上显示如下图：<br><img src="https://img-blog.csdn.net/20180108114342465?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvU0lNQkExOTQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>）</p>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="列表的使用格式"><a href="#列表的使用格式" class="headerlink" title="列表的使用格式"></a>列表的使用格式</h3><p>+ 、- 、* 创建无序列，任意数字开始+空格创建有序列表</p>
+<h3 id="列表在typora中的显示形式"><a href="#列表在typora中的显示形式" class="headerlink" title="列表在typora中的显示形式"></a>列表在typora中的显示形式</h3><ul>
+<li>java</li>
+<li>C</li>
+<li>C++</li>
+<li>Python</li>
+</ul>
+<h2 id="数学表达式"><a href="#数学表达式" class="headerlink" title="数学表达式"></a>数学表达式</h2><p>Typora支持加入用LaTeX写成的数学公式，并且在软件界面下用MathJax直接渲染。</p>
+<p>数学公式分为两种：</p>
+<p>一种是行内公式(inline math，可以在偏好设置中单独打开，由一个美元符号$将公式围起来；</p>
+<p>一种是行外公式，直接 按<strong>Ctrl+Shift+M</strong>；</p>
+<p>注：上标和下标可以使用数学表达式来获取</p>
+<h2 id="水平分割线"><a href="#水平分割线" class="headerlink" title="水平分割线"></a>水平分割线</h2><h3 id="水平分割线的使用格式"><a href="#水平分割线的使用格式" class="headerlink" title="水平分割线的使用格式"></a>水平分割线的使用格式</h3><p>***或者- - -</p>
+<h3 id="水平分割线在typora中显示形式"><a href="#水平分割线在typora中显示形式" class="headerlink" title="水平分割线在typora中显示形式"></a>水平分割线在typora中显示形式</h3><hr>
+<hr>
+<p>（注意：在CSDN博客上未显示，但是在Typora上显示如下图：<br><img src="https://img-blog.csdn.net/20180108114442472?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvU0lNQkExOTQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>）</p>
+<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><h3 id="引用的使用格式"><a href="#引用的使用格式" class="headerlink" title="引用的使用格式"></a>引用的使用格式</h3><p>>+空格</p>
+<h3 id="引用在typora中的显示形式"><a href="#引用在typora中的显示形式" class="headerlink" title="引用在typora中的显示形式"></a>引用在typora中的显示形式</h3><blockquote>
+<p>与天奋斗，其乐无穷！与地奋斗，其乐无穷！与人奋斗，其乐无穷！</p>
+<p> ———— 《毛泽东选集》之《奋斗自勉》（毛泽东1917年）</p>
+</blockquote>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><h3 id="注释的使用格式"><a href="#注释的使用格式" class="headerlink" title="注释的使用格式"></a>注释的使用格式</h3><p>要添加注释的文字[1](<a href="https://blog.csdn.net/SIMBA1949/article/details/79001226#fn:" target="_blank" rel="noopener">https://blog.csdn.net/SIMBA1949/article/details/79001226#fn:</a>)</p>
+<h3 id="注释在typora中显示形式"><a href="#注释在typora中显示形式" class="headerlink" title="注释在typora中显示形式"></a>注释在typora中显示形式</h3><p>中国<a href="https://blog.csdn.net/SIMBA1949/article/details/79001226#fn:" target="_blank" rel="noopener">2</a></p>
+<h2 id="表情"><a href="#表情" class="headerlink" title="表情"></a>表情</h2><h3 id="表情的使用格式"><a href="#表情的使用格式" class="headerlink" title="表情的使用格式"></a>表情的使用格式</h3><p>:单词</p>
+<h3 id="表情在typora中的显示形式"><a href="#表情在typora中的显示形式" class="headerlink" title="表情在typora中的显示形式"></a>表情在typora中的显示形式</h3><p>:smiley:<br>（注意：在CSDN博客上未显示，但是在Typora上显示如下图：<br><img src="https://img-blog.csdn.net/20180108114531939?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvU0lNQkExOTQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>）</p>
+<h2 id="Typora快捷键"><a href="#Typora快捷键" class="headerlink" title="Typora快捷键"></a>Typora快捷键</h2><table>
+<thead>
+<tr>
+<th>快捷键</th>
+<th>作用</th>
+<th>快捷键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl+1</td>
+<td>一阶标题</td>
+<td>Ctrl+B</td>
+<td>字体加粗</td>
+</tr>
+<tr>
+<td>Ctrl+2</td>
+<td>二阶标题</td>
+<td>Ctrl+I</td>
+<td>字体倾斜</td>
+</tr>
+<tr>
+<td>Ctrl+3</td>
+<td>三阶标题</td>
+<td>Ctrl+U</td>
+<td>下划线</td>
+</tr>
+<tr>
+<td>Ctrl+4</td>
+<td>四阶标题</td>
+<td>Ctrl+Home</td>
+<td>返回Typora顶部</td>
+</tr>
+<tr>
+<td>Ctrl+5</td>
+<td>五阶标题</td>
+<td>Ctrl+End</td>
+<td>返回Typora底部</td>
+</tr>
+<tr>
+<td>Ctrl+6</td>
+<td>六阶标题</td>
+<td>Ctrl+T</td>
+<td>创建表格</td>
+</tr>
+<tr>
+<td>Ctrl+L</td>
+<td>选中某句话</td>
+<td>Ctrl+K</td>
+<td>创建超链接</td>
+</tr>
+<tr>
+<td>Ctrl+D</td>
+<td>选中某个单词</td>
+<td>Ctrl+F</td>
+<td>搜索</td>
+</tr>
+<tr>
+<td>Ctrl+E</td>
+<td>选中相同格式的文字</td>
+<td>Ctrl+H</td>
+<td>搜索并替换</td>
+</tr>
+<tr>
+<td>Alt+Shift+5</td>
+<td>删除线</td>
+<td>Ctrl+Shift+I</td>
+<td>插入图片</td>
+</tr>
+</tbody>
+</table>
+<p>注：一些实体符号需要在实体符号之前加”\”才能够显示</p>
+<hr>
+<ol>
+<li>伟大的中华人民共和国万岁 <a href="https://blog.csdn.net/SIMBA1949/article/details/79001226#fnref:" target="_blank" rel="noopener">↩</a></li>
+<li>伟大的中华人民共和国万岁 <a href="https://blog.csdn.net/SIMBA1949/article/details/79001226#fnref:" target="_blank" rel="noopener">↩</a></li>
+</ol>
+
+      </div>
+        
+          <section class="meta" id="footer-meta">
+            <hr>
+            <div class="new-meta-box">
+              
+                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-04-19T11:45:51+08:00">
+                  <a class="notlink">
+                    <i class="fas fa-save" aria-hidden="true"></i>
+                    2019-04-19
+                  </a>
+                </div>
+              
+              
+                
+                <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Markdown/"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;Markdown</a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/typora/"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;typora</a></div>
+              
+              
+                
+  <div class="new-meta-item share -mob-share-list">
+    <i class="fas fa-share-alt" aria-hidden="true"></i>
+    <div class="-mob-share-list share-body">
+      
+        
+          <a class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2019/04/19/typora/&title=typora的简单入门(Markdown基本语法) | GIS小站&summary=">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qq.png">
+            
+          </a>
+        
+      
+        
+          <a class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2019/04/19/typora/&title=typora的简单入门(Markdown基本语法) | GIS小站&summary=">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qzone.png">
+            
+          </a>
+        
+      
+        
+          <a class="qrcode" rel="external nofollow noopener noreferrer" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3aS47DIBBFUe9/0840UoRzXxWJBFxGUcsxnAyqqc914XW/rfe/fH7mz5NvTV4yZMhYlnE/rtEzn29Id3nenZ9NhgwZ5zBGGz+Hy2cSfzMP5cO/y5AhQ0b7mefjdvaVIUOGjPR1JJgSsAwZMmTUktj0W/3A/ZNcXIYMGQsyeNX9/59/0t+QIUPGUow7XPxSyK+GPLwOTyVDhoytGbUGZCdcFhNUcB4ZMmTszSDBMW1G8pQ4HS+7ar+3DBkyFmfUjkvaAHPbnF8uozJkyNiaURuJSC+O6UWQhFoZMmScxiCv4KMSpFQXB9POZVGGDBnLMtKxBt4k4NklHywb7iJDhoyDGWkwndX+jJNYGTJkbM3g5bM0LPIkttYSQBdEGTJkbMdAlzC80nQ3bWeieqEMGTK2YKSBkodO3iroJ8kyZMg4k1EbueDXx7SRiXJxGTJkbMogbUVeVuNNAnKtLPZjZciQsR2DH50fIh3d4OMXQ6QMGTK2ZqQF+rnl/loSiwqCMmTI2I5RG3ToP8MB6FQyZMg4gME3SJ9Mh8mKoxgyZMg4hkGS2FryyRucPCWWIUPGCYw7XGlyy4fDWlQZMmRszZhV3OcH7bQwJzQqZMiQsSyDp5pBSjkpQQ1+AhkyZBzASIv+taS32Fkl/ytkyJAho1RES0kkEE8OuDJkyDiMwS92hJ1eXmXIkHECozMSkY5r9AtzMmTIOI3RSR15Sa7TTui0GWTIkLE44wXAwwPxMK6R9gAAAABJRU5ErkJggg==">
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+          
+          </a>
+        
+      
+        
+          <a class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2019/04/19/typora/&title=typora的简单入门(Markdown基本语法) | GIS小站&summary=">
+            
+              <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/weibo.png">
+            
+          </a>
+        
+      
+        
+          <a class="qrcode" rel="external nofollow noopener noreferrer" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3aS47DIBBFUe9/0840UoRzXxWJBFxGUcsxnAyqqc914XW/rfe/fH7mz5NvTV4yZMhYlnE/rtEzn29Id3nenZ9NhgwZ5zBGGz+Hy2cSfzMP5cO/y5AhQ0b7mefjdvaVIUOGjPR1JJgSsAwZMmTUktj0W/3A/ZNcXIYMGQsyeNX9/59/0t+QIUPGUow7XPxSyK+GPLwOTyVDhoytGbUGZCdcFhNUcB4ZMmTszSDBMW1G8pQ4HS+7ar+3DBkyFmfUjkvaAHPbnF8uozJkyNiaURuJSC+O6UWQhFoZMmScxiCv4KMSpFQXB9POZVGGDBnLMtKxBt4k4NklHywb7iJDhoyDGWkwndX+jJNYGTJkbM3g5bM0LPIkttYSQBdEGTJkbMdAlzC80nQ3bWeieqEMGTK2YKSBkodO3iroJ8kyZMg4k1EbueDXx7SRiXJxGTJkbMogbUVeVuNNAnKtLPZjZciQsR2DH50fIh3d4OMXQ6QMGTK2ZqQF+rnl/loSiwqCMmTI2I5RG3ToP8MB6FQyZMg4gME3SJ9Mh8mKoxgyZMg4hkGS2FryyRucPCWWIUPGCYw7XGlyy4fDWlQZMmRszZhV3OcH7bQwJzQqZMiQsSyDp5pBSjkpQQ1+AhkyZBzASIv+taS32Fkl/ytkyJAho1RES0kkEE8OuDJkyDiMwS92hJ1eXmXIkHECozMSkY5r9AtzMmTIOI3RSR15Sa7TTui0GWTIkLE44wXAwwPxMK6R9gAAAABJRU5ErkJggg==">
+          
+            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
+          
+          </a>
+        
+      
+    </div>
+  </div>
+
+
+              
+            </div>
+          </section>
+        
+
+        
+            <div class="prev-next">
+                
+                
+                    <section class="next">
+                        <span class="art-item-right" aria-hidden="true">
+                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
+                            <h4>
+                                <a href="/2019/04/19/用Python来撩妹吧(1)-实时掌控她的小情绪/" rel="prev" title="用Python来撩妹吧-实时掌控她的小情绪">
+                                    
+                                        用Python来撩妹吧-实时掌控她的小情绪
+                                    
+                                </a>
+                            </h4>
+                            
+                                
+                                <h6 class="tags">
+                                    <a class="tag" href="/tags/撩妹/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>撩妹</a>
+                                </h6>
+                            
+                        </span>
+                    </section>
+                
+            </div>
+        
+
+    </section>
+
+</article>
+
+<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+
+
+<br>
+
+<!-- 显示推荐文章和评论 -->
+
+
+
+
+
+<script>
+    window.subData = {
+        title: 'typora的简单入门(Markdown基本语法)',
+        tools: true
+    }
+</script>
+
+
+        </div>
+        <aside class='l_side'>
+            
+  
+  
+    
+      
+      
+        <section class="author">
+  <div class="content material">
+    
+      <div class="avatar">
+        <img class="avatar" src="/medias/avatar.jpg">
+      </div>
+    
+    
+      <div class="text">
+        
+        
+        
+          <p><span id="jinrishici-sentence">柳暗花明又一村</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="mailto:zailushanga@gmail.com" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="https://github.com/llqing" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-github" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=1409711765" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-music" aria-hidden="true"></i></a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+  <section class="toc-wrapper">
+    
+<header class="material">
+  <div><i class="fas fa-list fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;文章目录</div>
+  
+    <div class="wrapper"><a class="s-toc rightBtn" rel="external nofollow noopener noreferrer" href="javascript:void(0)"><i class="fas fa-thumbtack fa-fw"></i></a></div>
+  
+</header>
+
+    <div class="content material">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#标题的使用"><span class="toc-text">标题的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#标题的使用格式"><span class="toc-text">标题的使用格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#标题Typora显示形式是"><span class="toc-text">标题Typora显示形式是</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#文本居中"><span class="toc-text">文本居中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#文本居中使用格式"><span class="toc-text">文本居中使用格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#文本居中在Typora中显示形式是"><span class="toc-text">文本居中在Typora中显示形式是</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#下划线"><span class="toc-text">下划线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#下划线使用格式"><span class="toc-text">下划线使用格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#下划线在Typora显示形式是"><span class="toc-text">下划线在Typora显示形式是</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#删除线"><span class="toc-text">删除线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#删除线使用格式"><span class="toc-text">删除线使用格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#删除线在Typora显示形式是"><span class="toc-text">删除线在Typora显示形式是</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字体加粗"><span class="toc-text">字体加粗</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字体加粗使用格式"><span class="toc-text">字体加粗使用格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字体加粗在Typora显示形式是"><span class="toc-text">字体加粗在Typora显示形式是</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字体倾斜"><span class="toc-text">字体倾斜</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#字体倾斜使用格式"><span class="toc-text">字体倾斜使用格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字体倾斜在Typora的显示形式"><span class="toc-text">字体倾斜在Typora的显示形式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图片的插入"><span class="toc-text">图片的插入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#超链接"><span class="toc-text">超链接</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#超链接使用格式"><span class="toc-text">超链接使用格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#超链接在Typora显示形式是：（必须以http开头）"><span class="toc-text">超链接在Typora显示形式是：（必须以http开头）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#代码区域"><span class="toc-text">代码区域</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#代码区域的使用格式"><span class="toc-text">代码区域的使用格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码区域在typora中显示形式"><span class="toc-text">代码区域在typora中显示形式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表格的使用"><span class="toc-text">表格的使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#表格的二种使用格式"><span class="toc-text">表格的二种使用格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表格在typora中显示形式"><span class="toc-text">表格在typora中显示形式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#任务列表"><span class="toc-text">任务列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#任务列表使用格式"><span class="toc-text">任务列表使用格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#任务列表在typora中的显示形式"><span class="toc-text">任务列表在typora中的显示形式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#列表"><span class="toc-text">列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#列表的使用格式"><span class="toc-text">列表的使用格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#列表在typora中的显示形式"><span class="toc-text">列表在typora中的显示形式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数学表达式"><span class="toc-text">数学表达式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#水平分割线"><span class="toc-text">水平分割线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#水平分割线的使用格式"><span class="toc-text">水平分割线的使用格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#水平分割线在typora中显示形式"><span class="toc-text">水平分割线在typora中显示形式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#引用"><span class="toc-text">引用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#引用的使用格式"><span class="toc-text">引用的使用格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#引用在typora中的显示形式"><span class="toc-text">引用在typora中的显示形式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注释"><span class="toc-text">注释</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#注释的使用格式"><span class="toc-text">注释的使用格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#注释在typora中显示形式"><span class="toc-text">注释在typora中显示形式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#表情"><span class="toc-text">表情</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#表情的使用格式"><span class="toc-text">表情的使用格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表情在typora中的显示形式"><span class="toc-text">表情在typora中的显示形式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Typora快捷键"><span class="toc-text">Typora快捷键</span></a></li></ol>
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        <section class="plain">
+  
+<header class="material">
+  <div><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;注意啦～</div>
+  
+</header>
+
+  <div class="content material">
+    <p>小站栏目还在完善中，将不定期分享GIS、Code等内容(看博主心情)，如有特殊需要可以联系博主，超喜欢的话还可以安利给身边的朋友哦～</p>
+
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+  <section class="category">
+    
+<header class="material">
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;所有分类</div>
+  
+</header>
+
+    <div class="content material">
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/AI/" href="/categories/AI/"><div class="name">AI</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Blog/" href="/categories/Blog/"><div class="name">Blog</div><div class="badge">(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/GIS/" href="/categories/GIS/"><div class="name">GIS</div><div class="badge">(5)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Git/" href="/categories/Git/"><div class="name">Git</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/LaTeX/" href="/categories/LaTeX/"><div class="name">LaTeX</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Linux/" href="/categories/Linux/"><div class="name">Linux</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Python/" href="/categories/Python/"><div class="name">Python</div><div class="badge">(4)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/web基础/" href="/categories/web基础/"><div class="name">web基础</div><div class="badge">(4)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/好玩的/" href="/categories/好玩的/"><div class="name">好玩的</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/常用工具/" href="/categories/常用工具/"><div class="name">常用工具</div><div class="badge">(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/数据库/" href="/categories/数据库/"><div class="name">数据库</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/数据结构与算法/" href="/categories/数据结构与算法/"><div class="name">数据结构与算法</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/脚本/" href="/categories/脚本/"><div class="name">脚本</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/高数/" href="/categories/高数/"><div class="name">高数</div><div class="badge">(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        
+  <section class="tagcloud">
+    
+<header class="material">
+  <div><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+</header>
+
+    <div class="content material">
+      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/API/" style="font-size: 24px; color: #555">API</a> <a href="/tags/ArcGIS/" style="font-size: 24px; color: #555">ArcGIS</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 24px; color: #555">Markdown</a> <a href="/tags/NoSQL/" style="font-size: 14px; color: #999">NoSQL</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Redis/" style="font-size: 14px; color: #999">Redis</a> <a href="/tags/TCP/" style="font-size: 19px; color: #777">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/typora/" style="font-size: 14px; color: #999">typora</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/属性/" style="font-size: 14px; color: #999">属性</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/撩妹/" style="font-size: 14px; color: #999">撩妹</a> <a href="/tags/方法/" style="font-size: 14px; color: #999">方法</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/算法/" style="font-size: 14px; color: #999">算法</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        <section class="list">
+  
+<header class="material">
+  <div><i class="fas fa-medal fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;精选项目</div>
+  
+</header>
+
+  <div class="content material">
+    <ul class="entry">
+      
+    </ul>
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        <section class="list">
+  
+<header class="material">
+  <div><i class="fas fa-link fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;特别链接</div>
+  
+</header>
+
+  <div class="content material">
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="https://llqing.github.io/about/" href="https://llqing.github.io/about/">
+          <div class="name">
+            
+              <i class="fas fa-comment-dots fa-fw" aria-hidden="true"></i>
+            
+            &nbsp;&nbsp;关于我 / 留言板
+          </div>
+          
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+
+
+  <section class="music">
+    
+<header class="material">
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
+  
+    <a class="rightBtn" target="_blank" rel="external nofollow noopener noreferrer" href="https://music.163.com/#/user/home?id=1409711765" title="https://music.163.com/#/user/home?id=1409711765">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class="content material">
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer" data-theme="#1BCDFC" data-mode="circulation" data-server="netease" data-type="playlist" data-id="1409711765" data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
+
+    </div>
+  </section>
+
+
+      
+    
+  
+
+
+        </aside>
+        <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+    <footer id="footer" class="clearfix">
+  
+    <div class="footer">
+      <p>这里是页脚，谢谢支持。</p>
+
+    </div>
+    <br>
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="mailto:zailushanga@gmail.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="https://github.com/llqing" class="social fab fa-github flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="https://music.163.com/#/user/home?id=1409711765" class="social fas fa-music flat-btn" target="_blank" rel="external"></a>
+        
+      
+    </div>
+  
+  <br>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+</div>
+  <div>本站使用 <a href target="_blank" class="codename">Material X</a> 作为主题，总访问量为 <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+  </div>
+</footer>
+
+    <script>setLoadingBarProgress(80);</script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
+  </script>
+
+
+
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+  <!-- fastclick -->
+  <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+  </script>
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/app.js"></script>
+<script src="/js/search.js"></script>
+
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
+      });
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
+
+
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
+
+
+
+
+
+    <script>setLoadingBarProgress(100);</script>
+</body>
+</html>
