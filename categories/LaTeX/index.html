@@ -1,858 +1,643 @@
 <!DOCTYPE html>
-<html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <title>Category: LaTeX | GIS小站</title>
-  
-  <meta name="keywords" content="GIS,Code">
-  
-  
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
-  <meta name="HandheldFriendly" content="True">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <!-- meta -->
-  
-  
-  <meta name="theme-color" content="#FFFFFF">
-  <meta name="msapplication-TileColor" content="#1BC3FB">
-  <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml">
-  
 
-  <!-- link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
-  
-  
-  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
-  <link rel="icon" type="image/x-icon" sizes="32x32" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/favicon-32x32.png">
-  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png">
-  <link rel="mask-icon" color="#1BC3FB" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg">
-  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest">
-  
 
-  
-  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
-  
 
-  
-  <link rel="stylesheet" href="/style.css">
-  
 
-  <script>
-    function setLoadingBarProgress(num) {
-      document.getElementById('loading-bar').style.width=num+"%";
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="加油,少年">
+<meta name="keywords" content="GIS,Code">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GIS小站">
+<meta property="og:url" content="https://llqing.github.io/categories/LaTeX/index.html">
+<meta property="og:site_name" content="GIS小站">
+<meta property="og:description" content="加油,少年">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GIS小站">
+<meta name="twitter:description" content="加油,少年">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
-  </script>
+  };
+</script>
 
+
+
+  <link rel="canonical" href="https://llqing.github.io/categories/LaTeX/">
+
+
+
+
+
+  <title>分类: LaTeX | GIS小站</title>
   
-  
+
+
+
+
+
+
+
+
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-<body>
-    <div id="loading-bar-wrapper">
-  <div id="loading-bar" class="material"></div>
-</div>
+  
+  
+    
+  
 
-    <script>setLoadingBarProgress(20)</script>
-    <header class="l_header material">
-	<div class="wrapper">
-		<div class="nav-main container container--flex">
-      <a class="logo flat-box" href="/">
-        
-          GIS小站
-        
+  <div class="container sidebar-position-left ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">GIS小站</span>
+        <span class="logo-line-after"><i></i></span>
       </a>
-			<div class="menu">
-				<ul class="h-list">
-          
-  					
-  						<li>
-								<a id="https:llqing.github.io" class="nav flat-box" href="https://llqing.github.io/">
-									<i class="fas fa-home fa-fw"></i>&nbsp;主页
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="home" class="nav flat-box" href="/">
-									<i class="fas fa-rss fa-fw"></i>&nbsp;博客
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="archives" class="nav flat-box" href="/archives/">
-									<i class="fas fa-archive fa-fw"></i>&nbsp;归档
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="friends" class="nav flat-box" href="/friends/">
-									<i class="fas fa-users fa-fw"></i>&nbsp;朋友
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="about" class="nav flat-box" href="/about/">
-									<i class="fas fa-address-card fa-fw"></i>&nbsp;关于
-								</a>
-							</li>
-      			
-      		
-				</ul>
-			</div>
-
-			
-				<div class="m_search">
-					<form name="searchform" class="form u-search-form">
-						<input type="text" class="input u-search-input" placeholder="搜索">
-						<span class="icon"><i class="fas fa-search fa-fw"></i></span>
-					</form>
-				</div>
-			
-			<ul class="switcher h-list">
-				
-					<li class="s-search"><a class="fas fa-search fa-fw" href="javascript:void(0)"></a></li>
-				
-				<li class="s-menu"><a class="fas fa-bars fa-fw" href="javascript:void(0)"></a></li>
-			</ul>
-		</div>
-
-		<div class="nav-sub container container--flex">
-			<a class="logo flat-box"></a>
-			<ul class="switcher h-list">
-				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
-				<li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
-			</ul>
-		</div>
-	</div>
-</header>
-	<aside class="menu-phone">
-    <header>
-		<nav class="menu">
-      <ul>
-          
-              
-                  <li>
-										<a id="https:llqing.github.io" class="nav flat-box" href="https://llqing.github.io/">
-											<i class="fas fa-home fa-fw"></i>&nbsp;主页
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="home" class="nav flat-box" href="/">
-											<i class="fas fa-rss fa-fw"></i>&nbsp;博客
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="archives" class="nav flat-box" href="/archives/">
-											<i class="fas fa-archive fa-fw"></i>&nbsp;归档
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="friends" class="nav flat-box" href="/friends/">
-											<i class="fas fa-users fa-fw"></i>&nbsp;朋友
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="about" class="nav flat-box" href="/about/">
-											<i class="fas fa-address-card fa-fw"></i>&nbsp;关于
-										</a>
-                  </li>
-              
-       
-      </ul>
-		</nav>
-    </header>
-	</aside>
-
-    <script>setLoadingBarProgress(40);</script>
-    <div class="l_body">
-    <div class='container clearfix'>
-        <div class='l_main'>
-            
-    <script>
-        window.subData= { title:'分类 : LaTeX'}
-    </script>
-
-
-
-
-  <section class="post-list">
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-
-
-
-      
-
-      
-
-      
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/03/30/LaTeX初识/">
-              
-                  LaTeX初识
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-03-30
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/LaTeX/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              LaTeX
-            </a>
-          </div>
-        
-      
-      
-      
     </div>
-    <hr>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-</section>
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>闲来无事，想起了自己当年的毕业论文，想拿来再次修改修改，看到网上很多专业人士都是使用LaTeX来写论文，似乎很流弊的样子，天呐，想想当年我还是使用的Word，就修改格式都用了大半天的时间，太可怕了，难道这就是专业人士和我们这些业余的区别！老衲怎能轻言放弃，于是乎就一顿Google，百度，看看是何方技能！传播与众人</p>
-<h1 id="LaTeX简介"><a href="#LaTeX简介" class="headerlink" title="LaTeX简介"></a>LaTeX简介</h1><h2 id="什么是TeX"><a href="#什么是TeX" class="headerlink" title="什么是TeX"></a>什么是TeX</h2><p>电子排版系统的出现给印刷出版业带来了一场革命，利用电子计算机及各种辅助设备，可以完成从文稿、图表的录入、编辑、修改、组版，直至得到各种不同 用途、不同质量的输出结果。利用电子排版系统，可以减轻劳动强度，缩短出版周期。</p>
-<p>目前世界上有许多电子排版系统。这些系统各有特点，也各有自己的适用范围。TeX 就是一种优秀的电子排版系统。</p>
-<p>TeX 提供了一套功能强大并且十分灵活的排版语言，它多达 900 多条指令，并且 TeX 有宏功能，用户可以不断地定义自己适用的新命令来扩展 TeX 系统的功能。许多人利用 TeX 提供的宏定义功能对 TeX 进行了二次开发，其中比较著名的有美国数学学会推荐的非常适合于数学家使用的 AMS-TeX 以及适合于一般文章、报告、书籍的 LaTeX 系统。</p>
-<p>TeX 系统是公认的数学公式排得最好的系统。<a href="http://www.ams.org/" target="_blank" rel="noopener">美国数学学会 （AMS）</a> 鼓励数学家们使用 TeX 系统向它的期刊投稿。世界上许多一流的出版社如 Kluwer、Addison-Wesley、牛津大学出版社等也利用 TeX 系统出版书籍和期刊。</p>
-<p>大部分的 TeX 系统都是免费的。Knuth 教授还公开了他的全部源程序。TeX 系统目前已经在数百种计算机系统上得到实现。TeX 系统的排版结果 DVI（DeVice Independent）文件与输出设备无关。DVI 文件可以显示、打印、照排，几乎可以在所有的输出设备上输出。TeX 排版源文件及结果在各种计算机系统上互相兼容。</p>
-<h2 id="TeX-的历史"><a href="#TeX-的历史" class="headerlink" title="TeX 的历史"></a>TeX 的历史</h2><p>七十年代末，<a href="http://www-cs-faculty.stanford.edu/~knuth/" target="_blank" rel="noopener">Donald E. Knuth（高德纳）</a> 在看到其多卷巨著“The Art of Computer Programming”第二卷的校样时，对由计算机排版的校样的低质量感到无法忍受。因此决定自己来开发一个高质量的计算机排版系统，这样就有了 TeX 。</p>
-<p>TeX 的名字是由大写的希腊字母“tec”(tau, epsilon, chi)组成。在希腊语中这个词的意思是“科技”和“艺术”，这也解释了它的发音。“T”和“E”就像在“technology”中的发音一样，而“x” 的发音类似于苏格兰语单词“loch”或德语单词“ach”中的“ch”，也类似于西班牙语中的“j”或俄语中的“kh”。TeX 标志为 TEX ，这三个字母相靠得很近，而且中间的那个 E 有点儿下沉。但在无格式文件中，就写为 TeX 。</p>
-<p>TeX 的第一版于 1978 年面世。在经过了不断的改进后，1982 年版的 TeX 是一个十分稳定的版本。从此以后，TeX 没有较大的变动，只有很少部分的改进和错误修正。现在几乎所有的操作系统平台下，都有相应的 TeX 软件，而且用它们排版同一个文件得到的输出结果是相同的。TeX 目前的版本是 3.141592，很接近圆周率π。每有一新的版本，就会加上一个π的小数点后的数。所以我们已经知道下一版本的 TeX 是 3.1415926，最终将收敛到π。这也代表了 TeX 不断追求完美的理想。</p>
-<p>TeX 的源程序是用 Pascal 写成的，原因是 Knuth 希望 TeX 尽可能方便地移植到其它的操作系统中去。当时 Pascal 是最适合于这一要求的编程语言。这也使得 TeX 现在已经在几乎所有的计算机系统中得到实现。</p>
-<p>TeX 的另一个重要的特征就是它的输出是与设备无关的。TeX 的输出文件称为 DVI 文件，即是“Device Independent”。一旦 TeX 处理了你的文件，你所得到的 DVI 文件就可以被送到任何输出设备如打印机，屏幕等并且总会得到相同的结果，而这与这些输出设备的限制没有任何关系。这说明 DVI 文件中所有的元素，从页面设置到文本中字符的位置都被固定，不能更改。</p>
-<p>TeX 现在已经被它的开发者 Knuth 所“冰封”(frozen)，新版本的 TeX 只有少许改进和错误修正。这些变动必须保证不会使得即使是写于 1982 年的 TeX 文档无法编译，TeX 自带了测试文件来确保这一点。如果测试文件文件的输出结果不同于预定的结果，那么这个排版系统就不能够被称为“TeX”。所以像一些对 TeX 有很大改进的软件，如“Omega”等将不能被称为“TeX”，尽管它也是基于“TeX”的。</p>
-<p>在设计 TeX 的同时，Knuth 还设计了一个字体生成程序 MetaFont。MetaFont 是独立于 TeX 之外的，但又与 TeX 有着非常密切的联系。MetaFont 生成的只是位图字体，当对字体进行缩放时的效果不佳。对于如何得到像 Type1 字体一样的轮廓字体，现在还在研究之中。与 TeX 一样，Knuth 也“冰封”了 MetaFont 。所以 MetaFont 的进一步的改进和发展将会由其他人来完成，而且名字也将不再是 MetaFont 。</p>
-<h2 id="TeX-的未来"><a href="#TeX-的未来" class="headerlink" title="TeX 的未来"></a>TeX 的未来</h2><p>虽然 TeX 在过去的二十多年中没有大的变化，但这并不意味着 TeX 是一个僵化的系统。恰恰相反，TeX 开放的设计使得它能够很容易的适应新的要求。例如，在没有改动内核的情形下，TeX 很容易地实现了对 PostScript 字体和外部图形的支持。TeX 还是第一个能够自动生成 HTML 的字处理软件。最近，TeX 又开始增加了在不借助其它工具（如 Adobe Distiller）的条件下生成 PDF 的扩展功能。下面列出的几个项目都是正在进行中，对 TeX 的功能进行了扩展。</p>
-<h3 id="PDFTeX"><a href="#PDFTeX" class="headerlink" title="PDFTeX"></a>PDFTeX</h3><p>完全兼容标准的 TeX ，但能够给出 PDF 输出。它也可以输出标准的 DVI 。</p>
-<h3 id="e-TeX"><a href="#e-TeX" class="headerlink" title="e-TeX"></a>e-TeX</h3><p>不仅完全兼容标准的 TeX ，还支持一种“扩展模式”。在“扩展模式”中引入了许多新的特性和增强功能。这些新的特性和增强功能提供了更好的编程工具和对输出的控制。</p>
-<h3 id="Omega"><a href="#Omega" class="headerlink" title="Omega"></a>Omega</h3><p>这是一个几乎是完全重新写过的，支持 Unicode 的 TeX 程序。Omega 有很多特征都超出了 Knuth 对 TeX 的原始设想。它采用了与 TeX 不同的方法来处理字符，使得可以处理非拉丁语系的文本。也支持从右到左，从上到下的排版方式。</p>
-<h3 id="NTS"><a href="#NTS" class="headerlink" title="NTS"></a>NTS</h3><p>NTS 代表“New Typesetting System”。Knuth 已经停止发展 TeX，并决定任何超越 TeX 的扩展都不能被称为 TeX 。NTS 只是一些对于 TeX 的后续继承者的设想和概念的集合，还不是一个实际上的系统。该项目的第一个公布的产品就是 e-TeX。后来不知什么缘故，NTS的开发就停止了。直到 2002 年左右，一些 TeX 专家，想用 Java 开发 TeX，于是把中途夭折的 NTS 项目捡了起来，搞出了一个叫做 ExTeX 的东西，但是并没有普遍应用。</p>
-<h3 id="MLTeX"><a href="#MLTeX" class="headerlink" title="MLTeX"></a>MLTeX</h3><p>这个 TeX 的扩展引入了命令 \charsubdef，使得可以更为简单方便的使用 8 bit 字符。不过，与 e-TeX 相比，这只是一个微小的改进。</p>
-<h3 id="XeTeX"><a href="#XeTeX" class="headerlink" title="XeTeX"></a>XeTeX</h3><p>Jonathan Kew 在 e-TeX 基础上添加 Unicode 支持，并且连接 Mac OS X 的各种技术，比如ATT,Quartz,QuickTime，产生了一个重要的TeX分支，叫做XeTeX.XeTeX在2005/6年陆续发布了它的 Windows 和 Linux版本，最终集成在 TeXLive 2007 当中，标志着它被广泛地认可。在 XeTeX 中，使用多国语言，变得非常轻松，并且可以方便地使用系统的 TrueType 和 OpenType 字体，因此得到许多 TeX Guru 的喜爱。</p>
-<h3 id="LuaTeX"><a href="#LuaTeX" class="headerlink" title="LuaTeX"></a>LuaTeX</h3><p>尽管 Omega 项目在开始时看上去很有希望，但是它的开发进展缓慢并且功能上也非常不稳定（基本上可以认为这个项目已经死亡）。于是，Giuseppe Bilotta 等人启动了 Aleph 项目，目的是让 Omega 稳定并且引入了 e-TeX 的扩展功能。后来 Aleph 项目现在也停止了，不过它的大部分功能都被集成到了 <a href="http://wiki.ctex.org/index.php?title=LuaTeX&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener">LuaTeX</a> 中。<a href="http://wiki.ctex.org/index.php?title=LuaTeX&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener">LuaTeX</a> 是一个新的 TeX 引擎项目，由科罗拉多州立大学（Idris Samawi Hamid 的东方 TeX 项目）和 NTG 资助，该项目于 2006 年启动，于 2007 年夏季发布首个 beta 版本。</p>
-<p>LuaTeX 是 Aleph 与 pdfTeX 项目的继任者，主要由 Taco Hoekwater 开发。除了兼有 Aleph 和 pdfTeX 的功能之外，LuaTeX还具有以下特点：</p>
-<ul>
-<li>内部集成了轻量级的动态编程语言 Lua，可以采用该语言扩展 LuaTeX 功能或宏包；</li>
-<li>提供了 OpenType 字体的本地支持，与 XeTeX 做法不同的是，LuaTeX 没有使用操作系统自带的字体库来访问字体，而是使用了 FontForge库；</li>
-<li>内部集成了 MPLib（一个扩展的 MetaPost 库模块）。</li>
-</ul>
-<h2 id="TeX-的优点"><a href="#TeX-的优点" class="headerlink" title="TeX 的优点"></a>TeX 的优点</h2><p>在一个充斥着“所见即所得”(WYSIWSG)桌面出版软件的情况下来使用 TeX 确是有点令人奇怪。但是，在某些情形下，你会感到 TeX 是最好的，甚至是唯一适合的系统。</p>
-<p>首先我们来看一下 TeX 的优势所在：</p>
-<ul>
-<li><strong>高质量的输出</strong> TeX 遵循传统的排版规则，以排版的质量为最重要的目标。如果你把 TeX 的输出结果和用其它的排版软件排版相同的文本所得到的结果加以比较，你就会发现其中的区别。</li>
-<li><strong>超常的稳定性</strong> 自从 TeX 出现以来，只有一些微小的改动。也就是说，十几年前的 TeX 文件用现在的 TeX 系统排版得到的结果与十几年前得到的结果是一样的。稳定性还体现在 TeX 系统极少会崩溃，可以处理任意大小的文件，即使你的计算机的内存很少，TeX 也可自如的工作。</li>
-<li></li>
-<li><p><strong>TeX 是可编程的</strong> TeX 是一种宏命令编程语言。你可以用很少的命令来完成非常复杂的工作。如果需要的话，你也可以重新定义 TeX 的所有命令来得到特殊的效果。</p>
-</li>
-<li><strong>高度的灵活性</strong> TeX 自从出现以来其内核只有微小的改动。但是由于其内核的设计方式，世界上的 TeX 使用者可以让 TeX 做几乎任何工作。你可以用 TeX 来排版英文文本，也可以排版德文，俄文，中文等多种语言。你还可以用 TeX 来排版乐谱，象棋，围棋棋谱等等。</li>
-<li><strong>简单方便</strong> TeX 文档是 ASCII 码的文本文件。因此，即使你手边没有 TeX 系统，你也可以看懂绝大部分的内容。TeX 文件的这种特点使得它占用很少的存储空间，也可以很方便的用 email 来传输。</li>
-<li><strong>良好的通用性</strong> 目前为止，TeX 几乎在所有的计算机操作系统平台上得到实现。如：Atari，Apple，Macintosh，Unix，VMS，MS-DOS，MS-Windows 和 OS/2 等等。TeX 的源文件可在不同的平台之间自由的交换，而得到的输出是完全相同的。</li>
-<li><strong>低廉的价格</strong> TeX 是免费软件，它的源程序也是免费的。你可能仅仅需要支付邮费，甚至于一分不花地得到适合你的 TeX 系统。世界上有很多非常好的 TeX 免费软件如：teTeX，MikTeX，fpTeX 等等。同时也有一些具有各自特点（如或多或少的所见即所得特性的）和提供专家级帮助系统的商业版本。</li>
-<li><strong>超级技术支持</strong> 由于 TeX 并不是被某个公司所垄断开发，所以世界各地的使用者设计了统一的技术支持的方式。这通常是通过因特网以 email, WWW, Usenet 或 Ftp 的方式来提供，有时也可能通过电话或传真的方式。绝大多数情况下这些技术支持都是免费的，这也是 TeX 的精神。</li>
-<li><strong>TeX 是一种乐趣</strong> 使用 TeX 不仅仅是一种工作手段，也是一种乐趣。它有挑战，也有荣誉。很多人在熟悉了 TeX 之后都开始把使用 TeX 作为一种爱好，而不是一件枯燥无味的劳动。</li>
-</ul>
-<h2 id="TeX-的不足"><a href="#TeX-的不足" class="headerlink" title="TeX 的不足"></a>TeX 的不足</h2><p>在展示了 TeX 的优秀之处后，也得承认 TeX 也有一些不足的地方：</p>
-<ol>
-<li>TeX 不是在一个下午就能完全学会的，除非你是一个真正的天才。当你开始学习并使用它的时候，你将会不停的去翻看 TeX 的参考手册来寻找一个 TeX 命令。你也会发现 TeX 常常不理会你键入的命令，还给出一个让你感到迷惑的错误讯息。这一切都说明了掌握 TeX 需要一个比较长而且艰难的学习过程。TeX 的一些扩展如 LaTeX、ConTeXt 则要相对简单的多，使用起来也比 TeX 方便，一个新手完全可以在一个下午或者更短的时间内学会开始使用 LaTeX 或 ConTeXt。</li>
-<li>当发生错误的时候，TeX 会给出一些信息来提示你。但很多情况下并不足以是你迅速准确的找到错误之所在。尤其对刚刚开始学习的新手来说更是如此。</li>
-<li>像 TeX 这种宏语言不同于其它的计算机语言，如 C，Pascal 等，大多数人并不了解。因此，当你想要写自己的宏命令时，你需要对 TeX 有比较深入的了解才能写出牢固可靠的宏命令。</li>
-<li>TeX 不是所见即所得的。尽管市场上有些近似于所见即所得的自由/开源软件（如 <a href="http://www.lyx.org/" target="_blank" rel="noopener">LyX</a>）或商业软件，但即使与最普通的字处理软件比，也 还是有不小的差距。</li>
-</ol>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/LaTeX/"><i class="fas fa-hashtag fa-fw"></i>LaTeX</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-      
-
-  </section>
-
-
-
-
-
-
-  
-
-  <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-  
-
-  
-
-
-
-
-        </div>
-        <aside class='l_side'>
-            
-  
-  
-    
-      
-      
-        <section class="author">
-  <div class="content material">
-    
-      <div class="avatar">
-        <img class="avatar" src="/medias/avatar.jpg">
-      </div>
-    
-    
-      <div class="text">
-        
-        
-        
-          <p><span id="jinrishici-sentence">柳暗花明又一村</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="mailto:zailushanga@gmail.com" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
-          
-        
-          
-            <a href="https://github.com/llqing" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-github" aria-hidden="true"></i></a>
-          
-        
-          
-            <a href="https://music.163.com/#/user/home?id=1409711765" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-music" aria-hidden="true"></i></a>
-          
-        
-      </div>
-    
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
   </div>
-</section>
-
-      
-    
-  
-    
-      
-      
-        
-
-      
-    
-  
-    
-      
-      
-        <section class="plain">
-  
-<header class="material">
-  <div><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;注意啦～</div>
-  
-</header>
-
-  <div class="content material">
-    <p>小站栏目还在完善中，将不定期分享GIS、Code等内容(看博主心情)，如有特殊需要可以联系博主，超喜欢的话还可以安利给身边的朋友哦～</p>
-
-  </div>
-</section>
-
-      
-    
-  
-    
-      
-      
-        
-  <section class="category">
-    
-<header class="material">
-  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;所有分类</div>
-  
-</header>
-
-    <div class="content material">
-      <ul class="entry">
-        
-          <li><a class="flat-box" title="/categories/AI/" href="/categories/AI/"><div class="name">AI</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Blog/" href="/categories/Blog/"><div class="name">Blog</div><div class="badge">(3)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/GIS/" href="/categories/GIS/"><div class="name">GIS</div><div class="badge">(5)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Git/" href="/categories/Git/"><div class="name">Git</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/LaTeX/" href="/categories/LaTeX/"><div class="name">LaTeX</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Linux/" href="/categories/Linux/"><div class="name">Linux</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Python/" href="/categories/Python/"><div class="name">Python</div><div class="badge">(4)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/web基础/" href="/categories/web基础/"><div class="name">web基础</div><div class="badge">(4)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/好玩的/" href="/categories/好玩的/"><div class="name">好玩的</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/常用工具/" href="/categories/常用工具/"><div class="name">常用工具</div><div class="badge">(3)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/数据库/" href="/categories/数据库/"><div class="name">数据库</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/数据结构与算法/" href="/categories/数据结构与算法/"><div class="name">数据结构与算法</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/杂谈/" href="/categories/杂谈/"><div class="name">杂谈</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/脚本/" href="/categories/脚本/"><div class="name">脚本</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/高数/" href="/categories/高数/"><div class="name">高数</div><div class="badge">(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-      
-    
-  
-    
-      
-      
-        
-  <section class="tagcloud">
-    
-<header class="material">
-  <div><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
-  
-</header>
-
-    <div class="content material">
-      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/API/" style="font-size: 24px; color: #555">API</a> <a href="/tags/ArcGIS/" style="font-size: 24px; color: #555">ArcGIS</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 24px; color: #555">Markdown</a> <a href="/tags/Matplotlib/" style="font-size: 14px; color: #999">Matplotlib</a> <a href="/tags/NoSQL/" style="font-size: 14px; color: #999">NoSQL</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Redis/" style="font-size: 14px; color: #999">Redis</a> <a href="/tags/TCP/" style="font-size: 19px; color: #777">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/typora/" style="font-size: 14px; color: #999">typora</a> <a href="/tags/中文显示乱码/" style="font-size: 14px; color: #999">中文显示乱码</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/属性/" style="font-size: 14px; color: #999">属性</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/撩妹/" style="font-size: 14px; color: #999">撩妹</a> <a href="/tags/方法/" style="font-size: 14px; color: #999">方法</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/算法/" style="font-size: 14px; color: #999">算法</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
-    </div>
-  </section>
-
-
-      
-    
-  
-    
-      
-      
-        <section class="list">
-  
-<header class="material">
-  <div><i class="fas fa-medal fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;精选项目</div>
-  
-</header>
-
-  <div class="content material">
-    <ul class="entry">
-      
-    </ul>
-  </div>
-</section>
-
-      
-    
-  
-    
-      
-      
-        <section class="list">
-  
-<header class="material">
-  <div><i class="fas fa-link fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;特别链接</div>
-  
-</header>
-
-  <div class="content material">
-    <ul class="entry">
-      
-        <li><a class="flat-box" title="https://llqing.github.io/about/" href="https://llqing.github.io/about/">
-          <div class="name">
-            
-              <i class="fas fa-comment-dots fa-fw" aria-hidden="true"></i>
-            
-            &nbsp;&nbsp;关于我 / 留言板
-          </div>
-          
-        </a></li>
-      
-    </ul>
-  </div>
-</section>
-
-      
-    
-  
-    
-      
-      
-        
-
-
-  <section class="music">
-    
-<header class="material">
-  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
-  
-    <a class="rightBtn" target="_blank" rel="external nofollow noopener noreferrer" href="https://music.163.com/#/user/home?id=1409711765" title="https://music.163.com/#/user/home?id=1409711765">
-    <i class="far fa-heart fa-fw"></i></a>
-  
-</header>
-
-    <div class="content material">
-      
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
-  <div class="aplayer" data-theme="#1BCDFC" data-mode="circulation" data-server="netease" data-type="playlist" data-id="1409711765" data-volume="0.7">
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
-
-
-    </div>
-  </section>
-
-
-      
-    
-  
-
-
-        </aside>
-        <script>setLoadingBarProgress(60);</script>
-    </div>
-    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
-    </div>
-    <footer id="footer" class="clearfix">
-  
-    <div class="footer">
-      <p>这里是页脚，谢谢支持。</p>
-
-    </div>
-    <br>
-  
-  
-    <div class="social-wrapper">
-      
-        
-          <a href="mailto:zailushanga@gmail.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
-        
-      
-        
-          <a href="https://github.com/llqing" class="social fab fa-github flat-btn" target="_blank" rel="external"></a>
-        
-      
-        
-          <a href="https://music.163.com/#/user/home?id=1409711765" class="social fas fa-music flat-btn" target="_blank" rel="external"></a>
-        
-      
-    </div>
-  
-  <br>
-  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
-  <div>本站使用 <a href target="_blank" class="codename">Material X</a> 作为主题，总访问量为 <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-other">
+          <a href="/other" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            随意发挥
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  
+  
+  
+  <div class="post-block category">
+
+    <div id="posts" class="posts-collapse">
+      <div class="collection-title">
+        <h1>LaTeX<small>分类</small>
+        </h1>
+      </div>
+
+      
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/03/30/LaTeX初识/" itemprop="url">
+              
+                <span itemprop="name">LaTeX初识</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-03-30T12:50:00+08:00" content="2019-03-30">
+          03-30
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+      
+    </div>
+
   </div>
-</footer>
+  
+  
+  
 
-    <script>setLoadingBarProgress(80);</script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-
-  <script>
-    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
-    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
-    var ALGOLIA_API_KEY = "";
-    var ALGOLIA_APP_ID = "";
-    var ALGOLIA_INDEX_NAME = "";
-    var AZURE_SERVICE_NAME = "";
-    var AZURE_INDEX_NAME = "";
-    var AZURE_QUERY_KEY = "";
-    var BAIDU_API_ID = "";
-    var SEARCH_SERVICE = "hexo" || "hexo";
-    var ROOT = "/"||"/";
-    if(!ROOT.endsWith('/'))ROOT += '/';
-  </script>
+  
 
 
 
-  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      const $reveal = $('.reveal');
-      if ($reveal.length === 0) return;
-      const sr = ScrollReveal({ distance: 0 });
-      sr.reveal('.reveal');
-    });
-  </script>
+          </div>
+          
 
 
-  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      Waves.attach('.flat-btn', ['waves-button']);
-      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-      Waves.attach('.flat-box', ['waves-block']);
-      Waves.attach('.float-box', ['waves-block', 'waves-float']);
-      Waves.attach('.waves-image');
-      Waves.init();
-    });
-  </script>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="LLQ">
+            
+              <p class="site-author-name" itemprop="name">LLQ</p>
+              <p class="site-description motion-element" itemprop="description">加油,少年</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
 
 
-  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LLQ</span>
+
+  
+</div>
 
 
-  <!-- fastclick -->
-  <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      FastClick.attach(document.body)
-    }, false)
-  </script>
-
-
-
-
-
-
-
-
-
-
-  <script src="/js/app.js"></script>
-<script src="/js/search.js"></script>
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
 
 
+  <span class="post-meta-divider">|</span>
 
 
-<!-- 复制 -->
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-<script>
-  let COPY_SUCCESS = "复制成功";
-  let COPY_FAILURE = "复制失败";
-  /*页面载入完成后，创建复制按钮*/
-  !function (e, t, a) {
-    /* code */
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
-        }
-      });
 
-      clipboard.on('success', function(e) {
-        //您可以加入成功提示
-        console.info('Action:', e.action);
-        console.info('Text:', e.text);
-        console.info('Trigger:', e.trigger);
-        success_prompt(COPY_SUCCESS);
-        e.clearSelection();
-      });
-      clipboard.on('error', function(e) {
-        //您可以加入失败提示
-        console.error('Action:', e.action);
-        console.error('Trigger:', e.trigger);
-        fail_prompt(COPY_FAILURE);
-      });
-    }
-    initCopyCode();
-
-  }(window, document);
-
-  /**
-   * 弹出式提示框，默认1.5秒自动消失
-   * @param message 提示信息
-   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
-   * @param time 消失时间
-   */
-  var prompt = function (message, style, time)
-  {
-      style = (style === undefined) ? 'alert-success' : style;
-      time = (time === undefined) ? 1500 : time*1000;
-      $('<div>')
-          .appendTo('body')
-          .addClass('alert ' + style)
-          .html(message)
-          .show()
-          .delay(time)
-          .fadeOut();
-  };
-
-  // 成功提示
-  var success_prompt = function(message, time)
-  {
-      prompt(message, 'alert-success', time);
-  };
-
-  // 失败提示
-  var fail_prompt = function(message, time)
-  {
-      prompt(message, 'alert-danger', time);
-  };
-
-  // 提醒
-  var warning_prompt = function(message, time)
-  {
-      prompt(message, 'alert-warning', time);
-  };
-
-  // 信息提示
-  var info_prompt = function(message, time)
-  {
-      prompt(message, 'alert-info', time);
-  };
-
-</script>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
 
 
-<!-- fancybox -->
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-<script>
-  let LAZY_LOAD_IMAGE = "";
-  $(".article-entry").find("img").each(function () {
-      var element = document.createElement("a");
-      $(element).attr("data-fancybox", "gallery");
-      $(element).attr("href", $(this).attr("src"));
-      /* 图片采用懒加载处理时,
-       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
-       * 那么此处将原本的属性名src替换为对应属性名data-original,
-       * 修改如下
-       */
-       if (LAZY_LOAD_IMAGE) {
-         $(element).attr("href", $(this).attr("data-original"));
-       }
-      $(this).wrap(element);
-  });
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
 
 
 
-    <script>setLoadingBarProgress(100);</script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'MmISOJnFve0SNjE41MNyGuyT-gzGzoHsz',
+        appKey: 'LQzUzH6ixJqwfSeRRoS5qWFY',
+        placeholder: '随便说点什么吧',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>

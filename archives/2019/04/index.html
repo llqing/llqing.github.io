@@ -1,2016 +1,980 @@
 <!DOCTYPE html>
-<html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <title>Archives: 2019/4 | GIS小站</title>
-  
-  <meta name="keywords" content="GIS,Code">
-  
-  
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
-  <meta name="HandheldFriendly" content="True">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <!-- meta -->
-  
-  
-  <meta name="theme-color" content="#FFFFFF">
-  <meta name="msapplication-TileColor" content="#1BC3FB">
-  <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml">
-  
 
-  <!-- link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
-  
-  
-  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
-  <link rel="icon" type="image/x-icon" sizes="32x32" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/favicon-32x32.png">
-  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png">
-  <link rel="mask-icon" color="#1BC3FB" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg">
-  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest">
-  
 
-  
-  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
-  
 
-  
-  <link rel="stylesheet" href="/style.css">
-  
 
-  <script>
-    function setLoadingBarProgress(num) {
-      document.getElementById('loading-bar').style.width=num+"%";
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="加油,少年">
+<meta name="keywords" content="GIS,Code">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GIS小站">
+<meta property="og:url" content="https://llqing.github.io/archives/2019/04/index.html">
+<meta property="og:site_name" content="GIS小站">
+<meta property="og:description" content="加油,少年">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GIS小站">
+<meta name="twitter:description" content="加油,少年">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
-  </script>
+  };
+</script>
 
+
+
+  <link rel="canonical" href="https://llqing.github.io/archives/2019/04/">
+
+
+
+
+
+  <title>归档 | GIS小站</title>
   
-  
+
+
+
+
+
+
+
+
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-<body>
-    <div id="loading-bar-wrapper">
-  <div id="loading-bar" class="material"></div>
-</div>
+  
+  
+    
+  
 
-    <script>setLoadingBarProgress(20)</script>
-    <header class="l_header material">
-	<div class="wrapper">
-		<div class="nav-main container container--flex">
-      <a class="logo flat-box" href="/">
-        
-          GIS小站
-        
+  <div class="container sidebar-position-left page-archive">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">GIS小站</span>
+        <span class="logo-line-after"><i></i></span>
       </a>
-			<div class="menu">
-				<ul class="h-list">
-          
-  					
-  						<li>
-								<a id="https:llqing.github.io" class="nav flat-box" href="https://llqing.github.io/">
-									<i class="fas fa-home fa-fw"></i>&nbsp;主页
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="home" class="nav flat-box" href="/">
-									<i class="fas fa-rss fa-fw"></i>&nbsp;博客
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="archives" class="nav flat-box" href="/archives/">
-									<i class="fas fa-archive fa-fw"></i>&nbsp;归档
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="friends" class="nav flat-box" href="/friends/">
-									<i class="fas fa-users fa-fw"></i>&nbsp;朋友
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="about" class="nav flat-box" href="/about/">
-									<i class="fas fa-address-card fa-fw"></i>&nbsp;关于
-								</a>
-							</li>
-      			
-      		
-				</ul>
-			</div>
-
-			
-				<div class="m_search">
-					<form name="searchform" class="form u-search-form">
-						<input type="text" class="input u-search-input" placeholder="搜索">
-						<span class="icon"><i class="fas fa-search fa-fw"></i></span>
-					</form>
-				</div>
-			
-			<ul class="switcher h-list">
-				
-					<li class="s-search"><a class="fas fa-search fa-fw" href="javascript:void(0)"></a></li>
-				
-				<li class="s-menu"><a class="fas fa-bars fa-fw" href="javascript:void(0)"></a></li>
-			</ul>
-		</div>
-
-		<div class="nav-sub container container--flex">
-			<a class="logo flat-box"></a>
-			<ul class="switcher h-list">
-				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
-				<li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
-			</ul>
-		</div>
-	</div>
-</header>
-	<aside class="menu-phone">
-    <header>
-		<nav class="menu">
-      <ul>
-          
-              
-                  <li>
-										<a id="https:llqing.github.io" class="nav flat-box" href="https://llqing.github.io/">
-											<i class="fas fa-home fa-fw"></i>&nbsp;主页
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="home" class="nav flat-box" href="/">
-											<i class="fas fa-rss fa-fw"></i>&nbsp;博客
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="archives" class="nav flat-box" href="/archives/">
-											<i class="fas fa-archive fa-fw"></i>&nbsp;归档
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="friends" class="nav flat-box" href="/friends/">
-											<i class="fas fa-users fa-fw"></i>&nbsp;朋友
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="about" class="nav flat-box" href="/about/">
-											<i class="fas fa-address-card fa-fw"></i>&nbsp;关于
-										</a>
-                  </li>
-              
-       
-      </ul>
-		</nav>
-    </header>
-	</aside>
-
-    <script>setLoadingBarProgress(40);</script>
-    <div class="l_body">
-    <div class='container clearfix'>
-        <div class='l_main'>
-            
-	
-    <script>
-        window.subData= { title:'year : 2019.4'}
-    </script>
-
-
-
-
-  <section class="post-list">
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-
-
-
-      
-
-      
-
-      
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/28/ArcScene三维制作/">
-              
-                  ArcScene三维制作
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-28
-          </a>
-        </div>
-      
-      
-        
-      
-      
-      
     </div>
-    <hr>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-</section>
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-    </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/23/Matplotlib中文不显示问题/">
-              
-                  Matplotlib中文不显示问题
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-23
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/杂谈/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              杂谈
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
   </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h2 id="Matplotlib中中文不显示问题"><a href="#Matplotlib中中文不显示问题" class="headerlink" title="Matplotlib中中文不显示问题"></a>Matplotlib中中文不显示问题</h2><p>我们在使用jupter进行数据分析的时候，会接触到Matplotlib这个库，它是用来进行可视化数据分析的，在一个图中，我们常常会加入一些中文来进行说明。当我们加入中文的时候会出现下图所示的样子：</p>
-<p><img src="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126171304928-1982592030.png" alt="img"></p>
-<p>可以看到，中文变成了这种乱码的形式。网上有很多的例子，有很多是错误的，这里我把我测试成功的方法说明一下。</p>
-<p>我使用的电脑系统是Window10，后面的方法也是针对它的，其他的系统应该也差距不大，可以借鉴一下。</p>
-<h3 id="1-找一个喜欢的字体"><a href="#1-找一个喜欢的字体" class="headerlink" title="1.找一个喜欢的字体"></a>1.找一个喜欢的字体</h3><p>字体的话，我们可以去网上下载，也可以用系统自带的。我们可以进入到目录：C:\Windows\Fonts中，里面有很多字体，这里我选择了微软雅黑，这里将它复制。</p>
-<p><img src="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126172644334-542625206.png" alt="img"></p>
-<h3 id="2-将字体放到默认Matplotlib默认字体目录"><a href="#2-将字体放到默认Matplotlib默认字体目录" class="headerlink" title="2.将字体放到默认Matplotlib默认字体目录"></a>2.将字体放到默认Matplotlib默认字体目录</h3><p>在我电脑中Matplotlib默认字体目录是：D:\Anaconda3\Lib\site-packages\matplotlib\mpl-data\fonts\ttf。我们将复制的微软雅黑字体粘贴到这个目录下，然后双击安装。</p>
-<p>（因为安装的时候我修改了路径，将Anaconda安装到了D盘，如果你安装到C盘或者使用默认目录的话会有一些出入。）</p>
-<p><img src="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126172748235-1568497793.png" alt="img"></p>
-<h3 id="3-用下面代码找到Matplotlib的配置文件"><a href="#3-用下面代码找到Matplotlib的配置文件" class="headerlink" title="3.用下面代码找到Matplotlib的配置文件"></a>3.用下面代码找到Matplotlib的配置文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib</span><br><span class="line">print(matplotlib.matplotlib_fname())</span><br></pre></td></tr></table></figure>
-<p> 效果如下图：</p>
-<p><img src="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126172004091-1576679331.png" alt="img"></p>
-<h3 id="4-打开步骤3中得到的文件，然后修改"><a href="#4-打开步骤3中得到的文件，然后修改" class="headerlink" title="4.打开步骤3中得到的文件，然后修改"></a>4.打开步骤3中得到的文件，然后修改</h3><p><img src="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126173224483-1641500168.png" alt="img"></p>
-<p>这里我们顺便解决一下Matplotlib中负号不显示的问题，还是修改这个文件。</p>
-<p><img src="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126173832737-772380232.png" alt="img"></p>
-<h3 id="5-将Matplotlib中的缓存文件删除"><a href="#5-将Matplotlib中的缓存文件删除" class="headerlink" title="5.将Matplotlib中的缓存文件删除"></a>5.将Matplotlib中的缓存文件删除</h3><p>目录：C:\Users\用户.matplotlib中存放的是Matplotlib的缓存目录，我们只要将这个.matplotlib文件删除即可。</p>
-<h3 id="6-重启jupyter-notebook"><a href="#6-重启jupyter-notebook" class="headerlink" title="6.重启jupyter notebook"></a>6.重启jupyter notebook</h3><p>经过上面的6步，我们的乱码问题解决了。</p>
-<p> <img src="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126174308128-811831411.png" alt="img"></p>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/Matplotlib/"><i class="fas fa-hashtag fa-fw"></i>Matplotlib</a>
-        
-          <a href="/tags/中文显示乱码/"><i class="fas fa-hashtag fa-fw"></i>中文显示乱码</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/19/typora/">
-              
-                  typora的简单入门(Markdown基本语法)
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-19
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/常用工具/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              常用工具
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <ul>
-<li><ul>
-<li>标题的使用<ul>
-<li><a href>标题的使用格式</a></li>
-<li><a href>标题Typora显示形式是</a></li>
-</ul>
-</li>
-<li>文本居中<ul>
-<li><a href>文本居中使用格式</a></li>
-<li><a href>文本居中在Typora中显示形式是</a></li>
-</ul>
-</li>
-<li>下划线<ul>
-<li><a href>下划线使用格式</a></li>
-<li><a href>下划线在Typora显示形式是</a></li>
-</ul>
-</li>
-<li>删除线<ul>
-<li><a href>删除线使用格式</a></li>
-<li><a href>删除线在Typora显示形式是</a></li>
-</ul>
-</li>
-<li>字体加粗<ul>
-<li><a href>字体加粗使用格式</a></li>
-<li><a href>字体加粗在Typora显示形式是</a></li>
-</ul>
-</li>
-<li>字体倾斜<ul>
-<li><a href>字体倾斜使用格式</a></li>
-<li><a href>字体倾斜在Typora的显示形式</a></li>
-</ul>
-</li>
-<li><a href>图片的插入</a></li>
-<li>超链接<ul>
-<li><a href>超链接使用格式</a></li>
-<li><a href>超链接在Typora显示形式是必须以http开头</a></li>
-</ul>
-</li>
-<li>代码区域<ul>
-<li><a href>代码区域的使用格式</a></li>
-<li><a href>代码区域在typora中显示形式</a></li>
-</ul>
-</li>
-<li>表格的使用<ul>
-<li><a href>表格的二种使用格式</a></li>
-<li><a href>表格在typora中显示形式</a></li>
-</ul>
-</li>
-<li>任务列表<ul>
-<li><a href>任务列表使用格式</a></li>
-<li><a href>任务列表在typora中的显示形式</a></li>
-</ul>
-</li>
-<li>列表<ul>
-<li><a href>列表的使用格式</a></li>
-<li><a href>列表在typora中的显示形式</a></li>
-</ul>
-</li>
-<li><a href>数学表达式</a></li>
-<li>水平分割线<ul>
-<li><a href>水平分割线的使用格式</a></li>
-<li><a href>水平分割线在typora中显示形式</a></li>
-</ul>
-</li>
-<li>引用<ul>
-<li><a href>引用的使用格式</a></li>
-<li><a href>引用在typora中的显示形式</a></li>
-</ul>
-</li>
-<li>注释<ul>
-<li><a href>注释的使用格式</a></li>
-<li><a href>注释在typora中显示形式</a></li>
-</ul>
-</li>
-<li>表情<ul>
-<li><a href>表情的使用格式</a></li>
-<li><a href>表情在typora中的显示形式</a></li>
-</ul>
-</li>
-<li><a href>Typora快捷键</a></li>
-</ul>
-</li>
-</ul>
-<p>Typora可以根据当前文档的标题层级，自动生成并显示大纲，窗口的右下角并有字数显示。</p>
-<h2 id="标题的使用"><a href="#标题的使用" class="headerlink" title="标题的使用"></a>标题的使用</h2><h3 id="标题的使用格式"><a href="#标题的使用格式" class="headerlink" title="标题的使用格式"></a>标题的使用格式</h3><p># 一阶标题 或者快捷键Ctrl+1</p>
-<p>##二阶标题 或者快捷键Ctrl+2</p>
-<p>###三阶标题 或者快捷键Ctrl+3</p>
-<p>####四阶标题 或者快捷键Ctrl+4</p>
-<p>#####五阶标题 或者快捷键Ctrl+5</p>
-<p>######六阶标题 或者快捷键Ctrl+6</p>
-<h3 id="标题Typora显示形式是"><a href="#标题Typora显示形式是" class="headerlink" title="标题Typora显示形式是"></a>标题Typora显示形式是</h3><p><img src="https://img-blog.csdn.net/20180108112546034?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvU0lNQkExOTQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<h2 id="文本居中"><a href="#文本居中" class="headerlink" title="文本居中"></a>文本居中</h2><h3 id="文本居中使用格式"><a href="#文本居中使用格式" class="headerlink" title="文本居中使用格式"></a>文本居中使用格式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\&lt;center\&gt;这是要居中的文本内容\&lt;/center\&gt;1</span><br></pre></td></tr></table></figure>
-<h3 id="文本居中在Typora中显示形式是"><a href="#文本居中在Typora中显示形式是" class="headerlink" title="文本居中在Typora中显示形式是"></a>文本居中在Typora中显示形式是</h3><p>这是要居中的文本</p>
-<p>注：Typora目前并不会直接预览居中效果——相应的效果只有输出文本的时候才会显现。</p>
-<h2 id="下划线"><a href="#下划线" class="headerlink" title="下划线"></a>下划线</h2><h3 id="下划线使用格式"><a href="#下划线使用格式" class="headerlink" title="下划线使用格式"></a>下划线使用格式</h3><p>\下划线的内容\&lt;\u&gt; 或者快捷键Ctrl+U</p>
-<h3 id="下划线在Typora显示形式是"><a href="#下划线在Typora显示形式是" class="headerlink" title="下划线在Typora显示形式是"></a>下划线在Typora显示形式是</h3><p>这就是我亲测的下划线</p>
-<h2 id="删除线"><a href="#删除线" class="headerlink" title="删除线"></a>删除线</h2><h3 id="删除线使用格式"><a href="#删除线使用格式" class="headerlink" title="删除线使用格式"></a>删除线使用格式</h3><p>~~删除线的内容~~</p>
-<h3 id="删除线在Typora显示形式是"><a href="#删除线在Typora显示形式是" class="headerlink" title="删除线在Typora显示形式是"></a>删除线在Typora显示形式是</h3><p><del>这是删除线的内容</del></p>
-<h2 id="字体加粗"><a href="#字体加粗" class="headerlink" title="字体加粗"></a>字体加粗</h2><h3 id="字体加粗使用格式"><a href="#字体加粗使用格式" class="headerlink" title="字体加粗使用格式"></a>字体加粗使用格式</h3><p><strong>加粗字体</strong> 或者快捷键Ctrl+B</p>
-<h3 id="字体加粗在Typora显示形式是"><a href="#字体加粗在Typora显示形式是" class="headerlink" title="字体加粗在Typora显示形式是"></a>字体加粗在Typora显示形式是</h3><p><strong>加粗字体 This is a bold font</strong></p>
-<h2 id="字体倾斜"><a href="#字体倾斜" class="headerlink" title="字体倾斜"></a>字体倾斜</h2><h3 id="字体倾斜使用格式"><a href="#字体倾斜使用格式" class="headerlink" title="字体倾斜使用格式"></a>字体倾斜使用格式</h3><p><em>字体倾斜了</em> 或者快捷键Ctrl+I</p>
-<h3 id="字体倾斜在Typora的显示形式"><a href="#字体倾斜在Typora的显示形式" class="headerlink" title="字体倾斜在Typora的显示形式"></a>字体倾斜在Typora的显示形式</h3><p><em>字体倾斜了 This is a alanted font</em></p>
-<h2 id="图片的插入"><a href="#图片的插入" class="headerlink" title="图片的插入"></a>图片的插入</h2><p>最简单粗暴的图片插入方式如图：</p>
-<p><img src="https://img-blog.csdn.net/20180108113042939?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvU0lNQkExOTQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>图片来源<a href="http://support.typora.io/Images" target="_blank" rel="noopener">http://support.typora.io/Images</a></p>
-<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><h3 id="超链接使用格式"><a href="#超链接使用格式" class="headerlink" title="超链接使用格式"></a>超链接使用格式</h3><p>第一种：[<a href="http://www.simba.com\](http://www.simba.com/)" target="_blank" rel="noopener">http://www.simba.com\](http://www.simba.com/)</a></p>
-<p>第二种：快捷键Ctrl+K</p>
-<p><a href="超链接地址">自定义内容</a> 例如：<a href="www.baidu.com">百度一下</a></p>
-<h3 id="超链接在Typora显示形式是：（必须以http开头）"><a href="#超链接在Typora显示形式是：（必须以http开头）" class="headerlink" title="超链接在Typora显示形式是：（必须以http开头）"></a>超链接在Typora显示形式是：（必须以http开头）</h3><p>第一种：<a href="http://www.simba.com/" target="_blank" rel="noopener">http://www.simba.com</a></p>
-<p>第二种：<a href="https://blog.csdn.net/SIMBA1949/article/details/www.baidu.com" target="_blank" rel="noopener">百度一下</a></p>
-<p>按住Ctrl键+点击上面链接就可以直接访问该链接</p>
-<h2 id="代码区域"><a href="#代码区域" class="headerlink" title="代码区域"></a>代码区域</h2><p>Typora支持对多种语言的代码区域进行<strong>语法高亮</strong>。这些语言可以说是<strong>涵盖了绝大部分经常使用的编程语言</strong>，包括C++，Python，MATLAB，甚至包含spreadsheet（也就是Excel电子表格）。用Typora记编程笔记，看起来一清二楚。如果设置代码语言为flow，那么可以直接画出一个流程图；还可以使用相应的方法画出时序图等图表。</p>
-<h3 id="代码区域的使用格式"><a href="#代码区域的使用格式" class="headerlink" title="代码区域的使用格式"></a>代码区域的使用格式</h3><p><code></code> <code>+编程语言：例如java代码：</code> <code></code>java</p>
-<h3 id="代码区域在typora中显示形式"><a href="#代码区域在typora中显示形式" class="headerlink" title="代码区域在typora中显示形式"></a>代码区域在typora中显示形式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">simba</span></span>&#123;</span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    System.out.println(<span class="string">"我爱你，中国"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;<span class="number">12345</span></span><br></pre></td></tr></table></figure>
-<h2 id="表格的使用"><a href="#表格的使用" class="headerlink" title="表格的使用"></a>表格的使用</h2><h3 id="表格的二种使用格式"><a href="#表格的二种使用格式" class="headerlink" title="表格的二种使用格式"></a>表格的二种使用格式</h3><p>第一种：快捷键<strong>Ctrl+T</strong>，会自动跳出设置行和列的设置框，如下图</p>
-<p><img src="https://img-blog.csdn.net/20180108113324218?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvU0lNQkExOTQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>第二种：</p>
-<p>|国籍|省份|市区|</p>
-<h3 id="表格在typora中显示形式"><a href="#表格在typora中显示形式" class="headerlink" title="表格在typora中显示形式"></a>表格在typora中显示形式</h3><p>第一种：</p>
-<table>
-<thead>
-<tr>
-<th>国籍</th>
-<th>省份</th>
-<th>市区</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>中国</td>
-<td>北京</td>
-<td>东城区</td>
-</tr>
-</tbody>
-</table>
-<p>第二种：</p>
-<table>
-<thead>
-<tr>
-<th>国籍</th>
-<th>省份</th>
-<th>市区</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="任务列表"><a href="#任务列表" class="headerlink" title="任务列表"></a>任务列表</h2><h3 id="任务列表使用格式"><a href="#任务列表使用格式" class="headerlink" title="任务列表使用格式"></a>任务列表使用格式</h3><p>- [ ] 文字 （注：注意用空格隔开）</p>
-<h3 id="任务列表在typora中的显示形式"><a href="#任务列表在typora中的显示形式" class="headerlink" title="任务列表在typora中的显示形式"></a>任务列表在typora中的显示形式</h3><ul>
-<li style="list-style: none"><input type="checkbox" checked> JAVA</li>
-<li style="list-style: none"><input type="checkbox"> C</li>
-<li style="list-style: none"><input type="checkbox"> C++</li>
-<li style="list-style: none"><input type="checkbox"> Python</li>
-</ul>
-<p>（注意：在CSDN博客上未显示，但是在Typora上显示如下图：<br><img src="https://img-blog.csdn.net/20180108114342465?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvU0lNQkExOTQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>）</p>
-<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="列表的使用格式"><a href="#列表的使用格式" class="headerlink" title="列表的使用格式"></a>列表的使用格式</h3><p>+ 、- 、* 创建无序列，任意数字开始+空格创建有序列表</p>
-<h3 id="列表在typora中的显示形式"><a href="#列表在typora中的显示形式" class="headerlink" title="列表在typora中的显示形式"></a>列表在typora中的显示形式</h3><ul>
-<li>java</li>
-<li>C</li>
-<li>C++</li>
-<li>Python</li>
-</ul>
-<h2 id="数学表达式"><a href="#数学表达式" class="headerlink" title="数学表达式"></a>数学表达式</h2><p>Typora支持加入用LaTeX写成的数学公式，并且在软件界面下用MathJax直接渲染。</p>
-<p>数学公式分为两种：</p>
-<p>一种是行内公式(inline math，可以在偏好设置中单独打开，由一个美元符号$将公式围起来；</p>
-<p>一种是行外公式，直接 按<strong>Ctrl+Shift+M</strong>；</p>
-<p>注：上标和下标可以使用数学表达式来获取</p>
-<h2 id="水平分割线"><a href="#水平分割线" class="headerlink" title="水平分割线"></a>水平分割线</h2><h3 id="水平分割线的使用格式"><a href="#水平分割线的使用格式" class="headerlink" title="水平分割线的使用格式"></a>水平分割线的使用格式</h3><p>***或者- - -</p>
-<h3 id="水平分割线在typora中显示形式"><a href="#水平分割线在typora中显示形式" class="headerlink" title="水平分割线在typora中显示形式"></a>水平分割线在typora中显示形式</h3><hr>
-<hr>
-<p>（注意：在CSDN博客上未显示，但是在Typora上显示如下图：<br><img src="https://img-blog.csdn.net/20180108114442472?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvU0lNQkExOTQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>）</p>
-<h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><h3 id="引用的使用格式"><a href="#引用的使用格式" class="headerlink" title="引用的使用格式"></a>引用的使用格式</h3><p>>+空格</p>
-<h3 id="引用在typora中的显示形式"><a href="#引用在typora中的显示形式" class="headerlink" title="引用在typora中的显示形式"></a>引用在typora中的显示形式</h3><blockquote>
-<p>与天奋斗，其乐无穷！与地奋斗，其乐无穷！与人奋斗，其乐无穷！</p>
-<p> ———— 《毛泽东选集》之《奋斗自勉》（毛泽东1917年）</p>
-</blockquote>
-<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><h3 id="注释的使用格式"><a href="#注释的使用格式" class="headerlink" title="注释的使用格式"></a>注释的使用格式</h3><p>要添加注释的文字[1](<a href="https://blog.csdn.net/SIMBA1949/article/details/79001226#fn:" target="_blank" rel="noopener">https://blog.csdn.net/SIMBA1949/article/details/79001226#fn:</a>)</p>
-<h3 id="注释在typora中显示形式"><a href="#注释在typora中显示形式" class="headerlink" title="注释在typora中显示形式"></a>注释在typora中显示形式</h3><p>中国<a href="https://blog.csdn.net/SIMBA1949/article/details/79001226#fn:" target="_blank" rel="noopener">2</a></p>
-<h2 id="表情"><a href="#表情" class="headerlink" title="表情"></a>表情</h2><h3 id="表情的使用格式"><a href="#表情的使用格式" class="headerlink" title="表情的使用格式"></a>表情的使用格式</h3><p>:单词</p>
-<h3 id="表情在typora中的显示形式"><a href="#表情在typora中的显示形式" class="headerlink" title="表情在typora中的显示形式"></a>表情在typora中的显示形式</h3><p>:smiley:<br>（注意：在CSDN博客上未显示，但是在Typora上显示如下图：<br><img src="https://img-blog.csdn.net/20180108114531939?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvU0lNQkExOTQ5/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>）</p>
-<h2 id="Typora快捷键"><a href="#Typora快捷键" class="headerlink" title="Typora快捷键"></a>Typora快捷键</h2><table>
-<thead>
-<tr>
-<th>快捷键</th>
-<th>作用</th>
-<th>快捷键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Ctrl+1</td>
-<td>一阶标题</td>
-<td>Ctrl+B</td>
-<td>字体加粗</td>
-</tr>
-<tr>
-<td>Ctrl+2</td>
-<td>二阶标题</td>
-<td>Ctrl+I</td>
-<td>字体倾斜</td>
-</tr>
-<tr>
-<td>Ctrl+3</td>
-<td>三阶标题</td>
-<td>Ctrl+U</td>
-<td>下划线</td>
-</tr>
-<tr>
-<td>Ctrl+4</td>
-<td>四阶标题</td>
-<td>Ctrl+Home</td>
-<td>返回Typora顶部</td>
-</tr>
-<tr>
-<td>Ctrl+5</td>
-<td>五阶标题</td>
-<td>Ctrl+End</td>
-<td>返回Typora底部</td>
-</tr>
-<tr>
-<td>Ctrl+6</td>
-<td>六阶标题</td>
-<td>Ctrl+T</td>
-<td>创建表格</td>
-</tr>
-<tr>
-<td>Ctrl+L</td>
-<td>选中某句话</td>
-<td>Ctrl+K</td>
-<td>创建超链接</td>
-</tr>
-<tr>
-<td>Ctrl+D</td>
-<td>选中某个单词</td>
-<td>Ctrl+F</td>
-<td>搜索</td>
-</tr>
-<tr>
-<td>Ctrl+E</td>
-<td>选中相同格式的文字</td>
-<td>Ctrl+H</td>
-<td>搜索并替换</td>
-</tr>
-<tr>
-<td>Alt+Shift+5</td>
-<td>删除线</td>
-<td>Ctrl+Shift+I</td>
-<td>插入图片</td>
-</tr>
-</tbody>
-</table>
-<p>注：一些实体符号需要在实体符号之前加”\”才能够显示</p>
-<hr>
-<ol>
-<li>伟大的中华人民共和国万岁 <a href="https://blog.csdn.net/SIMBA1949/article/details/79001226#fnref:" target="_blank" rel="noopener">↩</a></li>
-<li>伟大的中华人民共和国万岁 <a href="https://blog.csdn.net/SIMBA1949/article/details/79001226#fnref:" target="_blank" rel="noopener">↩</a></li>
-</ol>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/Markdown/"><i class="fas fa-hashtag fa-fw"></i>Markdown</a>
-        
-          <a href="/tags/typora/"><i class="fas fa-hashtag fa-fw"></i>typora</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/19/用Python来撩妹吧(1)-实时掌控她的小情绪/">
-              
-                  用Python来撩妹吧-实时掌控她的小情绪
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-19
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/好玩的/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              好玩的
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>好不容易有了女朋友，可相处起来总是磕磕碰碰。</p>
-<p>有时候，你很想关心她，但是你太忙了，以至于她一直抱怨，觉得你不够关心她。你暗自下决心，下次一定要准时发消息给她，哪怕是几句话，可是你又忘记了。你觉得自己很委屈😭，但是她又觉得你不负责。</p>
-<p>现在，再不用担心了，用python就可以给女友定时发提示消息了，而且不会漏过每一个关键时刻，每天早上起床、中午吃饭、晚上吃饭、晚上睡觉，都会准时发消息给她了，而且还可以让她学习英语单词哦！</p>
-<p>在生日来临之时，自动发祝福语。在节日来临之时，比如三八妇女节、女神节、情人节、春节、圣诞节，自动发问候语哦，再也不用担心他说你没有仪式感了😀</p>
-<p>最重要的是，可以实时知道女友的情感情绪指数，再也不用担心女友莫名其妙生气了。</p>
-<h2 id="编写思路"><a href="#编写思路" class="headerlink" title="编写思路"></a>编写思路</h2><p>为了方便快速开发，我们使用python中的wxpy模块完成微信的基本操作。</p>
-<p>首先，我们设置一个config.ini配置文件，并从这个配置文件开始读取信息。这些参数一看就懂，所以无需多言。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 读取配置文件</span></span><br><span class="line"></span><br><span class="line"><span class="attr">cf</span> = configparser.ConfigParser()</span><br><span class="line"></span><br><span class="line">cf.read("./config.ini",encoding='UTF-8')</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置女友的微信名称，记住，不是微信ID也不是微信备注</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 你女友的微信名称，记住，不是微信ID也不是微信备注</span></span><br><span class="line"></span><br><span class="line"><span class="attr">my_lady_wechat_name</span> = cf.get(<span class="string">"configuration"</span>, <span class="string">"my_lady_wechat_name"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置早上起床时间，中午吃饭时间，下午吃饭时间，晚上睡觉时间</span></span><br><span class="line"></span><br><span class="line"><span class="attr">say_good_morning</span> = cf.get(<span class="string">"configuration"</span>, <span class="string">"say_good_morning"</span>)</span><br><span class="line"></span><br><span class="line"><span class="attr">say_good_lunch</span> = cf.get(<span class="string">"configuration"</span>, <span class="string">"say_good_lunch"</span>)</span><br><span class="line"></span><br><span class="line"><span class="attr">say_good_dinner</span> = cf.get(<span class="string">"configuration"</span>, <span class="string">"say_good_dinner"</span>)</span><br><span class="line"></span><br><span class="line"><span class="attr">say_good_dream</span> = cf.get(<span class="string">"configuration"</span>, <span class="string">"say_good_dream"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置女友生日信息</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 几月，注意补全数字，为两位数，比如6月必须写成06</span></span><br><span class="line"></span><br><span class="line"><span class="attr">birthday_month</span> = cf.get(<span class="string">"configuration"</span>, <span class="string">"birthday_month"</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 几号，注意补全数字，为两位数，比如6号必须写成08</span></span><br><span class="line"></span><br><span class="line"><span class="attr">birthday_day</span> = cf.get(<span class="string">"configuration"</span>, <span class="string">"birthday_day"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取早上起床时间，中午吃饭时间，下午吃饭时间，晚上睡觉时间的随机提示语</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 一般这里的代码不要改动，需要增加提示语可以自己打开对应的文件修改</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#早上起床问候语列表，数据来源于新浪微博</span></span><br><span class="line"></span><br><span class="line"><span class="attr">str_list_good_morning</span> = <span class="string">''</span></span><br><span class="line"></span><br><span class="line">with open("./remind_sentence/sentence_good_morning.txt", "r",encoding='UTF-8') as f:</span><br><span class="line"></span><br><span class="line">    str_list_good_morning = f.readlines()</span><br><span class="line"></span><br><span class="line">print(str_list_good_morning)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#中午吃饭问候语列表，数据来源于新浪微博</span></span><br><span class="line"></span><br><span class="line"><span class="attr">str_list_good_lunch</span> = <span class="string">''</span></span><br><span class="line"></span><br><span class="line">with open("./remind_sentence/sentence_good_lunch.txt", "r",encoding='UTF-8') as f:</span><br><span class="line"></span><br><span class="line">    str_list_good_lunch = f.readlines()</span><br><span class="line"></span><br><span class="line">print(str_list_good_lunch)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#晚上吃饭问候语列表，数据来源于新浪微博</span></span><br><span class="line"></span><br><span class="line"><span class="attr">str_list_good_dinner</span> = <span class="string">''</span></span><br><span class="line"></span><br><span class="line">with open("./remind_sentence/sentence_good_dinner.txt", "r",encoding='UTF-8') as f:</span><br><span class="line"></span><br><span class="line">    str_list_good_dinner = f.readlines()</span><br><span class="line"></span><br><span class="line">print(str_list_good_dinner)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#晚上睡觉问候语列表，数据来源于新浪微博</span></span><br><span class="line"></span><br><span class="line"><span class="attr">str_list_good_dream</span> = <span class="string">''</span></span><br><span class="line"></span><br><span class="line">with open("./remind_sentence/sentence_good_dream.txt", "r",encoding='UTF-8') as f:</span><br><span class="line"></span><br><span class="line">    str_list_good_dream = f.readlines()</span><br><span class="line"></span><br><span class="line">print(str_list_good_dream)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置晚上睡觉问候语是否在原来的基础上再加上每日学英语精句</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># False表示否 True表示是</span></span><br><span class="line"></span><br><span class="line">if((cf.get("configuration", "flag_learn_english")) == '1'):</span><br><span class="line"></span><br><span class="line">    flag_learn_english = True</span><br><span class="line"></span><br><span class="line">else:</span><br><span class="line"></span><br><span class="line">    flag_learn_english = False</span><br><span class="line"></span><br><span class="line">print(flag_learn_english)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置所有问候语结束是否加上表情符号</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># False表示否 True表示是</span></span><br><span class="line"></span><br><span class="line"><span class="attr">str_emoj</span> = <span class="string">"(•‾̑⌣‾̑•)✧˖°----(๑´ڡ`๑)----(๑¯ิε ¯ิ๑)----(๑•́ ₃ •̀๑)----( ∙̆ .̯ ∙̆ )----(๑˘ ˘๑)----(●′ω`●)----(●･̆⍛･̆●)----ಥ_ಥ----_(:qゝ∠)----(´；ω；`)----( `)3')----Σ((( つ•̀ω•́)つ----╰(*´︶`*)╯----( ´´ิ∀´ิ` )----(´∩｀。)----( ื▿ ื)----(｡ŏ_ŏ)----( •ิ _ •ิ )----ヽ(*΄◞ิ౪◟ิ‵ *)----( ˘ ³˘)----(; ´_ゝ`)----(*ˉ﹃ˉ)----(◍'౪`◍)ﾉﾞ----(｡◝‿◜｡)----(ಠ .̫.̫ ಠ)----(´◞⊖◟`)----(。≖ˇェˇ≖｡)----(◕ܫ◕)----(｀◕‸◕´+)----(▼ _ ▼)----( ◉ืൠ◉ื)----ㄟ(◑‿◐ )ㄏ----(●'◡'●)ﾉ♥----(｡◕ˇ∀ˇ◕）----( ◔ ڼ ◔ )----( ´◔ ‸◔`)----(☍﹏⁰)----(♥◠‿◠)----ლ(╹◡╹ლ )----(๑꒪◞౪◟꒪๑)"</span></span><br><span class="line"></span><br><span class="line"><span class="attr">str_list_emoj</span> = str_emoj.split(<span class="string">'----'</span>)</span><br><span class="line"></span><br><span class="line">if ((cf.get("configuration", "flag_wx_emoj")) == '1'):</span><br><span class="line"></span><br><span class="line">    flag_wx_emoj = True</span><br><span class="line"></span><br><span class="line">else:</span><br><span class="line"></span><br><span class="line">    flag_wx_emoj = False</span><br><span class="line"></span><br><span class="line">print(str_list_emoj)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置节日祝福语</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 情人节祝福语</span></span><br><span class="line"></span><br><span class="line"><span class="attr">str_Valentine</span> = cf.get(<span class="string">"configuration"</span>, <span class="string">"str_Valentine"</span>)</span><br><span class="line"></span><br><span class="line">print(str_Valentine)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 三八妇女节祝福语</span></span><br><span class="line"></span><br><span class="line"><span class="attr">str_Women</span> = cf.get(<span class="string">"configuration"</span>, <span class="string">"str_Women"</span>)</span><br><span class="line"></span><br><span class="line">print(str_Women)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 平安夜祝福语</span></span><br><span class="line"></span><br><span class="line"><span class="attr">str_Christmas_Eve</span> = cf.get(<span class="string">"configuration"</span>, <span class="string">"str_Christmas_Eve"</span>)</span><br><span class="line"></span><br><span class="line">print(str_Christmas_Eve)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 圣诞节祝福语</span></span><br><span class="line"></span><br><span class="line"><span class="attr">str_Christmas</span> = cf.get(<span class="string">"configuration"</span>, <span class="string">"str_Christmas"</span>)</span><br><span class="line"></span><br><span class="line">print(str_Christmas)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 她生日的时候的祝福语</span></span><br><span class="line"></span><br><span class="line"><span class="attr">str_birthday</span> = cf.get(<span class="string">"configuration"</span>, <span class="string">"str_birthday"</span>)</span><br><span class="line"></span><br><span class="line">print(str_birthday)</span><br></pre></td></tr></table></figure>
-<p>如果你愿意，可以在上面对时间的判断中，加入一些其他你想要的，这样你女友就更开心啦！后期如果有时间，我将会加上以上节日问候功能。😀</p>
-<p>接着，开启微信机器人，为了程序的健壮性，自动判断一下操作系统，根据不同操作系统执行不同指令：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动微信机器人，自动根据操作系统执行不同的指令</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># windows系统或macOS Sierra系统使用bot = Bot()</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># linux系统或macOS Terminal系统使用bot = Bot(console_qr=2)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>(<span class="string">'Windows'</span> <span class="keyword">in</span> platform.system()):</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Windows</span></span><br><span class="line"></span><br><span class="line">    bot = Bot()</span><br><span class="line"></span><br><span class="line"><span class="keyword">elif</span>(<span class="string">'Darwin'</span> <span class="keyword">in</span> platform.system()):</span><br><span class="line"></span><br><span class="line">    <span class="comment"># MacOSX</span></span><br><span class="line"></span><br><span class="line">    bot = Bot()</span><br><span class="line"></span><br><span class="line"><span class="keyword">elif</span>(<span class="string">'Linux'</span> <span class="keyword">in</span> platform.system()):</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Linux</span></span><br><span class="line"></span><br><span class="line">    bot = Bot(console_qr=<span class="number">2</span>,cache_path=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 自行确定</span></span><br><span class="line"></span><br><span class="line">    print(<span class="string">"无法识别你的操作系统类型，请自己设置"</span>)</span><br></pre></td></tr></table></figure>
-<p>设置完相关参数以后，我们再来学习一下，如何每天教女友学英语：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取每日励志精句</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_message</span><span class="params">()</span>:</span></span><br><span class="line">    r = requests.get(<span class="string">"http://open.iciba.com/dsapi/"</span>)</span><br><span class="line">    note = r.json()[<span class="string">'note'</span>]</span><br><span class="line">    content = r.json()[<span class="string">'content'</span>]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> note, content</span><br></pre></td></tr></table></figure>
-<p>只有每天的问候和节日问候是仅仅不够的，我们必须时刻知道她的情绪指数，这里可以使用snowNlp或者jieba来做分析，但是为了能够在打包成exe可执行文件时使得程序尽可能小，我们采取直接调用接口的方式来做。代码如下：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 接收女友消息监听器</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 女友微信名</span></span><br><span class="line"></span><br><span class="line">my_girl_friend = bot.friends().search(my_lady_wechat_name)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"><span class="comment"># chats=my_girl_friend 表示接收消息的对象，也就是女友</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># except_self=False 表示同时也接收自己发的消息，不需要接收自己消息的可以去掉</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@bot.register(chats=my_girl_friend, except_self=False)</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_others</span><span class="params">(msg)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 输出聊天内容</span></span><br><span class="line"></span><br><span class="line">    print(msg.text)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 做极其简单的情感分析</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 结果仅供参考，请勿完全相信</span></span><br><span class="line"></span><br><span class="line">    postData = &#123;<span class="string">'data'</span>:msg.text&#125;</span><br><span class="line"></span><br><span class="line">    response = post(<span class="string">'https://bosonnlp.com/analysis/sentiment?analysisType='</span>,data=postData)</span><br><span class="line"></span><br><span class="line">    data = response.text</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 情感评分指数(越接近1表示心情越好，越接近0表示心情越差)</span></span><br><span class="line"></span><br><span class="line">    now_mod_rank = (data.split(<span class="string">','</span>)[<span class="number">0</span>]).replace(<span class="string">'[['</span>,<span class="string">''</span>)</span><br><span class="line"></span><br><span class="line">   print(<span class="string">"来自女友的消息:%s\n当前情感得分:%s\n越接近1表示心情越好，越接近0表示心情越差，情感结果仅供参考，请勿完全相信！\n\n"</span> % (msg.text, now_mod_rank))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 发送信息到文件传输助手</span></span><br><span class="line"></span><br><span class="line">   mood_message = <span class="string">u"来自女友的消息:"</span> + msg.text + <span class="string">"\n当前情感得分:"</span> + now_mod_rank + <span class="string">"\n越接近1表示心情越好，越接近0表示心情越差，情感结果仅供参考，请勿完全相信！\n\n"</span></span><br><span class="line"></span><br><span class="line">    bot.file_helper.send(mood_message)</span><br></pre></td></tr></table></figure>
-<p>教完女友学英语后，开始把我们的关心语发给她。这里涉及到wxpy模块的相关操作，很简单，看我的例子就会了：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 发送消息给她</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">send_message</span><span class="params">(your_message)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">try</span>:</span><br><span class="line"></span><br><span class="line">        <span class="comment"># 对方的微信名称</span></span><br><span class="line"></span><br><span class="line">        my_friend = bot.friends().search(my_lady_wechat_name)[<span class="number">0</span>]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 发送消息给对方</span></span><br><span class="line"></span><br><span class="line">        my_friend.send(your_message)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">except</span>:</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment"># 出问题时，发送信息到文件传输助手</span></span><br><span class="line"></span><br><span class="line">        bot.file_helper.send(<span class="string">u"守护女友出问题了，赶紧去看看咋回事~"</span>)</span><br></pre></td></tr></table></figure>
-<p>最后，就是如何每天定时发关心语给女友的问题了。首先来个while循环，365天无限关心😀</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 来个死循环，24小时关心她</span></span><br><span class="line"></span><br><span class="line">   <span class="keyword">while</span>(<span class="literal">True</span>):</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       <span class="comment"># 提示</span></span><br><span class="line"></span><br><span class="line">       print(<span class="string">"守护中，时间:%s"</span>% time.ctime())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       <span class="comment"># 每天定时问候，早上起床，中午吃饭，晚上吃饭，晚上睡觉</span></span><br><span class="line"></span><br><span class="line">       <span class="comment"># 获取时间，只获取时和分，对应的位置为倒数第13位到倒数第8位</span></span><br><span class="line"></span><br><span class="line">       now_time = time.ctime()[<span class="number">-13</span>:<span class="number">-8</span>]</span><br><span class="line"></span><br><span class="line">       <span class="keyword">if</span> (now_time == say_good_morning):</span><br><span class="line"></span><br><span class="line">           <span class="comment"># 随机取一句问候语</span></span><br><span class="line"></span><br><span class="line">           message = choice(str_list_good_morning)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">           <span class="comment"># 是否加上随机表情</span></span><br><span class="line"></span><br><span class="line">           <span class="keyword">if</span>(flag_wx_emoj):</span><br><span class="line"></span><br><span class="line">               message = message + choice(str_list_emoj)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">           send_message(message)</span><br><span class="line"></span><br><span class="line">           print(<span class="string">"提醒女友早上起床:%s"</span> % time.ctime())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       <span class="comment"># …………这下面还有很多代码，我就不列出来了…………</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">       <span class="comment"># 延时60秒</span></span><br><span class="line"></span><br><span class="line">       time.sleep(<span class="number">60</span>)</span><br></pre></td></tr></table></figure>
-<p>最后，输入以下代码开始守护女友模式吧~</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 开始守护女友</span></span><br><span class="line"></span><br><span class="line">   t = Thread(target=start_care, name=<span class="string">'start_care'</span>)</span><br><span class="line"></span><br><span class="line">   t.start()</span><br></pre></td></tr></table></figure>
-<h2 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h2><p><strong>pip安装下列包：</strong></p>
-<ul>
-<li style="list-style: none"><input type="checkbox" checked> pip install wxpy</li>
-<li style="list-style: none"><input type="checkbox" checked> pip install requests</li>
-</ul>
-<p><strong>设置以下内容：</strong></p>
-<p>config.ini</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[configuration]</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置女友的微信名称，记住，不是微信ID也不是微信备注</span></span><br><span class="line"></span><br><span class="line"><span class="attr">my_lady_wechat_name</span> = 小强子</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置女友生日信息</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 若某一项月份或者日期不想设置，请输入99，不能留空</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 几月，注意补全数字，为两位数，比如6月必须写成06</span></span><br><span class="line"></span><br><span class="line"><span class="attr">birthday_month</span> = <span class="number">03</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 几号，注意补全数字，为两位数，比如6号必须写成08</span></span><br><span class="line"></span><br><span class="line"><span class="attr">birthday_day</span> = <span class="number">18</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置早上起床时间，中午吃饭时间，下午吃饭时间，晚上睡觉时间</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 若某一项时间不想设置，请输入99:00，不能留空</span></span><br><span class="line"></span><br><span class="line"><span class="attr">say_good_morning</span> = <span class="number">03</span>:<span class="number">09</span></span><br><span class="line"></span><br><span class="line"><span class="attr">say_good_lunch</span> = <span class="number">03</span>:<span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="attr">say_good_dinner</span> = <span class="number">03</span>:<span class="number">11</span></span><br><span class="line"></span><br><span class="line"><span class="attr">say_good_dream</span> = <span class="number">03</span>:<span class="number">12</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置晚上睡觉问候语是否在原来的基础上再加上每日学英语精句</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1表示是，0表示否</span></span><br><span class="line"></span><br><span class="line"><span class="attr">flag_learn_english</span> = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置所有问候语结束是否加上表情符号</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 1表示是，0表示否</span></span><br><span class="line"></span><br><span class="line"><span class="attr">flag_wx_emoj</span> = <span class="number">1</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置节日祝福语</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 情人节祝福语</span></span><br><span class="line"></span><br><span class="line"><span class="attr">str_Valentine</span> = 亲爱的，情人节快乐！我想和你一起分享生命中的每一天，直到永远。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 三八妇女节祝福语</span></span><br><span class="line"></span><br><span class="line"><span class="attr">str_Women</span> = 嘿，女神节到了，祝我的女神开心快乐！你每天都是那么好看^_^</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 平安夜祝福语</span></span><br><span class="line"></span><br><span class="line"><span class="attr">str_Christmas_Eve</span> = 宝贝，平安夜快乐，你吃苹果了吗？n(*≧▽≦*)n</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 圣诞节祝福语</span></span><br><span class="line"></span><br><span class="line"><span class="attr">str_Christmas</span> = 小仙女，圣诞节快乐哦！（づ￣<span class="number">3</span>￣）づ╭❤～</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># 她生日的时候的祝福语</span></span><br><span class="line"></span><br><span class="line"><span class="attr">str_birthday</span> = 亲爱的，生日快乐，我已经给你准备好了礼物哦，明天你就能看到啦！(*@ο@*) 哇～</span><br></pre></td></tr></table></figure>
-<h2 id="完整代码下载"><a href="#完整代码下载" class="headerlink" title="完整代码下载:"></a>完整代码下载:</h2><p><a href="https://github.com/llqing/Guardian-of-girlfriend.git" target="_blank" rel="noopener">https://github.com/llqing/Guardian-of-girlfriend.git</a></p>
-<h2 id="演示图片"><a href="#演示图片" class="headerlink" title="演示图片"></a>演示图片</h2><p><img src="http://attachbak.dataguru.cn/attachments/portal/201904/04/095634fescbfaccax777aa.jpg" weight="620" height="993"></p>
-<p><img src="http://attachbak.dataguru.cn/attachments/portal/201904/04/095635mgnnooldeqlqkshd.jpg" weight="620" height="993"></p>
-<p><img src="http://attachbak.dataguru.cn/attachments/portal/201904/04/095636u1vkrnkkkyjzgo2m.jpg" alt></p>
-<p><img src="http://attachbak.dataguru.cn/attachments/portal/201904/04/095637jovs995vwj7lvsvs.jpg" alt></p>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/撩妹/"><i class="fas fa-hashtag fa-fw"></i>撩妹</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/14/Redis/">
-              
-                  Redis
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-14
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/数据库/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              数据库
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h2 id="一-是什么"><a href="#一-是什么" class="headerlink" title="一. 是什么?"></a>一. 是什么?</h2><blockquote>
-<p>redis是一款优秀的nosql（非关系型），key-vlaue,内存级别的数据库！redis是单线程,操作是安全的！<br>关系型:用一张二维表格来表示和存储现实生活中对象的这一类数据库。 oracle ，mysql<br>非关系型（nosql）:不用二维表格，比如key-value ,文档等数据.Redis,MongoDB ,Hadoop</p>
-</blockquote>
-<h2 id="二-特点"><a href="#二-特点" class="headerlink" title="二. 特点"></a>二. 特点</h2><blockquote>
-<p>1.Redis支持数据的持久化，会根据一定的策略持久化到磁盘,即使断电也不会丢失数据.<br>2.Redis不仅仅支持简单的key-value类型的数据，同时还提供list，set，zset，hash等数据结构的存储。<br>3.Redis支持数据的备份，即master-slave模式的数据备份。</p>
-</blockquote>
-<h2 id="三-数据及应用场景"><a href="#三-数据及应用场景" class="headerlink" title="三. 数据及应用场景"></a>三. 数据及应用场景</h2><blockquote>
-<p>1.String : string是redis最基本的类型，一个key对应一个value。string类型是二进制安全的。意思是redis的string可以包含任何数据。比如图片或者序列化的对象。String类型是Redis最基本的数据类型，一个键最大能存储512MB。<br>常用命令:<br>① get、获取存储在指定键中的值<br>② set、设置存储在指定键中的值<br>③ del、删除存储在指定键中的值（这个命令可以用于所有的类型）<br>使用场景:利用incr生成id,decr减库存, 缓存–过期时间设置，模拟session</p>
-</blockquote>
-<p>-</p>
-<blockquote>
-<p>2.list: Redis 列表是简单的字符串列表，按照插入顺序排序。你可以添加一个元素到列表的头部（左边）或者尾部（右边）。<br>常用命令：<br>① rpush、将给定值推入列表的右端<br>② lrange、获取列表在指定范围上的所有值<br>③ lindex、获取列表在指定范围上的单个元素<br>使用场景: 多任务调度队列</p>
-</blockquote>
-<p>-</p>
-<blockquote>
-<p>3.set: Redis的Set是string类型的无序集合。集合是通过哈希表实现的，所以添加，删除，查找的复杂度都是O(1)。<br>常用命令：<br>①sadd、将给定元素添加到集合<br>②smembers、返回集合包含的所有元素<br>③sismember、检查指定元素是否存在于集合中<br>使用场景: 微博关注数</p>
-</blockquote>
-<p>-</p>
-<blockquote>
-<p>4.hash : Redis hash 是一个键值(key=&gt;value)对集合。Redis hash是一个string类型的field和value的映射表，hash特别适合用于存储对象。<br>常用命令：<br>①hset、在散列里面关联起指定的键值对<br>②hget、获取指定散列键的值<br>③hgetall、获取散列包含的所有键值对<br>④hdel、如果给定键存在于散列里面，那么移除这个键<br>使用场景:购物车</p>
-</blockquote>
-<p>-</p>
-<blockquote>
-<p>5.zset: Redis zset 和 set 一样也是string类型元素的集合,且不允许重复的成员。不同的是每个元素都会关联一个double类型的分数。redis正是通过分数来为集合中的成员进行从小到大的排序。zset的成员是唯一的,但分数(score)却可以重复。<br>常用命令：<br>①zadd、将一个带有给定分值的成员添加到有序集合里面<br>②zrange、根据元素在有序排列中所处的位置，从有序集合里面获取多个元素<br>③zrangebyscore、获取有序集合在给定分值范围内的所有元素 ④zrem、如果指定成员存在于有序集合中，那么移除这个成员<br>使用场景:排行榜</p>
-</blockquote>
-<h2 id="四-持久化"><a href="#四-持久化" class="headerlink" title="四:持久化"></a>四:持久化</h2><blockquote>
-<ol>
-<li>rdb 快照:默认redis是会以快照的形式将数据持久化到磁盘的（一个二进制文件，dump.rdb，这个文件名字可以指定），在配置文件(redis.conf)中的格式是：save<br>N M表示在N秒之内，redis至少发生M次修改则redis抓快照到磁盘。当然我们也可以手动执行save或者bgsave（异步）做快照。</li>
-</ol>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">################################ SNAPSHOTTING  #################################</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Save the DB on disk:</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#   save &lt;seconds&gt; &lt;changes&gt;</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#   Will save the DB if both the given number of seconds and the given</span></span><br><span class="line"><span class="comment">#   number of write operations against the DB occurred.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#   In the example below the behaviour will be to save:</span></span><br><span class="line"><span class="comment">#   after 900 sec (15 min) if at least 1 key changed</span></span><br><span class="line"><span class="comment">#   after 300 sec (5 min) if at least 10 keys changed</span></span><br><span class="line"><span class="comment">#   after 60 sec if at least 10000 keys changed</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#   Note: you can disable saving at all commenting all the "save" lines.</span></span><br><span class="line"></span><br><span class="line">save <span class="number">900</span> <span class="number">1</span></span><br><span class="line">save <span class="number">300</span> <span class="number">10</span></span><br><span class="line">save <span class="number">60</span> <span class="number">1000012345678910111213141516171819</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<ol>
-<li>aof 命令副本: AOF 持久化记录服务器执行的所有写操作命令，并在服务器启动时，通过重新执行这些命令来还原数据集。 AOF 文件中的命令全部以 Redis 协议的格式来保存，新命令会被追加到文件的末尾。 Redis 还可以在后台对 AOF 文件进行重写（rewrite），使得 AOF 文件的体积不会超出保存数据集状态所需的实际大小。</li>
-</ol>
-</blockquote>
-<h2 id="五-优点"><a href="#五-优点" class="headerlink" title="五. 优点"></a>五. 优点</h2><blockquote>
-<p>1.性能极高 – Redis能读的速度是110000次/s,写的速度是81000次/s 。<br>2.丰富的数据类型 – Redis支持二进制案例的 Strings, Lists, Hashes, Sets 及 Ordered Sets 数据类型操作。<br>3.原子 – Redis的所有操作都是原子性的，意思就是要么成功执行要么失败完全不执行。单个操作是原子性的。多个操作也支持事务，即原子性，通过MULTI和EXEC指令包起来。<br>4.丰富的特性 – Redis还支持 publish/subscribe, 通知, key 过期等等特性。</p>
-</blockquote>
-<h2 id="六-访问"><a href="#六-访问" class="headerlink" title="六.访问"></a>六.访问</h2><p>Java访问redis:</p>
-<blockquote>
-<p>1.使用jedisjava客户端来访问redis服务器,优点类似jdbc访问db一样<br>2.如果是spring进行集成时,可以使用springDataRedis来访问redis , springDataRedis 只是对jedis的二次封装</p>
-</blockquote>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/NoSQL/"><i class="fas fa-hashtag fa-fw"></i>NoSQL</a>
-        
-          <a href="/tags/Redis/"><i class="fas fa-hashtag fa-fw"></i>Redis</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/14/经典排序算法（1）——冒泡排序算法详解/">
-              
-                  经典排序算法（1）——冒泡排序算法详解
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-14
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/数据结构与算法/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              数据结构与算法
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <ol>
-<li><strong>基本思想</strong></li>
-</ol>
-<p>冒泡排序的基本思想就是：从无序序列头部开始，进行两两比较，根据大小交换位置，直到最后将最大（小）的数据元素交换到了无序队列的队尾，从而成为有序序列的一部分；下一次继续这个过程，直到所有数据元素都排好序。</p>
-<p>算法的核心在于每次通过两两比较交换位置，选出剩余无序序列里最大（小）的数据元素放到队尾。</p>
-<ol start="2">
-<li><strong>运行过程</strong></li>
-</ol>
-<p>冒泡排序算法的运作如下：</p>
-<p>1、比较相邻的元素。如果第一个比第二个大（小），就交换他们两个。</p>
-<p>2、对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。这步做完后，最后的元素会是最大（小）的数。</p>
-<p>3、针对所有的元素重复以上的步骤，除了最后已经选出的元素（有序）。</p>
-<p>4、持续每次对越来越少的元素（无序元素）重复上面的步骤，直到没有任何一对数字需要比较，则序列最终有序。</p>
-<p><img src="https://img-blog.csdn.net/20160316103848750" alt="img"></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Python3</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">bubble_sort</span><span class="params">(nums)</span>:</span></span><br><span class="line">	<span class="keyword">for</span> i <span class="keyword">in</span> range(len(nums) - <span class="number">1</span>):  <span class="comment"># 这个循环负责设置冒泡排序进行的次数</span></span><br><span class="line">		<span class="keyword">for</span> j <span class="keyword">in</span> range(len(nums) - i - <span class="number">1</span>):  <span class="comment"># j为列表下标</span></span><br><span class="line">			<span class="keyword">if</span> nums[j] &gt; nums[j + <span class="number">1</span>]:</span><br><span class="line">				nums[j], nums[j + <span class="number">1</span>] = nums[j + <span class="number">1</span>], nums[j]</span><br><span class="line">				<span class="keyword">return</span> nums</span><br><span class="line"></span><br><span class="line">print(bubble_sort([<span class="number">45</span>, <span class="number">32</span>, <span class="number">8</span>, <span class="number">33</span>, <span class="number">12</span>, <span class="number">22</span>, <span class="number">19</span>, <span class="number">97</span>]))</span><br><span class="line"><span class="comment"># 输出：[8, 12, 19, 22, 32, 33, 45, 97]</span></span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li><strong>算法变种</strong></li>
-</ol>
-<p>鸡尾酒排序又叫定向冒泡排序，搅拌排序、来回排序等，是冒泡排序的一种变形。此算法与冒泡排序的不同处在于排序时是以双向在序列中进行排序。</p>
-<p>鸡尾酒排序在于排序过程是先从低到高，然后从高到低；而冒泡排序则仅从低到高去比较序列里的每个元素。它可以得到比冒泡排序稍微好一点的效能，原因是冒泡排序只从一个方向进行比对（由低到高），每次循环只移动一个项目。</p>
-<p>以序列(2,3,4,5,1)为例，鸡尾酒排序只需要从低到高，然后从高到低就可以完成排序，但如果使用冒泡排序则需要四次。</p>
-<p>但是在乱数序列的状态下，鸡尾酒排序与冒泡排序的效率都很差劲。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// C语言</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">cocktail_sort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> len)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> j, left = <span class="number">0</span>, right = len - <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span> (left &lt; right) &#123;</span><br><span class="line">		<span class="keyword">for</span> (j = left; j &lt; right; j++)</span><br><span class="line">			<span class="keyword">if</span> (arr[j] &gt; arr[j + <span class="number">1</span>])</span><br><span class="line">				swap(arr[j], arr[j + <span class="number">1</span>]);</span><br><span class="line">		right--;</span><br><span class="line">		<span class="keyword">for</span> (j = right; j &gt; left; j--)</span><br><span class="line">			<span class="keyword">if</span> (arr[j - <span class="number">1</span>] &gt; arr[j])</span><br><span class="line">				swap(arr[j - <span class="number">1</span>], arr[j]);</span><br><span class="line">		left++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li><strong>性能分析</strong></li>
-</ol>
-<ul>
-<li><p>时间复杂度</p>
-<p>在设置标志变量之后：</p>
-<p>当原始序列“正序”排列时，冒泡排序总的比较次数为n-1，移动次数为0，也就是说冒泡排序在最好情况下的时间复杂度为O(n)；</p>
-<p>当原始序列“逆序”排序时，冒泡排序总的比较次数为n(n-1)/2，移动次数为3n(n-1)/2次，所以冒泡排序在最坏情况下的时间复杂度为O(n^2)；</p>
-<p>当原始序列杂乱无序时，冒泡排序的平均时间复杂度为O(n^2)。</p>
-</li>
-<li><p>空间复杂度</p>
-<p>冒泡排序排序过程中需要一个临时变量进行两两交换，所需要的额外空间为1，因此空间复杂度为O(1)。</p>
-</li>
-<li><p>稳定性</p>
-<p>冒泡排序在排序过程中，元素两两交换时，相同元素的前后顺序并没有改变，所以冒泡排序是一种稳定排序算法。</p>
-</li>
-</ul>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/排序/"><i class="fas fa-hashtag fa-fw"></i>排序</a>
-        
-          <a href="/tags/算法/"><i class="fas fa-hashtag fa-fw"></i>算法</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/14/python类方法，实例方法，静态方法/">
-              
-                  Python：类属性，实例属性，私有属性与静态方法，类方法，实例方法
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-14
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/Python/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              Python
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">Python：类属性，实例属性，私有属性与静态方法，类方法，实例方法 </span><br><span class="line">属性分为实例属性与类属性</span><br><span class="line"></span><br><span class="line">方法分为普通方法，类方法，静态方法</span><br><span class="line"></span><br><span class="line">一：属性：</span><br><span class="line"></span><br><span class="line">　　尽量把需要用户传入的属性作为实例属性，而把同类都一样的属性作为类属性。实例属性在每创造一个实例时都会初始化一遍，不同的实例的实例属性可能不同，不同实例的类属性都相同。从而减少内存。</span><br><span class="line"></span><br><span class="line">　　<span class="number">1</span>：实例属性：</span><br><span class="line"></span><br><span class="line">　　　　最好在init(self,…)中初始化</span><br><span class="line"></span><br><span class="line">　　　　内部调用时都需要加上self.</span><br><span class="line"></span><br><span class="line">　　　　外部调用时用instancename.propertyname</span><br><span class="line"></span><br><span class="line">　　<span class="number">2</span>:类属性：</span><br><span class="line"></span><br><span class="line">　　　　在init()外初始化</span><br><span class="line"></span><br><span class="line">　　　　在内部用classname.类属性名调用</span><br><span class="line"></span><br><span class="line">　　　　外部既可以用classname.类属性名又可以用instancename.类属性名来调用</span><br><span class="line"></span><br><span class="line">　　<span class="number">3</span>：私有属性：</span><br><span class="line"></span><br><span class="line">　　　　<span class="number">1</span>）：单下划线_开头：只是告诉别人这是私有属性，外部依然可以访问更改</span><br><span class="line"></span><br><span class="line">　　　　<span class="number">2</span>）：双下划线__开头：外部不可通过instancename.propertyname来访问或者更改</span><br><span class="line"></span><br><span class="line">　　　　　　实际将其转化为了_classname__propertyname</span><br><span class="line"></span><br><span class="line">二：方法</span><br><span class="line"></span><br><span class="line">　　<span class="number">1</span>：普通类方法：</span><br><span class="line"></span><br><span class="line">　　　　<span class="function"><span class="keyword">def</span> <span class="title">fun_name</span><span class="params">(self,…)</span>:</span></span><br><span class="line"></span><br><span class="line">　　　　　　<span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">　　　　外部用实例调用</span><br><span class="line"></span><br><span class="line">　　<span class="number">2</span>：静态方法：@staticmethod</span><br><span class="line"></span><br><span class="line">　　　　　　不能访问实例属性！！！ 参数不能传入self！！！</span><br><span class="line"></span><br><span class="line">　　　　　　与类相关但是不依赖类与实例的方法！！</span><br><span class="line"></span><br><span class="line">　　<span class="number">3</span>:类方法：@classmethod</span><br><span class="line"></span><br><span class="line">　　　　　　不能访问实例属性！！！ 参数必须传入cls！！！</span><br><span class="line"></span><br><span class="line">　　　　　　必须传入cls参数（即代表了此类对象—–区别——self代表实例对象），并且用此来调用类属性：cls.类属性名</span><br><span class="line"></span><br><span class="line">　　*静态方法与类方法都可以通过类或者实例来调用。其两个的特点都是不能够调用实例属性</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/属性/"><i class="fas fa-hashtag fa-fw"></i>属性</a>
-        
-          <a href="/tags/方法/"><i class="fas fa-hashtag fa-fw"></i>方法</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/13/ArcGIS-API-for-JavaScript入门教程-3-你看得到：数据与视图分离/">
-              
-                  ArcGIS API for JavaScript 入门教程(3)-你看得到：数据与视图分离
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-13
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/GIS/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              GIS
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <blockquote>
-<p>这篇开始正式讲API。</p>
-<p>数据和视图分离不是什么奇怪的事情了，这是一个著名的设计——数据与视图分开。</p>
-</blockquote>
-<p>请跟我做，把以下折叠的代码复制到新建的html文件中，并双击打开。</p>
-<p><a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a>;)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">  &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1,maximum-scale=1,user-scalable=no&quot;&gt;</span><br><span class="line">  &lt;title&gt;Intro to MapView - Create a 2D map - 4.7&lt;/title&gt;</span><br><span class="line">  &lt;style&gt;</span><br><span class="line">    html,</span><br><span class="line">    body,</span><br><span class="line">    #viewDiv &#123;</span><br><span class="line">      padding: 0; margin: 0;</span><br><span class="line">      height: 100%; width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/style&gt;</span><br><span class="line"></span><br><span class="line">  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://js.arcgis.com/4.7/esri/css/main.css&quot;&gt;</span><br><span class="line">  &lt;script src=&quot;https://js.arcgis.com/4.7/&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    require([</span><br><span class="line">      &quot;esri/Map&quot;,&quot;esri/views/MapView&quot;,&quot;dojo/domReady!&quot;</span><br><span class="line">    ], function(Map, MapView) &#123;</span><br><span class="line"></span><br><span class="line">      var map = new Map(&#123;</span><br><span class="line">        basemap: &quot;streets&quot;</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      var view = new MapView(&#123;</span><br><span class="line">        container: &quot;viewDiv&quot;,</span><br><span class="line">        map: map,</span><br><span class="line">        zoom: 4,</span><br><span class="line">        center: [15, 65] // longitude, latitude</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;viewDiv&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<p><a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a>;)</p>
-<p>大概是这样：</p>
-<p><img src="https://images2018.cnblogs.com/blog/1097074/201805/1097074-20180523235618331-1247825520.png" alt="img"></p>
-<p>打开后是这样的：</p>
-<p>（环境说明：Chrome 65浏览器）</p>
-<p><img src="https://images2018.cnblogs.com/blog/1097074/201805/1097074-20180523235659575-1878304213.png" alt="img"></p>
-<p>那我们再复制另一个代码：</p>
-<p><a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a>;)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">  &lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1,maximum-scale=1,user-scalable=no&quot;&gt;</span><br><span class="line">  &lt;title&gt;Intro to SceneView - Create a 3D map - 4.7&lt;/title&gt;</span><br><span class="line">  &lt;style&gt;</span><br><span class="line">    html,</span><br><span class="line">    body,</span><br><span class="line">    #viewDiv &#123;</span><br><span class="line">      padding: 0;</span><br><span class="line">      margin: 0;</span><br><span class="line">      height: 100%;</span><br><span class="line">      width: 100%;</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/style&gt;</span><br><span class="line"></span><br><span class="line">  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://js.arcgis.com/4.7/esri/css/main.css&quot;&gt;</span><br><span class="line">  &lt;script src=&quot;https://js.arcgis.com/4.7/&quot;&gt;&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    require([</span><br><span class="line">      &quot;esri/Map&quot;,</span><br><span class="line">      &quot;esri/views/SceneView&quot;,</span><br><span class="line">      &quot;dojo/domReady!&quot;</span><br><span class="line">    ], function(Map, SceneView) &#123;</span><br><span class="line"></span><br><span class="line">      var map = new Map(&#123;</span><br><span class="line">        basemap: &quot;streets&quot;,</span><br><span class="line">        ground: &quot;world-elevation&quot;</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      var view = new SceneView(&#123;</span><br><span class="line">        container: &quot;viewDiv&quot;,</span><br><span class="line">        map: map,</span><br><span class="line">        scale: 50000000,</span><br><span class="line">        center: [-101.17, 21.78]</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">    &#125;);</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;div id=&quot;viewDiv&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<p><a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a>;)</p>
-<p>得到的结果是：</p>
-<p><img src="https://images2018.cnblogs.com/blog/1097074/201805/1097074-20180523235927632-1266833964.png" alt="img"></p>
-<h1 id="1-解释"><a href="#1-解释" class="headerlink" title="1. 解释"></a>1. 解释</h1><p>本着能不解释代码就不解释代码的精神，我先给大家讲一下我讲这个JsAPI的思路。</p>
-<p>它分五个主要学习的部分：</p>
-<ul>
-<li>数据</li>
-<li>视图</li>
-<li>空间分析</li>
-<li>符号渲染</li>
-<li>小部件</li>
-</ul>
-<p>其他不说不代表不会用到，但是相对于入门而言，这五个部分足够了。其重点讲解前三部分。</p>
-<p>如果看文字不舒服，那么上个结构图：</p>
-<p><img src="https://images2018.cnblogs.com/blog/1097074/201805/1097074-20180524193502413-859382166.png" alt="img"></p>
-<p>而上面两个案例，拿同一份数据结合二三维视图作了展示。</p>
-<p>抛开代码细节（如入口、引用、页面组织、样式等）不谈，我首先把代码中用于表示“数据”和“视图”的Js代码抽取出来：</p>
-<p><img src="https://images2018.cnblogs.com/blog/1097074/201805/1097074-20180524194308611-2083837347.png" alt="img"></p>
-<p>左边是二维的，右边是三维的。</p>
-<p>分别用两个对象来描述“数据”和“视图”，</p>
-<p><strong>用Map类实例出来的【map对象】以描述数据；用MapView类、SceneView类实例出来的【view对象】以描述视图</strong>。</p>
-<p>那么你可能会问了，倘若已经在代码里做出来了数据与视图，有什么桥梁可以连接它们呢？我们把view的代码展开。</p>
-<p><img src="https://images2018.cnblogs.com/blog/1097074/201805/1097074-20180524194641686-280020319.png" alt="img"></p>
-<p>我们知道，在Js中通过new关键字实例化一个类，SceneView类的构造函数指定了一个Js中的Object对象作为参数，这个Object对象是这样的：</p>
-<p><a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a>;)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    container: &quot;viewDiv&quot;,</span><br><span class="line">    map: map,</span><br><span class="line">    scale: 50000000,</span><br><span class="line">    center: [-101.17, 21.78]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><a href="javascript:void(0" target="_blank" rel="noopener"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a>;)</p>
-<p>其中，就有一个Map类型的属性叫map，将上面实例化的map对象赋予给它就实现了视图（SceneView、MapView）与数据（Map）的连接。</p>
-<p>其他的属性我们暂且不管，至少，在Js代码中，我们知道了哪些代码用于构造地理数据——用Map类、我们知道了哪些代码用于构造视图——View类。</p>
-<blockquote>
-<p>哦对了，SceneView和MapView都继承自View类。虽然我们知道Js是弱类型的语言，但是Dojo帮我们做了一些面向对象的工作。</p>
-<p>在这里，我沿用更广泛的说法，那就是用“类”这个称呼去替代官方的“模块”这个称呼，其实MapView、Map、SceneView都是模块，它们存在于js包里面。</p>
-</blockquote>
-<h1 id="2-补充"><a href="#2-补充" class="headerlink" title="2. 补充"></a>2. 补充</h1><p>如果上面看得懂，这里可以作为补充材料来阅读。</p>
-<h2 id="2-1-数据如何组织"><a href="#2-1-数据如何组织" class="headerlink" title="2.1 数据如何组织"></a>2.1 数据如何组织</h2><p>相信肯定有筒子开始疑问Map对象的构造参数中应该如何组织属性了吧，这个时候就需要去查示例代码和官方API参考了。</p>
-<p>我可以简单说一说。先看一下这个类的继承关系图：</p>
-<p><img src="https://images2018.cnblogs.com/blog/1097074/201805/1097074-20180524200353650-538894986.png" alt="img"></p>
-<p>清晰看到Map类的位置。</p>
-<p>有趣的是，Map有WebMap和WebScene两个子类，由于继承和多态的特征，说明视图中map属性也可以设为WebMap和WebScene。</p>
-<p>这有什么区别呢？暂且不说后期展开。</p>
-<p>再展开Map类的属性：</p>
-<p><img src="https://images2018.cnblogs.com/blog/1097074/201805/1097074-20180524205007659-924807109.png" alt="img"></p>
-<p>常用的有三个属性，底图、可操作图层集合、地形图层。</p>
-<ol>
-<li>basemap属性可使用预置的底图，也可以使用自定义的Basemap对象；</li>
-<li><strong>[★]</strong>layers属性是<strong>可操作的Layer对象</strong>的集合，Layer类有很多子类，如几何图层、地图图层、要素图层等，这些到以后会讲，这些<strong>都是赤果果的数据组成啊</strong>！</li>
-<li>ground属性表示地图高程，可以用预置的世界高程数据，也可以自定义高程图层，后期会讲。</li>
-</ol>
-<p>哦对了，对<strong>数据的在线简单编辑、绘制</strong>，也是由数据部分组织的，后面展开。</p>
-<h2 id="2-2-视图有什么用"><a href="#2-2-视图有什么用" class="headerlink" title="2.2 视图有什么用"></a>2.2 视图有什么用</h2><p>视图是管理“看得到”的东西的。</p>
-<p>其一，我们看得到的二三维地图、场景都是由它渲染的；</p>
-<p>其二，我们需要对数据进行展示时，是由它进行弹窗（Popup）展示的；</p>
-<p>这些业务和数据无关，任何一份数据都可以由视图进行前端渲染、数据展示，所以被抽取出来了，做到了高内聚低耦合、数据视图分离。</p>
-<hr>
-<p>好啦，到这里，“数据”与“视图”已经有了个大概的了解了，下一篇将开始讲解如何代码入门，可以学一下Dojo用于预习，尤其是Dojo的模块化。</p>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/ArcGIS/"><i class="fas fa-hashtag fa-fw"></i>ArcGIS</a>
-        
-          <a href="/tags/API/"><i class="fas fa-hashtag fa-fw"></i>API</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/09/ArcGIS-API-for-JavaScript入门教程-2-授人以渔/">
-              
-                  ArcGIS API for JavaScript 入门教程(2)-授人以渔
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-09
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/GIS/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              GIS
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>这篇仍然不讲怎么做，但是我要告诉你如何获取资源。</p>
-<h1 id="1-官方在线帮助、示例代码及入门导航"><a href="#1-官方在线帮助、示例代码及入门导航" class="headerlink" title="1. 官方在线帮助、示例代码及入门导航"></a>1. 官方在线帮助、示例代码及入门导航</h1><p>JsAPI最新版首页：<a href="https://developers.arcgis.com/javascript/" target="_blank" rel="noopener">https://developers.arcgis.com/javascript/</a></p>
-<p>JsAPI最新版在线帮助（模块查询）：<a href="https://developers.arcgis.com/javascript/latest/api-reference/index.html" target="_blank" rel="noopener">https://developers.arcgis.com/javascript/latest/api-reference/index.html</a></p>
-<p>JsAPI最新版示例代码：<a href="https://developers.arcgis.com/javascript/latest/sample-code/index.html" target="_blank" rel="noopener">https://developers.arcgis.com/javascript/latest/sample-code/index.html</a></p>
-<p>JsAPI最新版入门导航：<a href="https://developers.arcgis.com/javascript/latest/guide/index.html" target="_blank" rel="noopener">https://developers.arcgis.com/javascript/latest/guide/index.html</a></p>
-<h1 id="2-ArcGIS-Runtime-SDKs家族"><a href="#2-ArcGIS-Runtime-SDKs家族" class="headerlink" title="2. ArcGIS Runtime SDKs家族"></a>2. ArcGIS Runtime SDKs家族</h1><p>地址：<a href="https://developers.arcgis.com/" target="_blank" rel="noopener">https://developer.arcgis.com</a></p>
-<p>文档：<a href="https://developers.arcgis.com/documentation/" target="_blank" rel="noopener">https://developers.arcgis.com/documentation/</a></p>
-<p>Github地址：<a href="http://esri.github.io/" target="_blank" rel="noopener">http://esri.github.io/</a></p>
-<p>文档处也有很多好东西，有机会也要做翻译。</p>
-<h1 id="3-获取API和SDK"><a href="#3-获取API和SDK" class="headerlink" title="3. 获取API和SDK"></a>3. 获取API和SDK</h1><p>Runtime SDK家族API和SDK和文档：<a href="https://developers.arcgis.com/downloads/apis-and-sdks" target="_blank" rel="noopener">https://developers.arcgis.com/downloads/apis-and-sdks</a></p>
-<h1 id="4-善用搜索引擎"><a href="#4-善用搜索引擎" class="headerlink" title="4. 善用搜索引擎"></a>4. 善用搜索引擎</h1><p>如果百度/必应不到，请用谷歌，总有你需要的。</p>
-<p>——————————————————————————</p>
-<p>最后说个事，教程和笔记</p>
-<p>好多人混淆了教程和笔记。教程是力求别人能看懂，尽可能抓重点和抓主干讲，无关痛痒的不要讲太多。所以，此入门教程，我打算10来篇博客讲完，细致的可以自己慢慢学的，毕竟更新如此之快，我自己也在不断学习。</p>
-<p>而笔记，自己看得懂就行了，好多人挂着教程写的笔记哦…笔记是自己反复琢磨用的。</p>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/ArcGIS/"><i class="fas fa-hashtag fa-fw"></i>ArcGIS</a>
-        
-          <a href="/tags/API/"><i class="fas fa-hashtag fa-fw"></i>API</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/07/ArcGIS-API-for-JavaScript入门教程-1-前戏/">
-              
-                  ArcGIS API for JavaScript入门教程(1)-前戏
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-07
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/GIS/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              GIS
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <blockquote>
-<ul>
-<li>-&gt;对于萌新，你可能需要了解一下这个东西是什么</li>
-<li>-&gt;对于已经知道要用这个东西的开发者，你可能需要了解一下它的底层机制</li>
-<li>不针对大牛。龟速更新ing.</li>
-</ul>
-</blockquote>
-<h1 id="1-是什么【萌新别跳这一步】"><a href="#1-是什么【萌新别跳这一步】" class="headerlink" title="1. 是什么【萌新别跳这一步】"></a>1. 是什么【萌新别跳这一步】</h1><p><em>如果非萌新，可以跳过这一段文字。</em></p>
-<p>想要知道ArcGIS API for JavaScript是什么，我大概用以下几条条目描述：</p>
-<ul>
-<li>是一个WebGIS二次开发（如果不知道什么是WebGIS请用搜索引擎···）的前端开发包，使用JavaScript语言</li>
-<li>出自美国Esri公司</li>
-<li>是Esri的ArcGIS Runtime SDK家族中的一员</li>
-<li>它不是纯Js写的库</li>
-</ul>
-<p>能说明什么呢？</p>
-<ol>
-<li>它能制作在线地理信息系统平台，能做数据分析、空间分析、数据展示等；</li>
-<li>歪果仁写的，英文资料多，虽然中文也有一定数量的资料（博客、书籍等），但是呢，由于Esri更新贼快，一年三四更的，中文资料不一定跟得上速度；</li>
-<li>你可能需要学很多附属的东西，这个API很庞大、很笨重，入门门槛其实不高，但是深入难，前端上，你得知道造这个API的基础——Dojo框架，而Dojo框架由于历史渊源，又来自从属AMD（异步模块定义）规范的RequireJs，要想了解AMD，又不得不去看一些前端和后端的发展史，甚至不可避免要学一些基础的后端。</li>
-</ol>
-<p>如果你做好了这些准备，继续。</p>
-<p>哦对了，这个API当前有两个大支线，一个是3.x版本，一个是4.x版本；</p>
-<p>3.x版本已经很成熟，用于2D的WebGIS二次开发很完美，如果你用的是ArcGIS整套产品；</p>
-<p>我重点讲一下类和模块经过重新构造、较为简单的4.x版本，因为它最大的特征是数据视图分离、支持3D，旗帜鲜明对接ArcGIS Pro.</p>
-<h1 id="2-我必须学它吗？"><a href="#2-我必须学它吗？" class="headerlink" title="2. 我必须学它吗？"></a>2. 我必须学它吗？</h1><p>如果你的项目需求很大，大量用到空间分析、三维展示，频繁交互ArcGIS家族的产品（Server、ArcGIS Desktop等），请学；</p>
-<p>如果你的项目需求比较小，也可以学，当然也可以有别的选择：</p>
-<ul>
-<li>开源解决方案：Openlayers/Leaflets替代JsAPI。</li>
-</ul>
-<p>Openlayers和Leaflets同样是WebGIS二次开发工具包，排名很靠前，二者区别是ol自己提供了封装好的功能模块，而lf则支持插件式，它的插件很多。他们都支持npm方式引入。</p>
-<ul>
-<li>当然，为了实现简单的三维GIS，Cesium了解一下；</li>
-<li>如果只是3D数据展示，ThreeJs了解一下；</li>
-<li>如果数据源缺乏，不想自己做数据服务，对WebGIS标准缺少耐心，可以试试高德地图API、百度地图API等。</li>
-<li>如果想全开源，就目前而言3DGIS还是ArcGIS最强外，传统二维WebGIS可以用QGIS代替ArcGIS Desktop、用PostgreSQL代替Geodatabase、用GeoServer代替ArcGIS for Server。</li>
-</ul>
-<p>使用JsAPI最强大的特征就是真三维空间分析+无比强大的ArcTools工具箱了。</p>
-<h1 id="3-学习此API需要些什么"><a href="#3-学习此API需要些什么" class="headerlink" title="3. 学习此API需要些什么"></a>3. 学习此API需要些什么</h1><p>熟练HTML 5的学习方式、熟练CSS 3的学习方式、能自我学习JavaScript，最好有一定的GIS基础知识、一定的数学知识。</p>
-<p>我们在这里约定</p>
-<p>ArcGIS API for JavaScript = jsapi/JsAPI/jsAPI…</p>
-<p>你可能还要学习的是：</p>
-<ul>
-<li>NodeJs与npm（在4.7及3.24版本后可能要用npm下载）——作备选项，不学也无所谓</li>
-<li>webpack——上面那俩如果你学了，这个肯定要学了。</li>
-<li>英语</li>
-</ul>
-<p>对了，你不需要学怎么配置本地环境（就是说用官方的在线API进行学习就好了），我觉得那些东西网上太多了，查一下就行。有可能遇到跨域的问题，你也可以问搜索引擎，这里更关注的是“入门”而不是全面、细节，我需要把你快速带入门，之后看你的造化。</p>
-<h1 id="4-它怎么来的"><a href="#4-它怎么来的" class="headerlink" title="4. 它怎么来的"></a>4. 它怎么来的</h1><p>它基于一个更复杂的前端框架，Dojo.js。</p>
-<p>除了当前两条支线3.x和4.x，其实早些年还有过ArcGIS API for Sliverlight和ArcGIS API for Flex，当然他们已经退休了。</p>
-<p>JavaScript那么火热，自然而然选他啦。</p>
-<p>由于GIS数据模型的复杂性，和普通的Web信息系统不同，面向对象的机制更合适去描述GIS数据和GIS分析。当时，没有别的好选择，只能选Dojo，因为它支持许多符合WebGIS的特性，如异步操作、面向对象等。</p>
-<p>现如今，基于Node的包管理模式的前端开发早已不是什么难事，甚至还冒出了MVVM框架的一大堆火热框架。老迈的Dojo框架不能很好地融入其中，这让人很无奈。</p>
-<p>在JsAPI中，地图可以是一个模块，图层可以是一个模块，一个用于空间分析的“东西”也可以是一个模块。类似于桌面编程中的类、继承机制，AMD规范下的RequireJs就产生了。Dojo基于此，定制了一大批的有用模块，能做图表，能做页面，能读写DOM，能做动画，当然是你需要什么模块就调用什么模块，并不需要一次性全部加载。JsAPI基于Dojo，定制了各个方面的模块，从而向开发者提供了一套强大的WebGIS二次开发包。</p>
-<p>——————————</p>
-<p>好了，可以开始讲了。</p>
-<p>哦对了，我学的也不深，请不要用教程二字绑架我，认为我什么都会，我也在学习，希望一起交流，一起进步。</p>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/ArcGIS/"><i class="fas fa-hashtag fa-fw"></i>ArcGIS</a>
-        
-          <a href="/tags/API/"><i class="fas fa-hashtag fa-fw"></i>API</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-      
-
-  </section>
-
-
-
-
-
-
-  
-      <br>
-      <div class="prev-next">
-          <div class="prev-next">
-              
-              <p class="current">
-                  1 / 2
-              </p>
-              
-                  <a class="next" rel="next" href="/archives/2019/04/page/2/">
-                      <section class="post next">
-                          &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
-                      </section>
-                  </a>
-              
-
-          </div>
-      </div>
-
-  
-
-  <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-  
-
-  
-
-
-
-
-
-<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-
-
-
-
-        </div>
-        <aside class='l_side'>
-            
-  
-  
-    
-      
-      
-        <section class="author">
-  <div class="content material">
-    
-      <div class="avatar">
-        <img class="avatar" src="/medias/avatar.jpg">
-      </div>
-    
-    
-      <div class="text">
-        
-        
-        
-          <p><span id="jinrishici-sentence">柳暗花明又一村</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="mailto:zailushanga@gmail.com" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
-          
-        
-          
-            <a href="https://github.com/llqing" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-github" aria-hidden="true"></i></a>
-          
-        
-          
-            <a href="https://music.163.com/#/user/home?id=1409711765" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-music" aria-hidden="true"></i></a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-      
-    
-  
-    
-      
-      
-        
-
-      
-    
-  
-    
-      
-      
-        <section class="plain">
-  
-<header class="material">
-  <div><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;注意啦～</div>
-  
-</header>
-
-  <div class="content material">
-    <p>小站栏目还在完善中，将不定期分享GIS、Code等内容(看博主心情)，如有特殊需要可以联系博主，超喜欢的话还可以安利给身边的朋友哦～</p>
-
-  </div>
-</section>
-
-      
-    
-  
-    
-      
-      
-        
-  <section class="category">
-    
-<header class="material">
-  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;所有分类</div>
-  
-</header>
-
-    <div class="content material">
-      <ul class="entry">
-        
-          <li><a class="flat-box" title="/categories/AI/" href="/categories/AI/"><div class="name">AI</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Blog/" href="/categories/Blog/"><div class="name">Blog</div><div class="badge">(3)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/GIS/" href="/categories/GIS/"><div class="name">GIS</div><div class="badge">(5)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Git/" href="/categories/Git/"><div class="name">Git</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/LaTeX/" href="/categories/LaTeX/"><div class="name">LaTeX</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Linux/" href="/categories/Linux/"><div class="name">Linux</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Python/" href="/categories/Python/"><div class="name">Python</div><div class="badge">(4)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/web基础/" href="/categories/web基础/"><div class="name">web基础</div><div class="badge">(4)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/好玩的/" href="/categories/好玩的/"><div class="name">好玩的</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/常用工具/" href="/categories/常用工具/"><div class="name">常用工具</div><div class="badge">(3)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/数据库/" href="/categories/数据库/"><div class="name">数据库</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/数据结构与算法/" href="/categories/数据结构与算法/"><div class="name">数据结构与算法</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/杂谈/" href="/categories/杂谈/"><div class="name">杂谈</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/脚本/" href="/categories/脚本/"><div class="name">脚本</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/高数/" href="/categories/高数/"><div class="name">高数</div><div class="badge">(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-      
-    
-  
-    
-      
-      
-        
-  <section class="tagcloud">
-    
-<header class="material">
-  <div><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
-  
-</header>
-
-    <div class="content material">
-      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/API/" style="font-size: 24px; color: #555">API</a> <a href="/tags/ArcGIS/" style="font-size: 24px; color: #555">ArcGIS</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 24px; color: #555">Markdown</a> <a href="/tags/Matplotlib/" style="font-size: 14px; color: #999">Matplotlib</a> <a href="/tags/NoSQL/" style="font-size: 14px; color: #999">NoSQL</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Redis/" style="font-size: 14px; color: #999">Redis</a> <a href="/tags/TCP/" style="font-size: 19px; color: #777">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/typora/" style="font-size: 14px; color: #999">typora</a> <a href="/tags/中文显示乱码/" style="font-size: 14px; color: #999">中文显示乱码</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/属性/" style="font-size: 14px; color: #999">属性</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/撩妹/" style="font-size: 14px; color: #999">撩妹</a> <a href="/tags/方法/" style="font-size: 14px; color: #999">方法</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/算法/" style="font-size: 14px; color: #999">算法</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
-    </div>
-  </section>
-
-
-      
-    
-  
-    
-      
-      
-        <section class="list">
-  
-<header class="material">
-  <div><i class="fas fa-medal fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;精选项目</div>
-  
-</header>
-
-  <div class="content material">
-    <ul class="entry">
-      
-    </ul>
-  </div>
-</section>
-
-      
-    
-  
-    
-      
-      
-        <section class="list">
-  
-<header class="material">
-  <div><i class="fas fa-link fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;特别链接</div>
-  
-</header>
-
-  <div class="content material">
-    <ul class="entry">
-      
-        <li><a class="flat-box" title="https://llqing.github.io/about/" href="https://llqing.github.io/about/">
-          <div class="name">
-            
-              <i class="fas fa-comment-dots fa-fw" aria-hidden="true"></i>
-            
-            &nbsp;&nbsp;关于我 / 留言板
-          </div>
-          
-        </a></li>
-      
-    </ul>
-  </div>
-</section>
-
-      
-    
-  
-    
-      
-      
-        
-
-
-  <section class="music">
-    
-<header class="material">
-  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
-  
-    <a class="rightBtn" target="_blank" rel="external nofollow noopener noreferrer" href="https://music.163.com/#/user/home?id=1409711765" title="https://music.163.com/#/user/home?id=1409711765">
-    <i class="far fa-heart fa-fw"></i></a>
-  
-</header>
-
-    <div class="content material">
-      
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
-  <div class="aplayer" data-theme="#1BCDFC" data-mode="circulation" data-server="netease" data-type="playlist" data-id="1409711765" data-volume="0.7">
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
-
-
-    </div>
-  </section>
-
-
-      
-    
-  
-
-
-        </aside>
-        <script>setLoadingBarProgress(60);</script>
-    </div>
-    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
-    </div>
-    <footer id="footer" class="clearfix">
-  
-    <div class="footer">
-      <p>这里是页脚，谢谢支持。</p>
-
-    </div>
-    <br>
-  
-  
-    <div class="social-wrapper">
-      
-        
-          <a href="mailto:zailushanga@gmail.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
-        
-      
-        
-          <a href="https://github.com/llqing" class="social fab fa-github flat-btn" target="_blank" rel="external"></a>
-        
-      
-        
-          <a href="https://music.163.com/#/user/home?id=1409711765" class="social fas fa-music flat-btn" target="_blank" rel="external"></a>
-        
-      
-    </div>
-  
-  <br>
-  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
-  <div>本站使用 <a href target="_blank" class="codename">Material X</a> 作为主题，总访问量为 <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-other">
+          <a href="/other" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            随意发挥
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
+
+      <span class="archive-page-counter">
+        
+        
+         
+        
+        OK! 目前共计 32 篇日志。 继续努力。
+      </span>
+
+      
+
+        
+        
+        
+
+        
+          
+          <div class="collection-title">
+            <h1 class="archive-year" id="archive-year-2019">2019</h1>
+          </div>
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/28/ArcScene三维制作/" itemprop="url">
+              
+                <span itemprop="name">ArcScene三维制作</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-28T22:47:24+08:00" content="2019-04-28">
+          04-28
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/23/Matplotlib中文不显示问题/" itemprop="url">
+              
+                <span itemprop="name">Matplotlib中文不显示问题</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-23T17:24:52+08:00" content="2019-04-23">
+          04-23
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/19/typora/" itemprop="url">
+              
+                <span itemprop="name">typora的简单入门(Markdown基本语法)</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-19T11:38:00+08:00" content="2019-04-19">
+          04-19
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/19/用Python来撩妹吧(1)-实时掌控她的小情绪/" itemprop="url">
+              
+                <span itemprop="name">用Python来撩妹吧-实时掌控她的小情绪</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-19T10:00:13+08:00" content="2019-04-19">
+          04-19
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/14/Redis/" itemprop="url">
+              
+                <span itemprop="name">Redis</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-14T19:21:00+08:00" content="2019-04-14">
+          04-14
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/14/经典排序算法（1）——冒泡排序算法详解/" itemprop="url">
+              
+                <span itemprop="name">经典排序算法（1）——冒泡排序算法详解</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-14T18:41:00+08:00" content="2019-04-14">
+          04-14
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/14/python类方法，实例方法，静态方法/" itemprop="url">
+              
+                <span itemprop="name">Python：类属性，实例属性，私有属性与静态方法，类方法，实例方法</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-14T17:45:00+08:00" content="2019-04-14">
+          04-14
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/13/ArcGIS-API-for-JavaScript入门教程-3-你看得到：数据与视图分离/" itemprop="url">
+              
+                <span itemprop="name">ArcGIS API for JavaScript 入门教程(3)-你看得到：数据与视图分离</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-13T19:49:52+08:00" content="2019-04-13">
+          04-13
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/09/ArcGIS-API-for-JavaScript入门教程-2-授人以渔/" itemprop="url">
+              
+                <span itemprop="name">ArcGIS API for JavaScript 入门教程(2)-授人以渔</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-09T20:36:10+08:00" content="2019-04-09">
+          04-09
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/07/ArcGIS-API-for-JavaScript入门教程-1-前戏/" itemprop="url">
+              
+                <span itemprop="name">ArcGIS API for JavaScript入门教程(1)-前戏</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-07T23:30:13+08:00" content="2019-04-07">
+          04-07
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+    </div>
   </div>
-</footer>
+  
+  
+  
 
-    <script>setLoadingBarProgress(80);</script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-
-  <script>
-    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
-    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
-    var ALGOLIA_API_KEY = "";
-    var ALGOLIA_APP_ID = "";
-    var ALGOLIA_INDEX_NAME = "";
-    var AZURE_SERVICE_NAME = "";
-    var AZURE_INDEX_NAME = "";
-    var AZURE_QUERY_KEY = "";
-    var BAIDU_API_ID = "";
-    var SEARCH_SERVICE = "hexo" || "hexo";
-    var ROOT = "/"||"/";
-    if(!ROOT.endsWith('/'))ROOT += '/';
-  </script>
-
-
-
-  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      const $reveal = $('.reveal');
-      if ($reveal.length === 0) return;
-      const sr = ScrollReveal({ distance: 0 });
-      sr.reveal('.reveal');
-    });
-  </script>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      Waves.attach('.flat-btn', ['waves-button']);
-      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-      Waves.attach('.flat-box', ['waves-block']);
-      Waves.attach('.float-box', ['waves-block', 'waves-float']);
-      Waves.attach('.waves-image');
-      Waves.init();
-    });
-  </script>
-
-
-  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
-
-
-  <!-- fastclick -->
-  <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      FastClick.attach(document.body)
-    }, false)
-  </script>
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/archives/2019/04/page/2/">2</a><a class="extend next" rel="next" href="/archives/2019/04/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
 
 
 
 
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="LLQ">
+            
+              <p class="site-author-name" itemprop="name">LLQ</p>
+              <p class="site-description motion-element" itemprop="description">加油,少年</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LLQ</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
 
 
 
 
 
 
-  <script src="/js/app.js"></script>
-<script src="/js/search.js"></script>
 
+        
+      </div>
+    </footer>
 
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
 
+    
 
+  </div>
 
-<!-- 复制 -->
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-<script>
-  let COPY_SUCCESS = "复制成功";
-  let COPY_FAILURE = "复制失败";
-  /*页面载入完成后，创建复制按钮*/
-  !function (e, t, a) {
-    /* code */
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
-        }
-      });
+  
 
-      clipboard.on('success', function(e) {
-        //您可以加入成功提示
-        console.info('Action:', e.action);
-        console.info('Text:', e.text);
-        console.info('Trigger:', e.trigger);
-        success_prompt(COPY_SUCCESS);
-        e.clearSelection();
-      });
-      clipboard.on('error', function(e) {
-        //您可以加入失败提示
-        console.error('Action:', e.action);
-        console.error('Trigger:', e.trigger);
-        fail_prompt(COPY_FAILURE);
-      });
-    }
-    initCopyCode();
-
-  }(window, document);
-
-  /**
-   * 弹出式提示框，默认1.5秒自动消失
-   * @param message 提示信息
-   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
-   * @param time 消失时间
-   */
-  var prompt = function (message, style, time)
-  {
-      style = (style === undefined) ? 'alert-success' : style;
-      time = (time === undefined) ? 1500 : time*1000;
-      $('<div>')
-          .appendTo('body')
-          .addClass('alert ' + style)
-          .html(message)
-          .show()
-          .delay(time)
-          .fadeOut();
-  };
-
-  // 成功提示
-  var success_prompt = function(message, time)
-  {
-      prompt(message, 'alert-success', time);
-  };
-
-  // 失败提示
-  var fail_prompt = function(message, time)
-  {
-      prompt(message, 'alert-danger', time);
-  };
-
-  // 提醒
-  var warning_prompt = function(message, time)
-  {
-      prompt(message, 'alert-warning', time);
-  };
-
-  // 信息提示
-  var info_prompt = function(message, time)
-  {
-      prompt(message, 'alert-info', time);
-  };
-
-</script>
-
-
-<!-- fancybox -->
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-<script>
-  let LAZY_LOAD_IMAGE = "";
-  $(".article-entry").find("img").each(function () {
-      var element = document.createElement("a");
-      $(element).attr("data-fancybox", "gallery");
-      $(element).attr("href", $(this).attr("src"));
-      /* 图片采用懒加载处理时,
-       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
-       * 那么此处将原本的属性名src替换为对应属性名data-original,
-       * 修改如下
-       */
-       if (LAZY_LOAD_IMAGE) {
-         $(element).attr("href", $(this).attr("data-original"));
-       }
-      $(this).wrap(element);
-  });
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
 
 
 
-    <script>setLoadingBarProgress(100);</script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'MmISOJnFve0SNjE41MNyGuyT-gzGzoHsz',
+        appKey: 'LQzUzH6ixJqwfSeRRoS5qWFY',
+        placeholder: '随便说点什么吧',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>

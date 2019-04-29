@@ -1,245 +1,430 @@
 <!DOCTYPE html>
-<html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <title>Python中if __name__ == &#34;__main__&#34;是什么作用 | GIS小站</title>
-  
-  <meta name="keywords" content="GIS,Code">
-  
-  
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
-  <meta name="HandheldFriendly" content="True">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <!-- meta -->
-  
-  
-  <meta name="theme-color" content="#FFFFFF">
-  <meta name="msapplication-TileColor" content="#1BC3FB">
-  <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml">
-  
 
-  <!-- link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
-  
-  
-  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
-  <link rel="icon" type="image/x-icon" sizes="32x32" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/favicon-32x32.png">
-  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png">
-  <link rel="mask-icon" color="#1BC3FB" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg">
-  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest">
-  
 
-  
-  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
-  
 
-  
-  <link rel="stylesheet" href="/style.css">
-  
 
-  <script>
-    function setLoadingBarProgress(num) {
-      document.getElementById('loading-bar').style.width=num+"%";
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Python,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="2018/4/15 22:19:35    最近在写毕业论文使用到Python，在查找文献资源中看到了一行代码Python中if __name__ == &amp;quot;__main__:&amp;quot;之前练习Python并没有注意这个，也可能太就给忘了，为了搞清这个语句于是开始疯狂百度，各种论坛博客搜索，最终找到了这个语句的作用个人感觉最易懂的解释，分享给大家 python文件的后缀名是.py，pyt">
+<meta name="keywords" content="Python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python中if __name__ == &quot;__main__&quot;是什么作用">
+<meta property="og:url" content="https://llqing.github.io/2018/04/15/Python中if-name-name-main/index.html">
+<meta property="og:site_name" content="GIS小站">
+<meta property="og:description" content="2018/4/15 22:19:35    最近在写毕业论文使用到Python，在查找文献资源中看到了一行代码Python中if __name__ == &amp;quot;__main__:&amp;quot;之前练习Python并没有注意这个，也可能太就给忘了，为了搞清这个语句于是开始疯狂百度，各种论坛博客搜索，最终找到了这个语句的作用个人感觉最易懂的解释，分享给大家 python文件的后缀名是.py，pyt">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://img-blog.csdn.net/20160511222649275">
+<meta property="og:updated_time" content="2019-03-18T15:54:36.126Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python中if __name__ == &quot;__main__&quot;是什么作用">
+<meta name="twitter:description" content="2018/4/15 22:19:35    最近在写毕业论文使用到Python，在查找文献资源中看到了一行代码Python中if __name__ == &amp;quot;__main__:&amp;quot;之前练习Python并没有注意这个，也可能太就给忘了，为了搞清这个语句于是开始疯狂百度，各种论坛博客搜索，最终找到了这个语句的作用个人感觉最易懂的解释，分享给大家 python文件的后缀名是.py，pyt">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20160511222649275">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
-  </script>
+  };
+</script>
 
+
+
+  <link rel="canonical" href="https://llqing.github.io/2018/04/15/Python中if-name-name-main/">
+
+
+
+
+
+  <title>Python中if __name__ == "__main__"是什么作用 | GIS小站</title>
   
-  
+
+
+
+
+
+
+
+
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-<body>
-    <div id="loading-bar-wrapper">
-  <div id="loading-bar" class="material"></div>
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">GIS小站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
 
-    <script>setLoadingBarProgress(20)</script>
-    <header class="l_header material">
-	<div class="wrapper">
-		<div class="nav-main container container--flex">
-      <a class="logo flat-box" href="/">
-        
-          GIS小站
-        
-      </a>
-			<div class="menu">
-				<ul class="h-list">
-          
-  					
-  						<li>
-								<a id="https:llqing.github.io" class="nav flat-box" href="https://llqing.github.io/">
-									<i class="fas fa-home fa-fw"></i>&nbsp;主页
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="home" class="nav flat-box" href="/">
-									<i class="fas fa-rss fa-fw"></i>&nbsp;博客
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="archives" class="nav flat-box" href="/archives/">
-									<i class="fas fa-archive fa-fw"></i>&nbsp;归档
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="friends" class="nav flat-box" href="/friends/">
-									<i class="fas fa-users fa-fw"></i>&nbsp;朋友
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="about" class="nav flat-box" href="/about/">
-									<i class="fas fa-address-card fa-fw"></i>&nbsp;关于
-								</a>
-							</li>
-      			
-      		
-				</ul>
-			</div>
+<nav class="site-nav">
+  
 
-			
-				<div class="m_search">
-					<form name="searchform" class="form u-search-form">
-						<input type="text" class="input u-search-input" placeholder="搜索">
-						<span class="icon"><i class="fas fa-search fa-fw"></i></span>
-					</form>
-				</div>
-			
-			<ul class="switcher h-list">
-				
-					<li class="s-search"><a class="fas fa-search fa-fw" href="javascript:void(0)"></a></li>
-				
-				<li class="s-menu"><a class="fas fa-bars fa-fw" href="javascript:void(0)"></a></li>
-			</ul>
-		</div>
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-other">
+          <a href="/other" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            随意发挥
+          </a>
+        </li>
+      
 
-		<div class="nav-sub container container--flex">
-			<a class="logo flat-box"></a>
-			<ul class="switcher h-list">
-				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
-				<li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
-			</ul>
-		</div>
-	</div>
-</header>
-	<aside class="menu-phone">
-    <header>
-		<nav class="menu">
-      <ul>
-          
-              
-                  <li>
-										<a id="https:llqing.github.io" class="nav flat-box" href="https://llqing.github.io/">
-											<i class="fas fa-home fa-fw"></i>&nbsp;主页
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="home" class="nav flat-box" href="/">
-											<i class="fas fa-rss fa-fw"></i>&nbsp;博客
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="archives" class="nav flat-box" href="/archives/">
-											<i class="fas fa-archive fa-fw"></i>&nbsp;归档
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="friends" class="nav flat-box" href="/friends/">
-											<i class="fas fa-users fa-fw"></i>&nbsp;朋友
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="about" class="nav flat-box" href="/about/">
-											<i class="fas fa-address-card fa-fw"></i>&nbsp;关于
-										</a>
-                  </li>
-              
-       
-      </ul>
-		</nav>
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
     </header>
-	</aside>
 
-    <script>setLoadingBarProgress(40);</script>
-    <div class="l_body">
-    <div class='container clearfix'>
-        <div class='l_main'>
-            <article id="post" class="post white-box article-type-post" itemscope itemprop="blogPost">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      
-          <h1 class="title">Python中if __name__ == "__main__"是什么作用</h1>
-      
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
     
 
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2018-04-15
-          </a>
-        </div>
-      
-      
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://llqing.github.io/2018/04/15/Python中if-name-name-main/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LLQ">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GIS小站">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          
-          <div class="new-meta-item category">
-            <a href="/categories/Python/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              Python
-            </a>
-          </div>
         
-      
-      
+          <h1 class="post-title" itemprop="name headline">Python中if __name__ == "__main__"是什么作用</h1>
         
-          <div class="new-meta-item browse busuanzi">
-            <a class="notlink">
-              <i class="fas fa-eye" aria-hidden="true"></i>
-              <span id="busuanzi_value_page_pv">
-                <i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
               </span>
-            </a>
-          </div>
-        
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-15T22:18:03+08:00">
+                2018-04-15
+              </time>
+            
 
-    <section class="article typo">
-      <div class="article-entry" itemprop="articleBody">
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/04/15/Python中if-name-name-main/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2018/04/15/Python中if-name-name-main/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                   字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                   分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
         <p>2018/4/15 22:19:35 </p>
 <hr>
 <ul>
@@ -249,601 +434,392 @@
 <hr>
 <p>附上一张号称一篇程序覆盖Python基础的代码，基本的结构都涉及到了，看不清的话保存本地放大看吧。<br><img src="https://img-blog.csdn.net/20160511222649275" alt></p>
 
-      </div>
-        
-          <section class="meta" id="footer-meta">
-            <hr>
-            <div class="new-meta-box">
-              
-                <div class="new-meta-item date" itemprop="dateUpdated" datetime="2019-03-18T23:54:36+08:00">
-                  <a class="notlink">
-                    <i class="fas fa-save" aria-hidden="true"></i>
-                    2019-03-18
-                  </a>
-                </div>
-              
-              
-                
-                <div class="new-meta-item meta-tags"><a class="tag" href="/tags/Python/"><i class="fas fa-hashtag" aria-hidden="true"></i>&nbsp;Python</a></div>
-              
-              
-                
-  <div class="new-meta-item share -mob-share-list">
-    <i class="fas fa-share-alt" aria-hidden="true"></i>
-    <div class="-mob-share-list share-body">
       
-        
-          <a 128 class="-mob-share-qq" title="QQ好友" rel="external nofollow noopener noreferrer" href="http://connect.qq.com/widget/shareqq/index.html?url=http://yoursite.com/2018/04/15/Python中if-name-name-main/&title=Python中if __name__ == " __main__"是什么作用 | gis小站&summary="
-            
-            >
-            
-              <img src=" https: cdn.jsdelivr.net gh xaoxuu assets@19.1.9 logo qq.png">
-            
-          </a>
-        
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
       
-        
-          <a 128 class="-mob-share-qzone" title="QQ空间" rel="external nofollow noopener noreferrer" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://yoursite.com/2018/04/15/Python中if-name-name-main/&title=Python中if __name__ == " __main__"是什么作用 | gis小站&summary="
-            
-            >
-            
-              <img src=" https: cdn.jsdelivr.net gh xaoxuu assets@19.1.9 logo qzone.png">
-            
-          </a>
-        
-      
-        
-          <a class="qrcode" rel="external nofollow noopener noreferrer" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACs0lEQVR42u3awYobMRAE0P3/n95AToHEk6puyU7gzcnYg0ZvFtTaUn99xdf3z+vXz79fr+5Pvnk12vNTjl14eHh4o6k/Tzr59XnMV3fm3yfz+cM4eHh4eNd47dD5atyWnMOvCQ8PD++jvBw522o/zwQPDw/v/+Uly/dmK9x+xsPDw/sUbxY3nCoDM/bhrAUPDw8v5s0OwD77+fr5Hh4eHt7oVL298kBhNlo9Ah4eHt4F3iZ0aI+pnre8+Qa9Dpfx8PDw3sjLwe04e0YyNzw8PLz38NqC0bYCJIFCvimPAgs8PDy8o7z2YaeaCdpXNsts8fDw8G7zZnFqXgxm4FX7Ah4eHt41XgtLlubk+7wI5ffj4eHhvYeXTDSJd9vo4VRk/PKJeHh4eBd4xT/28ZY3vydvpTpbfvDw8PA2vHxBz4OA5C3OouHkz/CHGBcPDw/vKK8tA6sOhfJFzF76qsrh4eHhlafw+YKekE4dmG2ei4eHh3ePt4kG8pggH78NL/6yHcfDw8O7wJvFBPkB1akwd1Ns8PDw8G7wTg09axQ4G+PWiS8eHh5ezGsP7PP4IA9821bUfJ54eHh47+HNQtv98VVblqJ54uHh4V3g5QdgM8zzBnrWylA3XeHh4eEd5eWHScm0TvH2paXuJsPDw8OLeZvj//2xWV6Knu8pYg48PDy8NW/T8NQeRyULffKCiufi4eHhXeBtlv58Egl4s32PttR4eHh4h3jf5ZVvu2etA/lzo2M5PDw8vAu8dtndBBYJe9O4MITh4eHhjXhtMWg3x5vNel5mop4IPDw8vKO8thhsWg0S8L5ZAQ8PD+/f4W0CgrZstGn0yzAXDw8P70O8fCk/FVXsG8Lw8PDw7vFmYcQmum0LTF4wilM+PDw8vBGvPQBLSkLehrXfmm8iDDw8PLyS9wNlKcabEsYqqAAAAABJRU5ErkJggg==">
+        <div class="post-tags">
           
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/wechat.png">
+            <a href="/tags/Python/" rel="tag"># Python</a>
           
-          </a>
-        
+        </div>
       
-        
-          <a 128 class="-mob-share-weibo" title="微博" rel="external nofollow noopener noreferrer" href="http://service.weibo.com/share/share.php?url=http://yoursite.com/2018/04/15/Python中if-name-name-main/&title=Python中if __name__ == " __main__"是什么作用 | gis小站&summary="
-            
-            >
-            
-              <img src=" https: cdn.jsdelivr.net gh xaoxuu assets@19.1.9 logo weibo.png">
-            
-          </a>
-        
+
       
-        
-          <a class="qrcode" rel="external nofollow noopener noreferrer" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACs0lEQVR42u3awYobMRAE0P3/n95AToHEk6puyU7gzcnYg0ZvFtTaUn99xdf3z+vXz79fr+5Pvnk12vNTjl14eHh4o6k/Tzr59XnMV3fm3yfz+cM4eHh4eNd47dD5atyWnMOvCQ8PD++jvBw522o/zwQPDw/v/+Uly/dmK9x+xsPDw/sUbxY3nCoDM/bhrAUPDw8v5s0OwD77+fr5Hh4eHt7oVL298kBhNlo9Ah4eHt4F3iZ0aI+pnre8+Qa9Dpfx8PDw3sjLwe04e0YyNzw8PLz38NqC0bYCJIFCvimPAgs8PDy8o7z2YaeaCdpXNsts8fDw8G7zZnFqXgxm4FX7Ah4eHt41XgtLlubk+7wI5ffj4eHhvYeXTDSJd9vo4VRk/PKJeHh4eBd4xT/28ZY3vydvpTpbfvDw8PA2vHxBz4OA5C3OouHkz/CHGBcPDw/vKK8tA6sOhfJFzF76qsrh4eHhlafw+YKekE4dmG2ei4eHh3ePt4kG8pggH78NL/6yHcfDw8O7wJvFBPkB1akwd1Ns8PDw8G7wTg09axQ4G+PWiS8eHh5ezGsP7PP4IA9821bUfJ54eHh47+HNQtv98VVblqJ54uHh4V3g5QdgM8zzBnrWylA3XeHh4eEd5eWHScm0TvH2paXuJsPDw8OLeZvj//2xWV6Knu8pYg48PDy8NW/T8NQeRyULffKCiufi4eHhXeBtlv58Egl4s32PttR4eHh4h3jf5ZVvu2etA/lzo2M5PDw8vAu8dtndBBYJe9O4MITh4eHhjXhtMWg3x5vNel5mop4IPDw8vKO8thhsWg0S8L5ZAQ8PD+/f4W0CgrZstGn0yzAXDw8P70O8fCk/FVXsG8Lw8PDw7vFmYcQmum0LTF4wilM+PDw8vBGvPQBLSkLehrXfmm8iDDw8PLyS9wNlKcabEsYqqAAAAABJRU5ErkJggg==">
-          
-            <img src="https://cdn.jsdelivr.net/gh/xaoxuu/assets@19.1.9/logo/128/qrcode.png">
-          
-          </a>
-        
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/04/09/用MarkdownX编写博文/" rel="next" title="用MarkdownX编写博文">
+                <i class="fa fa-chevron-left"></i> 用MarkdownX编写博文
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/26/hexo博客出现command-not-found解决方案/" rel="prev" title="hexo博客出现command not found解决方案">
+                hexo博客出现command not found解决方案 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
       
     </div>
   </div>
 
 
-              
-            </div>
-          </section>
-        
-
-        
-            <div class="prev-next">
-                
-                    <section class="prev">
-                        <span class="art-item-left">
-                            <h6><i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页</h6>
-                            <h4>
-                                <a href="/2018/07/26/hexo博客出现command-not-found解决方案/" rel="prev" title="hexo博客出现command not found解决方案">
-                                  
-                                      hexo博客出现command not found解决方案
-                                  
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/hexo/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>hexo</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
-                
-                    <section class="next">
-                        <span class="art-item-right" aria-hidden="true">
-                            <h6>下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i></h6>
-                            <h4>
-                                <a href="/2018/04/09/用MarkdownX编写博文/" rel="prev" title="用MarkdownX编写博文">
-                                    
-                                        用MarkdownX编写博文
-                                    
-                                </a>
-                            </h4>
-                            
-                                
-                                <h6 class="tags">
-                                    <a class="tag" href="/tags/Markdown/"><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>Markdown</a>
-                                </h6>
-                            
-                        </span>
-                    </section>
-                
-            </div>
-        
-
-    </section>
-
-</article>
-
-<!-- 根据页面mathjax变量决定是否加载MathJax数学公式js -->
+          </div>
+          
 
 
-<br>
+          
 
-<!-- 显示推荐文章和评论 -->
+  
+    <div class="comments" id="comments">
+    </div>
+  
 
-
-
-
-
-<script>
-    window.subData = {
-        title: 'Python中if __name__ == "__main__"是什么作用',
-        tools: true
-    }
-</script>
 
 
         </div>
-        <aside class='l_side'>
-            
-  
-  
-    
-      
-      
-        <section class="author">
-  <div class="content material">
-    
-      <div class="avatar">
-        <img class="avatar" src="/medias/avatar.jpg">
-      </div>
-    
-    
-      <div class="text">
-        
-        
-        
-          <p><span id="jinrishici-sentence">柳暗花明又一村</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
         
           
-            <a href="mailto:zailushanga@gmail.com" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
-          
-        
-          
-            <a href="https://github.com/llqing" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-github" aria-hidden="true"></i></a>
-          
-        
-          
-            <a href="https://music.163.com/#/user/home?id=1409711765" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-music" aria-hidden="true"></i></a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-      
-    
   
-    
-      
-      
-        
-
-      
-    
-  
-    
-      
-      
-        <section class="plain">
-  
-<header class="material">
-  <div><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;注意啦～</div>
-  
-</header>
-
-  <div class="content material">
-    <p>小站栏目还在完善中，将不定期分享GIS、Code等内容(看博主心情)，如有特殊需要可以联系博主，超喜欢的话还可以安利给身边的朋友哦～</p>
-
-  </div>
-</section>
-
-      
-    
-  
-    
-      
-      
-        
-  <section class="category">
-    
-<header class="material">
-  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;所有分类</div>
-  
-</header>
-
-    <div class="content material">
-      <ul class="entry">
-        
-          <li><a class="flat-box" title="/categories/AI/" href="/categories/AI/"><div class="name">AI</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Blog/" href="/categories/Blog/"><div class="name">Blog</div><div class="badge">(3)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/GIS/" href="/categories/GIS/"><div class="name">GIS</div><div class="badge">(5)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Git/" href="/categories/Git/"><div class="name">Git</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/LaTeX/" href="/categories/LaTeX/"><div class="name">LaTeX</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Linux/" href="/categories/Linux/"><div class="name">Linux</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Python/" href="/categories/Python/"><div class="name">Python</div><div class="badge">(4)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/web基础/" href="/categories/web基础/"><div class="name">web基础</div><div class="badge">(4)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/好玩的/" href="/categories/好玩的/"><div class="name">好玩的</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/常用工具/" href="/categories/常用工具/"><div class="name">常用工具</div><div class="badge">(3)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/数据库/" href="/categories/数据库/"><div class="name">数据库</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/数据结构与算法/" href="/categories/数据结构与算法/"><div class="name">数据结构与算法</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/杂谈/" href="/categories/杂谈/"><div class="name">杂谈</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/脚本/" href="/categories/脚本/"><div class="name">脚本</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/高数/" href="/categories/高数/"><div class="name">高数</div><div class="badge">(1)</div></a></li>
-        
-      </ul>
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
-  </section>
-
-
-      
-    
-  
-    
-      
-      
-        
-  <section class="tagcloud">
-    
-<header class="material">
-  <div><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
-  
-</header>
-
-    <div class="content material">
-      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/API/" style="font-size: 24px; color: #555">API</a> <a href="/tags/ArcGIS/" style="font-size: 24px; color: #555">ArcGIS</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 24px; color: #555">Markdown</a> <a href="/tags/Matplotlib/" style="font-size: 14px; color: #999">Matplotlib</a> <a href="/tags/NoSQL/" style="font-size: 14px; color: #999">NoSQL</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Redis/" style="font-size: 14px; color: #999">Redis</a> <a href="/tags/TCP/" style="font-size: 19px; color: #777">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/typora/" style="font-size: 14px; color: #999">typora</a> <a href="/tags/中文显示乱码/" style="font-size: 14px; color: #999">中文显示乱码</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/属性/" style="font-size: 14px; color: #999">属性</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/撩妹/" style="font-size: 14px; color: #999">撩妹</a> <a href="/tags/方法/" style="font-size: 14px; color: #999">方法</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/算法/" style="font-size: 14px; color: #999">算法</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
-    </div>
-  </section>
-
-
-      
-    
-  
-    
-      
-      
-        <section class="list">
-  
-<header class="material">
-  <div><i class="fas fa-medal fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;精选项目</div>
-  
-</header>
-
-  <div class="content material">
-    <ul class="entry">
-      
-    </ul>
   </div>
-</section>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
 
       
-    
-  
-    
-      
-      
-        <section class="list">
-  
-<header class="material">
-  <div><i class="fas fa-link fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;特别链接</div>
-  
-</header>
 
-  <div class="content material">
-    <ul class="entry">
       
-        <li><a class="flat-box" title="https://llqing.github.io/about/" href="https://llqing.github.io/about/">
-          <div class="name">
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <i class="fas fa-comment-dots fa-fw" aria-hidden="true"></i>
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="LLQ">
             
-            &nbsp;&nbsp;关于我 / 留言板
+              <p class="site-author-name" itemprop="name">LLQ</p>
+              <p class="site-description motion-element" itemprop="description">加油,少年</p>
           </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
           
-        </a></li>
-      
-    </ul>
-  </div>
-</section>
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
 
       
-    
-  
-    
+
       
-      
-        
-
-
-  <section class="music">
-    
-<header class="material">
-  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
-  
-    <a class="rightBtn" target="_blank" rel="external nofollow noopener noreferrer" href="https://music.163.com/#/user/home?id=1409711765" title="https://music.163.com/#/user/home?id=1409711765">
-    <i class="far fa-heart fa-fw"></i></a>
-  
-</header>
-
-    <div class="content material">
-      
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
-  <div class="aplayer" data-theme="#1BCDFC" data-mode="circulation" data-server="netease" data-type="playlist" data-id="1409711765" data-volume="0.7">
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
-
 
     </div>
-  </section>
+  </aside>
 
 
-      
-    
-  
+        
+      </div>
+    </main>
 
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LLQ</span>
 
-        </aside>
-        <script>setLoadingBarProgress(60);</script>
-    </div>
-    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
-    </div>
-    <footer id="footer" class="clearfix">
   
-    <div class="footer">
-      <p>这里是页脚，谢谢支持。</p>
-
-    </div>
-    <br>
-  
-  
-    <div class="social-wrapper">
-      
-        
-          <a href="mailto:zailushanga@gmail.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
-        
-      
-        
-          <a href="https://github.com/llqing" class="social fab fa-github flat-btn" target="_blank" rel="external"></a>
-        
-      
-        
-          <a href="https://music.163.com/#/user/home?id=1409711765" class="social fas fa-music flat-btn" target="_blank" rel="external"></a>
-        
-      
-    </div>
-  
-  <br>
-  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
-  <div>本站使用 <a href target="_blank" class="codename">Material X</a> 作为主题，总访问量为 <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
   </div>
-</footer>
 
-    <script>setLoadingBarProgress(80);</script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  
 
-  <script>
-    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
-    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
-    var ALGOLIA_API_KEY = "";
-    var ALGOLIA_APP_ID = "";
-    var ALGOLIA_INDEX_NAME = "";
-    var AZURE_SERVICE_NAME = "";
-    var AZURE_INDEX_NAME = "";
-    var AZURE_QUERY_KEY = "";
-    var BAIDU_API_ID = "";
-    var SEARCH_SERVICE = "hexo" || "hexo";
-    var ROOT = "/"||"/";
-    if(!ROOT.endsWith('/'))ROOT += '/';
-  </script>
-
-
-
-  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      const $reveal = $('.reveal');
-      if ($reveal.length === 0) return;
-      const sr = ScrollReveal({ distance: 0 });
-      sr.reveal('.reveal');
-    });
-  </script>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      Waves.attach('.flat-btn', ['waves-button']);
-      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-      Waves.attach('.flat-box', ['waves-block']);
-      Waves.attach('.float-box', ['waves-block', 'waves-float']);
-      Waves.attach('.waves-image');
-      Waves.init();
-    });
-  </script>
-
-
-  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
-
-
-  <!-- fastclick -->
-  <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      FastClick.attach(document.body)
-    }, false)
-  </script>
-
-
-
-
-
-
-
-
-
-
-  <script src="/js/app.js"></script>
-<script src="/js/search.js"></script>
-
-
-
-
-
-<!-- 复制 -->
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-<script>
-  let COPY_SUCCESS = "复制成功";
-  let COPY_FAILURE = "复制失败";
-  /*页面载入完成后，创建复制按钮*/
-  !function (e, t, a) {
-    /* code */
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
-        }
-      });
-
-      clipboard.on('success', function(e) {
-        //您可以加入成功提示
-        console.info('Action:', e.action);
-        console.info('Text:', e.text);
-        console.info('Trigger:', e.trigger);
-        success_prompt(COPY_SUCCESS);
-        e.clearSelection();
-      });
-      clipboard.on('error', function(e) {
-        //您可以加入失败提示
-        console.error('Action:', e.action);
-        console.error('Trigger:', e.trigger);
-        fail_prompt(COPY_FAILURE);
-      });
-    }
-    initCopyCode();
-
-  }(window, document);
-
-  /**
-   * 弹出式提示框，默认1.5秒自动消失
-   * @param message 提示信息
-   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
-   * @param time 消失时间
-   */
-  var prompt = function (message, style, time)
-  {
-      style = (style === undefined) ? 'alert-success' : style;
-      time = (time === undefined) ? 1500 : time*1000;
-      $('<div>')
-          .appendTo('body')
-          .addClass('alert ' + style)
-          .html(message)
-          .show()
-          .delay(time)
-          .fadeOut();
-  };
-
-  // 成功提示
-  var success_prompt = function(message, time)
-  {
-      prompt(message, 'alert-success', time);
-  };
-
-  // 失败提示
-  var fail_prompt = function(message, time)
-  {
-      prompt(message, 'alert-danger', time);
-  };
-
-  // 提醒
-  var warning_prompt = function(message, time)
-  {
-      prompt(message, 'alert-warning', time);
-  };
-
-  // 信息提示
-  var info_prompt = function(message, time)
-  {
-      prompt(message, 'alert-info', time);
-  };
-
-</script>
-
-
-<!-- fancybox -->
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-<script>
-  let LAZY_LOAD_IMAGE = "";
-  $(".article-entry").find("img").each(function () {
-      var element = document.createElement("a");
-      $(element).attr("data-fancybox", "gallery");
-      $(element).attr("href", $(this).attr("src"));
-      /* 图片采用懒加载处理时,
-       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
-       * 那么此处将原本的属性名src替换为对应属性名data-original,
-       * 修改如下
-       */
-       if (LAZY_LOAD_IMAGE) {
-         $(element).attr("href", $(this).attr("data-original"));
-       }
-      $(this).wrap(element);
-  });
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
 
 
 
-    <script>setLoadingBarProgress(100);</script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'MmISOJnFve0SNjE41MNyGuyT-gzGzoHsz',
+        appKey: 'LQzUzH6ixJqwfSeRRoS5qWFY',
+        placeholder: '随便说点什么吧',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>

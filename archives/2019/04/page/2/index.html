@@ -1,1430 +1,875 @@
 <!DOCTYPE html>
-<html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  
-  <title>Archives: 2019/4 | GIS小站</title>
-  
-  <meta name="keywords" content="GIS,Code">
-  
-  
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
-  <meta name="HandheldFriendly" content="True">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <!-- meta -->
-  
-  
-  <meta name="theme-color" content="#FFFFFF">
-  <meta name="msapplication-TileColor" content="#1BC3FB">
-  <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml">
-  
 
-  <!-- link -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
-  
-  
-  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
-  <link rel="icon" type="image/x-icon" sizes="32x32" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/favicon-32x32.png">
-  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png">
-  <link rel="mask-icon" color="#1BC3FB" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg">
-  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest">
-  
 
-  
-  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
-  
 
-  
-  <link rel="stylesheet" href="/style.css">
-  
 
-  <script>
-    function setLoadingBarProgress(num) {
-      document.getElementById('loading-bar').style.width=num+"%";
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="加油,少年">
+<meta name="keywords" content="GIS,Code">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GIS小站">
+<meta property="og:url" content="https://llqing.github.io/archives/2019/04/page/2/index.html">
+<meta property="og:site_name" content="GIS小站">
+<meta property="og:description" content="加油,少年">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="GIS小站">
+<meta name="twitter:description" content="加油,少年">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
-  </script>
+  };
+</script>
 
+
+
+  <link rel="canonical" href="https://llqing.github.io/archives/2019/04/page/2/">
+
+
+
+
+
+  <title>归档 | GIS小站</title>
   
-  
+
+
+
+
+
+
+
+
 </head>
 
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-<body>
-    <div id="loading-bar-wrapper">
-  <div id="loading-bar" class="material"></div>
-</div>
+  
+  
+    
+  
 
-    <script>setLoadingBarProgress(20)</script>
-    <header class="l_header material">
-	<div class="wrapper">
-		<div class="nav-main container container--flex">
-      <a class="logo flat-box" href="/">
-        
-          GIS小站
-        
+  <div class="container sidebar-position-left page-archive">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">GIS小站</span>
+        <span class="logo-line-after"><i></i></span>
       </a>
-			<div class="menu">
-				<ul class="h-list">
-          
-  					
-  						<li>
-								<a id="https:llqing.github.io" class="nav flat-box" href="https://llqing.github.io/">
-									<i class="fas fa-home fa-fw"></i>&nbsp;主页
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="home" class="nav flat-box" href="/">
-									<i class="fas fa-rss fa-fw"></i>&nbsp;博客
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="archives" class="nav flat-box" href="/archives/">
-									<i class="fas fa-archive fa-fw"></i>&nbsp;归档
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="friends" class="nav flat-box" href="/friends/">
-									<i class="fas fa-users fa-fw"></i>&nbsp;朋友
-								</a>
-							</li>
-      			
-  						<li>
-								<a id="about" class="nav flat-box" href="/about/">
-									<i class="fas fa-address-card fa-fw"></i>&nbsp;关于
-								</a>
-							</li>
-      			
-      		
-				</ul>
-			</div>
-
-			
-				<div class="m_search">
-					<form name="searchform" class="form u-search-form">
-						<input type="text" class="input u-search-input" placeholder="搜索">
-						<span class="icon"><i class="fas fa-search fa-fw"></i></span>
-					</form>
-				</div>
-			
-			<ul class="switcher h-list">
-				
-					<li class="s-search"><a class="fas fa-search fa-fw" href="javascript:void(0)"></a></li>
-				
-				<li class="s-menu"><a class="fas fa-bars fa-fw" href="javascript:void(0)"></a></li>
-			</ul>
-		</div>
-
-		<div class="nav-sub container container--flex">
-			<a class="logo flat-box"></a>
-			<ul class="switcher h-list">
-				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
-				<li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
-			</ul>
-		</div>
-	</div>
-</header>
-	<aside class="menu-phone">
-    <header>
-		<nav class="menu">
-      <ul>
-          
-              
-                  <li>
-										<a id="https:llqing.github.io" class="nav flat-box" href="https://llqing.github.io/">
-											<i class="fas fa-home fa-fw"></i>&nbsp;主页
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="home" class="nav flat-box" href="/">
-											<i class="fas fa-rss fa-fw"></i>&nbsp;博客
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="archives" class="nav flat-box" href="/archives/">
-											<i class="fas fa-archive fa-fw"></i>&nbsp;归档
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="friends" class="nav flat-box" href="/friends/">
-											<i class="fas fa-users fa-fw"></i>&nbsp;朋友
-										</a>
-                  </li>
-              
-                  <li>
-										<a id="about" class="nav flat-box" href="/about/">
-											<i class="fas fa-address-card fa-fw"></i>&nbsp;关于
-										</a>
-                  </li>
-              
-       
-      </ul>
-		</nav>
-    </header>
-	</aside>
-
-    <script>setLoadingBarProgress(40);</script>
-    <div class="l_body">
-    <div class='container clearfix'>
-        <div class='l_main'>
-            
-	
-    <script>
-        window.subData= { title:'year : 2019.4'}
-    </script>
-
-
-
-
-  <section class="post-list">
-      
-
-
-
-      
-
-      
-
-      
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/06/如何重装系统/">
-              
-                  如何重装系统
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-06
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/常用工具/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              常用工具
-            </a>
-          </div>
-        
-      
-      
-      
     </div>
-    <hr>
+      
+        <p class="site-subtitle"></p>
+      
   </div>
-</section>
 
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本来我是不想写这篇文章的<del>因为懒</del>。</p>
-<p>但是有鉴于最近<strong>找我装系统的人太多</strong>了，再加上看见小白被无良商家骗于心不忍，就写篇教程吧-_-。</p>
-<p>我会把装机的主要几个阶段讲一下，但是任何跟着提示稍微理解下就可以无风险走的小步骤就不讲了。</p>
-<h2 id="装系统之前的准备"><a href="#装系统之前的准备" class="headerlink" title="装系统之前的准备"></a>装系统之前的准备</h2><p>首先要有个概念 <code>装系统是一件很简单的事</code>。电脑是一件给人用的 <strong>工具</strong> ，厂商没有理由设置门槛。装机是很简单的，<strong>但是最好不要随意重装系统，文件、软件重新安置太麻烦了</strong>。</p>
-<h2 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h2><ul>
-<li>物理准备<ul>
-<li>一只8G以上U盘</li>
-</ul>
-</li>
-<li>心理准备<ul>
-<li>一小时不到的时间</li>
-<li>一定的理解能力</li>
-</ul>
-</li>
-</ul>
-<h2 id="装机阶段"><a href="#装机阶段" class="headerlink" title="装机阶段"></a>装机阶段</h2><ol>
-<li><p>找到你所用电脑的<strong>主板</strong>厂商（<em>不需要拆机箱，直接用aida64或者别的软件看</em>）以及<strong>型号</strong>，如果是笔记本就直接使用<strong>电脑型号</strong>。</p>
-</li>
-<li><p>搜索 xxxx（<em>你的主板型号</em>） 进入bios的<strong>快捷键</strong>，并记住它。</p>
-</li>
-<li><p>在<a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">msdn 我告诉你</a>，这个网站上找到你要装的系统的 <strong>64位</strong> <strong>最新版本</strong>。</p>
-</li>
-<li><p>下载它。</p>
-</li>
-<li><p><strong>格式化</strong>U盘。</p>
-</li>
-<li><p>把下载的镜像文件用解压软件<strong>解压到U盘</strong>。</p>
-</li>
-<li><p><strong>备份c盘里的文件</strong>，其它盘看你想不想顺便格式化。</p>
-</li>
-<li><p>重启，并在开机的过程中<strong>狂按</strong>你记住的<strong>快捷键</strong>。</p>
-</li>
-<li><p>你将会进入一个蓝蓝白白的界面（bios），请动用你的英语水平进行翻译后使用。</p>
-</li>
-<li><p>你有两个选择</p>
-<ul>
-<li>UEFI路线<ol>
-<li>找到<strong>boot</strong>里面的<strong>UEFI</strong>设置为<strong>ENABLE</strong></li>
-<li><strong>重启</strong>，开机过程中<strong>狂按</strong>快捷键</li>
-<li>会看见弹出一个<strong>对话框</strong>，选择 <strong>WINDOWS</strong> <strong>BOOT</strong> <strong>MANAGER</strong></li>
-</ol>
-</li>
-<li>传统路线<ol>
-<li>找到<strong>boot</strong>里面的<strong>启动顺序</strong></li>
-<li>按照操作指示，把<strong>U盘</strong>放到最上面</li>
-<li>重启</li>
-</ol>
-</li>
-</ul>
-</li>
-<li><p>在Windows安装指示界面中，按照指示</p>
-<p>操作</p>
-<p>进行操作</p>
-<ul>
-<li>分区格式化请<strong>谨慎</strong></li>
-</ul>
-</li>
-<li><p>开机后联网会<strong>自动</strong>安装驱动</p>
-</li>
-<li><p>在你的显卡的对应官网下载安装<strong>显卡驱动</strong></p>
-</li>
-<li><p>在设备管理器中查看有无设备上有<strong>感叹号标识</strong>，若有，去官网下载驱动。</p>
-</li>
-<li><p>是否安装</p>
-<p>360、驱动大师等软件自行判断</p>
-<ul>
-<li>我推荐ccleaner、火绒</li>
-</ul>
-</li>
-<li><p>重启进入bios，把设置还原为改动之前的</p>
-</li>
-</ol>
-<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>简单的电脑维护其实很简单(<del>废话</del>)，只要不<strong>先入为主</strong>地认为自己不会，<strong>善用搜索引擎</strong>，不懂的东西<strong>稍微研究</strong>一下，一般都没有问题的。</p>
-<p><strong>如果看完本文仍觉得无从下手的话，可以联系QQ:244675854提供技术支持（收辛苦费20~30呦！），嘻嘻</strong></p>
-<blockquote>
-<p>我不对任何本文后果负责，还请读者们自行判断。</p>
-</blockquote>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/重装系统/"><i class="fas fa-hashtag fa-fw"></i>重装系统</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/06/视频跳过广告和VIP视频解析/">
-              
-                  如何开发一个用户脚本系列——脚本1:视频跳过广告和 VIP 视频解析
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-06
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/脚本/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              脚本
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
   </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>在这篇文章中，我们一起学习脚本 <strong>视频跳过广告和 VIP 视频解析</strong> 的开发。这也是本系列文章的最后一篇，希望完成这个系列的学习之后，你能够掌握编写脚本的方法。在正式开始之前，先说一下我认为开发脚本应该遵循的两个准则:</p>
-<ul>
-<li>功能实现。当你决定要开发一个脚本的时候，你肯定清楚你的脚本要实现什么功能，只有你的脚本实现了你所描述的功能，才会有更多的人安装使用，才会有更多的人给你好评；</li>
-<li>样式实现。什么叫样式实现？就是你在目标网站中添加的元素，要尽量与原网站的配色，样式相一致。这一项是非必须的，但我认为是非常重要的。你想想，如果原网站整体是蓝色，而你添加的按钮是红色，那该有多突兀，有多丑，虽然你的按钮确实突出了，但别人一看就是山寨，看着会很不舒服。而如果你的按钮也用它网站的颜色，这样就会跟原网站已有的元素契合，整体特别自然，做到以假乱真的效果。你的脚本让别人用的舒服，别人才更愿意给你好评。</li>
-</ul>
-<h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>我们在日常闲暇时间都会看点视频娱乐一下，而现在各大视频网站都推出了会员体系，一个视频网站的年费会员往往需要 200 块左右。然而我们想看的电视剧，电影，通常都不在一个平台上，导致我们就需要开通各个网站的会员。一个网站还好，但多个网站叠加起来，这笔钱也不少。所以有没有什么方法能够不需要开通各个网站的会员就可以看想看的视频呢？网上现在有一些免费公开的接口提供这种解析服务，只需要将视频播放页面的地址作为参数传给接口，接口就能完成解析，然后播放视频。但我们每次都复制视频播放地址给接口，也会很麻烦，这时候就可以写个脚本，在这些视频网站上添加一个按钮，当用户点击按钮的时候，自动获取到当前页面的播放地址，然后传给接口解析播放。HTML 中有个 <code>iframe</code> 标签，可以用来在当前页面中嵌入其他网页，所以使用 <code>iframe</code> 标签就能够实现在原视频网站站内解析播放视频，体验很好。在某视频网站上的效果如下图:<br><a href="https://mofiter-blog.oss-cn-hangzhou.aliyuncs.com/images/%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC6-1.png" target="_blank" rel="noopener"><img src="https://mofiter-blog.oss-cn-hangzhou.aliyuncs.com/images/%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC6-1.png" alt="img"></a></p>
-<h3 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h3><p>视频的解析都是解析接口实现的，脚本本身并不进行视频解析。所以解析接口是否稳定，是否有较高的成功率是很关键的。现在网上有很多解析接口，本文只提供 <a href="https://api.bbbbbb.me/" target="_blank" rel="noopener">思古解析</a>(用于站内解析)和 <a href="http://www.1717yun.com/" target="_blank" rel="noopener">1717yun解析</a>(用于站外解析)作为示例，同时由于视频网站很多，所以本文只选择 <a href="https://v.qq.com/" target="_blank" rel="noopener">腾讯视频</a> 作为运行脚本的示例。腾讯视频某一个视频的具体播放地址形式为 <code>https://v.qq.com/x/cover/xxx</code>，用 <code>@match</code> 匹配。在脚本编写过程中会用到 jQuery，使用 <code>@require</code> 引入 jQuery 库。站外解析需要在新 tab 页中打开链接，所以需要脚本管理器的 <code>GM_openInTab()</code> 函数，我们用 <code>@grant</code> 声明(为了兼容 Greasemonkey，我们还要声明它的函数 <code>GM.openInTab</code>)。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Copy// @require           https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js</span><br><span class="line">// @match             *://v.qq.com/x/cover/*</span><br><span class="line">// @grant             GM_openInTab</span><br><span class="line">// @grant             GM.openInTab</span><br></pre></td></tr></table></figure>
-<p>通过观察原网站可知，功能菜单都是在视频播放窗口下面，当鼠标放在功能按钮上面时，会显示功能面板，当鼠标移出功能按钮时，功能面板隐藏。所以我们将解析按钮加到功能菜单里面，将各个接口添加到功能面板，这样就可以选择不同的接口进行解析，同时使用原网站的样式风格。我们使用一个数组保存接口信息，这样方便遍历添加。由于安全问题，以 https 开头的视频网站内部不能使用 http 开头的接口，所以我们利用接口类型字段来标识接口是用来进行站内解析还是站外解析，如果是站内解析，它应该以 https 开头，如果接口以 http 开头，只能用来站外解析。我们希望将所有的接口以一个列表的形式呈现，所以我们把它放在一个 <code>&lt;ul&gt;</code> 标签里，然后每一个接口放在一个 <code>&lt;li&gt;</code> 标签里面。我们创建一个 <code>&lt;div&gt;</code> 标签，在里面添加一个 <code>&lt;iframe&gt;</code> 标签，用来加载解析结果的网页。在后面进行站内解析的时候，我们用这个 <code>&lt;div&gt;</code> 替换原视频网站播放窗口里面的内容。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Copyvar originalInterfaceList = [&#123;&quot;name&quot;:&quot;思古解析&quot;,&quot;type&quot;:&quot;站内&quot;,&quot;url&quot;:&quot;https://api.bbbbbb.me/jx/?url=&quot;&#125;,</span><br><span class="line">                             &#123;&quot;name&quot;:&quot;1717yun解析&quot;,&quot;type&quot;:&quot;站外&quot;,&quot;url&quot;:&quot;http://www.1717yun.com/jx/ty.php?url=&quot;&#125;];</span><br><span class="line">    var parseList = &quot;&lt;ul&gt;&quot;;</span><br><span class="line">    parseInterfaceList.forEach((item,index)=&gt;&#123;</span><br><span class="line">        parseList += &quot;&lt;li&gt;&quot; + item.name + &quot;(&quot; + item.type + &quot;)&lt;/li&gt;&quot;;</span><br><span class="line">    &#125;);</span><br><span class="line">    parseList += &quot;&lt;/ul&gt;&quot;;</span><br><span class="line">    var videoPlayer = $(&quot;&lt;div id=&apos;iframe-div&apos; style=&apos;width:100%;height:100%;z-index:2147483647;&apos;&gt;&lt;iframe id=&apos;iframe-player&apos; frameborder=&apos;0&apos; allowfullscreen=&apos;true&apos; width=&apos;100%&apos; height=&apos;100%&apos;&gt;&lt;/iframe&gt;&lt;/div&gt;&quot;);</span><br></pre></td></tr></table></figure>
-<p>准备好解析接口和要替换的内容之后，我们就要去原网站添加解析按钮，并添加点击事件，在点击事件里面，替换播放窗口的内容。通过 <code>location.href</code> 能拿到当前页面的 url，我们使用 <code>indexOf()</code> 方法查看 <code>v.qq.com</code> 的索引值，如果索引值大于 -1 说明当前匹配的网站是腾讯视频，我们再进行处理。我们使用 jQuery 获取到功能菜单的父元素，然后创建解析按钮元素，将解析按钮添加到功能菜单父元素。给解析按钮添加鼠标移入移出操作，来显示和隐藏接口列表的功能面板。在每一个解析接口上面添加点击操作，判断被点击的 <code>&lt;li&gt;</code> 标签的接口类型，如果是站内解析，则替换播放窗口的内容，如果是站外解析，则打开一个新的页面显示解析链接。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">Copyif(location.href.indexOf(&quot;v.qq.com&quot;) &gt; -1)&#123;</span><br><span class="line">        var action_wrap = $(&quot;.action_wrap&quot;);</span><br><span class="line">        var qq_jiexi = $(&quot;&lt;div id=&apos;qq-jiexi-btn&apos; class=&apos;action_item action_jiexi&apos; style=&apos;position:relative;&apos;&gt;&lt;a class=&apos;action_title fn-qq-jiexi-text&apos;&gt;&lt;span&gt;解析&lt;/span&gt;&lt;/a&gt;&lt;div class=&apos;mod_pop_action fn-qq-jiexi&apos; style=&apos;background-color:#fff;width:120px;left:-50px;text-align:center;line-height:25px;&apos;&gt;&quot; + parseList + &quot;&lt;/div&gt;&lt;/div&gt;&quot;);</span><br><span class="line">        action_wrap.append(qq_jiexi);</span><br><span class="line">        document.getElementById(&quot;qq-jiexi-btn&quot;).addEventListener(&quot;mouseover&quot;,()=&gt;&#123;</span><br><span class="line">            $(&quot;.action_jiexi&quot;).toggleClass(&quot;open&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">        document.getElementById(&quot;qq-jiexi-btn&quot;).addEventListener(&quot;mouseout&quot;,()=&gt;&#123;</span><br><span class="line">            $(&quot;.action_jiexi&quot;).toggleClass(&quot;open&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">        $(&quot;.fn-qq-jiexi li&quot;).each((index,item)=&gt;&#123;</span><br><span class="line">            item.addEventListener(&apos;click&apos;,()=&gt;&#123;</span><br><span class="line">                if(parseInterfaceList[index].type == &quot;站内&quot;)&#123;</span><br><span class="line">                    if(document.getElementById(&quot;iframe-player&quot;) == null)&#123;</span><br><span class="line">                        var txp_ad_skip_text = $(&quot;.txp_ad_inner .txp_ad_skip_text&quot;);</span><br><span class="line">                        if(txp_ad_skip_text.text() === &quot;VIP可关闭广告&quot;)&#123;</span><br><span class="line">                            txp_ad_skip_text.click();</span><br><span class="line">                            mod_player = $(&quot;#mod_player&quot;);</span><br><span class="line">                            mod_player.empty();</span><br><span class="line">                            mod_player.append(videoPlayer);</span><br><span class="line">                        &#125;else if(txp_ad_skip_text.text() === &quot;关闭广告&quot;)&#123;</span><br><span class="line">                            txp_ad_skip_text.click();</span><br><span class="line">                        &#125;else if(vipPage === true)&#123;</span><br><span class="line">                            var txp_btn_play = $(&quot;.txp_left_controls .txp_btn_play&quot;);</span><br><span class="line">                            if(txp_btn_play.attr(&quot;data-status&quot;) === &quot;pause&quot;)&#123;</span><br><span class="line">                                txp_btn_play.click();</span><br><span class="line">                            &#125;</span><br><span class="line">                            mod_player = $(&quot;#mod_player&quot;);</span><br><span class="line">                            mod_player.empty();</span><br><span class="line">                            mod_player.append(videoPlayer);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    innerParse(parseInterfaceList[index].url + location.href);</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    GMopenInTab(parseInterfaceList[index].url + location.href,false);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">&#125;</span><br><span class="line">function innerParse(url)&#123; // 站内解析</span><br><span class="line">    $(&quot;#iframe-player&quot;).attr(&quot;src&quot;,url);</span><br><span class="line">&#125;</span><br><span class="line">function GMopenInTab(url,open_in_background)&#123; //站外解析</span><br><span class="line">    if(typeof GM_openInTab === &quot;function&quot;)&#123; // Tampermonkey 和 Violentmonkey 调用 GM_openInTab</span><br><span class="line">        GM_openInTab(url,open_in_background);</span><br><span class="line">    &#125;else&#123; // Greasemonkey GM.openInTab</span><br><span class="line">        GM.openInTab(url,open_in_background);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>至此腾讯视频的解析差不多就完成了，还有些细节和用户体验方面的东西代码里面有写，这里就不再赘述了。其他视频网站的处理和腾讯视频的原理是一样的，都是添加解析按钮，然后给解析按钮添加点击事件，进行站内或站外解析。</p>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/如何开发用户脚本/"><i class="fas fa-hashtag fa-fw"></i>如何开发用户脚本</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/06/一键激活window-office/">
-              
-                  一键激活window & office
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-06
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/常用工具/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              常用工具
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h1 id="一键激活windows-amp-office"><a href="#一键激活windows-amp-office" class="headerlink" title="一键激活windows&amp;office"></a>一键激活windows&amp;office</h1><p>自建的激活服务器，可以一键激活VOL版的window和office。</p>
-<p>推荐去<a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">https://msdn.itellyou.cn/</a> 下载安装正版的window和office。</p>
-<h2 id="单击下载-一键激活window-amp-office-bat"><a href="#单击下载-一键激活window-amp-office-bat" class="headerlink" title="单击下载 一键激活window&amp;office.bat"></a>单击下载 <a href="https://tohot.top/download/%E4%B8%80%E9%94%AE%E6%BF%80%E6%B4%BBwindow&amp;office.bat" target="_blank" rel="noopener">一键激活window&amp;office.bat</a></h2>
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/激活/"><i class="fas fa-hashtag fa-fw"></i>激活</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/06/hello-world/">
-              
-                  Hello World
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-06
-          </a>
-        </div>
-      
-      
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/03/极限与导数/">
-              
-                  极限与导数
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-03
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/高数/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              高数
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p>最近学了一些基础微积分，这里稍微记录一下。</p>
-<h2 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h2><p>极限可以当做是一个函数f(x)f(x)的xx无限趋近于某一个常数或无穷远处时，函数数值所逼近的一个值。 例如，对于函数<br>$$<br>f(x)=2xx+1f(x)=2xx+1<br>$$<br>，当xx趋近于无穷大时，f(x)f(x)无限趋近于22。我们将此记成这样子：</p>
-<p>$$<br>limx→∞f(x)=limx→∞2xx+1=2limx→∞f(x)=limx→∞2xx+1=2<br>$$</p>
-<p>求极限需要会一点代数技巧，我反正是老是求不出……</p>
-<p>极限有一些方便的性质：<br>当然，这些等式的左边都是存在极限的。</p>
-<p>$$<br>limx→ca⋅f(x)=a⋅limx→cf(x)limx→ca⋅f(x)=a⋅limx→cf(x)<br>$$</p>
-<p>对于两个函数f(x)f(x)和g(x)g(x)之间极限的关系：（当然f(x)f(x)和g(x)g(x)都要存在极限）</p>
-<p>$$<br>limx→c[f(x)+g(x)]=limx→cf(x)+limx→cg(x)limx→c[f(x)+g(x)]=limx→cf(x)+limx→cg(x)<br>$$</p>
-<p>$$<br>limx→c[f(x)−g(x)]=limx→cf(x)−limx→cg(x)limx→c[f(x)−g(x)]=limx→cf(x)−limx→cg(x)<br>$$</p>
-<p>$$<br>limx→cf(x)⋅g(x)=limx→cf(x)⋅limx→cg(x)limx→cf(x)⋅g(x)=limx→cf(x)⋅limx→cg(x)<br>$$</p>
-<p>$$<br>limx→cf(x)g(x)=limx→cf(x)limx→cg(x)(limx→cg(x)≠0)limx→cf(x)g(x)=limx→cf(x)limx→cg(x)(limx→cg(x)≠0)<br>$$<br>简而言之，极限这东西可以加减乘除。</p>
-<h2 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h2><p>对于函数f(x)f(x)而言，它在x0x0处的导数是这么定义的：</p>
-<p>$$<br>limΔx→0f(x0+Δx)−f(x0)ΔxlimΔx→0f(x0+Δx)−f(x0)Δx<br>$$</p>
-<p>从几何意义上讲，这个值可以视为是f(x)f(x)的图像在x0x0处的切线的斜率。 当然不是所有的函数都是可以求导数的，只有在那一段上是连续的函数时，才会有导数。<br>连续的函数f(x)f(x)在其定义域内的每一点上都可以计算导数，意味着每一个xx都会对应一个导数，这样就形成了一个函数关系。我们将这个函数叫作导函数，记作f′(x)f′(x)。</p>
-<p>如何求导函数呢？根据导数的定义，我们将x0x0换为xx，然后求极限就好了。然而说的轻巧，实际上很多都比较难以求出，因此早有先人为我们把各种导函数算好了。</p>
-<p>举一个典型的例子<br>$$<br>f(x)=x2f(x)=x2<br>$$<br>。按照求导数的方法：</p>
-<p>$$<br>f′(x)=limΔx<br>$$<br>$$<br>→0f(x+Δx)−f(x)Δx=limΔx<br>$$<br>$$<br>→0(x+Δx)2−x2Δx=limΔx<br>$$<br>$$<br>→0Δx2+2xΔxΔx=limΔx<br>$$<br>$$<br>→0(Δx+2x)=2xf′(x)=limΔx<br>$$<br>$$<br>→0f(x+Δx)−f(x)Δx=limΔx<br>$$<br>$$<br>→0(x+Δx)2−x2Δx=limΔx<br>$$<br>$$<br>→0Δx2+2xΔxΔx=limΔx<br>$$<br>$$<br>→0(Δx+2x)=2x<br>$$</p>
-<p>事实上，对于幂函数<br>$$<br>f(x)=xαf(x)=xα，其导函数为，其导函数为<br>$$<br>，其导函数为<br>$$<br>f′(x)=αxα−1f′(x)=αxα−1<br>$$<br>。</p>
-<p>导数与导数之间存在运算关系，有了这些运算关系，我们就可以方便地进行求导。<br>类似于线性的性质：<br>$$<br>[a⋅f(x)+b⋅g(x)]′=a⋅f′(x)+b⋅g′(x)[a⋅f(x)+b⋅g(x)]′=a⋅f′(x)+b⋅g′(x)<br>$$</p>
-<p>两个导数相乘：<br>$$<br>[f(x)g(x)]′=f′(x)g(x)+f(x)g′(x)[f(x)g(x)]′=f′(x)g(x)+f(x)g′(x)<br>$$</p>
-<p>两个导数相除：<br>$$<br>[f(x)g(x)]′=f′(x)g(x)−f(x)g′(x)g2(x)(g(x)≠0)[f(x)g(x)]′=f′(x)g(x)−f(x)g′(x)g2(x)(g(x)≠0)<br>$$</p>
-<p>复合函数：<br>$$<br>[f(g(x))]′=f′(g(x))⋅g′(x)[f(g(x))]′=f′(g(x))⋅g′(x)<br>$$</p>
-<p>一些基本函数的导函数就放这里了，当我们要求一个特定函数的导函数时，可以利用上面的规则，然后根据导函数表来计算。下面只有xx是变量。<br>$$<br>c′=0c′=0<br>$$</p>
-<p>$$<br>x′=1x′=1<br>$$</p>
-<p>$$<br>(xα)′=αxα−1(xα)′=αxα−1<br>$$</p>
-<p>$$<br>(ex)′=ex(ex)′=ex<br>$$</p>
-<p>$$<br>(ax)′=axlna(ax)′=axln⁡a<br>$$</p>
-<p>$$<br>(lnx)′=1x(ln⁡x)′=1x<br>$$</p>
-<p>$$<br>(logax)′=1xlna(loga⁡x)′=1xln⁡a<br>$$</p>
-<p>$$<br>sin′x=cosxsin′⁡x=cos⁡x<br>$$</p>
-<p>$$<br>cos′x=−sinxcos′⁡x=−sin⁡x<br>$$</p>
-<p>$$<br>tan′x=1cos2xtan′⁡x=1cos2⁡x<br>$$</p>
-<p>$$<br>cot′x=−1sin2xcot′⁡x=−1sin2⁡x<br>$$</p>
-<h2 id="对数求导法"><a href="#对数求导法" class="headerlink" title="对数求导法"></a>对数求导法</h2><p>上面的求导公式已经能够应对大部分基本函数的求导了，但是对于下面的函数：<br>$$<br>f(x)=x1/xf(x)=x1/x<br>$$<br>该如何求导呢？<br>这就要用到对数来进行求导。</p>
-<p>我们知道，对于一个函数f(x)f(x)：<br>$$<br>[lnf(x)]′=ln′f(x)⋅f′(x)[ln⁡f(x)]′=ln′⁡f(x)⋅f′(x)<br>$$</p>
-<p>换言之：<br>$$<br>f′(x)=[lnf(x)]′ln′f(x)(1)(1)f′(x)=[ln⁡f(x)]′ln′⁡f(x)<br>$$<br>利用这一点，我们就可以对<br>$$<br>f(x)=x1/xf(x)=x1/x<br>$$<br>求导。 首先，为了方便我们设：<br>$$<br>y=x1/xy=x1/x<br>$$<br>由于两者相等，所以两者的对数也应相等：<br>$$<br>lny=lnx1/x=1xlnxln⁡y=ln⁡x1/x=1xln⁡x<br>$$</p>
-<p>将两边对xx求导。注意按照(1)(1)式，左式需要乘上y′y′两者才能相等。<br>$$<br>y′y=1−lnxx2y′y=1−ln⁡xx2<br>$$</p>
-<p>于是我们可以得到：<br>$$<br>y′=1−lnxx2y=1−lnxx2x1/x=f′(x)y′=1−ln⁡xx2y=1−ln⁡xx2x1/x=f′(x)<br>$$</p>
-<p>这样我们就完成了求导。<br>既然都对这个函数求过导了，我们来验证一下它的一个性质。<br>将ee代入导函数：<br>$$<br>f′(e)=1−lnee2e1/e=1−1e2=0f′(e)=1−ln⁡ee2e1/e=1−1e2=0<br>$$</p>
-<p>因此我们发现<br>$$<br>x=ex=e<br>$$<br>是这个函数的极值点。</p>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/极限/"><i class="fas fa-hashtag fa-fw"></i>极限</a>
-        
-          <a href="/tags/导数/"><i class="fas fa-hashtag fa-fw"></i>导数</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/03/Linux文件系统结构/">
-              
-                  Linux文件系统结构
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-03
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/Linux/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              Linux
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <h3 id="Linux-文件系统"><a href="#Linux-文件系统" class="headerlink" title="Linux 文件系统"></a>Linux 文件系统</h3><p>在 Linux 操作系统, 我们是看不到这些驱动器盘符, 而是文件夹(目录):</p>
-<p><img src="https://ws3.sinaimg.cn/large/005BYqpggy1g1poi8yj5tj30ku07ndhn.jpg" alt="Linux文件目录示意图"><br>​                                <strong><em>Linux文件目录示意图</em></strong></p>
-<p>Ubuntu 没有盘符概念, 只有一个根目录 <strong>/</strong>, 所有文件都在它下面.</p>
-<p><img src="https://ws3.sinaimg.cn/large/005BYqpgly1g1poizwgvjj30ip0bfaa7.jpg" alt="Linux 目录结构示意图"></p>
-<p>​                                <strong><em>Linux 目录结构示意图</em></strong></p>
-<h3 id="Linux-主要目录速查表"><a href="#Linux-主要目录速查表" class="headerlink" title="Linux 主要目录速查表"></a>Linux 主要目录速查表</h3><ul>
-<li><p>/：根目录，</p>
-<p>一般根目录下只存放目录</p>
-<p>，在 linux 下有且只有一个根目录，所有的东西都是从这里开始</p>
-<ul>
-<li>当在终端里输入 <code>/home</code>，其实是在告诉电脑，先从 <code>/</code>（根目录）开始，再进入到 <code>home</code> 目录</li>
-</ul>
-</li>
-<li><p>/bin、/usr/bin：可执行二进制文件的目录，如常用的命令 ls、tar、mv、cat 等</p>
-</li>
-<li><p>/boot：放置 linux 系统启动时用到的一些文件，如 linux 的内核文件：<code>/boot/vmlinuz</code>，系统引导管理器：<code>/boot/grub</code></p>
-</li>
-<li><p>/dev：存放linux系统下的设备文件，访问该目录下某个文件，相当于访问某个设备，常用的是挂载光驱<code>mount /dev/cdrom /mnt</code></p>
-</li>
-<li><p>/etc：系统配置文件存放的目录，不建议在此目录下存放可执行文件，重要的配置文件有</p>
-<ul>
-<li>/etc/inittab</li>
-<li>/etc/fstab</li>
-<li>/etc/init.d</li>
-<li>/etc/X11</li>
-<li>/etc/sysconfig</li>
-<li>/etc/xinetd.d</li>
-</ul>
-</li>
-<li><p>/home：系统默认的用户家目录，新增用户账号时，用户的家目录都存放在此目录下</p>
-<ul>
-<li><code>~</code> 表示当前用户的家目录</li>
-<li><code>~edu</code> 表示用户 <code>edu</code> 的家目录</li>
-</ul>
-</li>
-<li><p>/lib、/usr/lib、/usr/local/lib：系统使用的函数库的目录，程序在执行过程中，需要调用一些额外的参数时需要函数库的协助</p>
-</li>
-<li><p>/lost+fount：系统异常产生错误时，会将一些遗失的片段放置于此目录下</p>
-</li>
-<li><p>/mnt: /media：光盘默认挂载点，通常光盘挂载于 /mnt/cdrom 下，也不一定，可以选择任意位置进行挂载</p>
-</li>
-<li><p>/opt：给主机额外安装软件所摆放的目录</p>
-</li>
-<li><p>/proc：此目录的数据都在内存中，如系统核心，外部设备，网络状态，由于数据都存放于内存中，所以不占用磁盘空间，比较重要的文件有：/proc/cpuinfo、/proc/interrupts、/proc/dma、/proc/ioports、/proc/net/* 等</p>
-</li>
-<li><p>/root：系统管理员root的家目录</p>
-</li>
-<li><p>/sbin、/usr/sbin、/usr/local/sbin：放置系统管理员使用的可执行命令，如 fdisk、shutdown、mount 等。与 /bin 不同的是，这几个目录是给系统管理员 root 使用的命令，一般用户只能”查看”而不能设置和使用</p>
-</li>
-<li><p>/tmp：一般用户或正在执行的程序临时存放文件的目录，任何人都可以访问，重要数据不可放置在此目录下</p>
-</li>
-<li><p>/srv：服务启动之后需要访问的数据目录，如 www 服务需要访问的网页数据存放在 /srv/www 内</p>
-</li>
-<li><p>/usr：应用程序存放目录</p>
-<ul>
-<li>/usr/bin：存放应用程序可执行二进制文件的目录</li>
-<li>/usr/share：存放共享数据</li>
-<li>/usr/lib：存放不能直接运行的，却是许多程序运行所必需的一些函数库文件</li>
-<li>/usr/local：存放软件升级包</li>
-<li>/usr/share/doc：系统说明文件存放目录</li>
-<li>/usr/share/man：程序说明文件存放目录</li>
-</ul>
-</li>
-<li><p>/var：放置系统执行过程中经常变化的文件</p>
-<ul>
-<li>/var/log：随时更改的日志文件</li>
-<li>/var/spool/mail：邮件存放的目录</li>
-<li>/var/run：程序或服务启动后，其 PID 存放在该目录下</li>
-</ul>
-</li>
-</ul>
-<p><strong>重点:</strong> <strong>/home/用户名</strong> 是用户的家目录.</p>
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ol>
-<li>Linux 和 Windows 文件系统的区别<br> 1.1 Linux 文件系统只有一个根目录(<strong>/</strong>)<br> 1.2 Windows 文件系统会有可能会有多个盘符(例如C、D、E…)</li>
-<li><strong>/home/用户名</strong> 是用户的家目录, 是经常使用的目录.</li>
-</ol>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/linux/"><i class="fas fa-hashtag fa-fw"></i>linux</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-          
-            <div class="post-wrapper">
-              <article class="post reveal ">
-  
-<section class="meta">
-  
-  
-  <div class="meta" id="header-meta">
-    
-      <h2 class="title">
-          <a href="/2019/04/03/啥是人工智能/">
-              
-                  啥是人工智能
-              
-          </a>
-      </h2>
-    
-
-    <div class="new-meta-box">
-      
-        <div class="new-meta-item author">
-          <a href="http://yoursite.com">
-            <i class="fas fa-user" aria-hidden="true"></i>
-            LLQ
-          </a>
-        </div>
-      
-      
-        <div class="new-meta-item date">
-          <a class="notlink">
-            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
-            2019-04-03
-          </a>
-        </div>
-      
-      
-        
-          
-          <div class="new-meta-item category">
-            <a href="/categories/AI/">
-              <i class="fas fa-folder-open" aria-hidden="true"></i>
-              AI
-            </a>
-          </div>
-        
-      
-      
-      
-    </div>
-    <hr>
-  </div>
-</section>
-
-  <section class="article typo">
-    <div class="article-entry" itemprop="articleBody">
-      <p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZukIrsq7161xeGvkFcNun46boShNiatq5JZvqdjX5XjVlR6ToY48GAxQ/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
-<blockquote>
-<p>作者：武博士、宋知达、袁雪瑶、聂文韬</p>
-</blockquote>
-<p>本节我们会以生动有趣的漫画来介绍关于人工智能（AI）相关的故事，你将会学习到： <strong>人工智能的基本概念</strong></p>
-<p><strong>1.1 啥是人工智能</strong><br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZWzSukZqmRVrdvVemO9siatS9tjtGR81eAGYv7NWSyWITibOOrTf2xK9w/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"><br>当有人问我，Dr.Wu 你的研究方向是什么？我回答：人工智能。 接着大约会得到以下四种问题： </p>
-<p><strong>哇，好酷！是不是很难呢？</strong> </p>
-<p><strong>是不是制造机器人帮助我们呢？</strong> </p>
-<p><strong>AI和人工智能有什么区别？</strong> </p>
-<p><strong>究竟啥是人工之智能？</strong> </p>
-<p>接下来，我会带大家一一解惑。</p>
-<p><strong>1.1.1 人的智慧和人工智能</strong></p>
-<p>究竟什么是人工智能，什么是AI，接下来，由我为大家解答。 媒体上几乎每天都有AI和人工智能的词汇，总给人一种深奥神秘的感觉。人工智能顾名思义就是人类制造的智慧，英文叫Artificial Intelligence（AI），所以人工智能=AI。 </p>
-<p>那么问题又来了，智慧究竟是什么？我们要以何种方式去制造智慧？要回答这个问题，就必须从人与人造物的 区别和人的智慧说起。 </p>
-<p>对于人工智能的研究人员来说，目标并不是研究人类智慧的来源，而是以工程技术手段制造出类似人类智慧的 产品。  </p>
-<p>人类和人工智能最大的差异是，肉体的有无。<br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZSbYzsu8L847X5pXuYGvEiaVvNfatNdYJBwXpzhE2JG29x9wSLnVpRuw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"><br>人类可以通过身体获得外界资讯。透过感觉器官，我们可以感觉到声音、外观、触感、气味等，让我们觉得舒服或者讨厌，进而产生感情。 </p>
-<p>不过人工智能并没有人类的身体，因此无法像人类一样通过肉体感觉器官来积累感觉经验，也无法借此获得知识。 </p>
-<p>人工智能必须依赖人类，将人类通过鼻子、眼睛、嘴巴、皮肤…获得的外界资讯，以某种形式”输入“到人工智能，人工智能才可以加工和处理这些信息。 具体输入方式我们未来讨论。</p>
-<p><strong>1.1.2 图灵测试：哪个一边是人？</strong></p>
-<p>英国数学家，Dr.Wu 认为二十世纪最聪明的人三个人（爱因斯坦、图灵、冯诺依曼）之一，艾伦.图灵（Alan Turing：1912-1954）定义了一种方法，来判断人工智能是否成功，这种方法是：和自己对话的对象是人类还是人工智能？ </p>
-<p>这种方法就是大名鼎鼎的图灵测试。<br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZZhXpn1212YWcQFkmNibWOfmjIC6gvgJPcb5TL2ykLTs2ykXX2CwRnAw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"><br>只要三成以上的研究员将人工智能误以为是人类，就算通过图灵测试。 </p>
-<p>但是由于计算机很难做到与人类接近的对话，所以很长一段时间都没有任何人工智能通过图灵测试。反而人类在不断学习计算机语言，这就是大量程序员的工作，和计算机对话。 </p>
-<p>图灵测试又叫做模仿游戏‘Imitation Game’，一部描绘图灵一生的自传电影一样也叫模仿游戏，我觉得很好看哦。 Imitation 即为模仿。 </p>
-<p>除了这部电影之外，《黑客帝国》、《终结者》、《全面进化》等描述人工智能的电影中，大多提到人工智能会威胁到人类生活，而不是给人类带来幸福，这让很多人谈到人工智能都会感到恐慌。 </p>
-<p>但是，事实上，目前还没有做出公认通过图灵测试的人工智能。所以大家也不必恐慌哦。</p>
-<p><strong>1.1.3 人工智能会思考吗？</strong></p>
-<p>“思考”，大多数人会想到计算，应该是人工智能的专长。但事实上，要想像人类一样思考其实是一件非常困难的事情。 </p>
-<p>人工智能需要以各种输入数据案例为基础，通过这些数据案例获取经验和知识，然后进行预测和判断。如果输入的案例太少，就无法做出判断。 情况相反，人类即使遇到过去未曾遇到的状况，也可以以弹性的方式面对各种状况。 </p>
-<p>例如，人工智能需要看过上万张猫狗的图片才可以相对准确的识别猫狗图片，但是人类3岁左右的小朋友，只需要见过几次，就可以识别。差距还是巨大的。<br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZTfZic3rXM0eic33pYlPM6y45wP2gefKMfsysGPAgLShCPIOeqnIKgGGg/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"><br>但是，人类对于人类来说很难解决的问题，人工智能却能够迅速解决。例如：训练好的人工智能在图片识别过程中，效率远远高于人类，给他们10万张图片，他们会很快的为人类做好分类工作，无怨无悔，而且在工作过程中，人工智能本来的”智慧”也在提升。<br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZic88PlEGsls1K27E2XaOIaylGaP5yicPeRlOIvPtQkwVQmrjFd0lyXbA/640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"><br>我们将在未来的章节提到，目前具有一定“智能”的AI，可以用什么样的方式来解决什么样的问题。明白人工智能的擅长之处与不擅长之处，是未来社会我们能够幸福生活的关键。</p>
-<p>（未完待续…）</p>
-
-      
-    </div>
-    
-      <div class="full-width auto-padding tags">
-        
-          <a href="/tags/AI/"><i class="fas fa-hashtag fa-fw"></i>AI</a>
-        
-      </div>
-    
-  </section>
-</article>
-
-            </div>
-          
-        
-      
-
-  </section>
-
-
-
-
-
-
-  
-      <br>
-      <div class="prev-next">
-          <div class="prev-next">
-              
-                  <a class="prev" rel="prev" href="/archives/2019/04/">
-                      <section class="post prev">
-                          <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
-                      </section>
-                  </a>
-              
-              <p class="current">
-                  2 / 2
-              </p>
-              
-
-          </div>
-      </div>
-
-  
-
-  <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-  
-
-  
-
-
-
-
-
-<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
-
-
-
-
-        </div>
-        <aside class='l_side'>
-            
-  
-  
-    
-      
-      
-        <section class="author">
-  <div class="content material">
-    
-      <div class="avatar">
-        <img class="avatar" src="/medias/avatar.jpg">
-      </div>
-    
-    
-      <div class="text">
-        
-        
-        
-          <p><span id="jinrishici-sentence">柳暗花明又一村</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="mailto:zailushanga@gmail.com" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
-          
-        
-          
-            <a href="https://github.com/llqing" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-github" aria-hidden="true"></i></a>
-          
-        
-          
-            <a href="https://music.163.com/#/user/home?id=1409711765" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-music" aria-hidden="true"></i></a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-      
-    
-  
-    
-      
-      
-        
-
-      
-    
-  
-    
-      
-      
-        <section class="plain">
-  
-<header class="material">
-  <div><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;注意啦～</div>
-  
-</header>
-
-  <div class="content material">
-    <p>小站栏目还在完善中，将不定期分享GIS、Code等内容(看博主心情)，如有特殊需要可以联系博主，超喜欢的话还可以安利给身边的朋友哦～</p>
-
-  </div>
-</section>
-
-      
-    
-  
-    
-      
-      
-        
-  <section class="category">
-    
-<header class="material">
-  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;所有分类</div>
-  
-</header>
-
-    <div class="content material">
-      <ul class="entry">
-        
-          <li><a class="flat-box" title="/categories/AI/" href="/categories/AI/"><div class="name">AI</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Blog/" href="/categories/Blog/"><div class="name">Blog</div><div class="badge">(3)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/GIS/" href="/categories/GIS/"><div class="name">GIS</div><div class="badge">(5)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Git/" href="/categories/Git/"><div class="name">Git</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/LaTeX/" href="/categories/LaTeX/"><div class="name">LaTeX</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Linux/" href="/categories/Linux/"><div class="name">Linux</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/Python/" href="/categories/Python/"><div class="name">Python</div><div class="badge">(4)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/web基础/" href="/categories/web基础/"><div class="name">web基础</div><div class="badge">(4)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/好玩的/" href="/categories/好玩的/"><div class="name">好玩的</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/常用工具/" href="/categories/常用工具/"><div class="name">常用工具</div><div class="badge">(3)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/数据库/" href="/categories/数据库/"><div class="name">数据库</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/数据结构与算法/" href="/categories/数据结构与算法/"><div class="name">数据结构与算法</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/杂谈/" href="/categories/杂谈/"><div class="name">杂谈</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/脚本/" href="/categories/脚本/"><div class="name">脚本</div><div class="badge">(1)</div></a></li>
-        
-          <li><a class="flat-box" title="/categories/高数/" href="/categories/高数/"><div class="name">高数</div><div class="badge">(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-      
-    
-  
-    
-      
-      
-        
-  <section class="tagcloud">
-    
-<header class="material">
-  <div><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
-  
-</header>
-
-    <div class="content material">
-      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/API/" style="font-size: 24px; color: #555">API</a> <a href="/tags/ArcGIS/" style="font-size: 24px; color: #555">ArcGIS</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 24px; color: #555">Markdown</a> <a href="/tags/Matplotlib/" style="font-size: 14px; color: #999">Matplotlib</a> <a href="/tags/NoSQL/" style="font-size: 14px; color: #999">NoSQL</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Redis/" style="font-size: 14px; color: #999">Redis</a> <a href="/tags/TCP/" style="font-size: 19px; color: #777">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/typora/" style="font-size: 14px; color: #999">typora</a> <a href="/tags/中文显示乱码/" style="font-size: 14px; color: #999">中文显示乱码</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/属性/" style="font-size: 14px; color: #999">属性</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/撩妹/" style="font-size: 14px; color: #999">撩妹</a> <a href="/tags/方法/" style="font-size: 14px; color: #999">方法</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/算法/" style="font-size: 14px; color: #999">算法</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
-    </div>
-  </section>
-
-
-      
-    
-  
-    
-      
-      
-        <section class="list">
-  
-<header class="material">
-  <div><i class="fas fa-medal fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;精选项目</div>
-  
-</header>
-
-  <div class="content material">
-    <ul class="entry">
-      
-    </ul>
-  </div>
-</section>
-
-      
-    
-  
-    
-      
-      
-        <section class="list">
-  
-<header class="material">
-  <div><i class="fas fa-link fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;特别链接</div>
-  
-</header>
-
-  <div class="content material">
-    <ul class="entry">
-      
-        <li><a class="flat-box" title="https://llqing.github.io/about/" href="https://llqing.github.io/about/">
-          <div class="name">
-            
-              <i class="fas fa-comment-dots fa-fw" aria-hidden="true"></i>
-            
-            &nbsp;&nbsp;关于我 / 留言板
-          </div>
-          
-        </a></li>
-      
-    </ul>
-  </div>
-</section>
-
-      
-    
-  
-    
-      
-      
-        
-
-
-  <section class="music">
-    
-<header class="material">
-  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
-  
-    <a class="rightBtn" target="_blank" rel="external nofollow noopener noreferrer" href="https://music.163.com/#/user/home?id=1409711765" title="https://music.163.com/#/user/home?id=1409711765">
-    <i class="far fa-heart fa-fw"></i></a>
-  
-</header>
-
-    <div class="content material">
-      
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
-  <div class="aplayer" data-theme="#1BCDFC" data-mode="circulation" data-server="netease" data-type="playlist" data-id="1409711765" data-volume="0.7">
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
-
-
-    </div>
-  </section>
-
-
-      
-    
-  
-
-
-        </aside>
-        <script>setLoadingBarProgress(60);</script>
-    </div>
-    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
-    </div>
-    <footer id="footer" class="clearfix">
-  
-    <div class="footer">
-      <p>这里是页脚，谢谢支持。</p>
-
-    </div>
-    <br>
-  
-  
-    <div class="social-wrapper">
-      
-        
-          <a href="mailto:zailushanga@gmail.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
-        
-      
-        
-          <a href="https://github.com/llqing" class="social fab fa-github flat-btn" target="_blank" rel="external"></a>
-        
-      
-        
-          <a href="https://music.163.com/#/user/home?id=1409711765" class="social fas fa-music flat-btn" target="_blank" rel="external"></a>
-        
-      
-    </div>
-  
-  <br>
-  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
-  <div>本站使用 <a href target="_blank" class="codename">Material X</a> 作为主题，总访问量为 <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/sitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
+            
+            公益404
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-other">
+          <a href="/other" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            随意发挥
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
+
+      <span class="archive-page-counter">
+        
+        
+         
+        
+        OK! 目前共计 32 篇日志。 继续努力。
+      </span>
+
+      
+
+        
+        
+        
+
+        
+          
+          <div class="collection-title">
+            <h1 class="archive-year" id="archive-year-2019">2019</h1>
+          </div>
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/06/如何重装系统/" itemprop="url">
+              
+                <span itemprop="name">如何重装系统</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-06T15:35:37+08:00" content="2019-04-06">
+          04-06
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/06/视频跳过广告和VIP视频解析/" itemprop="url">
+              
+                <span itemprop="name">如何开发一个用户脚本系列——脚本1:视频跳过广告和 VIP 视频解析</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-06T13:55:55+08:00" content="2019-04-06">
+          04-06
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/06/一键激活window-office/" itemprop="url">
+              
+                <span itemprop="name">一键激活window & office</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-06T13:55:55+08:00" content="2019-04-06">
+          04-06
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/06/hello-world/" itemprop="url">
+              
+                <span itemprop="name">Hello World</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-06T10:20:56+08:00" content="2019-04-06">
+          04-06
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/03/极限与导数/" itemprop="url">
+              
+                <span itemprop="name">极限与导数</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-03T23:24:31+08:00" content="2019-04-03">
+          04-03
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/03/Linux文件系统结构/" itemprop="url">
+              
+                <span itemprop="name">Linux文件系统结构</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-03T19:41:25+08:00" content="2019-04-03">
+          04-03
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/04/03/啥是人工智能/" itemprop="url">
+              
+                <span itemprop="name">啥是人工智能</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated" datetime="2019-04-03T18:54:04+08:00" content="2019-04-03">
+          04-03
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+    </div>
   </div>
-</footer>
+  
+  
+  
 
-    <script>setLoadingBarProgress(80);</script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
-
-  <script>
-    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
-    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
-    var ALGOLIA_API_KEY = "";
-    var ALGOLIA_APP_ID = "";
-    var ALGOLIA_INDEX_NAME = "";
-    var AZURE_SERVICE_NAME = "";
-    var AZURE_INDEX_NAME = "";
-    var AZURE_QUERY_KEY = "";
-    var BAIDU_API_ID = "";
-    var SEARCH_SERVICE = "hexo" || "hexo";
-    var ROOT = "/"||"/";
-    if(!ROOT.endsWith('/'))ROOT += '/';
-  </script>
-
-
-
-  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      const $reveal = $('.reveal');
-      if ($reveal.length === 0) return;
-      const sr = ScrollReveal({ distance: 0 });
-      sr.reveal('.reveal');
-    });
-  </script>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
-  <script type="text/javascript">
-    $(function() {
-      Waves.attach('.flat-btn', ['waves-button']);
-      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
-      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
-      Waves.attach('.flat-box', ['waves-block']);
-      Waves.attach('.float-box', ['waves-block', 'waves-float']);
-      Waves.attach('.waves-image');
-      Waves.init();
-    });
-  </script>
-
-
-  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
-
-
-  <!-- fastclick -->
-  <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      FastClick.attach(document.body)
-    }, false)
-  </script>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/archives/2019/04/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2019/04/">1</a><span class="page-number current">2</span>
+  </nav>
 
 
 
 
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="LLQ">
+            
+              <p class="site-author-name" itemprop="name">LLQ</p>
+              <p class="site-description motion-element" itemprop="description">加油,少年</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LLQ</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
 
 
 
 
 
 
-  <script src="/js/app.js"></script>
-<script src="/js/search.js"></script>
 
+        
+      </div>
+    </footer>
 
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
 
+    
 
+  </div>
 
-<!-- 复制 -->
-<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-<script>
-  let COPY_SUCCESS = "复制成功";
-  let COPY_FAILURE = "复制失败";
-  /*页面载入完成后，创建复制按钮*/
-  !function (e, t, a) {
-    /* code */
-    var initCopyCode = function(){
-      var copyHtml = '';
-      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
-      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
-      copyHtml += '</button>';
-      $(".highlight .code pre").before(copyHtml);
-      var clipboard = new ClipboardJS('.btn-copy', {
-        target: function(trigger) {
-          return trigger.nextElementSibling;
-        }
-      });
+  
 
-      clipboard.on('success', function(e) {
-        //您可以加入成功提示
-        console.info('Action:', e.action);
-        console.info('Text:', e.text);
-        console.info('Trigger:', e.trigger);
-        success_prompt(COPY_SUCCESS);
-        e.clearSelection();
-      });
-      clipboard.on('error', function(e) {
-        //您可以加入失败提示
-        console.error('Action:', e.action);
-        console.error('Trigger:', e.trigger);
-        fail_prompt(COPY_FAILURE);
-      });
-    }
-    initCopyCode();
-
-  }(window, document);
-
-  /**
-   * 弹出式提示框，默认1.5秒自动消失
-   * @param message 提示信息
-   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
-   * @param time 消失时间
-   */
-  var prompt = function (message, style, time)
-  {
-      style = (style === undefined) ? 'alert-success' : style;
-      time = (time === undefined) ? 1500 : time*1000;
-      $('<div>')
-          .appendTo('body')
-          .addClass('alert ' + style)
-          .html(message)
-          .show()
-          .delay(time)
-          .fadeOut();
-  };
-
-  // 成功提示
-  var success_prompt = function(message, time)
-  {
-      prompt(message, 'alert-success', time);
-  };
-
-  // 失败提示
-  var fail_prompt = function(message, time)
-  {
-      prompt(message, 'alert-danger', time);
-  };
-
-  // 提醒
-  var warning_prompt = function(message, time)
-  {
-      prompt(message, 'alert-warning', time);
-  };
-
-  // 信息提示
-  var info_prompt = function(message, time)
-  {
-      prompt(message, 'alert-info', time);
-  };
-
-</script>
-
-
-<!-- fancybox -->
-<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-<script>
-  let LAZY_LOAD_IMAGE = "";
-  $(".article-entry").find("img").each(function () {
-      var element = document.createElement("a");
-      $(element).attr("data-fancybox", "gallery");
-      $(element).attr("href", $(this).attr("src"));
-      /* 图片采用懒加载处理时,
-       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
-       * 那么此处将原本的属性名src替换为对应属性名data-original,
-       * 修改如下
-       */
-       if (LAZY_LOAD_IMAGE) {
-         $(element).attr("href", $(this).attr("data-original"));
-       }
-      $(this).wrap(element);
-  });
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
 
 
 
-    <script>setLoadingBarProgress(100);</script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'MmISOJnFve0SNjE41MNyGuyT-gzGzoHsz',
+        appKey: 'LQzUzH6ixJqwfSeRRoS5qWFY',
+        placeholder: '随便说点什么吧',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
