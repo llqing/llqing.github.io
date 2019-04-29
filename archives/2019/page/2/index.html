@@ -1,1002 +1,1786 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html>
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform">
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Archives: 2019 | GIS小站</title>
+  
+  <meta name="keywords" content="GIS,Code">
   
   
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
 
+  
 
+  <meta name="HandheldFriendly" content="True">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!-- meta -->
+  
+  
+  <meta name="theme-color" content="#FFFFFF">
+  <meta name="msapplication-TileColor" content="#1BC3FB">
+  <meta name="msapplication-config" content="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/browserconfig.xml">
+  
 
+  <!-- link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.css">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.6.3/css/all.min.css">
+  
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/favicon-32x32.png">
+  <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/apple-touch-icon.png">
+  <link rel="mask-icon" color="#1BC3FB" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/safari-pinned-tab.svg">
+  <link rel="manifest" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicons/site.webmanifest">
+  
 
+  
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.jsdelivr.net/gh/xaoxuu/assets@master/favicon/favicon.ico">
+  
 
+  
+  <link rel="stylesheet" href="/style.css">
+  
 
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT">
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="加油,少年">
-<meta name="keywords" content="GIS,Code">
-<meta property="og:type" content="website">
-<meta property="og:title" content="GIS小站">
-<meta property="og:url" content="https://llqing.github.io/archives/2019/page/2/index.html">
-<meta property="og:site_name" content="GIS小站">
-<meta property="og:description" content="加油,少年">
-<meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="GIS小站">
-<meta name="twitter:description" content="加油,少年">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+  <script>
+    function setLoadingBarProgress(num) {
+      document.getElementById('loading-bar').style.width=num+"%";
     }
-  };
-</script>
+  </script>
 
-
-
-  <link rel="canonical" href="https://llqing.github.io/archives/2019/page/2/">
-
-
-
-
-
-  <title>归档 | GIS小站</title>
   
-
-
-
-
-
-
-
-
+  
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-archive">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">GIS小站</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle"></p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
+<body>
+    <div id="loading-bar-wrapper">
+  <div id="loading-bar" class="material"></div>
 </div>
 
-<nav class="site-nav">
+    <script>setLoadingBarProgress(20)</script>
+    <header class="l_header material">
+	<div class="wrapper">
+		<div class="nav-main container container--flex">
+      <a class="logo flat-box" href="/">
+        
+          GIS小站
+        
+      </a>
+			<div class="menu">
+				<ul class="h-list">
+          
+  					
+  						<li>
+								<a id="https:llqing.github.io" class="nav flat-box" href="https://llqing.github.io/">
+									<i class="fas fa-home fa-fw"></i>&nbsp;主页
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="home" class="nav flat-box" href="/">
+									<i class="fas fa-rss fa-fw"></i>&nbsp;博客
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="archives" class="nav flat-box" href="/archives/">
+									<i class="fas fa-archive fa-fw"></i>&nbsp;归档
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="friends" class="nav flat-box" href="/friends/">
+									<i class="fas fa-users fa-fw"></i>&nbsp;朋友
+								</a>
+							</li>
+      			
+  						<li>
+								<a id="about" class="nav flat-box" href="/about/">
+									<i class="fas fa-address-card fa-fw"></i>&nbsp;关于
+								</a>
+							</li>
+      			
+      		
+				</ul>
+			</div>
+
+			
+				<div class="m_search">
+					<form name="searchform" class="form u-search-form">
+						<input type="text" class="input u-search-input" placeholder="搜索">
+						<span class="icon"><i class="fas fa-search fa-fw"></i></span>
+					</form>
+				</div>
+			
+			<ul class="switcher h-list">
+				
+					<li class="s-search"><a class="fas fa-search fa-fw" href="javascript:void(0)"></a></li>
+				
+				<li class="s-menu"><a class="fas fa-bars fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
+
+		<div class="nav-sub container container--flex">
+			<a class="logo flat-box"></a>
+			<ul class="switcher h-list">
+				<li class="s-comment"><a class="flat-btn fas fa-comments fa-fw" href="javascript:void(0)"></a></li>
+				<li class="s-toc"><a class="flat-btn fas fa-list fa-fw" href="javascript:void(0)"></a></li>
+			</ul>
+		</div>
+	</div>
+</header>
+	<aside class="menu-phone">
+    <header>
+		<nav class="menu">
+      <ul>
+          
+              
+                  <li>
+										<a id="https:llqing.github.io" class="nav flat-box" href="https://llqing.github.io/">
+											<i class="fas fa-home fa-fw"></i>&nbsp;主页
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="home" class="nav flat-box" href="/">
+											<i class="fas fa-rss fa-fw"></i>&nbsp;博客
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="archives" class="nav flat-box" href="/archives/">
+											<i class="fas fa-archive fa-fw"></i>&nbsp;归档
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="friends" class="nav flat-box" href="/friends/">
+											<i class="fas fa-users fa-fw"></i>&nbsp;朋友
+										</a>
+                  </li>
+              
+                  <li>
+										<a id="about" class="nav flat-box" href="/about/">
+											<i class="fas fa-address-card fa-fw"></i>&nbsp;关于
+										</a>
+                  </li>
+              
+       
+      </ul>
+		</nav>
+    </header>
+	</aside>
+
+    <script>setLoadingBarProgress(40);</script>
+    <div class="l_body">
+    <div class='container clearfix'>
+        <div class='l_main'>
+            
+	
+    <script>
+        window.subData= { title:'year : 2019'}
+    </script>
+
+
+
+
+  <section class="post-list">
+      
+
+
+
+      
+
+      
+
+      
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/04/06/如何重装系统/">
+              
+                  如何重装系统
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="https://llqing.github.io">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-04-06
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/常用工具/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              常用工具
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本来我是不想写这篇文章的<del>因为懒</del>。</p>
+<p>但是有鉴于最近<strong>找我装系统的人太多</strong>了，再加上看见小白被无良商家骗于心不忍，就写篇教程吧-_-。</p>
+<p>我会把装机的主要几个阶段讲一下，但是任何跟着提示稍微理解下就可以无风险走的小步骤就不讲了。</p>
+<h2 id="装系统之前的准备"><a href="#装系统之前的准备" class="headerlink" title="装系统之前的准备"></a>装系统之前的准备</h2><p>首先要有个概念 <code>装系统是一件很简单的事</code>。电脑是一件给人用的 <strong>工具</strong> ，厂商没有理由设置门槛。装机是很简单的，<strong>但是最好不要随意重装系统，文件、软件重新安置太麻烦了</strong>。</p>
+<h2 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h2><ul>
+<li>物理准备<ul>
+<li>一只8G以上U盘</li>
+</ul>
+</li>
+<li>心理准备<ul>
+<li>一小时不到的时间</li>
+<li>一定的理解能力</li>
+</ul>
+</li>
+</ul>
+<h2 id="装机阶段"><a href="#装机阶段" class="headerlink" title="装机阶段"></a>装机阶段</h2><ol>
+<li><p>找到你所用电脑的<strong>主板</strong>厂商（<em>不需要拆机箱，直接用aida64或者别的软件看</em>）以及<strong>型号</strong>，如果是笔记本就直接使用<strong>电脑型号</strong>。</p>
+</li>
+<li><p>搜索 xxxx（<em>你的主板型号</em>） 进入bios的<strong>快捷键</strong>，并记住它。</p>
+</li>
+<li><p>在<a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">msdn 我告诉你</a>，这个网站上找到你要装的系统的 <strong>64位</strong> <strong>最新版本</strong>。</p>
+</li>
+<li><p>下载它。</p>
+</li>
+<li><p><strong>格式化</strong>U盘。</p>
+</li>
+<li><p>把下载的镜像文件用解压软件<strong>解压到U盘</strong>。</p>
+</li>
+<li><p><strong>备份c盘里的文件</strong>，其它盘看你想不想顺便格式化。</p>
+</li>
+<li><p>重启，并在开机的过程中<strong>狂按</strong>你记住的<strong>快捷键</strong>。</p>
+</li>
+<li><p>你将会进入一个蓝蓝白白的界面（bios），请动用你的英语水平进行翻译后使用。</p>
+</li>
+<li><p>你有两个选择</p>
+<ul>
+<li>UEFI路线<ol>
+<li>找到<strong>boot</strong>里面的<strong>UEFI</strong>设置为<strong>ENABLE</strong></li>
+<li><strong>重启</strong>，开机过程中<strong>狂按</strong>快捷键</li>
+<li>会看见弹出一个<strong>对话框</strong>，选择 <strong>WINDOWS</strong> <strong>BOOT</strong> <strong>MANAGER</strong></li>
+</ol>
+</li>
+<li>传统路线<ol>
+<li>找到<strong>boot</strong>里面的<strong>启动顺序</strong></li>
+<li>按照操作指示，把<strong>U盘</strong>放到最上面</li>
+<li>重启</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>在Windows安装指示界面中，按照指示</p>
+<p>操作</p>
+<p>进行操作</p>
+<ul>
+<li>分区格式化请<strong>谨慎</strong></li>
+</ul>
+</li>
+<li><p>开机后联网会<strong>自动</strong>安装驱动</p>
+</li>
+<li><p>在你的显卡的对应官网下载安装<strong>显卡驱动</strong></p>
+</li>
+<li><p>在设备管理器中查看有无设备上有<strong>感叹号标识</strong>，若有，去官网下载驱动。</p>
+</li>
+<li><p>是否安装</p>
+<p>360、驱动大师等软件自行判断</p>
+<ul>
+<li>我推荐ccleaner、火绒</li>
+</ul>
+</li>
+<li><p>重启进入bios，把设置还原为改动之前的</p>
+</li>
+</ol>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>简单的电脑维护其实很简单(<del>废话</del>)，只要不<strong>先入为主</strong>地认为自己不会，<strong>善用搜索引擎</strong>，不懂的东西<strong>稍微研究</strong>一下，一般都没有问题的。</p>
+<p><strong>如果看完本文仍觉得无从下手的话，可以联系QQ:244675854提供技术支持（收辛苦费20~30呦！），嘻嘻</strong></p>
+<blockquote>
+<p>我不对任何本文后果负责，还请读者们自行判断。</p>
+</blockquote>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/重装系统/"><i class="fas fa-hashtag fa-fw"></i>重装系统</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/04/06/视频跳过广告和VIP视频解析/">
+              
+                  如何开发一个用户脚本系列——脚本1:视频跳过广告和 VIP 视频解析
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="https://llqing.github.io">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-04-06
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/脚本/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              脚本
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>在这篇文章中，我们一起学习脚本 <strong>视频跳过广告和 VIP 视频解析</strong> 的开发。这也是本系列文章的最后一篇，希望完成这个系列的学习之后，你能够掌握编写脚本的方法。在正式开始之前，先说一下我认为开发脚本应该遵循的两个准则:</p>
+<ul>
+<li>功能实现。当你决定要开发一个脚本的时候，你肯定清楚你的脚本要实现什么功能，只有你的脚本实现了你所描述的功能，才会有更多的人安装使用，才会有更多的人给你好评；</li>
+<li>样式实现。什么叫样式实现？就是你在目标网站中添加的元素，要尽量与原网站的配色，样式相一致。这一项是非必须的，但我认为是非常重要的。你想想，如果原网站整体是蓝色，而你添加的按钮是红色，那该有多突兀，有多丑，虽然你的按钮确实突出了，但别人一看就是山寨，看着会很不舒服。而如果你的按钮也用它网站的颜色，这样就会跟原网站已有的元素契合，整体特别自然，做到以假乱真的效果。你的脚本让别人用的舒服，别人才更愿意给你好评。</li>
+</ul>
+<h3 id="需求分析"><a href="#需求分析" class="headerlink" title="需求分析"></a>需求分析</h3><p>我们在日常闲暇时间都会看点视频娱乐一下，而现在各大视频网站都推出了会员体系，一个视频网站的年费会员往往需要 200 块左右。然而我们想看的电视剧，电影，通常都不在一个平台上，导致我们就需要开通各个网站的会员。一个网站还好，但多个网站叠加起来，这笔钱也不少。所以有没有什么方法能够不需要开通各个网站的会员就可以看想看的视频呢？网上现在有一些免费公开的接口提供这种解析服务，只需要将视频播放页面的地址作为参数传给接口，接口就能完成解析，然后播放视频。但我们每次都复制视频播放地址给接口，也会很麻烦，这时候就可以写个脚本，在这些视频网站上添加一个按钮，当用户点击按钮的时候，自动获取到当前页面的播放地址，然后传给接口解析播放。HTML 中有个 <code>iframe</code> 标签，可以用来在当前页面中嵌入其他网页，所以使用 <code>iframe</code> 标签就能够实现在原视频网站站内解析播放视频，体验很好。在某视频网站上的效果如下图:<br><a href="https://mofiter-blog.oss-cn-hangzhou.aliyuncs.com/images/%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC6-1.png" target="_blank" rel="noopener"><img src="https://mofiter-blog.oss-cn-hangzhou.aliyuncs.com/images/%E5%A6%82%E4%BD%95%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC6-1.png" alt="img"></a></p>
+<h3 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h3><p>视频的解析都是解析接口实现的，脚本本身并不进行视频解析。所以解析接口是否稳定，是否有较高的成功率是很关键的。现在网上有很多解析接口，本文只提供 <a href="https://api.bbbbbb.me/" target="_blank" rel="noopener">思古解析</a>(用于站内解析)和 <a href="http://www.1717yun.com/" target="_blank" rel="noopener">1717yun解析</a>(用于站外解析)作为示例，同时由于视频网站很多，所以本文只选择 <a href="https://v.qq.com/" target="_blank" rel="noopener">腾讯视频</a> 作为运行脚本的示例。腾讯视频某一个视频的具体播放地址形式为 <code>https://v.qq.com/x/cover/xxx</code>，用 <code>@match</code> 匹配。在脚本编写过程中会用到 jQuery，使用 <code>@require</code> 引入 jQuery 库。站外解析需要在新 tab 页中打开链接，所以需要脚本管理器的 <code>GM_openInTab()</code> 函数，我们用 <code>@grant</code> 声明(为了兼容 Greasemonkey，我们还要声明它的函数 <code>GM.openInTab</code>)。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Copy// @require           https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js</span><br><span class="line">// @match             *://v.qq.com/x/cover/*</span><br><span class="line">// @grant             GM_openInTab</span><br><span class="line">// @grant             GM.openInTab</span><br></pre></td></tr></table></figure>
+<p>通过观察原网站可知，功能菜单都是在视频播放窗口下面，当鼠标放在功能按钮上面时，会显示功能面板，当鼠标移出功能按钮时，功能面板隐藏。所以我们将解析按钮加到功能菜单里面，将各个接口添加到功能面板，这样就可以选择不同的接口进行解析，同时使用原网站的样式风格。我们使用一个数组保存接口信息，这样方便遍历添加。由于安全问题，以 https 开头的视频网站内部不能使用 http 开头的接口，所以我们利用接口类型字段来标识接口是用来进行站内解析还是站外解析，如果是站内解析，它应该以 https 开头，如果接口以 http 开头，只能用来站外解析。我们希望将所有的接口以一个列表的形式呈现，所以我们把它放在一个 <code>&lt;ul&gt;</code> 标签里，然后每一个接口放在一个 <code>&lt;li&gt;</code> 标签里面。我们创建一个 <code>&lt;div&gt;</code> 标签，在里面添加一个 <code>&lt;iframe&gt;</code> 标签，用来加载解析结果的网页。在后面进行站内解析的时候，我们用这个 <code>&lt;div&gt;</code> 替换原视频网站播放窗口里面的内容。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Copyvar originalInterfaceList = [&#123;&quot;name&quot;:&quot;思古解析&quot;,&quot;type&quot;:&quot;站内&quot;,&quot;url&quot;:&quot;https://api.bbbbbb.me/jx/?url=&quot;&#125;,</span><br><span class="line">                             &#123;&quot;name&quot;:&quot;1717yun解析&quot;,&quot;type&quot;:&quot;站外&quot;,&quot;url&quot;:&quot;http://www.1717yun.com/jx/ty.php?url=&quot;&#125;];</span><br><span class="line">    var parseList = &quot;&lt;ul&gt;&quot;;</span><br><span class="line">    parseInterfaceList.forEach((item,index)=&gt;&#123;</span><br><span class="line">        parseList += &quot;&lt;li&gt;&quot; + item.name + &quot;(&quot; + item.type + &quot;)&lt;/li&gt;&quot;;</span><br><span class="line">    &#125;);</span><br><span class="line">    parseList += &quot;&lt;/ul&gt;&quot;;</span><br><span class="line">    var videoPlayer = $(&quot;&lt;div id=&apos;iframe-div&apos; style=&apos;width:100%;height:100%;z-index:2147483647;&apos;&gt;&lt;iframe id=&apos;iframe-player&apos; frameborder=&apos;0&apos; allowfullscreen=&apos;true&apos; width=&apos;100%&apos; height=&apos;100%&apos;&gt;&lt;/iframe&gt;&lt;/div&gt;&quot;);</span><br></pre></td></tr></table></figure>
+<p>准备好解析接口和要替换的内容之后，我们就要去原网站添加解析按钮，并添加点击事件，在点击事件里面，替换播放窗口的内容。通过 <code>location.href</code> 能拿到当前页面的 url，我们使用 <code>indexOf()</code> 方法查看 <code>v.qq.com</code> 的索引值，如果索引值大于 -1 说明当前匹配的网站是腾讯视频，我们再进行处理。我们使用 jQuery 获取到功能菜单的父元素，然后创建解析按钮元素，将解析按钮添加到功能菜单父元素。给解析按钮添加鼠标移入移出操作，来显示和隐藏接口列表的功能面板。在每一个解析接口上面添加点击操作，判断被点击的 <code>&lt;li&gt;</code> 标签的接口类型，如果是站内解析，则替换播放窗口的内容，如果是站外解析，则打开一个新的页面显示解析链接。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">Copyif(location.href.indexOf(&quot;v.qq.com&quot;) &gt; -1)&#123;</span><br><span class="line">        var action_wrap = $(&quot;.action_wrap&quot;);</span><br><span class="line">        var qq_jiexi = $(&quot;&lt;div id=&apos;qq-jiexi-btn&apos; class=&apos;action_item action_jiexi&apos; style=&apos;position:relative;&apos;&gt;&lt;a class=&apos;action_title fn-qq-jiexi-text&apos;&gt;&lt;span&gt;解析&lt;/span&gt;&lt;/a&gt;&lt;div class=&apos;mod_pop_action fn-qq-jiexi&apos; style=&apos;background-color:#fff;width:120px;left:-50px;text-align:center;line-height:25px;&apos;&gt;&quot; + parseList + &quot;&lt;/div&gt;&lt;/div&gt;&quot;);</span><br><span class="line">        action_wrap.append(qq_jiexi);</span><br><span class="line">        document.getElementById(&quot;qq-jiexi-btn&quot;).addEventListener(&quot;mouseover&quot;,()=&gt;&#123;</span><br><span class="line">            $(&quot;.action_jiexi&quot;).toggleClass(&quot;open&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">        document.getElementById(&quot;qq-jiexi-btn&quot;).addEventListener(&quot;mouseout&quot;,()=&gt;&#123;</span><br><span class="line">            $(&quot;.action_jiexi&quot;).toggleClass(&quot;open&quot;);</span><br><span class="line">        &#125;);</span><br><span class="line">        $(&quot;.fn-qq-jiexi li&quot;).each((index,item)=&gt;&#123;</span><br><span class="line">            item.addEventListener(&apos;click&apos;,()=&gt;&#123;</span><br><span class="line">                if(parseInterfaceList[index].type == &quot;站内&quot;)&#123;</span><br><span class="line">                    if(document.getElementById(&quot;iframe-player&quot;) == null)&#123;</span><br><span class="line">                        var txp_ad_skip_text = $(&quot;.txp_ad_inner .txp_ad_skip_text&quot;);</span><br><span class="line">                        if(txp_ad_skip_text.text() === &quot;VIP可关闭广告&quot;)&#123;</span><br><span class="line">                            txp_ad_skip_text.click();</span><br><span class="line">                            mod_player = $(&quot;#mod_player&quot;);</span><br><span class="line">                            mod_player.empty();</span><br><span class="line">                            mod_player.append(videoPlayer);</span><br><span class="line">                        &#125;else if(txp_ad_skip_text.text() === &quot;关闭广告&quot;)&#123;</span><br><span class="line">                            txp_ad_skip_text.click();</span><br><span class="line">                        &#125;else if(vipPage === true)&#123;</span><br><span class="line">                            var txp_btn_play = $(&quot;.txp_left_controls .txp_btn_play&quot;);</span><br><span class="line">                            if(txp_btn_play.attr(&quot;data-status&quot;) === &quot;pause&quot;)&#123;</span><br><span class="line">                                txp_btn_play.click();</span><br><span class="line">                            &#125;</span><br><span class="line">                            mod_player = $(&quot;#mod_player&quot;);</span><br><span class="line">                            mod_player.empty();</span><br><span class="line">                            mod_player.append(videoPlayer);</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                    innerParse(parseInterfaceList[index].url + location.href);</span><br><span class="line">                &#125;else&#123;</span><br><span class="line">                    GMopenInTab(parseInterfaceList[index].url + location.href,false);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;);</span><br><span class="line">&#125;</span><br><span class="line">function innerParse(url)&#123; // 站内解析</span><br><span class="line">    $(&quot;#iframe-player&quot;).attr(&quot;src&quot;,url);</span><br><span class="line">&#125;</span><br><span class="line">function GMopenInTab(url,open_in_background)&#123; //站外解析</span><br><span class="line">    if(typeof GM_openInTab === &quot;function&quot;)&#123; // Tampermonkey 和 Violentmonkey 调用 GM_openInTab</span><br><span class="line">        GM_openInTab(url,open_in_background);</span><br><span class="line">    &#125;else&#123; // Greasemonkey GM.openInTab</span><br><span class="line">        GM.openInTab(url,open_in_background);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>至此腾讯视频的解析差不多就完成了，还有些细节和用户体验方面的东西代码里面有写，这里就不再赘述了。其他视频网站的处理和腾讯视频的原理是一样的，都是添加解析按钮，然后给解析按钮添加点击事件，进行站内或站外解析。</p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/如何开发用户脚本/"><i class="fas fa-hashtag fa-fw"></i>如何开发用户脚本</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/04/06/一键激活window-office/">
+              
+                  一键激活window & office
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="https://llqing.github.io">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-04-06
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/常用工具/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              常用工具
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h1 id="一键激活windows-amp-office"><a href="#一键激活windows-amp-office" class="headerlink" title="一键激活windows&amp;office"></a>一键激活windows&amp;office</h1><p>自建的激活服务器，可以一键激活VOL版的window和office。</p>
+<p>推荐去<a href="https://msdn.itellyou.cn/" target="_blank" rel="noopener">https://msdn.itellyou.cn/</a> 下载安装正版的window和office。</p>
+<h2 id="单击下载-一键激活window-amp-office-bat"><a href="#单击下载-一键激活window-amp-office-bat" class="headerlink" title="单击下载 一键激活window&amp;office.bat"></a>单击下载 <a href="https://tohot.top/download/%E4%B8%80%E9%94%AE%E6%BF%80%E6%B4%BBwindow&amp;office.bat" target="_blank" rel="noopener">一键激活window&amp;office.bat</a></h2>
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/激活/"><i class="fas fa-hashtag fa-fw"></i>激活</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/04/06/hello-world/">
+              
+                  Hello World
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="https://llqing.github.io">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-04-06
+          </a>
+        </div>
+      
+      
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+      
+    </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/04/03/极限与导数/">
+              
+                  极限与导数
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="https://llqing.github.io">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-04-03
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/高数/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              高数
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>最近学了一些基础微积分，这里稍微记录一下。</p>
+<h2 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h2><p>极限可以当做是一个函数f(x)f(x)的xx无限趋近于某一个常数或无穷远处时，函数数值所逼近的一个值。 例如，对于函数<br>$$<br>f(x)=2xx+1f(x)=2xx+1<br>$$<br>，当xx趋近于无穷大时，f(x)f(x)无限趋近于22。我们将此记成这样子：</p>
+<p>$$<br>limx→∞f(x)=limx→∞2xx+1=2limx→∞f(x)=limx→∞2xx+1=2<br>$$</p>
+<p>求极限需要会一点代数技巧，我反正是老是求不出……</p>
+<p>极限有一些方便的性质：<br>当然，这些等式的左边都是存在极限的。</p>
+<p>$$<br>limx→ca⋅f(x)=a⋅limx→cf(x)limx→ca⋅f(x)=a⋅limx→cf(x)<br>$$</p>
+<p>对于两个函数f(x)f(x)和g(x)g(x)之间极限的关系：（当然f(x)f(x)和g(x)g(x)都要存在极限）</p>
+<p>$$<br>limx→c[f(x)+g(x)]=limx→cf(x)+limx→cg(x)limx→c[f(x)+g(x)]=limx→cf(x)+limx→cg(x)<br>$$</p>
+<p>$$<br>limx→c[f(x)−g(x)]=limx→cf(x)−limx→cg(x)limx→c[f(x)−g(x)]=limx→cf(x)−limx→cg(x)<br>$$</p>
+<p>$$<br>limx→cf(x)⋅g(x)=limx→cf(x)⋅limx→cg(x)limx→cf(x)⋅g(x)=limx→cf(x)⋅limx→cg(x)<br>$$</p>
+<p>$$<br>limx→cf(x)g(x)=limx→cf(x)limx→cg(x)(limx→cg(x)≠0)limx→cf(x)g(x)=limx→cf(x)limx→cg(x)(limx→cg(x)≠0)<br>$$<br>简而言之，极限这东西可以加减乘除。</p>
+<h2 id="导数"><a href="#导数" class="headerlink" title="导数"></a>导数</h2><p>对于函数f(x)f(x)而言，它在x0x0处的导数是这么定义的：</p>
+<p>$$<br>limΔx→0f(x0+Δx)−f(x0)ΔxlimΔx→0f(x0+Δx)−f(x0)Δx<br>$$</p>
+<p>从几何意义上讲，这个值可以视为是f(x)f(x)的图像在x0x0处的切线的斜率。 当然不是所有的函数都是可以求导数的，只有在那一段上是连续的函数时，才会有导数。<br>连续的函数f(x)f(x)在其定义域内的每一点上都可以计算导数，意味着每一个xx都会对应一个导数，这样就形成了一个函数关系。我们将这个函数叫作导函数，记作f′(x)f′(x)。</p>
+<p>如何求导函数呢？根据导数的定义，我们将x0x0换为xx，然后求极限就好了。然而说的轻巧，实际上很多都比较难以求出，因此早有先人为我们把各种导函数算好了。</p>
+<p>举一个典型的例子<br>$$<br>f(x)=x2f(x)=x2<br>$$<br>。按照求导数的方法：</p>
+<p>$$<br>f′(x)=limΔx<br>$$<br>$$<br>→0f(x+Δx)−f(x)Δx=limΔx<br>$$<br>$$<br>→0(x+Δx)2−x2Δx=limΔx<br>$$<br>$$<br>→0Δx2+2xΔxΔx=limΔx<br>$$<br>$$<br>→0(Δx+2x)=2xf′(x)=limΔx<br>$$<br>$$<br>→0f(x+Δx)−f(x)Δx=limΔx<br>$$<br>$$<br>→0(x+Δx)2−x2Δx=limΔx<br>$$<br>$$<br>→0Δx2+2xΔxΔx=limΔx<br>$$<br>$$<br>→0(Δx+2x)=2x<br>$$</p>
+<p>事实上，对于幂函数<br>$$<br>f(x)=xαf(x)=xα，其导函数为，其导函数为<br>$$<br>，其导函数为<br>$$<br>f′(x)=αxα−1f′(x)=αxα−1<br>$$<br>。</p>
+<p>导数与导数之间存在运算关系，有了这些运算关系，我们就可以方便地进行求导。<br>类似于线性的性质：<br>$$<br>[a⋅f(x)+b⋅g(x)]′=a⋅f′(x)+b⋅g′(x)[a⋅f(x)+b⋅g(x)]′=a⋅f′(x)+b⋅g′(x)<br>$$</p>
+<p>两个导数相乘：<br>$$<br>[f(x)g(x)]′=f′(x)g(x)+f(x)g′(x)[f(x)g(x)]′=f′(x)g(x)+f(x)g′(x)<br>$$</p>
+<p>两个导数相除：<br>$$<br>[f(x)g(x)]′=f′(x)g(x)−f(x)g′(x)g2(x)(g(x)≠0)[f(x)g(x)]′=f′(x)g(x)−f(x)g′(x)g2(x)(g(x)≠0)<br>$$</p>
+<p>复合函数：<br>$$<br>[f(g(x))]′=f′(g(x))⋅g′(x)[f(g(x))]′=f′(g(x))⋅g′(x)<br>$$</p>
+<p>一些基本函数的导函数就放这里了，当我们要求一个特定函数的导函数时，可以利用上面的规则，然后根据导函数表来计算。下面只有xx是变量。<br>$$<br>c′=0c′=0<br>$$</p>
+<p>$$<br>x′=1x′=1<br>$$</p>
+<p>$$<br>(xα)′=αxα−1(xα)′=αxα−1<br>$$</p>
+<p>$$<br>(ex)′=ex(ex)′=ex<br>$$</p>
+<p>$$<br>(ax)′=axlna(ax)′=axln⁡a<br>$$</p>
+<p>$$<br>(lnx)′=1x(ln⁡x)′=1x<br>$$</p>
+<p>$$<br>(logax)′=1xlna(loga⁡x)′=1xln⁡a<br>$$</p>
+<p>$$<br>sin′x=cosxsin′⁡x=cos⁡x<br>$$</p>
+<p>$$<br>cos′x=−sinxcos′⁡x=−sin⁡x<br>$$</p>
+<p>$$<br>tan′x=1cos2xtan′⁡x=1cos2⁡x<br>$$</p>
+<p>$$<br>cot′x=−1sin2xcot′⁡x=−1sin2⁡x<br>$$</p>
+<h2 id="对数求导法"><a href="#对数求导法" class="headerlink" title="对数求导法"></a>对数求导法</h2><p>上面的求导公式已经能够应对大部分基本函数的求导了，但是对于下面的函数：<br>$$<br>f(x)=x1/xf(x)=x1/x<br>$$<br>该如何求导呢？<br>这就要用到对数来进行求导。</p>
+<p>我们知道，对于一个函数f(x)f(x)：<br>$$<br>[lnf(x)]′=ln′f(x)⋅f′(x)[ln⁡f(x)]′=ln′⁡f(x)⋅f′(x)<br>$$</p>
+<p>换言之：<br>$$<br>f′(x)=[lnf(x)]′ln′f(x)(1)(1)f′(x)=[ln⁡f(x)]′ln′⁡f(x)<br>$$<br>利用这一点，我们就可以对<br>$$<br>f(x)=x1/xf(x)=x1/x<br>$$<br>求导。 首先，为了方便我们设：<br>$$<br>y=x1/xy=x1/x<br>$$<br>由于两者相等，所以两者的对数也应相等：<br>$$<br>lny=lnx1/x=1xlnxln⁡y=ln⁡x1/x=1xln⁡x<br>$$</p>
+<p>将两边对xx求导。注意按照(1)(1)式，左式需要乘上y′y′两者才能相等。<br>$$<br>y′y=1−lnxx2y′y=1−ln⁡xx2<br>$$</p>
+<p>于是我们可以得到：<br>$$<br>y′=1−lnxx2y=1−lnxx2x1/x=f′(x)y′=1−ln⁡xx2y=1−ln⁡xx2x1/x=f′(x)<br>$$</p>
+<p>这样我们就完成了求导。<br>既然都对这个函数求过导了，我们来验证一下它的一个性质。<br>将ee代入导函数：<br>$$<br>f′(e)=1−lnee2e1/e=1−1e2=0f′(e)=1−ln⁡ee2e1/e=1−1e2=0<br>$$</p>
+<p>因此我们发现<br>$$<br>x=ex=e<br>$$<br>是这个函数的极值点。</p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/极限/"><i class="fas fa-hashtag fa-fw"></i>极限</a>
+        
+          <a href="/tags/导数/"><i class="fas fa-hashtag fa-fw"></i>导数</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/04/03/Linux文件系统结构/">
+              
+                  Linux文件系统结构
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="https://llqing.github.io">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-04-03
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/Linux/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              Linux
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h3 id="Linux-文件系统"><a href="#Linux-文件系统" class="headerlink" title="Linux 文件系统"></a>Linux 文件系统</h3><p>在 Linux 操作系统, 我们是看不到这些驱动器盘符, 而是文件夹(目录):</p>
+<p><img src="https://ws3.sinaimg.cn/large/005BYqpggy1g1poi8yj5tj30ku07ndhn.jpg" alt="Linux文件目录示意图"><br>​                                <strong><em>Linux文件目录示意图</em></strong></p>
+<p>Ubuntu 没有盘符概念, 只有一个根目录 <strong>/</strong>, 所有文件都在它下面.</p>
+<p><img src="https://ws3.sinaimg.cn/large/005BYqpgly1g1poizwgvjj30ip0bfaa7.jpg" alt="Linux 目录结构示意图"></p>
+<p>​                                <strong><em>Linux 目录结构示意图</em></strong></p>
+<h3 id="Linux-主要目录速查表"><a href="#Linux-主要目录速查表" class="headerlink" title="Linux 主要目录速查表"></a>Linux 主要目录速查表</h3><ul>
+<li><p>/：根目录，</p>
+<p>一般根目录下只存放目录</p>
+<p>，在 linux 下有且只有一个根目录，所有的东西都是从这里开始</p>
+<ul>
+<li>当在终端里输入 <code>/home</code>，其实是在告诉电脑，先从 <code>/</code>（根目录）开始，再进入到 <code>home</code> 目录</li>
+</ul>
+</li>
+<li><p>/bin、/usr/bin：可执行二进制文件的目录，如常用的命令 ls、tar、mv、cat 等</p>
+</li>
+<li><p>/boot：放置 linux 系统启动时用到的一些文件，如 linux 的内核文件：<code>/boot/vmlinuz</code>，系统引导管理器：<code>/boot/grub</code></p>
+</li>
+<li><p>/dev：存放linux系统下的设备文件，访问该目录下某个文件，相当于访问某个设备，常用的是挂载光驱<code>mount /dev/cdrom /mnt</code></p>
+</li>
+<li><p>/etc：系统配置文件存放的目录，不建议在此目录下存放可执行文件，重要的配置文件有</p>
+<ul>
+<li>/etc/inittab</li>
+<li>/etc/fstab</li>
+<li>/etc/init.d</li>
+<li>/etc/X11</li>
+<li>/etc/sysconfig</li>
+<li>/etc/xinetd.d</li>
+</ul>
+</li>
+<li><p>/home：系统默认的用户家目录，新增用户账号时，用户的家目录都存放在此目录下</p>
+<ul>
+<li><code>~</code> 表示当前用户的家目录</li>
+<li><code>~edu</code> 表示用户 <code>edu</code> 的家目录</li>
+</ul>
+</li>
+<li><p>/lib、/usr/lib、/usr/local/lib：系统使用的函数库的目录，程序在执行过程中，需要调用一些额外的参数时需要函数库的协助</p>
+</li>
+<li><p>/lost+fount：系统异常产生错误时，会将一些遗失的片段放置于此目录下</p>
+</li>
+<li><p>/mnt: /media：光盘默认挂载点，通常光盘挂载于 /mnt/cdrom 下，也不一定，可以选择任意位置进行挂载</p>
+</li>
+<li><p>/opt：给主机额外安装软件所摆放的目录</p>
+</li>
+<li><p>/proc：此目录的数据都在内存中，如系统核心，外部设备，网络状态，由于数据都存放于内存中，所以不占用磁盘空间，比较重要的文件有：/proc/cpuinfo、/proc/interrupts、/proc/dma、/proc/ioports、/proc/net/* 等</p>
+</li>
+<li><p>/root：系统管理员root的家目录</p>
+</li>
+<li><p>/sbin、/usr/sbin、/usr/local/sbin：放置系统管理员使用的可执行命令，如 fdisk、shutdown、mount 等。与 /bin 不同的是，这几个目录是给系统管理员 root 使用的命令，一般用户只能”查看”而不能设置和使用</p>
+</li>
+<li><p>/tmp：一般用户或正在执行的程序临时存放文件的目录，任何人都可以访问，重要数据不可放置在此目录下</p>
+</li>
+<li><p>/srv：服务启动之后需要访问的数据目录，如 www 服务需要访问的网页数据存放在 /srv/www 内</p>
+</li>
+<li><p>/usr：应用程序存放目录</p>
+<ul>
+<li>/usr/bin：存放应用程序可执行二进制文件的目录</li>
+<li>/usr/share：存放共享数据</li>
+<li>/usr/lib：存放不能直接运行的，却是许多程序运行所必需的一些函数库文件</li>
+<li>/usr/local：存放软件升级包</li>
+<li>/usr/share/doc：系统说明文件存放目录</li>
+<li>/usr/share/man：程序说明文件存放目录</li>
+</ul>
+</li>
+<li><p>/var：放置系统执行过程中经常变化的文件</p>
+<ul>
+<li>/var/log：随时更改的日志文件</li>
+<li>/var/spool/mail：邮件存放的目录</li>
+<li>/var/run：程序或服务启动后，其 PID 存放在该目录下</li>
+</ul>
+</li>
+</ul>
+<p><strong>重点:</strong> <strong>/home/用户名</strong> 是用户的家目录.</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ol>
+<li>Linux 和 Windows 文件系统的区别<br> 1.1 Linux 文件系统只有一个根目录(<strong>/</strong>)<br> 1.2 Windows 文件系统会有可能会有多个盘符(例如C、D、E…)</li>
+<li><strong>/home/用户名</strong> 是用户的家目录, 是经常使用的目录.</li>
+</ol>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/linux/"><i class="fas fa-hashtag fa-fw"></i>linux</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/04/03/啥是人工智能/">
+              
+                  啥是人工智能
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="https://llqing.github.io">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-04-03
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/AI/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              AI
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZukIrsq7161xeGvkFcNun46boShNiatq5JZvqdjX5XjVlR6ToY48GAxQ/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"></p>
+<blockquote>
+<p>作者：武博士、宋知达、袁雪瑶、聂文韬</p>
+</blockquote>
+<p>本节我们会以生动有趣的漫画来介绍关于人工智能（AI）相关的故事，你将会学习到： <strong>人工智能的基本概念</strong></p>
+<p><strong>1.1 啥是人工智能</strong><br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZWzSukZqmRVrdvVemO9siatS9tjtGR81eAGYv7NWSyWITibOOrTf2xK9w/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"><br>当有人问我，Dr.Wu 你的研究方向是什么？我回答：人工智能。 接着大约会得到以下四种问题： </p>
+<p><strong>哇，好酷！是不是很难呢？</strong> </p>
+<p><strong>是不是制造机器人帮助我们呢？</strong> </p>
+<p><strong>AI和人工智能有什么区别？</strong> </p>
+<p><strong>究竟啥是人工之智能？</strong> </p>
+<p>接下来，我会带大家一一解惑。</p>
+<p><strong>1.1.1 人的智慧和人工智能</strong></p>
+<p>究竟什么是人工智能，什么是AI，接下来，由我为大家解答。 媒体上几乎每天都有AI和人工智能的词汇，总给人一种深奥神秘的感觉。人工智能顾名思义就是人类制造的智慧，英文叫Artificial Intelligence（AI），所以人工智能=AI。 </p>
+<p>那么问题又来了，智慧究竟是什么？我们要以何种方式去制造智慧？要回答这个问题，就必须从人与人造物的 区别和人的智慧说起。 </p>
+<p>对于人工智能的研究人员来说，目标并不是研究人类智慧的来源，而是以工程技术手段制造出类似人类智慧的 产品。  </p>
+<p>人类和人工智能最大的差异是，肉体的有无。<br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZSbYzsu8L847X5pXuYGvEiaVvNfatNdYJBwXpzhE2JG29x9wSLnVpRuw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"><br>人类可以通过身体获得外界资讯。透过感觉器官，我们可以感觉到声音、外观、触感、气味等，让我们觉得舒服或者讨厌，进而产生感情。 </p>
+<p>不过人工智能并没有人类的身体，因此无法像人类一样通过肉体感觉器官来积累感觉经验，也无法借此获得知识。 </p>
+<p>人工智能必须依赖人类，将人类通过鼻子、眼睛、嘴巴、皮肤…获得的外界资讯，以某种形式”输入“到人工智能，人工智能才可以加工和处理这些信息。 具体输入方式我们未来讨论。</p>
+<p><strong>1.1.2 图灵测试：哪个一边是人？</strong></p>
+<p>英国数学家，Dr.Wu 认为二十世纪最聪明的人三个人（爱因斯坦、图灵、冯诺依曼）之一，艾伦.图灵（Alan Turing：1912-1954）定义了一种方法，来判断人工智能是否成功，这种方法是：和自己对话的对象是人类还是人工智能？ </p>
+<p>这种方法就是大名鼎鼎的图灵测试。<br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZZhXpn1212YWcQFkmNibWOfmjIC6gvgJPcb5TL2ykLTs2ykXX2CwRnAw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"><br>只要三成以上的研究员将人工智能误以为是人类，就算通过图灵测试。 </p>
+<p>但是由于计算机很难做到与人类接近的对话，所以很长一段时间都没有任何人工智能通过图灵测试。反而人类在不断学习计算机语言，这就是大量程序员的工作，和计算机对话。 </p>
+<p>图灵测试又叫做模仿游戏‘Imitation Game’，一部描绘图灵一生的自传电影一样也叫模仿游戏，我觉得很好看哦。 Imitation 即为模仿。 </p>
+<p>除了这部电影之外，《黑客帝国》、《终结者》、《全面进化》等描述人工智能的电影中，大多提到人工智能会威胁到人类生活，而不是给人类带来幸福，这让很多人谈到人工智能都会感到恐慌。 </p>
+<p>但是，事实上，目前还没有做出公认通过图灵测试的人工智能。所以大家也不必恐慌哦。</p>
+<p><strong>1.1.3 人工智能会思考吗？</strong></p>
+<p>“思考”，大多数人会想到计算，应该是人工智能的专长。但事实上，要想像人类一样思考其实是一件非常困难的事情。 </p>
+<p>人工智能需要以各种输入数据案例为基础，通过这些数据案例获取经验和知识，然后进行预测和判断。如果输入的案例太少，就无法做出判断。 情况相反，人类即使遇到过去未曾遇到的状况，也可以以弹性的方式面对各种状况。 </p>
+<p>例如，人工智能需要看过上万张猫狗的图片才可以相对准确的识别猫狗图片，但是人类3岁左右的小朋友，只需要见过几次，就可以识别。差距还是巨大的。<br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZTfZic3rXM0eic33pYlPM6y45wP2gefKMfsysGPAgLShCPIOeqnIKgGGg/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"><br>但是，人类对于人类来说很难解决的问题，人工智能却能够迅速解决。例如：训练好的人工智能在图片识别过程中，效率远远高于人类，给他们10万张图片，他们会很快的为人类做好分类工作，无怨无悔，而且在工作过程中，人工智能本来的”智慧”也在提升。<br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/ic1ub2G0IWkFlKxdD4FllSbibV5FvmSBAZic88PlEGsls1K27E2XaOIaylGaP5yicPeRlOIvPtQkwVQmrjFd0lyXbA/640?wx_fmt=jpeg&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1" alt="img"><br>我们将在未来的章节提到，目前具有一定“智能”的AI，可以用什么样的方式来解决什么样的问题。明白人工智能的擅长之处与不擅长之处，是未来社会我们能够幸福生活的关键。</p>
+<p>（未完待续…）</p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/AI/"><i class="fas fa-hashtag fa-fw"></i>AI</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/03/31/15行python代码搞定网易云热门歌单/">
+              
+                  零基础15行python代码搞定网易云热门歌单
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="https://llqing.github.io">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-03-31
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/Python/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              Python
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <blockquote>
+<p>健身、吃饭、敲代码；等车、撸猫、下午茶……若能佐以合适的音乐当“配餐”，总是惬意非常。本文就将带你爬一爬网易云的那些热门歌单！</p>
+</blockquote>
+<p>心情好或心情坏，点一首歌抚慰你受伤或躁动的心灵——下面教你用 15 行代码搞定热门歌单！</p>
+<p>本文使用的是 Selenium 模块，它是一个自动化测试工具，利用它我们可以驱动浏览器执行特定的动作，如点击、下拉等操作，对于一些 JavaScript 渲染的页面来说，此种抓取方式非常有效。</p>
+<p>采用了 Chrome 浏览器配合 Selenium 工作，本文的 Python 版本是 3.7.2。</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a><strong>准备工作</strong></h1><ol>
+<li>若你的环境中没有 Selenium 模块，直接使用 pip 安装即可：</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install selenium</span><br></pre></td></tr></table></figure>
+<ol start="2">
+<li><p>打开谷歌浏览器，检查Chrome的版本：在浏览器地址中输入 chrome://settings/help 回车即可看到：</p>
+<p><img src="https://img.vim-cn.com/ac/4ed0c338deb650848bbc8e56ea2c6147b1bf17.png" alt="02.png"></p>
+</li>
+<li><p>打开 ChromeDriver 的官方网站（<a href="https://sites.google.com/a/chromium.org/chromedriver/downloads），寻找与你当前浏览器版本相对应的" target="_blank" rel="noopener">https://sites.google.com/a/chromium.org/chromedriver/downloads），寻找与你当前浏览器版本相对应的</a> ChromeDriver 下载：</p>
+<p><img src="https://img.vim-cn.com/05/758873fffa1036762e388ecff28eead7b0be1f.png" alt="03.png"></p>
+</li>
+<li><p>选择你自己的操作系统类型进行下载即可：</p>
+<p><img src="https://img.vim-cn.com/d1/7821da501ffe292bc5e376857e402582d194e0.png" alt="04.png"></p>
+</li>
+<li><p>以 Windows 为例，下载结束后，将 ChromeDriver 放置在 Python 安装目录下的 Scripts 文件夹即可：</p>
+<p><img src="https://img.vim-cn.com/1b/5ca9231635c8c93f78b4c1a051573209cefdf6.png" alt="05.png"></p>
+</li>
+</ol>
+<p>准备工作完成，代码写起来吧~</p>
+<h1 id="迷你爬虫的实现"><a href="#迷你爬虫的实现" class="headerlink" title="迷你爬虫的实现"></a><strong>迷你爬虫的实现</strong></h1><p>我们这次的目标是爬取热门歌单，比如网易云音乐中播放量大于 1000万 的歌单信息（歌单名称、链接）。</p>
+<ol>
+<li><p>先来打开网易云的歌单第一页：    </p>
+<p><a href="https://music.163.com/#/discover/playlist/" target="_blank" rel="noopener">https://music.163.com/#/discover/playlist/</a></p>
+</li>
+<li><p>使用 Chrome 的开发者工具 <f12> 进行分析：</f12></p>
+<p><img src="https://img.vim-cn.com/f8/79c7e9ee5bb3083922c40acec3cf36cf3818ad.png" alt="02-2.png"></p>
+</li>
+</ol>
+<p>我们想要拿的信息全在这里：</p>
+<p>msk，封面 [mask]：有歌单的名称及链接</p>
+<p>nb，播放数 [number broadcast]：135万</p>
+<ol start="3">
+<li><p>我们还需要遍历所有的页，使用工具继续分析，找到“下一页”的 URL：</p>
+<p><img src="https://img.vim-cn.com/d3/6bef2ed87892bb9d6d86935cc23cab4afb5c87.png" alt="02-3.png"></p>
+</li>
+<li><p>切换至最后一页，拿到最后一页的 URL：</p>
+<p><img src="https://img.vim-cn.com/1f/9ec15c2bd641cce2ea5d1dbba8a3c8de3885c7.png" alt="02-4.png"></p>
+</li>
+<li><p>等我们爬取完所有符合的歌单信息后，将其保存在本地；</p>
+</li>
+<li><p>全部工作结束，最后再通过下面的伪代码回顾下整体思路：</p>
+<p><img src="https://img.vim-cn.com/3f/b955a96ab865b20641f7498479a9a2441e3707.png" alt="02-6.png"></p>
+</li>
+<li><p>爬取的效果如下：</p>
+<p><img src="https://img.vim-cn.com/46/826692648fd04b345d5754c9125e5f1ec9fe60.png" alt="02-7.png"></p>
+</li>
+</ol>
+<p>另附源码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> selenium <span class="keyword">import</span> webdriver</span><br><span class="line"></span><br><span class="line"><span class="comment"># 网易云音乐歌单列表第一页地址</span></span><br><span class="line">url = <span class="string">'https://music.163.com/#/discover/playlist/?order=hot&amp;cat=%E5%85%A8%E9%83%A8&amp;limit=35&amp;offset=0'</span></span><br><span class="line"><span class="comment"># 用Chrome接口创建一个Selenium的WebDriver</span></span><br><span class="line">browser = webdriver.Chrome()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 逐页解析，直至歌单列表的最后一页</span></span><br><span class="line"><span class="keyword">while</span> url != <span class="string">'javacript:void(0)'</span>:</span><br><span class="line">    <span class="comment"># 用WebDriver加载页面</span></span><br><span class="line">    browser.get(url)</span><br><span class="line">    <span class="comment"># 切换至内容的iframe</span></span><br><span class="line">    browser.switch_to.frame(<span class="string">"contentFrame"</span>)</span><br><span class="line">    <span class="comment"># 定位歌单标签</span></span><br><span class="line">    data = browser.find_element_by_id(<span class="string">"m-pl-container"</span>).find_elements_by_tag_name(<span class="string">"li"</span>)</span><br><span class="line">    <span class="comment"># 解析当前页中所有的歌单详情</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(data)):</span><br><span class="line">        <span class="comment"># 获取歌单的播放量</span></span><br><span class="line">        num = data[i].find_element_by_class_name(<span class="string">"nb"</span>).text</span><br><span class="line">        <span class="keyword">if</span> <span class="string">'万'</span> <span class="keyword">in</span> num <span class="keyword">and</span> int(num.split(<span class="string">'万'</span>)[<span class="number">0</span>]) &gt; <span class="number">1000</span>:</span><br><span class="line">            <span class="comment"># 获取播放量大于1000万的歌单封面</span></span><br><span class="line">            msk = data[i].find_element_by_css_selector(<span class="string">"a.msk"</span>)</span><br><span class="line">            <span class="comment"># 把歌单封面中的标题、链接以及播放量，存储在TXT文件中</span></span><br><span class="line">            <span class="keyword">with</span> open(<span class="string">"163playlist.txt"</span>, <span class="string">'a'</span>, encoding=<span class="string">'utf-8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">                f.write(<span class="string">' '</span>.join([msk.get_attribute(<span class="string">'title'</span>), num, msk.get_attribute(<span class="string">"href"</span>)]) + <span class="string">'\n'</span> + <span class="string">'='</span> * <span class="number">50</span> + <span class="string">'\n'</span>)</span><br><span class="line">    <span class="comment"># 定位'下一页'的URL</span></span><br><span class="line">    url = browser.find_element_by_css_selector(<span class="string">"a.zbtn.znxt"</span>).get_attribute(<span class="string">"href"</span>) </span><br><span class="line">    </span><br><span class="line"><span class="comment"># 结束调用</span></span><br><span class="line">browser.close()</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/music/"><i class="fas fa-hashtag fa-fw"></i>music</a>
+        
+          <a href="/tags/网易/"><i class="fas fa-hashtag fa-fw"></i>网易</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/03/30/LaTeX初识/">
+              
+                  LaTeX初识
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="https://llqing.github.io">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-03-30
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/LaTeX/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              LaTeX
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>闲来无事，想起了自己当年的毕业论文，想拿来再次修改修改，看到网上很多专业人士都是使用LaTeX来写论文，似乎很流弊的样子，天呐，想想当年我还是使用的Word，就修改格式都用了大半天的时间，太可怕了，难道这就是专业人士和我们这些业余的区别！老衲怎能轻言放弃，于是乎就一顿Google，百度，看看是何方技能！传播与众人</p>
+<h1 id="LaTeX简介"><a href="#LaTeX简介" class="headerlink" title="LaTeX简介"></a>LaTeX简介</h1><h2 id="什么是TeX"><a href="#什么是TeX" class="headerlink" title="什么是TeX"></a>什么是TeX</h2><p>电子排版系统的出现给印刷出版业带来了一场革命，利用电子计算机及各种辅助设备，可以完成从文稿、图表的录入、编辑、修改、组版，直至得到各种不同 用途、不同质量的输出结果。利用电子排版系统，可以减轻劳动强度，缩短出版周期。</p>
+<p>目前世界上有许多电子排版系统。这些系统各有特点，也各有自己的适用范围。TeX 就是一种优秀的电子排版系统。</p>
+<p>TeX 提供了一套功能强大并且十分灵活的排版语言，它多达 900 多条指令，并且 TeX 有宏功能，用户可以不断地定义自己适用的新命令来扩展 TeX 系统的功能。许多人利用 TeX 提供的宏定义功能对 TeX 进行了二次开发，其中比较著名的有美国数学学会推荐的非常适合于数学家使用的 AMS-TeX 以及适合于一般文章、报告、书籍的 LaTeX 系统。</p>
+<p>TeX 系统是公认的数学公式排得最好的系统。<a href="http://www.ams.org/" target="_blank" rel="noopener">美国数学学会 （AMS）</a> 鼓励数学家们使用 TeX 系统向它的期刊投稿。世界上许多一流的出版社如 Kluwer、Addison-Wesley、牛津大学出版社等也利用 TeX 系统出版书籍和期刊。</p>
+<p>大部分的 TeX 系统都是免费的。Knuth 教授还公开了他的全部源程序。TeX 系统目前已经在数百种计算机系统上得到实现。TeX 系统的排版结果 DVI（DeVice Independent）文件与输出设备无关。DVI 文件可以显示、打印、照排，几乎可以在所有的输出设备上输出。TeX 排版源文件及结果在各种计算机系统上互相兼容。</p>
+<h2 id="TeX-的历史"><a href="#TeX-的历史" class="headerlink" title="TeX 的历史"></a>TeX 的历史</h2><p>七十年代末，<a href="http://www-cs-faculty.stanford.edu/~knuth/" target="_blank" rel="noopener">Donald E. Knuth（高德纳）</a> 在看到其多卷巨著“The Art of Computer Programming”第二卷的校样时，对由计算机排版的校样的低质量感到无法忍受。因此决定自己来开发一个高质量的计算机排版系统，这样就有了 TeX 。</p>
+<p>TeX 的名字是由大写的希腊字母“tec”(tau, epsilon, chi)组成。在希腊语中这个词的意思是“科技”和“艺术”，这也解释了它的发音。“T”和“E”就像在“technology”中的发音一样，而“x” 的发音类似于苏格兰语单词“loch”或德语单词“ach”中的“ch”，也类似于西班牙语中的“j”或俄语中的“kh”。TeX 标志为 TEX ，这三个字母相靠得很近，而且中间的那个 E 有点儿下沉。但在无格式文件中，就写为 TeX 。</p>
+<p>TeX 的第一版于 1978 年面世。在经过了不断的改进后，1982 年版的 TeX 是一个十分稳定的版本。从此以后，TeX 没有较大的变动，只有很少部分的改进和错误修正。现在几乎所有的操作系统平台下，都有相应的 TeX 软件，而且用它们排版同一个文件得到的输出结果是相同的。TeX 目前的版本是 3.141592，很接近圆周率π。每有一新的版本，就会加上一个π的小数点后的数。所以我们已经知道下一版本的 TeX 是 3.1415926，最终将收敛到π。这也代表了 TeX 不断追求完美的理想。</p>
+<p>TeX 的源程序是用 Pascal 写成的，原因是 Knuth 希望 TeX 尽可能方便地移植到其它的操作系统中去。当时 Pascal 是最适合于这一要求的编程语言。这也使得 TeX 现在已经在几乎所有的计算机系统中得到实现。</p>
+<p>TeX 的另一个重要的特征就是它的输出是与设备无关的。TeX 的输出文件称为 DVI 文件，即是“Device Independent”。一旦 TeX 处理了你的文件，你所得到的 DVI 文件就可以被送到任何输出设备如打印机，屏幕等并且总会得到相同的结果，而这与这些输出设备的限制没有任何关系。这说明 DVI 文件中所有的元素，从页面设置到文本中字符的位置都被固定，不能更改。</p>
+<p>TeX 现在已经被它的开发者 Knuth 所“冰封”(frozen)，新版本的 TeX 只有少许改进和错误修正。这些变动必须保证不会使得即使是写于 1982 年的 TeX 文档无法编译，TeX 自带了测试文件来确保这一点。如果测试文件文件的输出结果不同于预定的结果，那么这个排版系统就不能够被称为“TeX”。所以像一些对 TeX 有很大改进的软件，如“Omega”等将不能被称为“TeX”，尽管它也是基于“TeX”的。</p>
+<p>在设计 TeX 的同时，Knuth 还设计了一个字体生成程序 MetaFont。MetaFont 是独立于 TeX 之外的，但又与 TeX 有着非常密切的联系。MetaFont 生成的只是位图字体，当对字体进行缩放时的效果不佳。对于如何得到像 Type1 字体一样的轮廓字体，现在还在研究之中。与 TeX 一样，Knuth 也“冰封”了 MetaFont 。所以 MetaFont 的进一步的改进和发展将会由其他人来完成，而且名字也将不再是 MetaFont 。</p>
+<h2 id="TeX-的未来"><a href="#TeX-的未来" class="headerlink" title="TeX 的未来"></a>TeX 的未来</h2><p>虽然 TeX 在过去的二十多年中没有大的变化，但这并不意味着 TeX 是一个僵化的系统。恰恰相反，TeX 开放的设计使得它能够很容易的适应新的要求。例如，在没有改动内核的情形下，TeX 很容易地实现了对 PostScript 字体和外部图形的支持。TeX 还是第一个能够自动生成 HTML 的字处理软件。最近，TeX 又开始增加了在不借助其它工具（如 Adobe Distiller）的条件下生成 PDF 的扩展功能。下面列出的几个项目都是正在进行中，对 TeX 的功能进行了扩展。</p>
+<h3 id="PDFTeX"><a href="#PDFTeX" class="headerlink" title="PDFTeX"></a>PDFTeX</h3><p>完全兼容标准的 TeX ，但能够给出 PDF 输出。它也可以输出标准的 DVI 。</p>
+<h3 id="e-TeX"><a href="#e-TeX" class="headerlink" title="e-TeX"></a>e-TeX</h3><p>不仅完全兼容标准的 TeX ，还支持一种“扩展模式”。在“扩展模式”中引入了许多新的特性和增强功能。这些新的特性和增强功能提供了更好的编程工具和对输出的控制。</p>
+<h3 id="Omega"><a href="#Omega" class="headerlink" title="Omega"></a>Omega</h3><p>这是一个几乎是完全重新写过的，支持 Unicode 的 TeX 程序。Omega 有很多特征都超出了 Knuth 对 TeX 的原始设想。它采用了与 TeX 不同的方法来处理字符，使得可以处理非拉丁语系的文本。也支持从右到左，从上到下的排版方式。</p>
+<h3 id="NTS"><a href="#NTS" class="headerlink" title="NTS"></a>NTS</h3><p>NTS 代表“New Typesetting System”。Knuth 已经停止发展 TeX，并决定任何超越 TeX 的扩展都不能被称为 TeX 。NTS 只是一些对于 TeX 的后续继承者的设想和概念的集合，还不是一个实际上的系统。该项目的第一个公布的产品就是 e-TeX。后来不知什么缘故，NTS的开发就停止了。直到 2002 年左右，一些 TeX 专家，想用 Java 开发 TeX，于是把中途夭折的 NTS 项目捡了起来，搞出了一个叫做 ExTeX 的东西，但是并没有普遍应用。</p>
+<h3 id="MLTeX"><a href="#MLTeX" class="headerlink" title="MLTeX"></a>MLTeX</h3><p>这个 TeX 的扩展引入了命令 \charsubdef，使得可以更为简单方便的使用 8 bit 字符。不过，与 e-TeX 相比，这只是一个微小的改进。</p>
+<h3 id="XeTeX"><a href="#XeTeX" class="headerlink" title="XeTeX"></a>XeTeX</h3><p>Jonathan Kew 在 e-TeX 基础上添加 Unicode 支持，并且连接 Mac OS X 的各种技术，比如ATT,Quartz,QuickTime，产生了一个重要的TeX分支，叫做XeTeX.XeTeX在2005/6年陆续发布了它的 Windows 和 Linux版本，最终集成在 TeXLive 2007 当中，标志着它被广泛地认可。在 XeTeX 中，使用多国语言，变得非常轻松，并且可以方便地使用系统的 TrueType 和 OpenType 字体，因此得到许多 TeX Guru 的喜爱。</p>
+<h3 id="LuaTeX"><a href="#LuaTeX" class="headerlink" title="LuaTeX"></a>LuaTeX</h3><p>尽管 Omega 项目在开始时看上去很有希望，但是它的开发进展缓慢并且功能上也非常不稳定（基本上可以认为这个项目已经死亡）。于是，Giuseppe Bilotta 等人启动了 Aleph 项目，目的是让 Omega 稳定并且引入了 e-TeX 的扩展功能。后来 Aleph 项目现在也停止了，不过它的大部分功能都被集成到了 <a href="http://wiki.ctex.org/index.php?title=LuaTeX&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener">LuaTeX</a> 中。<a href="http://wiki.ctex.org/index.php?title=LuaTeX&amp;action=edit&amp;redlink=1" target="_blank" rel="noopener">LuaTeX</a> 是一个新的 TeX 引擎项目，由科罗拉多州立大学（Idris Samawi Hamid 的东方 TeX 项目）和 NTG 资助，该项目于 2006 年启动，于 2007 年夏季发布首个 beta 版本。</p>
+<p>LuaTeX 是 Aleph 与 pdfTeX 项目的继任者，主要由 Taco Hoekwater 开发。除了兼有 Aleph 和 pdfTeX 的功能之外，LuaTeX还具有以下特点：</p>
+<ul>
+<li>内部集成了轻量级的动态编程语言 Lua，可以采用该语言扩展 LuaTeX 功能或宏包；</li>
+<li>提供了 OpenType 字体的本地支持，与 XeTeX 做法不同的是，LuaTeX 没有使用操作系统自带的字体库来访问字体，而是使用了 FontForge库；</li>
+<li>内部集成了 MPLib（一个扩展的 MetaPost 库模块）。</li>
+</ul>
+<h2 id="TeX-的优点"><a href="#TeX-的优点" class="headerlink" title="TeX 的优点"></a>TeX 的优点</h2><p>在一个充斥着“所见即所得”(WYSIWSG)桌面出版软件的情况下来使用 TeX 确是有点令人奇怪。但是，在某些情形下，你会感到 TeX 是最好的，甚至是唯一适合的系统。</p>
+<p>首先我们来看一下 TeX 的优势所在：</p>
+<ul>
+<li><strong>高质量的输出</strong> TeX 遵循传统的排版规则，以排版的质量为最重要的目标。如果你把 TeX 的输出结果和用其它的排版软件排版相同的文本所得到的结果加以比较，你就会发现其中的区别。</li>
+<li><strong>超常的稳定性</strong> 自从 TeX 出现以来，只有一些微小的改动。也就是说，十几年前的 TeX 文件用现在的 TeX 系统排版得到的结果与十几年前得到的结果是一样的。稳定性还体现在 TeX 系统极少会崩溃，可以处理任意大小的文件，即使你的计算机的内存很少，TeX 也可自如的工作。</li>
+<li></li>
+<li><p><strong>TeX 是可编程的</strong> TeX 是一种宏命令编程语言。你可以用很少的命令来完成非常复杂的工作。如果需要的话，你也可以重新定义 TeX 的所有命令来得到特殊的效果。</p>
+</li>
+<li><strong>高度的灵活性</strong> TeX 自从出现以来其内核只有微小的改动。但是由于其内核的设计方式，世界上的 TeX 使用者可以让 TeX 做几乎任何工作。你可以用 TeX 来排版英文文本，也可以排版德文，俄文，中文等多种语言。你还可以用 TeX 来排版乐谱，象棋，围棋棋谱等等。</li>
+<li><strong>简单方便</strong> TeX 文档是 ASCII 码的文本文件。因此，即使你手边没有 TeX 系统，你也可以看懂绝大部分的内容。TeX 文件的这种特点使得它占用很少的存储空间，也可以很方便的用 email 来传输。</li>
+<li><strong>良好的通用性</strong> 目前为止，TeX 几乎在所有的计算机操作系统平台上得到实现。如：Atari，Apple，Macintosh，Unix，VMS，MS-DOS，MS-Windows 和 OS/2 等等。TeX 的源文件可在不同的平台之间自由的交换，而得到的输出是完全相同的。</li>
+<li><strong>低廉的价格</strong> TeX 是免费软件，它的源程序也是免费的。你可能仅仅需要支付邮费，甚至于一分不花地得到适合你的 TeX 系统。世界上有很多非常好的 TeX 免费软件如：teTeX，MikTeX，fpTeX 等等。同时也有一些具有各自特点（如或多或少的所见即所得特性的）和提供专家级帮助系统的商业版本。</li>
+<li><strong>超级技术支持</strong> 由于 TeX 并不是被某个公司所垄断开发，所以世界各地的使用者设计了统一的技术支持的方式。这通常是通过因特网以 email, WWW, Usenet 或 Ftp 的方式来提供，有时也可能通过电话或传真的方式。绝大多数情况下这些技术支持都是免费的，这也是 TeX 的精神。</li>
+<li><strong>TeX 是一种乐趣</strong> 使用 TeX 不仅仅是一种工作手段，也是一种乐趣。它有挑战，也有荣誉。很多人在熟悉了 TeX 之后都开始把使用 TeX 作为一种爱好，而不是一件枯燥无味的劳动。</li>
+</ul>
+<h2 id="TeX-的不足"><a href="#TeX-的不足" class="headerlink" title="TeX 的不足"></a>TeX 的不足</h2><p>在展示了 TeX 的优秀之处后，也得承认 TeX 也有一些不足的地方：</p>
+<ol>
+<li>TeX 不是在一个下午就能完全学会的，除非你是一个真正的天才。当你开始学习并使用它的时候，你将会不停的去翻看 TeX 的参考手册来寻找一个 TeX 命令。你也会发现 TeX 常常不理会你键入的命令，还给出一个让你感到迷惑的错误讯息。这一切都说明了掌握 TeX 需要一个比较长而且艰难的学习过程。TeX 的一些扩展如 LaTeX、ConTeXt 则要相对简单的多，使用起来也比 TeX 方便，一个新手完全可以在一个下午或者更短的时间内学会开始使用 LaTeX 或 ConTeXt。</li>
+<li>当发生错误的时候，TeX 会给出一些信息来提示你。但很多情况下并不足以是你迅速准确的找到错误之所在。尤其对刚刚开始学习的新手来说更是如此。</li>
+<li>像 TeX 这种宏语言不同于其它的计算机语言，如 C，Pascal 等，大多数人并不了解。因此，当你想要写自己的宏命令时，你需要对 TeX 有比较深入的了解才能写出牢固可靠的宏命令。</li>
+<li>TeX 不是所见即所得的。尽管市场上有些近似于所见即所得的自由/开源软件（如 <a href="http://www.lyx.org/" target="_blank" rel="noopener">LyX</a>）或商业软件，但即使与最普通的字处理软件比，也 还是有不小的差距。</li>
+</ol>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/LaTeX/"><i class="fas fa-hashtag fa-fw"></i>LaTeX</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
+          <a href="/2019/03/30/杂谈WebGIS/">
+              
+                  开篇-杂谈WebGIS
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="https://llqing.github.io">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2019-03-30
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/GIS/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              GIS
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>我相信大家对百度地图，谷歌地图等相关应用已经是非常熟悉了。通过这些应用，我们可以浏览地图、定位我们自己的位置、查找我们想知道的兴趣点、搜索交通路线等等。而其实，这些功能便是WebGIS的一些最基本的功能。</p>
+<p>那么什么是WebGIS呢，说到这里，我还是首先给大家讲讲什么是GIS。</p>
+<h2 id="2．GIS简介"><a href="#2．GIS简介" class="headerlink" title="2．GIS简介"></a>2．GIS简介</h2><h3 id="2-1-GIS的名词解释"><a href="#2-1-GIS的名词解释" class="headerlink" title="2.1 GIS的名词解释"></a>2.1 GIS的名词解释</h3><p>GIS的全名是Geographic Information System，中文全名是地理信息系统。它是在计算机硬、软件系统支持下，对整个或部分地球表层（包括大气层）空间中的有关地理分布数据进行采集、储存、管理、运算、分析、显示和描述的技术系统。</p>
+<h3 id="2-2-什么是GIS学科"><a href="#2-2-什么是GIS学科" class="headerlink" title="2.2 什么是GIS学科"></a>2.2 什么是GIS学科</h3><p>撇开这些晦涩的文字，我争取用更形象的方法来给大家介绍下GIS这个学科。</p>
+<p>我们人类在很久之前就已经开始使用羊皮或者纸质的地图了，他的用途主要便是给人们的行军、航海等做向导，而这同样也是现代GIS学科里GIS最基本的功能之一。到19世纪时，现代GIS学科开始慢慢萌芽。这里有一个很有名的例子。1854年伦敦发生霍乱，10天就死了500人。居民大多怀疑瘟疫是由于地下的墓穴引起的，引起了极大的社会恐慌。当时有个有名的医生叫Snow博士，他不信这个原因，为了查出真正的霍乱源头，他首先绘出了伦敦地图，然后将所有霍乱病人的所在地标出来，然后他发现了一个有趣的现象，在伦敦的一个居民饮水井附近出现的霍乱病人最多，并且最开始出现的霍乱病人也是在那里发现的。最后Snow博士对那口井进行检查，确定了霍乱发生的源头。从这个例子中我们可以看出，地图的应用已经不再局限于导航了，而开始慢慢利用其得天独厚的时间空间优势与其他学科开始进行结合。</p>
+<p>到了20世纪电脑的出现，人造卫星的升天等技术的突破，GIS这个学科也相应的开始走向成熟以及开始普及。20世纪60年代，加拿大科学家首先提出了GIS这个学科。到了20世纪末，一大批优秀的GIS软件已经出现，比如Esri公司的ArcGIS系列，MapInfo公司的MapInfo。国内的GIS从上世纪80年代才开始起步，不过到上世纪末时，也出现了自己的GIS公司，比较有名的有GeoStar、MapGIS等。</p>
+<p>而此时的GIS已不再是局限纸上的地图了，它已经成为了一个计算机技术和多种学科相交叉的新型学科了。它涉及到测量学——地理信息的采集和地图的制作等，计算机科学——电子地图的制作和展现以及各种GIS功能的实现，物理学——对传感器的研究以及光谱和影像的研究，气象学——大气层等对卫星影像的影响等，生物学、医学、犯罪学等——研究地理等各时间空间因素对这些学科的影响。</p>
+<p>GIS是什么呢，说的最通熟易懂的就是，GIS是利用测绘生成纸制地图或者航拍以及卫星等生成影像后，将这些数据存储在计算机中，以地图或图片的形式表现出来，然后根据实际生产生活以及科研中的各种需求，进而提供具体的经过处理后的数据。</p>
+<h2 id="3-WebGIS简介"><a href="#3-WebGIS简介" class="headerlink" title="3.WebGIS简介"></a>3.WebGIS简介</h2><h3 id="3-1什么是WebGIS"><a href="#3-1什么是WebGIS" class="headerlink" title="3.1什么是WebGIS"></a>3.1什么是WebGIS</h3><p>顾名思义，WebGIS就是展现于网络上的GIS。在上世纪八十年开始，出现的大量GIS软件，基本上都是C/S架构的，也就是首先需要在本机上装有专业的GIS软件，然后用户根据需求使用这些GIS软件。当然这种桌面端的GIS软件有其天然的优势，比如开发相对简单，不需要Internet支持，以及可以做更多的复杂功能、响应相对迅速等优势。但是同时，其缺点更是不容忽视。首当其冲的便是不便于推广，而不便于推广的原因在于C/S系统其本身的天然的劣势：不便于更新，不便于跨平台，不便于用户在不安装指定客户端的情况下使用。</p>
+<p>从本世纪开始，internet进入了爆发式增长阶段，网络的铺设以及网速的提升都有了大幅度增加，这为WebGIS的发展提供了坚实的大环境。于是，基于B/S的GIS系统越来越多的开始提供服务，并且在RIA（富客户端）技术、AJAX（动态网页）技术的涌现和成熟，WebGIS也基本能展现出与C/S一样的效果和功能。而WebGIS的大发展，更是用户的需求，google地图和百度地图等服务提供商的大规模扩张便是最好的证明。</p>
+<p>什么是WebGIS，就是将GIS这门学科所能提供的功能，以B/S技术展现给用户，使用户只需要在浏览器上便能使用这些GIS功能的一个应用方向。</p>
+<h3 id="3-2对国内WebGIS行业的理解"><a href="#3-2对国内WebGIS行业的理解" class="headerlink" title="3.2对国内WebGIS行业的理解"></a>3.2对国内WebGIS行业的理解</h3><p>目前使用WebGIS技术的公司可以大致分为两个方向：一个是互联网方向，一个是行业应用方向。</p>
+<p>国内的互联网方向里基本可以说已经被百度地图，搜搜地图，高德地图，三个巨头垄断。所以对于想从事互联网方向的WebGIS开发人员，其实可以选择的大公司并不多。但是，如果你是一个技术足够好，且技术不局限于一般的关系数据库，对大数据和分布式系统感兴趣的WebGIS开发人员，强烈建议你去这些互联网公司，在那里你能接触到最新的IT技术以及感受到强大的头脑风暴。也便是，对新技术，对前沿方向有更多追求的人，去互联网公司是很好的选择。</p>
+<p>但是我们不得不承认另外一个现实，这些互联网公司基本集中在北上广深，并且对GIS研发人员在技术上的需求是，计算机技术的比重要远大于对GIS学科本身的理论所占的比重。于是，更多的GIS学科出身的人，最后选择的是行业应用公司。而投身于这样的公司，就没有前途吗？答案是否定的。</p>
+<p>Esri公司作为全球最成功的GIS软件公司，很好的给出了这个答案。目前Esri的AO库号称世界上第二大的库，除了微软的Framework，就是它了。它同时也是一个年盈利在8亿美元的公司。Esri公司与美国和加拿大政府的合作堪称行业公司的典范，它为这两个国家的数字化城市的建设立下了汗马功劳，做出了很多优秀的作品。说这个例子，只是为了表明，在我们的数字化城市的需求越来越深入，政府的需求越来越实际，整个国家的市场建设越来越合理以及公平公正透明，WebGIS在行业上的应用也将越来越广泛，并且越来越能够服务政府、企业和人民，并且更能做出有真实价值的产品。并且，从事行业应用的研发人员，随着对所从事行业理解的深入，这些理解给未来所带来的收获可能比技术单纯的提高所带来的收获要大得多。要知道，项目需求分析靠的基本是行业理解，当然，对技术的了解也给项目可行性分析提供了保障。两者相辅相成。</p>
+<p>每个人追求不一样，根据自己的需求，根据自己的现状，做出选择，坚持下去，不说梦想是否能实现，起码你不会是一个自己都认为自己活该如此平庸的人。</p>
+<h2 id="4-WebGIS的框架"><a href="#4-WebGIS的框架" class="headerlink" title="4.WebGIS的框架"></a>4.WebGIS的框架</h2><p>前面说了太多的非技术类的话，这里我们开始提一个技术类话题——WebGIS的框架。其实WebGIS的框架跟其他Web项目的框架没有很多本质上的区别。可能唯一的不同是WebGIS需要提供一些地图方面的功能服务。这里我先把这个框架给出，同时每个层面需要的技术我也在其中大致画出。</p>
+<p>​                                    <img src="https://images0.cnblogs.com/i/656746/201408/021630108995466.png" alt="img">                    </p>
+<p>​                                       </p>
+<h3 id="4-1前端"><a href="#4-1前端" class="headerlink" title="4.1前端"></a>4.1前端</h3><p>如所有的Web项目一样，前端由HTML、CSS、JS、Flex等语言组成。根据需求和语言的特性，选择合适的语言进行开发是至关重要的。没有最好的语言，只有最合适的语言。</p>
+<h3 id="4-2-后台程序"><a href="#4-2-后台程序" class="headerlink" title="4.2 后台程序"></a>4.2 后台程序</h3><h4 id="4-2-1-中间件"><a href="#4-2-1-中间件" class="headerlink" title="4.2.1 中间件"></a>4.2.1 中间件</h4><p>开发时，我们要选择适合自己的中间件。不同的中间件有其特性，如果是一般项目，tomcat等是很合适的，其使用方便，相关技术支持和资料也很好查找。但是如果是大型的集群项目，Weblogic和WebShpere可能是更好的选择，但是这两个中间件首先配置就是有难度的，同时不同的版本，可能对某些jar包的支持存在问题。如果项目必须使用国产的中间件，TongWeb和Apusics是不错的选择。</p>
+<h4 id="4-2-2-地图服务器"><a href="#4-2-2-地图服务器" class="headerlink" title="4.2.2 地图服务器"></a>4.2.2 地图服务器</h4><p>在WebGIS中，与其他一般的Web工程有明显区别的就体现在地图服务器上面。一般的地图服务器都由已有的软件商提供了解决方案，比较流行的有AGS、Geoserver、MapServer、SuperServer等。利用这些地图服务器我们能很好的实现地图的发布以及对一些空间查询和空间操作的支持。</p>
+<h4 id="4-2-3-业务服务器"><a href="#4-2-3-业务服务器" class="headerlink" title="4.2.3 业务服务器"></a>4.2.3 业务服务器</h4><p>业务服务器是Web项目里不可获取的一环。不管是利用哪些已有框架编写，比如Spring、Struts、Hibernate等，我们一般还是会将业务服务器的实现分为三个层次，即有名的MVC模式。而不同的框架里这三个层次的实现各有差别。</p>
+<h3 id="4-3-数据"><a href="#4-3-数据" class="headerlink" title="4.3 数据"></a>4.3 数据</h3><p>WebGIS的数据大致可以分为三种，一种是地图、影像数据，一种是空间属性数据、一种是业务数据。地图、影像数据一般是一些png或者其他格式的数据组成。</p>
+<p>在GIS中有个很重要的概念，即影像金字塔。这个概念主要是为了加速地图在前端的显示。而我们准备地图、影像数据时，也一般会首先对这些数据进行切图。</p>
+<p>空间属性数据，是通过一些工具将已经整理好的数据进行入库。对于AGS，只有连接的是入库数据的mxd，才能发布成FeatureServer服务，以供数据的编辑。当然，空间数据入库后还可以支持业务逻辑的使用。</p>
+<p>第三种数据，业务逻辑数据，是每个Web项目必须有的，它根据不同的业务需求将业务所需的数据进行采集和入库。</p>
+<h2 id="5-从WebGIS的原理谈起"><a href="#5-从WebGIS的原理谈起" class="headerlink" title="5.从WebGIS的原理谈起"></a>5.从WebGIS的原理谈起</h2><p>目前很多公司都提供了自己的二次开发包，在前端的有OpenLayers、AGS API for JS/Flex等。在后台的也有geoTools、AO等。用这些开发包，我们可以很快的实现出图以及很多GIS功能，基本上不用写太多的编码。</p>
+<p>但是，同样，由于封装的太好，很多WebGIS的原理我们也便忽略而不做了解了。</p>
+<p>这里，我希望利用我薄弱的知识，能和大家一起，探讨一些WebGIS中常用的原理知识。希望大家支持。</p>
+<h2 id="6-感想"><a href="#6-感想" class="headerlink" title="6.感想"></a>6.感想</h2><p>由于我薄弱的理论和技术基础，也谈不上对WebGIS的明天有很大的预言。我只希望我们每个人都争取做一个完美主义者，同时也是一个有圣徒情怀的人，从而作践自己实现目标。与大家一起进步。希望我也能保持自己的写作动力，积累经验和知识。</p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/WebGIS/"><i class="fas fa-hashtag fa-fw"></i>WebGIS</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+      
+
+  </section>
+
+
+
+
+
+
+  
+      <br>
+      <div class="prev-next">
+          <div class="prev-next">
+              
+                  <a class="prev" rel="prev" href="/archives/2019/">
+                      <section class="post prev">
+                          <i class="fas fa-chevron-left" aria-hidden="true"></i>&nbsp;上一页&nbsp;
+                      </section>
+                  </a>
+              
+              <p class="current">
+                  2 / 3
+              </p>
+              
+                  <a class="next" rel="next" href="/archives/2019/page/3/">
+                      <section class="post next">
+                          &nbsp;下一页&nbsp;<i class="fas fa-chevron-right" aria-hidden="true"></i>
+                      </section>
+                  </a>
+              
+
+          </div>
+      </div>
+
+  
+
+  <!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
   
 
   
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
-            
-            关于
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
-            
-            分类
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-sitemap">
-          <a href="/sitemap.xml" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br>
-            
-            站点地图
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-commonweal">
-          <a href="/404/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br>
-            
-            公益404
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-other">
-          <a href="/other" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
-            
-            随意发挥
-          </a>
-        </li>
-      
 
+
+
+
+
+<!-- 根据主题中的设置决定是否在archive中针对摘要部分的MathJax公式加载mathjax.js文件 -->
+
+
+
+
+        </div>
+        <aside class='l_side'>
+            
+  
+  
+    
+      
+      
+        <section class="author">
+  <div class="content material">
+    
+      <div class="avatar">
+        <img class="avatar" src="/medias/avatar.jpg">
+      </div>
+    
+    
+      <div class="text">
+        
+        
+        
+          <p><span id="jinrishici-sentence">柳暗花明又一村</span></p>
+          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+        
+      </div>
+    
+    
+      <div class="social-wrapper">
+        
+          
+            <a href="mailto:zailushanga@gmail.com" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-envelope" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="https://github.com/llqing" class="social flat-btn" target="_blank" rel="external"><i class="social fab fa-github" aria-hidden="true"></i></a>
+          
+        
+          
+            <a href="https://music.163.com/#/user/home?id=1409711765" class="social flat-btn" target="_blank" rel="external"><i class="social fas fa-music" aria-hidden="true"></i></a>
+          
+        
+      </div>
+    
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+
+      
+    
+  
+    
+      
+      
+        <section class="plain">
+  
+<header class="material">
+  <div><i class="fas fa-bullhorn fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;注意啦～</div>
+  
+</header>
+
+  <div class="content material">
+    <p>小站栏目还在完善中，将不定期分享GIS、Code等内容(看博主心情)，如有特殊需要可以联系博主，超喜欢的话还可以安利给身边的朋友哦～</p>
+
+  </div>
+</section>
+
+      
+    
+  
+    
+      
+      
+        
+  <section class="category">
+    
+<header class="material">
+  <div><i class="fas fa-folder-open fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;所有分类</div>
+  
+</header>
+
+    <div class="content material">
+      <ul class="entry">
+        
+          <li><a class="flat-box" title="/categories/AI/" href="/categories/AI/"><div class="name">AI</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Blog/" href="/categories/Blog/"><div class="name">Blog</div><div class="badge">(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/GIS/" href="/categories/GIS/"><div class="name">GIS</div><div class="badge">(5)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Git/" href="/categories/Git/"><div class="name">Git</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/LaTeX/" href="/categories/LaTeX/"><div class="name">LaTeX</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Linux/" href="/categories/Linux/"><div class="name">Linux</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/Python/" href="/categories/Python/"><div class="name">Python</div><div class="badge">(4)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/web基础/" href="/categories/web基础/"><div class="name">web基础</div><div class="badge">(4)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/好玩的/" href="/categories/好玩的/"><div class="name">好玩的</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/常用工具/" href="/categories/常用工具/"><div class="name">常用工具</div><div class="badge">(3)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/数据库/" href="/categories/数据库/"><div class="name">数据库</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/数据结构与算法/" href="/categories/数据结构与算法/"><div class="name">数据结构与算法</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/杂谈/" href="/categories/杂谈/"><div class="name">杂谈</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/脚本/" href="/categories/脚本/"><div class="name">脚本</div><div class="badge">(1)</div></a></li>
+        
+          <li><a class="flat-box" title="/categories/高数/" href="/categories/高数/"><div class="name">高数</div><div class="badge">(1)</div></a></li>
+        
+      </ul>
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        
+  <section class="tagcloud">
+    
+<header class="material">
+  <div><i class="fas fa-hashtag fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;热门标签</div>
+  
+</header>
+
+    <div class="content material">
+      <a href="/tags/AI/" style="font-size: 14px; color: #999">AI</a> <a href="/tags/API/" style="font-size: 24px; color: #555">API</a> <a href="/tags/ArcGIS/" style="font-size: 24px; color: #555">ArcGIS</a> <a href="/tags/GIS-arcpy-python/" style="font-size: 14px; color: #999">GIS; arcpy; python;</a> <a href="/tags/HTTP/" style="font-size: 14px; color: #999">HTTP</a> <a href="/tags/HTTPS/" style="font-size: 14px; color: #999">HTTPS</a> <a href="/tags/LaTeX/" style="font-size: 14px; color: #999">LaTeX</a> <a href="/tags/Markdown/" style="font-size: 24px; color: #555">Markdown</a> <a href="/tags/Matplotlib/" style="font-size: 14px; color: #999">Matplotlib</a> <a href="/tags/NoSQL/" style="font-size: 14px; color: #999">NoSQL</a> <a href="/tags/Python/" style="font-size: 14px; color: #999">Python</a> <a href="/tags/Redis/" style="font-size: 14px; color: #999">Redis</a> <a href="/tags/TCP/" style="font-size: 19px; color: #777">TCP</a> <a href="/tags/WebGIS/" style="font-size: 14px; color: #999">WebGIS</a> <a href="/tags/git-版本库/" style="font-size: 14px; color: #999">git; 版本库</a> <a href="/tags/hexo/" style="font-size: 14px; color: #999">hexo</a> <a href="/tags/linux/" style="font-size: 14px; color: #999">linux</a> <a href="/tags/music/" style="font-size: 14px; color: #999">music</a> <a href="/tags/typora/" style="font-size: 14px; color: #999">typora</a> <a href="/tags/中文显示乱码/" style="font-size: 14px; color: #999">中文显示乱码</a> <a href="/tags/如何开发用户脚本/" style="font-size: 14px; color: #999">如何开发用户脚本</a> <a href="/tags/导数/" style="font-size: 14px; color: #999">导数</a> <a href="/tags/属性/" style="font-size: 14px; color: #999">属性</a> <a href="/tags/排序/" style="font-size: 14px; color: #999">排序</a> <a href="/tags/撩妹/" style="font-size: 14px; color: #999">撩妹</a> <a href="/tags/方法/" style="font-size: 14px; color: #999">方法</a> <a href="/tags/极限/" style="font-size: 14px; color: #999">极限</a> <a href="/tags/激活/" style="font-size: 14px; color: #999">激活</a> <a href="/tags/算法/" style="font-size: 14px; color: #999">算法</a> <a href="/tags/网易/" style="font-size: 14px; color: #999">网易</a> <a href="/tags/重装系统/" style="font-size: 14px; color: #999">重装系统</a>
+    </div>
+  </section>
+
+
+      
+    
+  
+    
+      
+      
+        <section class="list">
+  
+<header class="material">
+  <div><i class="fas fa-medal fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;精选项目</div>
+  
+</header>
+
+  <div class="content material">
+    <ul class="entry">
       
     </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-         
-        
-        OK! 目前共计 32 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/06/如何重装系统/" itemprop="url">
-              
-                <span itemprop="name">如何重装系统</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-06T15:35:37+08:00" content="2019-04-06">
-          04-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/06/视频跳过广告和VIP视频解析/" itemprop="url">
-              
-                <span itemprop="name">如何开发一个用户脚本系列——脚本1:视频跳过广告和 VIP 视频解析</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-06T13:55:55+08:00" content="2019-04-06">
-          04-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/06/一键激活window-office/" itemprop="url">
-              
-                <span itemprop="name">一键激活window & office</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-06T13:55:55+08:00" content="2019-04-06">
-          04-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/06/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-06T10:20:56+08:00" content="2019-04-06">
-          04-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/03/极限与导数/" itemprop="url">
-              
-                <span itemprop="name">极限与导数</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-03T23:24:31+08:00" content="2019-04-03">
-          04-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/03/Linux文件系统结构/" itemprop="url">
-              
-                <span itemprop="name">Linux文件系统结构</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-03T19:41:25+08:00" content="2019-04-03">
-          04-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/04/03/啥是人工智能/" itemprop="url">
-              
-                <span itemprop="name">啥是人工智能</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-03T18:54:04+08:00" content="2019-04-03">
-          04-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/31/15行python代码搞定网易云热门歌单/" itemprop="url">
-              
-                <span itemprop="name">零基础15行python代码搞定网易云热门歌单</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-31T00:00:00+08:00" content="2019-03-31">
-          03-31
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/30/LaTeX初识/" itemprop="url">
-              
-                <span itemprop="name">LaTeX初识</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-30T12:50:00+08:00" content="2019-03-30">
-          03-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/03/30/杂谈WebGIS/" itemprop="url">
-              
-                <span itemprop="name">开篇-杂谈WebGIS</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-03-30T12:03:00+08:00" content="2019-03-30">
-          03-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-    </div>
   </div>
-  
-  
-  
+</section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2019/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2019/">1</a><span class="page-number current">2</span><a class="page-number" href="/archives/2019/page/3/">3</a><a class="extend next" rel="next" href="/archives/2019/page/3/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
+      
     
-    <div class="sidebar-inner">
-
+  
+    
       
-
       
+        <section class="list">
+  
+<header class="material">
+  <div><i class="fas fa-link fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;特别链接</div>
+  
+</header>
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <div class="content material">
+    <ul class="entry">
+      
+        <li><a class="flat-box" title="https://llqing.github.io/about/" href="https://llqing.github.io/about/">
+          <div class="name">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="LLQ">
+              <i class="fas fa-comment-dots fa-fw" aria-hidden="true"></i>
             
-              <p class="site-author-name" itemprop="name">LLQ</p>
-              <p class="site-description motion-element" itemprop="description">加油,少年</p>
+            &nbsp;&nbsp;关于我 / 留言板
           </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">32</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-categories">
-                
-                  <span class="site-state-item-count">15</span>
-                  <span class="site-state-item-name">分类</span>
-                
-              </div>
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">31</span>
-                  <span class="site-state-item-name">标签</span>
-                
-              </div>
-            
-
-          </nav>
-
           
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
+        </a></li>
+      
+    </ul>
+  </div>
+</section>
 
       
-
+    
+  
+    
       
+      
+        
+
+
+  <section class="music">
+    
+<header class="material">
+  <div><i class="fas fa-compact-disc fa-fw" aria-hidden="true"></i>&nbsp;&nbsp;最近在听</div>
+  
+    <a class="rightBtn" target="_blank" rel="external nofollow noopener noreferrer" href="https://music.163.com/#/user/home?id=1409711765" title="https://music.163.com/#/user/home?id=1409711765">
+    <i class="far fa-heart fa-fw"></i></a>
+  
+</header>
+
+    <div class="content material">
+      
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.css">
+  <div class="aplayer" data-theme="#1BCDFC" data-mode="circulation" data-server="netease" data-type="playlist" data-id="1409711765" data-volume="0.7">
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.7.0/dist/APlayer.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/meting@1.1.0/dist/Meting.min.js"></script>
+
 
     </div>
-  </aside>
+  </section>
 
 
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">LLQ</span>
-
+      
+    
   
+
+
+        </aside>
+        <script>setLoadingBarProgress(60);</script>
+    </div>
+    <a class="s-top fas fa-arrow-up fa-fw" href='javascript:void(0)'></a>
+    </div>
+    <footer id="footer" class="clearfix">
+  
+    <div class="footer">
+      <p>这里是页脚，谢谢支持。</p>
+
+    </div>
+    <br>
+  
+  
+    <div class="social-wrapper">
+      
+        
+          <a href="mailto:zailushanga@gmail.com" class="social fas fa-envelope flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="https://github.com/llqing" class="social fab fa-github flat-btn" target="_blank" rel="external"></a>
+        
+      
+        
+          <a href="https://music.163.com/#/user/home?id=1409711765" class="social fas fa-music flat-btn" target="_blank" rel="external"></a>
+        
+      
+    </div>
+  
+  <br>
+  <div><p>博客内容遵循 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
 </div>
-
-
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
+  <div>本站使用 <a href target="_blank" class="codename">Material X</a> 作为主题，总访问量为 <span id="busuanzi_value_site_pv"><i class="fas fa-spinner fa-spin fa-fw" aria-hidden="true"></i></span> 次。
   </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
-  
-  <script type="text/javascript">
-    var GUEST = ['nick','mail','link'];
-    var guest = 'nick,mail,link';
-    guest = guest.split(',').filter(item=>{
-      return GUEST.indexOf(item)>-1;
-    });
-    new Valine({
-        el: '#comments' ,
-        verify: false,
-        notify: false,
-        appId: 'MmISOJnFve0SNjE41MNyGuyT-gzGzoHsz',
-        appKey: 'LQzUzH6ixJqwfSeRRoS5qWFY',
-        placeholder: '随便说点什么吧',
-        avatar:'mm',
-        guest_info:guest,
-        pageSize:'10' || 10,
-    });
+</footer>
+
+    <script>setLoadingBarProgress(80);</script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+
+  <script>
+    var GOOGLE_CUSTOM_SEARCH_API_KEY = "";
+    var GOOGLE_CUSTOM_SEARCH_ENGINE_ID = "";
+    var ALGOLIA_API_KEY = "";
+    var ALGOLIA_APP_ID = "";
+    var ALGOLIA_INDEX_NAME = "";
+    var AZURE_SERVICE_NAME = "";
+    var AZURE_INDEX_NAME = "";
+    var AZURE_QUERY_KEY = "";
+    var BAIDU_API_ID = "";
+    var SEARCH_SERVICE = "hexo" || "hexo";
+    var ROOT = "/"||"/";
+    if(!ROOT.endsWith('/'))ROOT += '/';
   </script>
 
 
 
-  
+  <script async src="https://cdn.jsdelivr.net/npm/scrollreveal@4.0.5/dist/scrollreveal.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      const $reveal = $('.reveal');
+      if ($reveal.length === 0) return;
+      const sr = ScrollReveal({ distance: 0 });
+      sr.reveal('.reveal');
+    });
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/node-waves@0.7.6/dist/waves.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      Waves.attach('.flat-btn', ['waves-button']);
+      Waves.attach('.float-btn', ['waves-button', 'waves-float']);
+      Waves.attach('.float-btn-light', ['waves-button', 'waves-float', 'waves-light']);
+      Waves.attach('.flat-box', ['waves-block']);
+      Waves.attach('.float-box', ['waves-block', 'waves-float']);
+      Waves.attach('.waves-image');
+      Waves.init();
+    });
+  </script>
+
+
+  <script async src="https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js"></script>
+
+
+  <!-- fastclick -->
+  <script src="https://cdn.jsdelivr.net/npm/fastclick@1.0.6/lib/fastclick.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      FastClick.attach(document.body)
+    }, false)
+  </script>
 
 
 
 
 
-  
 
-  
 
-  
 
-  
-  
 
-  
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+
+  <script src="/js/app.js"></script>
+<script src="/js/search.js"></script>
+
+
+
+
+
+<!-- 复制 -->
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  let COPY_SUCCESS = "复制成功";
+  let COPY_FAILURE = "复制失败";
+  /*页面载入完成后，创建复制按钮*/
+  !function (e, t, a) {
+    /* code */
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '  <i class="fa fa-copy"></i><span>Copy</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
         }
       });
-    </script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
+      clipboard.on('success', function(e) {
+        //您可以加入成功提示
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        success_prompt(COPY_SUCCESS);
+        e.clearSelection();
       });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-  
+      clipboard.on('error', function(e) {
+        //您可以加入失败提示
+        console.error('Action:', e.action);
+        console.error('Trigger:', e.trigger);
+        fail_prompt(COPY_FAILURE);
+      });
+    }
+    initCopyCode();
+
+  }(window, document);
+
+  /**
+   * 弹出式提示框，默认1.5秒自动消失
+   * @param message 提示信息
+   * @param style 提示样式，有alert-success、alert-danger、alert-warning、alert-info
+   * @param time 消失时间
+   */
+  var prompt = function (message, style, time)
+  {
+      style = (style === undefined) ? 'alert-success' : style;
+      time = (time === undefined) ? 1500 : time*1000;
+      $('<div>')
+          .appendTo('body')
+          .addClass('alert ' + style)
+          .html(message)
+          .show()
+          .delay(time)
+          .fadeOut();
+  };
+
+  // 成功提示
+  var success_prompt = function(message, time)
+  {
+      prompt(message, 'alert-success', time);
+  };
+
+  // 失败提示
+  var fail_prompt = function(message, time)
+  {
+      prompt(message, 'alert-danger', time);
+  };
+
+  // 提醒
+  var warning_prompt = function(message, time)
+  {
+      prompt(message, 'alert-warning', time);
+  };
+
+  // 信息提示
+  var info_prompt = function(message, time)
+  {
+      prompt(message, 'alert-info', time);
+  };
+
+</script>
 
 
-  
+<!-- fancybox -->
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>
+  let LAZY_LOAD_IMAGE = "";
+  $(".article-entry").find("img").each(function () {
+      var element = document.createElement("a");
+      $(element).attr("data-fancybox", "gallery");
+      $(element).attr("href", $(this).attr("src"));
+      /* 图片采用懒加载处理时,
+       * 一般图片标签内会有个属性名来存放图片的真实地址，比如 data-original,
+       * 那么此处将原本的属性名src替换为对应属性名data-original,
+       * 修改如下
+       */
+       if (LAZY_LOAD_IMAGE) {
+         $(element).attr("href", $(this).attr("data-original"));
+       }
+      $(this).wrap(element);
+  });
+</script>
 
-  
 
+
+
+
+    <script>setLoadingBarProgress(100);</script>
 </body>
 </html>
