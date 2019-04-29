@@ -586,27 +586,17 @@
 
       
         
-          
-            <h2 id="Matplotlib中中文不显示问题"><a href="#Matplotlib中中文不显示问题" class="headerlink" title="Matplotlib中中文不显示问题"></a>Matplotlib中中文不显示问题</h2><p>我们在使用jupter进行数据分析的时候，会接触到Matplotlib这个库，它是用来进行可视化数据分析的，在一个图中，我们常常会加入一些中文来进行说明。当我们加入中文的时候会出现下图所示的样子：</p>
+          <h2 id="Matplotlib中中文不显示问题"><a href="#Matplotlib中中文不显示问题" class="headerlink" title="Matplotlib中中文不显示问题"></a>Matplotlib中中文不显示问题</h2><p>我们在使用jupter进行数据分析的时候，会接触到Matplotlib这个库，它是用来进行可视化数据分析的，在一个图中，我们常常会加入一些中文来进行说明。当我们加入中文的时候会出现下图所示的样子：</p>
 <p><img src="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126171304928-1982592030.png" alt="img"></p>
 <p>可以看到，中文变成了这种乱码的形式。网上有很多的例子，有很多是错误的，这里我把我测试成功的方法说明一下。</p>
 <p>我使用的电脑系统是Window10，后面的方法也是针对它的，其他的系统应该也差距不大，可以借鉴一下。</p>
-<h3 id="1-找一个喜欢的字体"><a href="#1-找一个喜欢的字体" class="headerlink" title="1.找一个喜欢的字体"></a>1.找一个喜欢的字体</h3><p>字体的话，我们可以去网上下载，也可以用系统自带的。我们可以进入到目录：C:\Windows\Fonts中，里面有很多字体，这里我选择了微软雅黑，这里将它复制。</p>
-<p><img src="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126172644334-542625206.png" alt="img"></p>
-<h3 id="2-将字体放到默认Matplotlib默认字体目录"><a href="#2-将字体放到默认Matplotlib默认字体目录" class="headerlink" title="2.将字体放到默认Matplotlib默认字体目录"></a>2.将字体放到默认Matplotlib默认字体目录</h3><p>在我电脑中Matplotlib默认字体目录是：D:\Anaconda3\Lib\site-packages\matplotlib\mpl-data\fonts\ttf。我们将复制的微软雅黑字体粘贴到这个目录下，然后双击安装。</p>
-<p>（因为安装的时候我修改了路径，将Anaconda安装到了D盘，如果你安装到C盘或者使用默认目录的话会有一些出入。）</p>
-<p><img src="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126172748235-1568497793.png" alt="img"></p>
-<h3 id="3-用下面代码找到Matplotlib的配置文件"><a href="#3-用下面代码找到Matplotlib的配置文件" class="headerlink" title="3.用下面代码找到Matplotlib的配置文件"></a>3.用下面代码找到Matplotlib的配置文件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import matplotlib</span><br><span class="line">print(matplotlib.matplotlib_fname())</span><br></pre></td></tr></table></figure>
-<p> 效果如下图：</p>
-<p><img src="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126172004091-1576679331.png" alt="img"></p>
-<h3 id="4-打开步骤3中得到的文件，然后修改"><a href="#4-打开步骤3中得到的文件，然后修改" class="headerlink" title="4.打开步骤3中得到的文件，然后修改"></a>4.打开步骤3中得到的文件，然后修改</h3><p><img src="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126173224483-1641500168.png" alt="img"></p>
-<p>这里我们顺便解决一下Matplotlib中负号不显示的问题，还是修改这个文件。</p>
-<p><img src="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126173832737-772380232.png" alt="img"></p>
-<h3 id="5-将Matplotlib中的缓存文件删除"><a href="#5-将Matplotlib中的缓存文件删除" class="headerlink" title="5.将Matplotlib中的缓存文件删除"></a>5.将Matplotlib中的缓存文件删除</h3><p>目录：C:\Users\用户.matplotlib中存放的是Matplotlib的缓存目录，我们只要将这个.matplotlib文件删除即可。</p>
-<h3 id="6-重启jupyter-notebook"><a href="#6-重启jupyter-notebook" class="headerlink" title="6.重启jupyter notebook"></a>6.重启jupyter notebook</h3><p>经过上面的6步，我们的乱码问题解决了。</p>
-<p> <img src="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126174308128-811831411.png" alt="img"></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/04/23/Matplotlib中文不显示问题/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

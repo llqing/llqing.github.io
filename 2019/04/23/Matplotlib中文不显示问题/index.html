@@ -94,7 +94,7 @@
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126173224483-1641500168.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126173832737-772380232.png">
 <meta property="og:image" content="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126174308128-811831411.png">
-<meta property="og:updated_time" content="2019-04-23T09:29:11.573Z">
+<meta property="og:updated_time" content="2019-04-29T16:05:13.964Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Matplotlib中文不显示问题">
 <meta name="twitter:description" content="Matplotlib中中文不显示问题我们在使用jupter进行数据分析的时候，会接触到Matplotlib这个库，它是用来进行可视化数据分析的，在一个图中，我们常常会加入一些中文来进行说明。当我们加入中文的时候会出现下图所示的样子：  可以看到，中文变成了这种乱码的形式。网上有很多的例子，有很多是错误的，这里我把我测试成功的方法说明一下。 我使用的电脑系统是Window10，后面的方法也是针对它的">
@@ -435,6 +435,7 @@
 <p><img src="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126171304928-1982592030.png" alt="img"></p>
 <p>可以看到，中文变成了这种乱码的形式。网上有很多的例子，有很多是错误的，这里我把我测试成功的方法说明一下。</p>
 <p>我使用的电脑系统是Window10，后面的方法也是针对它的，其他的系统应该也差距不大，可以借鉴一下。</p>
+<a id="more"></a>
 <h3 id="1-找一个喜欢的字体"><a href="#1-找一个喜欢的字体" class="headerlink" title="1.找一个喜欢的字体"></a>1.找一个喜欢的字体</h3><p>字体的话，我们可以去网上下载，也可以用系统自带的。我们可以进入到目录：C:\Windows\Fonts中，里面有很多字体，这里我选择了微软雅黑，这里将它复制。</p>
 <p><img src="https://img2018.cnblogs.com/blog/1365086/201811/1365086-20181126172644334-542625206.png" alt="img"></p>
 <h3 id="2-将字体放到默认Matplotlib默认字体目录"><a href="#2-将字体放到默认Matplotlib默认字体目录" class="headerlink" title="2.将字体放到默认Matplotlib默认字体目录"></a>2.将字体放到默认Matplotlib默认字体目录</h3><p>在我电脑中Matplotlib默认字体目录是：D:\Anaconda3\Lib\site-packages\matplotlib\mpl-data\fonts\ttf。我们将复制的微软雅黑字体粘贴到这个目录下，然后双击安装。</p>
