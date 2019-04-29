@@ -205,6 +205,85 @@
   <div class="meta" id="header-meta">
     
       <h2 class="title">
+          <a href="/2018/04/15/Python中if-name-name-main/">
+              
+                  Python中if __name__ == "__main__"是什么作用
+              
+          </a>
+      </h2>
+    
+
+    <div class="new-meta-box">
+      
+        <div class="new-meta-item author">
+          <a href="http://yoursite.com">
+            <i class="fas fa-user" aria-hidden="true"></i>
+            LLQ
+          </a>
+        </div>
+      
+      
+        <div class="new-meta-item date">
+          <a class="notlink">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+            2018-04-15
+          </a>
+        </div>
+      
+      
+        
+          
+          <div class="new-meta-item category">
+            <a href="/categories/Python/">
+              <i class="fas fa-folder-open" aria-hidden="true"></i>
+              Python
+            </a>
+          </div>
+        
+      
+      
+      
+    </div>
+    <hr>
+  </div>
+</section>
+
+  <section class="article typo">
+    <div class="article-entry" itemprop="articleBody">
+      <p>2018/4/15 22:19:35 </p>
+<hr>
+<ul>
+<li>最近在写毕业论文使用到Python，在查找文献资源中看到了一行代码<br><code>Python中if __name__ == &quot;__main__:&quot;</code>之前练习Python并没有注意这个，也可能太就给忘了，为了搞清这个语句于是开始疯狂百度，各种论坛博客搜索，最终找到了这个语句的作用个人感觉最易懂的解释，分享给大家</li>
+<li>python文件的后缀名是.py，python文件既可以用来直接执行，也可以作为模块被导入。<br>我们在使用python时经常会看到<code>Python中if __name__ == &quot;__main__:&quot;</code>这样一个句子,这是什么呢？<br>其中name是模块的内置属性，而这个内置属性的值取决于这个.py文件的使用方式，即你是作为模块导入还是直接执行。<br>如果你是直接执行，那么这个name的值就是’main’，如果你作为一个模块导入，那么这个内置属性值就取决于这个文件名(不包含路径和文件扩展名)。<br>所以我们在看到一个这样的句子<code>Python中if __name__ == &quot;__main__&quot;:</code>时，就是文件在执行时要执行这个main()函数</li>
+</ul>
+<hr>
+<p>附上一张号称一篇程序覆盖Python基础的代码，基本的结构都涉及到了，看不清的话保存本地放大看吧。<br><img src="https://img-blog.csdn.net/20160511222649275" alt></p>
+
+      
+    </div>
+    
+      <div class="full-width auto-padding tags">
+        
+          <a href="/tags/Python/"><i class="fas fa-hashtag fa-fw"></i>Python</a>
+        
+      </div>
+    
+  </section>
+</article>
+
+            </div>
+          
+        
+          
+            <div class="post-wrapper">
+              <article class="post reveal ">
+  
+<section class="meta">
+  
+  
+  <div class="meta" id="header-meta">
+    
+      <h2 class="title">
           <a href="/2018/04/09/用MarkdownX编写博文/">
               
                   用MarkdownX编写博文
