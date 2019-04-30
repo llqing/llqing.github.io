@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://llqing.github.io/tags/index.html</loc>
+    
+    <lastmod>2019-04-30T10:33:46.245Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://llqing.github.io/categories/index.html</loc>
+    
+    <lastmod>2019-04-30T10:30:39.131Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://llqing.github.io/books/index.html</loc>
+    
+    <lastmod>2019-04-30T10:27:06.443Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://llqing.github.io/2019/04/30/%E8%A7%A3%E5%86%B3Next%E4%B8%8Bbusuanzi%E6%97%A0%E6%95%88/</loc>
     
     <lastmod>2019-04-30T04:06:17.798Z</lastmod>
@@ -173,20 +194,6 @@
     <loc>https://llqing.github.io/friends/index.html</loc>
     
     <lastmod>2019-04-03T08:11:46.769Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://llqing.github.io/tags/index.html</loc>
-    
-    <lastmod>2019-04-03T08:10:34.804Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://llqing.github.io/categories/index.html</loc>
-    
-    <lastmod>2019-04-03T08:10:18.620Z</lastmod>
     
   </url>
   
