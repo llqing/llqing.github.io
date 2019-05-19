@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="ArcScene,">
 
 
 
@@ -86,18 +86,36 @@
 
 
 
-<meta name="description" content="加油,少年">
-<meta name="keywords" content="GIS,Code">
+<meta name="description" content="1.添加地图数据 数据显示效果: 1.1设置图层的显示顺序  数据显示效果: (遥感影像在矢量图层上显示) 1.2设置影像图层的高程和高程分辨率(目的是遥感影像三维显示) 数据显示效果:(遥感影像已经含有高程,突出显示) 1.3设置矢量图层 (县界线) 的高程(1.3和1.4的目的是做3D场景的外围墙) 数据显示效果: “县界线”图层设置了高程(注意和上图比较不同之处) 1.4矢量图层(县界线)的">
+<meta name="keywords" content="ArcScene">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ArcScene三维制作">
 <meta property="og:url" content="https://llqing.github.io/2019/04/28/ArcScene三维制作/index.html">
 <meta property="og:site_name" content="GIS小站">
-<meta property="og:description" content="加油,少年">
+<meta property="og:description" content="1.添加地图数据 数据显示效果: 1.1设置图层的显示顺序  数据显示效果: (遥感影像在矢量图层上显示) 1.2设置影像图层的高程和高程分辨率(目的是遥感影像三维显示) 数据显示效果:(遥感影像已经含有高程,突出显示) 1.3设置矢量图层 (县界线) 的高程(1.3和1.4的目的是做3D场景的外围墙) 数据显示效果: “县界线”图层设置了高程(注意和上图比较不同之处) 1.4矢量图层(县界线)的">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-28T14:47:24.146Z">
+<meta property="og:image" content="https://img.vim-cn.com/bb/4c5d3067b662afcea69cc168e7be020dded3a9.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/ae/831ff75d7786c09abb0c6dd285da83fa5f47e6.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/fe/92a3b09d4cb54e3f843d6e8c4d79a9a6abb10c.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/1d/2e8bd2f071bf46178012d06444e42c64e5ef0f.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/70/107bf0274d20367a553b96611f69fac8d8accb.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/8b/223faacdfdc0de2e41440be0cb2aab9c948aae.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/01/a68497e0e3771ef971ea75fd3d2b15e0726074.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/93/d49e2a4321be61025c3400eba6061c81181611.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/fe/293ba3d040993390156d5dcd0f3c6966cb3428.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/36/be8d6df92d60c354aa96db456e5732b986759d.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/a9/a7abab13291c5e076d0ccb3e3003546f6f8588.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/2f/a9f2eb85c437e292f4053437409c6cabe27d58.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/98/26511418b1cf046cd6902d62c0aa495e3ccbf5.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/f0/b93e7aa08dad6816163bfc6ebbf8e14e42b66e.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/f2/be5dc7fa0d92a1fbfd807e2072b3c4f2b8b0d4.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/77/be723101980a81493d0b7a0ec2793e74e23aa2.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/c8/b96db9abb4efdb4a7c6749b50fdfb7a08ff853.jpg">
+<meta property="og:updated_time" content="2019-05-17T13:41:47.174Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ArcScene三维制作">
-<meta name="twitter:description" content="加油,少年">
+<meta name="twitter:description" content="1.添加地图数据 数据显示效果: 1.1设置图层的显示顺序  数据显示效果: (遥感影像在矢量图层上显示) 1.2设置影像图层的高程和高程分辨率(目的是遥感影像三维显示) 数据显示效果:(遥感影像已经含有高程,突出显示) 1.3设置矢量图层 (县界线) 的高程(1.3和1.4的目的是做3D场景的外围墙) 数据显示效果: “县界线”图层设置了高程(注意和上图比较不同之处) 1.4矢量图层(县界线)的">
+<meta name="twitter:image" content="https://img.vim-cn.com/bb/4c5d3067b662afcea69cc168e7be020dded3a9.jpg">
 
 
 
@@ -382,6 +400,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/GIS/" itemprop="url" rel="index">
+                    <span itemprop="name">GIS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -418,7 +458,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  0 字
+                  284 字
                 </span>
               
 
@@ -455,7 +495,24 @@
       
 
       
-        
+        <h5 id="1-添加地图数据"><a href="#1-添加地图数据" class="headerlink" title="1.添加地图数据"></a>1.添加地图数据</h5><p><img src="https://img.vim-cn.com/bb/4c5d3067b662afcea69cc168e7be020dded3a9.jpg" alt></p>
+<h5 id="数据显示效果"><a href="#数据显示效果" class="headerlink" title="数据显示效果:"></a>数据显示效果:</h5><p><img src="https://img.vim-cn.com/ae/831ff75d7786c09abb0c6dd285da83fa5f47e6.jpg" alt></p>
+<h5 id="1-1设置图层的显示顺序"><a href="#1-1设置图层的显示顺序" class="headerlink" title="1.1设置图层的显示顺序"></a>1.1设置图层的显示顺序</h5><p><img src="https://img.vim-cn.com/fe/92a3b09d4cb54e3f843d6e8c4d79a9a6abb10c.jpg" alt> </p>
+<h5 id="数据显示效果-遥感影像在矢量图层上显示"><a href="#数据显示效果-遥感影像在矢量图层上显示" class="headerlink" title="数据显示效果: (遥感影像在矢量图层上显示)"></a>数据显示效果: (遥感影像在矢量图层上显示)</h5><p><img src="https://img.vim-cn.com/1d/2e8bd2f071bf46178012d06444e42c64e5ef0f.jpg" alt></p>
+<h5 id="1-2设置影像图层的高程和高程分辨率-目的是遥感影像三维显示"><a href="#1-2设置影像图层的高程和高程分辨率-目的是遥感影像三维显示" class="headerlink" title="1.2设置影像图层的高程和高程分辨率(目的是遥感影像三维显示)"></a>1.2设置影像图层的高程和高程分辨率(目的是遥感影像三维显示)</h5><p><img src="https://img.vim-cn.com/70/107bf0274d20367a553b96611f69fac8d8accb.jpg" alt></p>
+<h5 id="数据显示效果-遥感影像已经含有高程-突出显示"><a href="#数据显示效果-遥感影像已经含有高程-突出显示" class="headerlink" title="数据显示效果:(遥感影像已经含有高程,突出显示)"></a>数据显示效果:(遥感影像已经含有高程,突出显示)</h5><p><img src="https://img.vim-cn.com/8b/223faacdfdc0de2e41440be0cb2aab9c948aae.jpg" alt></p>
+<h5 id="1-3设置矢量图层-县界线-的高程-1-3和1-4的目的是做3D场景的外围墙"><a href="#1-3设置矢量图层-县界线-的高程-1-3和1-4的目的是做3D场景的外围墙" class="headerlink" title="1.3设置矢量图层 (县界线) 的高程(1.3和1.4的目的是做3D场景的外围墙)"></a>1.3设置矢量图层 (县界线) 的高程(1.3和1.4的目的是做3D场景的外围墙)</h5><p><img src="https://img.vim-cn.com/01/a68497e0e3771ef971ea75fd3d2b15e0726074.jpg" alt></p>
+<h5 id="数据显示效果-“县界线”图层设置了高程-注意和上图比较不同之处"><a href="#数据显示效果-“县界线”图层设置了高程-注意和上图比较不同之处" class="headerlink" title="数据显示效果: “县界线”图层设置了高程(注意和上图比较不同之处)"></a>数据显示效果: “县界线”图层设置了高程(注意和上图比较不同之处)</h5><p><img src="https://img.vim-cn.com/93/d49e2a4321be61025c3400eba6061c81181611.jpg" alt></p>
+<h5 id="1-4矢量图层-县界线-的拉伸-步骤1-3和1-4的目的是做3D场景的外围墙"><a href="#1-4矢量图层-县界线-的拉伸-步骤1-3和1-4的目的是做3D场景的外围墙" class="headerlink" title="1.4矢量图层(县界线)的拉伸 (步骤1.3和1.4的目的是做3D场景的外围墙)"></a>1.4矢量图层(县界线)的拉伸 (步骤1.3和1.4的目的是做3D场景的外围墙)</h5><p><img src="https://img.vim-cn.com/fe/293ba3d040993390156d5dcd0f3c6966cb3428.jpg" alt></p>
+<h5 id="矢量图层-县界层-拉伸后显示效果"><a href="#矢量图层-县界层-拉伸后显示效果" class="headerlink" title="矢量图层(县界层)拉伸后显示效果"></a>矢量图层(县界层)拉伸后显示效果</h5><p><img src="https://img.vim-cn.com/36/be8d6df92d60c354aa96db456e5732b986759d.jpg" alt></p>
+<h5 id="1-5-使用面图层（县界）设置3D场景的底面（此步骤的目的是做3D场景的“盒底”）"><a href="#1-5-使用面图层（县界）设置3D场景的底面（此步骤的目的是做3D场景的“盒底”）" class="headerlink" title="1.5 使用面图层（县界）设置3D场景的底面（此步骤的目的是做3D场景的“盒底”）"></a>1.5 使用面图层（县界）设置3D场景的底面（此步骤的目的是做3D场景的“盒底”）</h5><p><img src="https://img.vim-cn.com/a9/a7abab13291c5e076d0ccb3e3003546f6f8588.jpg" alt></p>
+<h5 id="1-6-设置遥感影像图的显示（绘制）精度"><a href="#1-6-设置遥感影像图的显示（绘制）精度" class="headerlink" title="1.6 设置遥感影像图的显示（绘制）精度"></a>1.6 设置遥感影像图的显示（绘制）精度</h5><p><img src="https://img.vim-cn.com/2f/a9f2eb85c437e292f4053437409c6cabe27d58.jpg" alt></p>
+<h5 id="具体设置如下："><a href="#具体设置如下：" class="headerlink" title="具体设置如下："></a>具体设置如下：</h5><p><img src="https://img.vim-cn.com/98/26511418b1cf046cd6902d62c0aa495e3ccbf5.jpg" alt></p>
+<h5 id="显示效果：（注意和上图比较精细程度）"><a href="#显示效果：（注意和上图比较精细程度）" class="headerlink" title="显示效果：（注意和上图比较精细程度）"></a>显示效果：（注意和上图比较精细程度）</h5><p><img src="https://img.vim-cn.com/f0/b93e7aa08dad6816163bfc6ebbf8e14e42b66e.jpg" alt></p>
+<h5 id="1-7-将3D场景导出为2D场景"><a href="#1-7-将3D场景导出为2D场景" class="headerlink" title="1.7 将3D场景导出为2D场景"></a>1.7 将3D场景导出为2D场景</h5><p><img src="https://img.vim-cn.com/f2/be5dc7fa0d92a1fbfd807e2072b3c4f2b8b0d4.jpg" alt></p>
+<p><img src="https://img.vim-cn.com/77/be723101980a81493d0b7a0ec2793e74e23aa2.jpg" alt></p>
+<h5 id="1-8-设置场景的背景色（如加入天空等）"><a href="#1-8-设置场景的背景色（如加入天空等）" class="headerlink" title="1.8 设置场景的背景色（如加入天空等）"></a>1.8 设置场景的背景色（如加入天空等）</h5><p><img src="https://img.vim-cn.com/c8/b96db9abb4efdb4a7c6749b50fdfb7a08ff853.jpg" alt></p>
+
       
     </div>
     
@@ -465,7 +522,7 @@
     
       <div>
         <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
-    <img id="wechat_subscriber_qcode" src="/uploads/weixinlogo.png" alt="LLQ wechat" style="width: 200px; max-width: 100%;">
+    <img id="wechat_subscriber_qcode" src="/images/weixinlogo.png" alt="LLQ wechat" style="width: 200px; max-width: 100%;">
     <div>扫一扫上面的二维码可以关注我哦</div>
 </div>
 
@@ -506,6 +563,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ArcScene/" rel="tag"># ArcScene</a>
+          
+        </div>
       
 
       
@@ -610,8 +673,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -628,7 +700,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">33</span>
+                  <span class="site-state-item-count">34</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -650,7 +722,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -707,6 +779,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-添加地图数据"><span class="nav-number">1.</span> <span class="nav-text">1.添加地图数据</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数据显示效果"><span class="nav-number">2.</span> <span class="nav-text">数据显示效果:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1设置图层的显示顺序"><span class="nav-number">3.</span> <span class="nav-text">1.1设置图层的显示顺序</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数据显示效果-遥感影像在矢量图层上显示"><span class="nav-number">4.</span> <span class="nav-text">数据显示效果: (遥感影像在矢量图层上显示)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2设置影像图层的高程和高程分辨率-目的是遥感影像三维显示"><span class="nav-number">5.</span> <span class="nav-text">1.2设置影像图层的高程和高程分辨率(目的是遥感影像三维显示)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数据显示效果-遥感影像已经含有高程-突出显示"><span class="nav-number">6.</span> <span class="nav-text">数据显示效果:(遥感影像已经含有高程,突出显示)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-3设置矢量图层-县界线-的高程-1-3和1-4的目的是做3D场景的外围墙"><span class="nav-number">7.</span> <span class="nav-text">1.3设置矢量图层 (县界线) 的高程(1.3和1.4的目的是做3D场景的外围墙)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#数据显示效果-“县界线”图层设置了高程-注意和上图比较不同之处"><span class="nav-number">8.</span> <span class="nav-text">数据显示效果: “县界线”图层设置了高程(注意和上图比较不同之处)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-4矢量图层-县界线-的拉伸-步骤1-3和1-4的目的是做3D场景的外围墙"><span class="nav-number">9.</span> <span class="nav-text">1.4矢量图层(县界线)的拉伸 (步骤1.3和1.4的目的是做3D场景的外围墙)</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#矢量图层-县界层-拉伸后显示效果"><span class="nav-number">10.</span> <span class="nav-text">矢量图层(县界层)拉伸后显示效果</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-5-使用面图层（县界）设置3D场景的底面（此步骤的目的是做3D场景的“盒底”）"><span class="nav-number">11.</span> <span class="nav-text">1.5 使用面图层（县界）设置3D场景的底面（此步骤的目的是做3D场景的“盒底”）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-6-设置遥感影像图的显示（绘制）精度"><span class="nav-number">12.</span> <span class="nav-text">1.6 设置遥感影像图的显示（绘制）精度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#具体设置如下："><span class="nav-number">13.</span> <span class="nav-text">具体设置如下：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#显示效果：（注意和上图比较精细程度）"><span class="nav-number">14.</span> <span class="nav-text">显示效果：（注意和上图比较精细程度）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-7-将3D场景导出为2D场景"><span class="nav-number">15.</span> <span class="nav-text">1.7 将3D场景导出为2D场景</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-8-设置场景的背景色（如加入天空等）"><span class="nav-number">16.</span> <span class="nav-text">1.8 设置场景的背景色（如加入天空等）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
