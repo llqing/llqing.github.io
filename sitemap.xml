@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://llqing.github.io/tags/index.html</loc>
+    
+    <lastmod>2019-05-31T07:04:49.758Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://llqing.github.io/categories/index.html</loc>
+    
+    <lastmod>2019-05-31T07:04:19.745Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://llqing.github.io/2019/03/31/15%E8%A1%8Cpython%E4%BB%A3%E7%A0%81%E6%90%9E%E5%AE%9A%E7%BD%91%E6%98%93%E4%BA%91%E7%83%AD%E9%97%A8%E6%AD%8C%E5%8D%95/</loc>
+    
+    <lastmod>2019-05-31T06:57:09.202Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://llqing.github.io/books/index.html</loc>
     
     <lastmod>2019-05-31T06:48:20.869Z</lastmod>
@@ -33,20 +54,6 @@
     <loc>https://llqing.github.io/2019/04/13/ArcGIS-API-for-JavaScript%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B-3-%E4%BD%A0%E7%9C%8B%E5%BE%97%E5%88%B0%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%B8%8E%E8%A7%86%E5%9B%BE%E5%88%86%E7%A6%BB/</loc>
     
     <lastmod>2019-05-17T10:39:50.370Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://llqing.github.io/tags/index.html</loc>
-    
-    <lastmod>2019-04-30T10:33:46.245Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://llqing.github.io/categories/index.html</loc>
-    
-    <lastmod>2019-04-30T10:30:39.131Z</lastmod>
     
   </url>
   
@@ -145,13 +152,6 @@
     <loc>https://llqing.github.io/about/index.html</loc>
     
     <lastmod>2019-04-07T15:15:00.421Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://llqing.github.io/2019/03/31/15%E8%A1%8Cpython%E4%BB%A3%E7%A0%81%E6%90%9E%E5%AE%9A%E7%BD%91%E6%98%93%E4%BA%91%E7%83%AD%E9%97%A8%E6%AD%8C%E5%8D%95/</loc>
-    
-    <lastmod>2019-04-07T14:51:22.430Z</lastmod>
     
   </url>
   
