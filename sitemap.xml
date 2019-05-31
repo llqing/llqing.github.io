@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://llqing.github.io/about/index.html</loc>
+    
+    <lastmod>2019-05-31T07:24:11.523Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://llqing.github.io/guestbook/index.html</loc>
     
     <lastmod>2019-05-31T07:18:14.661Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://llqing.github.io/categories/index.html</loc>
     
     <lastmod>2019-05-31T07:15:57.309Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://llqing.github.io/about/index.html</loc>
-    
-    <lastmod>2019-05-31T07:14:50.276Z</lastmod>
     
   </url>
   
