@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://llqing.github.io/books/index.html</loc>
+    
+    <lastmod>2019-05-31T06:48:20.869Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://llqing.github.io/2019/05/31/%E5%BF%AB%E6%9D%A5%E6%91%86%E8%84%B1%E5%B9%B3%E6%B7%A1%E7%9A%84%E5%9C%B0%E5%9B%BE/</loc>
     
     <lastmod>2019-05-31T04:07:59.409Z</lastmod>
@@ -40,13 +47,6 @@
     <loc>https://llqing.github.io/categories/index.html</loc>
     
     <lastmod>2019-04-30T10:30:39.131Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://llqing.github.io/books/index.html</loc>
-    
-    <lastmod>2019-04-30T10:27:06.443Z</lastmod>
     
   </url>
   
