@@ -95,12 +95,13 @@
 <meta property="og:description" content="什么是地图投影地图投影是利用一定数学法则把地球表面的经、纬线转换到平面上的理论和方法。 由于地球是一个赤道略宽两极略扁的不规则的梨形球体，故其表面是一个不可展平的曲面，所以运用任何数学方法进行这种转换都会产生误差和变形，为按照不同的需求缩小误差，就产生了各种投影方式。 比如这篇很有意思的文章你所不知的有趣投影方法。 为什么要进行地图投影 地理坐标为球面坐标, 不方便进行距离, 方位, 面积等参数的">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://img.vim-cn.com/e1/4408a6608880aa9a6a83d5ba46fa96c8e3c842.jpg">
-<meta property="og:image" content="https://segmentfault.com/img/remote/1460000007807512">
-<meta property="og:image" content="https://segmentfault.com/img/remote/1460000007807513">
-<meta property="og:image" content="https://segmentfault.com/img/remote/1460000007807514">
-<meta property="og:image" content="https://segmentfault.com/img/remote/1460000007807515">
-<meta property="og:image" content="https://segmentfault.com/img/remote/1460000007807516">
-<meta property="og:updated_time" content="2019-06-30T12:03:07.564Z">
+<meta property="og:image" content="https://img.vim-cn.com/82/e74d03f558ef92eb5a1657f484b213bb4bfb62.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/83/dffa24b070f4943b818fccee376ed16276c59e.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/aa/ca292494ce4e977645913d7a501bab782e69af.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/d5/f4c5f433d57ded4cca99b721333b8e5437fce1.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/13/8c62e9da0ce8d7852be2ccb876873ee3b5b91a.jpg">
+<meta property="og:image" content="https://img.vim-cn.com/74/3a0ac1988906c99aa2d4db06c91366a03848c5.jpg">
+<meta property="og:updated_time" content="2019-06-30T12:14:56.745Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用Python做地图投影">
 <meta name="twitter:description" content="什么是地图投影地图投影是利用一定数学法则把地球表面的经、纬线转换到平面上的理论和方法。 由于地球是一个赤道略宽两极略扁的不规则的梨形球体，故其表面是一个不可展平的曲面，所以运用任何数学方法进行这种转换都会产生误差和变形，为按照不同的需求缩小误差，就产生了各种投影方式。 比如这篇很有意思的文章你所不知的有趣投影方法。 为什么要进行地图投影 地理坐标为球面坐标, 不方便进行距离, 方位, 面积等参数的">
@@ -522,16 +523,17 @@
 <p>输出为</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">569704.566 4269024.671</span><br><span class="line">569722.342 4268814.027</span><br></pre></td></tr></table></figure>
 <h3 id="基于geopandas的矢量地图投影"><a href="#基于geopandas的矢量地图投影" class="headerlink" title="基于geopandas的矢量地图投影"></a>基于geopandas的矢量地图投影</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">import shapely, geopandas, fiona</span><br><span class="line">import seaborn as sns</span><br><span class="line">from fiona.crs import from_epsg,from_string</span><br><span class="line"></span><br><span class="line"># Data</span><br><span class="line">shp = &apos;E:\NationalGISdata\Province.shp&apos;</span><br><span class="line"></span><br><span class="line">shp_df = geopandas.GeoDataFrame.from_file(shp)</span><br><span class="line"># #IndexError报错的话，用arcgis将shapefile文件重新导出一遍试试</span><br><span class="line">shp_df.head()</span><br></pre></td></tr></table></figure>
-<p><img src="https://segmentfault.com/img/remote/1460000007807512" alt="img"></p>
+<p><img src="https://img.vim-cn.com/82/e74d03f558ef92eb5a1657f484b213bb4bfb62.jpg" alt="img"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 根据当前的兰伯特投影绘制</span><br><span class="line">shp_df.plot(column=&quot;GDP_1994&quot;,colormap=&apos;Set1&apos;)</span><br></pre></td></tr></table></figure>
-<p><img src="https://segmentfault.com/img/remote/1460000007807513" alt="img"></p>
+<p><img src="https://img.vim-cn.com/83/dffa24b070f4943b818fccee376ed16276c59e.jpg" alt="img"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># 转换到经纬度坐标</span><br><span class="line">shp_df_wgs84 = shp_df.to_crs(from_epsg(4326))</span><br><span class="line">shp_df_wgs84.plot(column=&quot;GDP_1994&quot;,colormap=&apos;Set1&apos;)</span><br></pre></td></tr></table></figure>
-<p><img src="https://segmentfault.com/img/remote/1460000007807514" alt="img"></p>
+<p><img src="https://img.vim-cn.com/aa/ca292494ce4e977645913d7a501bab782e69af.jpg" alt="img"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># 国家2000坐标系</span><br><span class="line"># EPSG:4508  CGCS2000 / Gauss-Kruger CM 111E</span><br><span class="line">shp_df_4508 = shp_df.to_crs(from_epsg(4508))</span><br><span class="line">shp_df_4508.plot(column=&quot;GDP_1994&quot;,colormap=&apos;Set1&apos;)</span><br></pre></td></tr></table></figure>
-<p><img src="https://segmentfault.com/img/remote/1460000007807515" alt="img"></p>
+<p><img src="https://img.vim-cn.com/d5/f4c5f433d57ded4cca99b721333b8e5437fce1.jpg" alt="img"></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 除了直接用ESPG code，也可以自己定义投影参数</span><br><span class="line"></span><br><span class="line">ESRI_54024 = &quot;&quot;&quot;</span><br><span class="line">+proj=bonne +lon_0=0 +lat_1=60 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs </span><br><span class="line"></span><br><span class="line">shp_df_3408 = shp_df.to_crs(from_string(ESRI_54024))</span><br><span class="line">shp_df_3408.plot(column=&quot;GDP_1994&quot;,colormap=&apos;Set1&apos;)</span><br></pre></td></tr></table></figure>
-<p><img src="https://segmentfault.com/img/remote/1460000007807516" alt="img"></p>
-<p>### </p>
+<p><img src="https://img.vim-cn.com/13/8c62e9da0ce8d7852be2ccb876873ee3b5b91a.jpg" alt="img"></p>
+<p>更多图示:</p>
+<p><img src="https://img.vim-cn.com/74/3a0ac1988906c99aa2d4db06c91366a03848c5.jpg" alt></p>
 <p>(文章参考资料:微信公众号<strong>stdrei</strong>)</p>
 
       
