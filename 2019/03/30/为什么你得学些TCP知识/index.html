@@ -484,6 +484,8 @@
 <p>突然我记起我一周以前看过的一篇叫做“性能研究（In search of performance）”的文章——我们如何为每个 POST 请求节省 200ms。在这篇文章中，他们说到为什么每个 POST 请求会花费额外的 200 毫秒。就是这个原因。这是该文章中的关键段落：</p>
 <h3 id><a href="#" class="headerlink" title=" "></a> </h3><h3 id="延迟确认（ACK）-与-TCP-NODELAY"><a href="#延迟确认（ACK）-与-TCP-NODELAY" class="headerlink" title="延迟确认（ACK） 与 TCP_NODELAY"></a><strong>延迟确认（ACK） 与 TCP_NODELAY</strong></h3><blockquote>
 <p>Ruby 的 Net::HTTP 会将 POST 请求切分为两个 TCP 包，一个消息头，一个消息体。相反，curl 会将这两者合并为一个包。更糟糕的是，Net::HTTP 在打开 TCP 套接字时不会设置 TCP_NODELAY，这将导致第二个包需要等到第一个包的接收确认通知之后才能发送。这是 Nagle 算法导致的。</p>
+</blockquote>
+<blockquote>
 <p>转换到连接的另一端，HAProxy 需要决定如何确认这两个包。在 1.4.18 版本中（我们正在用的版本），它是通过 TCP 延迟确认通知来实现的。延迟确认对 Nagle 算法有非常糟糕的影响，会导致请求暂停直到服务器延迟确认超时。</p>
 </blockquote>
 <p>现在我们解释这个段落说的内容。</p>
@@ -696,7 +698,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">48</span>
+                  <span class="site-state-item-count">49</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -718,7 +720,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">45</span>
+                  <span class="site-state-item-count">46</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>

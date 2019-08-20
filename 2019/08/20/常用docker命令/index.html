@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-simple.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Docker,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Docker是一个不断发展的系统，开发人员积极改进使用和性能。所以命令总是在变化。docker一些老的命令经常被弃用，并被新的或更有效的命令取代。您可以使用帮助选项检查Docker安装上的最新可用命令： 1$ docker --help 要使用特定命令的选项，可以使用该命令的help选项。例如，要使用docker run命令选项，可以使用以下命令： 1$ docker run --help 目前，">
+<meta name="keywords" content="Docker">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用docker命令">
+<meta property="og:url" content="https://llqing.github.io/2019/08/20/常用docker命令/index.html">
+<meta property="og:site_name" content="GIS小站">
+<meta property="og:description" content="Docker是一个不断发展的系统，开发人员积极改进使用和性能。所以命令总是在变化。docker一些老的命令经常被弃用，并被新的或更有效的命令取代。您可以使用帮助选项检查Docker安装上的最新可用命令： 1$ docker --help 要使用特定命令的选项，可以使用该命令的help选项。例如，要使用docker run命令选项，可以使用以下命令： 1$ docker run --help 目前，">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-20T06:42:32.774Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常用docker命令">
+<meta name="twitter:description" content="Docker是一个不断发展的系统，开发人员积极改进使用和性能。所以命令总是在变化。docker一些老的命令经常被弃用，并被新的或更有效的命令取代。您可以使用帮助选项检查Docker安装上的最新可用命令： 1$ docker --help 要使用特定命令的选项，可以使用该命令的help选项。例如，要使用docker run命令选项，可以使用以下命令： 1$ docker run --help 目前，">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://llqing.github.io/2019/08/20/常用docker命令/">
+
+
+
+
+
+  <title>常用docker命令 | GIS小站</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?000f0c5c3ac5acce3202c3c17b07cfd8";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">GIS小站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-other">
+          <a href="/other" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            随意发挥
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-comments"></i> <br>
+            
+            留言
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
+            
+            教程资源
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://llqing.github.io/2019/08/20/常用docker命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LLQ">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GIS小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">常用docker命令</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-20T14:34:28+08:00">
+                2019-08-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/常用工具/" itemprop="url" rel="index">
+                    <span itemprop="name">常用工具</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/08/20/常用docker命令/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/20/常用docker命令/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读数 <i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  18 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Docker是一个不断发展的系统，开发人员积极改进使用和性能。所以命令总是在变化。docker一些老的命令经常被弃用，并被新的或更有效的命令取代。您可以使用帮助选项检查Docker安装上的最新可用命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker --help</span><br></pre></td></tr></table></figure>
+<p>要使用特定命令的选项，可以使用该命令的help选项。例如，要使用docker run命令选项，可以使用以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run --help</span><br></pre></td></tr></table></figure>
+<p>目前，有13个管理命令和41个通用命令。下面是我们的docker命令：</p>
+<ul>
+<li><strong>docker attach-将本地输入/输出/错误流附加到正在运行的容器。</strong></li>
+<li><strong>docker commit-从容器的当前更改状态创建一个新镜像。</strong></li>
+<li><strong>docker exec-在正在运行的容器中运行命令。</strong></li>
+<li><strong>docker history-显示镜像的历史记录。</strong></li>
+<li><strong>docker info-显示系统信息，包括镜像和容器数。</strong></li>
+<li><strong>docker inspect-查找有关Docker容器和镜像的系统级信息。</strong></li>
+<li><strong>docker login-登录到本地注册表或Docker Hub。</strong></li>
+<li><strong>docker pull-从本地注册表或Docker Hub中提取镜像或存储库。</strong></li>
+<li><strong>docker ps-列出容器的各种属性。</strong></li>
+<li><strong>docker restart-停止并启动容器。</strong></li>
+<li><strong>docker rm-移除容器。</strong></li>
+<li><strong>docker rmi-删除镜像。</strong></li>
+<li><strong>docker run-在一个独立的容器中运行一个命令。</strong></li>
+<li><strong>docker search-在Docker Hub中搜索镜像。</strong></li>
+<li><strong>docker start-启动已经停止的容器。</strong></li>
+<li><strong>docker stop-停止运行容器。</strong></li>
+<li><strong>docker version -提供Docker版本信息。</strong></li>
+</ul>
+<p>让我们深入研究一下使用这些docker命令可以执行的各种操作。</p>
+<p>注意：对于部分信息转储，我们使用了三个点（…）。</p>
+<p><strong>显示Docker版本和系统信息</strong></p>
+<p>当您在工作时，您通常都需要检查Docker版本和Docker系统信息。您可以使用以下命令查找Docker版本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ docker version</span><br><span class="line">Client:</span><br><span class="line">Version: 18.03.0-ce</span><br><span class="line">API version: 1.37</span><br><span class="line">Go version: go1.9.4</span><br><span class="line">Git commit: 0520e24</span><br><span class="line">Built: Wed Mar 21 23:06:22 2018</span><br><span class="line">OS/Arch: darwin/amd64</span><br><span class="line">Experimental: false</span><br><span class="line">Orchestrator: swarm</span><br><span class="line">Server:</span><br><span class="line">Engine:</span><br><span class="line">Version: 18.03.0-ce</span><br><span class="line">API version: 1.37 (minimum version 1.12)</span><br><span class="line">Go version: go1.9.4</span><br><span class="line">Git commit: 0520e24</span><br><span class="line">Built: Wed Mar 21 23:14:32 2018</span><br><span class="line">OS/Arch: linux/amd64</span><br><span class="line">Experimental: true</span><br></pre></td></tr></table></figure>
+<p>另一个重要的命令是<strong>docker info</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$ docker info</span><br><span class="line"></span><br><span class="line">Containers: 0</span><br><span class="line">Running: 0</span><br><span class="line">Paused: 0</span><br><span class="line">Stopped: 0</span><br><span class="line">Images: 0</span><br><span class="line">Server Version: 18.03.0-ce</span><br><span class="line">Storage Driver: overlay2</span><br><span class="line">Backing Filesystem: extfs</span><br><span class="line">Supports d_type: true</span><br><span class="line">Native Overlay Diff: true</span><br><span class="line">Logging Driver: json-file</span><br><span class="line">Cgroup Driver: cgroupfs</span><br><span class="line">Plugins:</span><br><span class="line">Volume: local</span><br><span class="line">Network: bridge host ipvlan macvlan null overlay</span><br><span class="line">Log: awslogs fluentd gcplogs gelf journald json-file logentries splunk syslog</span><br><span class="line"></span><br><span class="line">…</span><br></pre></td></tr></table></figure>
+<p>它将向您显示各种重要信息，如服务器版本、存储驱动程序、内核版本、操作系统、总内存等等。当您试图为当前的Docker安装增加新的资源或试图解决系统级资源分配问题时，这些信息可能很有用。这也是一种快速检查正在运行、暂停和停止的容器数量以及下载到系统的镜像数量的方法。</p>
+<p><strong>搜索和下载Docker镜像</strong></p>
+<p>您可以使用docker search命令在docker hub上搜索已经可用的镜像。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ docker search ubuntu</span><br><span class="line"></span><br><span class="line">NAME DESCRIPTION STARS OFFICIAL AUTOMATED</span><br><span class="line">ubuntu Ubuntu is a Debian-based Linux operating sys… 7861 [OK]</span><br><span class="line">dorowu/ubuntu-desktop-lxde-vnc Ubuntu with openssh-server and NoVNC 190 [OK]</span><br><span class="line">rastasheep/ubuntu-sshd Dockerized SSH service, built on top of offi… 156 [OK]</span><br><span class="line">ansible/ubuntu14.04-ansible Ubuntu 14.04 LTS with ansible 93 [OK]</span><br><span class="line">ubuntu-upstart Upstart is an event-based replacement for th… 87 [OK]</span><br><span class="line">neurodebian NeuroDebian provides neuroscience research s… 50 [OK]</span><br><span class="line"></span><br><span class="line">…</span><br></pre></td></tr></table></figure>
+<p>上面的搜索显示了对Ubuntu可用的镜像及其描述。</p>
+<p>让我们下载最著名的Ubuntu镜像。您可以使用docker pull命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull ubuntu</span><br><span class="line"></span><br><span class="line">Using default tag: latest</span><br><span class="line">latest: Pulling from library/ubuntu</span><br><span class="line">6b98dfc16071: Pull complete</span><br><span class="line">4001a1209541: Pull complete</span><br><span class="line">6319fc68c576: Pull complete</span><br><span class="line">b24603670dc3: Pull complete</span><br><span class="line">97f170c87c6f: Pull complete</span><br><span class="line">Digest: sha256:5f4bdc3467537cbbe563e80db2c3ec95d548a9145d64453b06939c4592d67b6d</span><br><span class="line">Status: Downloaded newer image for ubuntu:latest</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
+<p><strong>玩转Docker镜像</strong></p>
+<p>您可以使用docker info命令查找您拥有的镜像数量：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ docker info</span><br><span class="line"></span><br><span class="line">Containers: 0</span><br><span class="line">Running: 0</span><br><span class="line">Paused: 0</span><br><span class="line">Stopped: 0</span><br><span class="line">Images: 1</span><br><span class="line">…</span><br></pre></td></tr></table></figure>
+<p>该 docker images命令将详细列出您拥有的镜像：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker images</span><br><span class="line">REPOSITORY TAG IMAGE ID CREATED SIZE</span><br><span class="line">ubuntu latest 113a43faa138 2 weeks ago 81.2MB</span><br></pre></td></tr></table></figure>
+<p>假设您决定下载nginx图像。你可以运行另一个docker pull  命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull nginx</span><br></pre></td></tr></table></figure>
+<p>现在，如果您查看Docker镜像，您会看到如下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker images</span><br><span class="line">REPOSITORY TAG IMAGE ID CREATED SIZE</span><br><span class="line">ubuntu latest 113a43faa138 2 weeks ago 81.2MB</span><br><span class="line">nginx latest cd5239a0906a 2 weeks ago</span><br></pre></td></tr></table></figure>
+<p> 您可以使用这些页面查找镜像的特定版本。在Ubuntu页面上，您会注意到Ubuntu的最新版本是18.04。如果要查找16.04版本的Ubuntu，可以使用16.04标记下载该特定版本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull ubuntu:16.04</span><br></pre></td></tr></table></figure>
+<p>然后你将会有两个Ubuntu镜像版本：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ docker images</span><br><span class="line">REPOSITORY TAG IMAGE ID CREATED SIZE</span><br><span class="line">ubuntu 16.04 5e8b97a2a082 2 weeks ago 114MB</span><br><span class="line">ubuntu latest 113a43faa138 2 weeks ago 81.2MB</span><br><span class="line">nginx latest cd5239a0906a 2 weeks ago 109MB</span><br></pre></td></tr></table></figure>
+<p>注意：您不需要注册Docker Hub即可拉取镜像。但是，如果要将图像推送到Docker Hub，则需要注册，然后使用Docker login命令登录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker login --username = yourhubusername --email = youremail@company.com</span><br></pre></td></tr></table></figure>
+<p><strong>运行镜像的Docker容器</strong></p>
+<p>假设您想在docker上运行nginx服务器。运行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -p 8080:80 nginx</span><br></pre></td></tr></table></figure>
+<p>docker run命令从先前从Docker Hub中提取的nginx镜像创建了一个nginx容器。“-p 8080:80”告诉Docker将本地主机端口8080映射到Docker容器的端口80。您应该能够从<a href="http://localhost:8080访问nginx服务器。" target="_blank" rel="noopener">http://localhost:8080访问nginx服务器。</a></p>
+<p>nginx容器附加到命令行。因此，如果退出命令行，容器将不再运行。您可以使用detach（“-d”）选项启动nginx容器，这样即使您退出命令行，它也可以继续运行。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -p 8080:80 -d nginx</span><br></pre></td></tr></table></figure>
+<p>上面的命令将以分离模式启动容器并返回命令行。</p>
+<p><strong>列出Docker容器</strong></p>
+<p>该  docker ps 命令允许您查找正在运行的所有容器。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps</span><br><span class="line">CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES</span><br><span class="line">6162daed25da nginx &quot;nginx -g &apos;daemon of…&quot; 7 minutes ago Up 7 minutes 0.0.0.0:8080-&gt;80/tcp hardcore_torvalds</span><br></pre></td></tr></table></figure>
+<p>它显示了容器的各种属性。您可以看到它是从nginx镜像创建的，并且还显示了端口转发信息。容器ID和名称属性需要特别说明。您可以使用这些属性来唯一地标识容器。这两个属性都是自动生成的。但您也可以在容器创建过程中为容器命名。让我们创建一个名为“my_nginx”的nginx容器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run --name my_nginx -p 8888:80 -d nginx</span><br></pre></td></tr></table></figure>
+<p>让我们再次列出Docker容器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps</span><br><span class="line">CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES</span><br><span class="line">e7b19b6ad778 nginx &quot;nginx -g &apos;daemon of…&quot; About a minute ago Up About a minute 0.0.0.0:8888-&gt;80/tcp my_nginx</span><br><span class="line">6162daed25da nginx &quot;nginx -g &apos;daemon of…&quot; 15 minutes ago Up 16 minutes 0.0.0.0:8080-&gt;80/tcp hardcore_torvalds</span><br></pre></td></tr></table></figure>
+<p><strong>注意，新容器的名称是“my_nginx”。当您处理大量容器时，可以使用命名规则。这将帮助您更好地组织容器。</strong></p>
+<p>docker ps命令只显示正在运行的容器。如果对上述情况使用docker info命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ docker info</span><br><span class="line"></span><br><span class="line">Containers: 2</span><br><span class="line">Running: 2</span><br><span class="line">Paused: 0</span><br><span class="line">Stopped: 0</span><br><span class="line">Images: 3</span><br><span class="line">…</span><br></pre></td></tr></table></figure>
+<p>您可以看到有两个容器正在运行。如果您有一个暂停或停止的容器，您必须使用a ll（“-a”）选项：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps -a</span><br></pre></td></tr></table></figure>
+<p><strong>启动，停止，重新启动和杀掉容器</strong></p>
+<p>假设您要停止’my_nginx’容器。您可以使用CONTAINER ID或NAME。在这种情况下，让我们使用名称：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker stop my_nginx</span><br><span class="line"></span><br><span class="line">my_nginx</span><br></pre></td></tr></table></figure>
+<p>我们列出Docker容器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps</span><br><span class="line"></span><br><span class="line">CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES</span><br><span class="line">6162daed25da nginx &quot;nginx -g &apos;daemon of…&quot; 27 minutes ago Up 27 minutes 0.0.0.0:8080-&gt;80/tcp hardcore_torvalds</span><br><span class="line"></span><br><span class="line">$ docker ps -a</span><br><span class="line"></span><br><span class="line">CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES</span><br><span class="line">e7b19b6ad778 nginx &quot;nginx -g &apos;daemon of…&quot; 12 minutes ago Exited (0) About a minute ago my_nginx</span><br><span class="line">6162daed25da nginx &quot;nginx -g &apos;daemon of…&quot; 27 minutes ago Up 27 minutes 0.0.0.0:8080-&gt;80/tcp hardcore_torvalds</span><br></pre></td></tr></table></figure>
+<p>如果docker ps 没有-a选项运行，它只显示正在运行的容器。在第二种情况下，您可以看到’my_nginx’容器处于退出状态。</p>
+<p>让我们docker start容器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker start my_nginx</span><br><span class="line"></span><br><span class="line">my_nginx</span><br></pre></td></tr></table></figure>
+<p>如果您查看Docker容器列表：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps</span><br><span class="line">CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES</span><br><span class="line">e7b19b6ad778 nginx &quot;nginx -g &apos;daemon of…&quot; 16 minutes ago Up 29 seconds 0.0.0.0:8888-&gt;80/tcp my_nginx</span><br><span class="line">6162daed25da nginx &quot;nginx -g &apos;daemon of…&quot; 30 minutes ago Up 30 minutes 0.0.0.0:8080-&gt;80/tcp hardcore_torvalds</span><br></pre></td></tr></table></figure>
+<p>您可以看到STATUS显示容器’my_nginx’再次启动。</p>
+<p>如果由于某些问题而想要停止并启动容器，可以使用restart命令。它比单独停止和启动容器更快：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker restart my_nginx</span><br></pre></td></tr></table></figure>
+<p>您可以像进程一样终止docker容器。让我们杀掉’my_nginx’容器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker kill my_nginx</span><br></pre></td></tr></table></figure>
+<p>再次列出Docker容器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps -a</span><br><span class="line"></span><br><span class="line">CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES</span><br><span class="line">e7b19b6ad778 nginx &quot;nginx -g &apos;daemon of…&quot; 22 minutes ago Exited (137) 7 seconds ago my_nginx</span><br><span class="line">6162daed25da nginx &quot;nginx -g &apos;daemon of…&quot; 36 minutes ago Up 36 minutes 0.0.0.0:8080-&gt;80/tcp hardcore_torvalds</span><br></pre></td></tr></table></figure>
+<p>容器my_nginx未运行。此外，您可以在信息中看到您有一个正在运行的容器和一个已停止的容器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$ docker info</span><br><span class="line"></span><br><span class="line">Containers: 2</span><br><span class="line">Running: 1</span><br><span class="line">Paused: 0</span><br><span class="line">Stopped: 1</span><br><span class="line">Images: 3</span><br><span class="line"></span><br><span class="line">…</span><br></pre></td></tr></table></figure>
+<p>使用启动或重新启动Docker命令来启动被杀掉的容器。</p>
+<p><strong>Docker exec bash 和Docker SSH 进入容器</strong></p>
+<p>您通常需要与容器的shell进行交互，以创建服务或解决问题。可以使用docker exec命令创建交互式shell。让我们用bash shell从Ubuntu镜像启动一个容器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker run --name my_ubuntu -it ubuntu:latest bash</span><br><span class="line"></span><br><span class="line">root@a19c770b8621:/#</span><br></pre></td></tr></table></figure>
+<p>这  root@hash# 意味着您位于Docker容器的bash shell中。您可以运行shell命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root@a19c770b8621:/# ls</span><br><span class="line"></span><br><span class="line">bin boot dev etc home lib lib64 media mnt opt proc root run sbin srv sys tmp usr var</span><br><span class="line">root@a19c770b8621:/# pwd</span><br><span class="line"></span><br><span class="line">/</span><br></pre></td></tr></table></figure>
+<p>您可以列出Docker容器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps</span><br><span class="line"></span><br><span class="line">CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES</span><br><span class="line">a19c770b8621 ubuntu:latest &quot;bash&quot; About a minute ago Up About a minute my_ubuntu</span><br><span class="line">6162daed25da nginx &quot;nginx -g &apos;daemon of…&quot; About an hour ago Up About an hour 0.0.0.0:8080-&gt;80/tcp hardcore_torvalds</span><br></pre></td></tr></table></figure>
+<p>你可以看到’my_ubuntu’正在运行。假设你想将Docker ssh放入容器’my_ubuntu’中。你可以使用  docker exec   bash方法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker exec -it my_ubuntu bash</span><br><span class="line"></span><br><span class="line">root@a19c770b8621:/#</span><br></pre></td></tr></table></figure>
+<p><strong>注意，命令提示符的容器ID和bash匹配。因此，您将ssh放入容器“my-ubuntu”的结果是成功的。</strong></p>
+<p>使用docker exec向容器中发出命令。例如，您可以直接从命令提示符在“my_buntu”docker容器上运行ls命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker exec -it my_ubuntu ls</span><br><span class="line"></span><br><span class="line">bin dev home lib64 mnt proc run srv tmp var</span><br><span class="line">boot etc lib media opt root sbin sys usr</span><br></pre></td></tr></table></figure>
+<p><strong>连接到正在运行中的容器</strong></p>
+<p>在上面的示例中，您以附加模式启动了Ubuntu容器。相反，您可以在分离模式下启动它：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -it -d --name my_ubuntu_2 ubuntu:latest bash</span><br><span class="line"></span><br><span class="line">75b28b7208359137b3e1dc2843387918e28b4c6c4860ef0cdeac79c205f5cbc4</span><br></pre></td></tr></table></figure>
+<p>验证容器是否正在运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps</span><br><span class="line"></span><br><span class="line">CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES</span><br><span class="line">75b28b720835 ubuntu:latest &quot;bash&quot; 3 minutes ago Up 3 minutes my_ubuntu_2</span><br><span class="line">a19c770b8621 ubuntu:latest &quot;bash&quot; 15 minutes ago Up 15 minutes my_ubuntu</span><br><span class="line">6162daed25da nginx &quot;nginx -g &apos;daemon of…&quot; 2 hours ago Up 2 hours 0.0.0.0:8080-&gt;80/tcp hardcore_torvalds</span><br></pre></td></tr></table></figure>
+<p>使用该  docker attach 命令获得  docker exec 类似的效果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker attach my_ubuntu_2</span><br><span class="line"></span><br><span class="line">root@75b28b720835:/#</span><br></pre></td></tr></table></figure>
+<p><strong>查看镜像的创建历史</strong></p>
+<p>Docker社区构建了docker镜像。这些镜像是分层创建的。您可以使用Docker history命令查看镜像的创建方式。我们先来看看你有什么镜像：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ docker images</span><br><span class="line"></span><br><span class="line">REPOSITORY TAG IMAGE ID CREATED SIZE</span><br><span class="line">ubuntu 16.04 5e8b97a2a082 2 weeks ago 114MB</span><br><span class="line">ubuntu latest 113a43faa138 2 weeks ago 81.2MB</span><br><span class="line">nginx latest cd5239a0906a 2 weeks ago 109MB</span><br></pre></td></tr></table></figure>
+<p>让我们来看看’nginx’镜像的历史：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ docker history nginx</span><br><span class="line"></span><br><span class="line">IMAGE CREATED CREATED BY SIZE COMMENT</span><br><span class="line">cd5239a0906a 2 weeks ago /bin/sh -c #(nop) CMD [&quot;nginx&quot; &quot;-g&quot; &quot;daemon… 0B </span><br><span class="line">&lt;missing&gt; 2 weeks ago /bin/sh -c #(nop) STOPSIGNAL [SIGTERM] 0B </span><br><span class="line">&lt;missing&gt; 2 weeks ago /bin/sh -c #(nop) EXPOSE 80/tcp 0B </span><br><span class="line">&lt;missing&gt; 2 weeks ago /bin/sh -c ln -sf /dev/stdout /var/log/nginx… 22B </span><br><span class="line">&lt;missing&gt; 2 weeks ago /bin/sh -c set -x &amp;&amp; apt-get update &amp;&amp; apt… 53.7MB </span><br><span class="line">&lt;missing&gt; 2 weeks ago /bin/sh -c #(nop) ENV NJS_VERSION=1.15.0.0.… 0B </span><br><span class="line">&lt;missing&gt; 2 weeks ago /bin/sh -c #(nop) ENV NGINX_VERSION=1.15.0-… 0B </span><br><span class="line">&lt;missing&gt; 7 weeks ago /bin/sh -c #(nop) LABEL maintainer=NGINX Do… 0B </span><br><span class="line">&lt;missing&gt; 8 weeks ago /bin/sh -c #(nop) CMD [&quot;bash&quot;] 0B </span><br><span class="line">&lt;missing&gt; 8 weeks ago /bin/sh -c #(nop) ADD file:ec5be7eec56a74975… 55.3MB</span><br></pre></td></tr></table></figure>
+<p>您可以使用镜像的history命令来了解最近发生了什么变化。如果在从已经使用的新版本镜像启动容器后发现问题，此命令可以帮助您找到原因。或者，也可以使用以下版本的命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker image history nginx</span><br></pre></td></tr></table></figure>
+<p><strong>获取容器/镜像的元数据</strong></p>
+<p>您可以使用docker inspect命令查找关于您的系统的低级信息。运行docker ps命令列出docker容器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps</span><br><span class="line"></span><br><span class="line">CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES</span><br><span class="line">6162daed25da nginx &quot;nginx -g &apos;daemon of…&quot; 2 hours ago Up 2 hours 0.0.0.0:8080-&gt;80/tcp hardcore_torvalds</span><br></pre></td></tr></table></figure>
+<p>让我们使用CONTAINER ID来检查容器（您也可以使用容器名称）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ docker inspect 6162daed25da</span><br><span class="line"></span><br><span class="line">[</span><br><span class="line">&#123;</span><br><span class="line">&quot;Id&quot;: &quot;6162daed25da50b98afca5f7ed8caca2289bf309b2547d87ae8674b899d604a4&quot;,</span><br><span class="line">&quot;Created&quot;: &quot;2018-06-25T05:46:37.902211302Z&quot;,</span><br><span class="line">&quot;Path&quot;: &quot;nginx&quot;,</span><br><span class="line">&quot;Args&quot;: [</span><br><span class="line"></span><br><span class="line">…</span><br><span class="line">…</span><br><span class="line">…</span><br><span class="line"></span><br><span class="line">&quot;DriverOpts&quot;: null</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>该命令将以JSON格式提供大量信息。以下是查找容器IP地址的技巧：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ docker inspect 6162daed25da | grep &quot;IPAddress&quot;</span><br><span class="line"></span><br><span class="line">&quot;SecondaryIPAddresses&quot;: null,</span><br><span class="line">&quot;IPAddress&quot;: &quot;172.17.0.2&quot;,</span><br><span class="line">&quot;IPAddress&quot;: &quot;172.17.0.2&quot;,</span><br></pre></td></tr></table></figure>
+<p><strong>容器与主机之间的数据拷贝</strong></p>
+<p>我们列出Docker容器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps</span><br><span class="line"></span><br><span class="line">CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES</span><br><span class="line">6162daed25da nginx &quot;nginx -g &apos;daemon of…&quot; 3 hours ago Up 3 hours 0.0.0.0:8080-&gt;80/tcp hardcore_torvalds</span><br></pre></td></tr></table></figure>
+<p>nginx容器在端口8080上运行。所以，如果你访问<a href="http://localhost:8080，你会看到以下内容：" target="_blank" rel="noopener">http://localhost:8080，你会看到以下内容：</a></p>
+<p>“Welcome to nginx！”</p>
+<p>如果您看到此页面，则nginx Web服务器已成功安装并正常运行。需要进一步配置。</p>
+<p>让我们在你的本地目录中创建这个index.html：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;Header&gt;&lt;title&gt;My Website&lt;/title&gt;&lt;/header&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">Hello world</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<p>让我们使用docker exec -ls命令和查看nginx容器中包含index.html文件的文件夹：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker exec -it hardcore_torvalds ls /usr/share/nginx/html</span><br><span class="line"></span><br><span class="line">50x.html index.html</span><br></pre></td></tr></table></figure>
+<p>使用您创建的本地文件覆盖容器的index.html文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker cp index.html hardcore_torvalds:usr/share/nginx/html/</span><br></pre></td></tr></table></figure>
+<p>现在，如果您再次访问<a href="http://localhost:8080，您应该看到“hello" target="_blank" rel="noopener">http://localhost:8080，您应该看到“hello</a> world”。</p>
+<p>可以使用docker cp命令在主机和创建的容器之间移动文件。</p>
+<p><strong>创建镜像</strong></p>
+<p>假设您要从您创建的“Hello World”容器创建将来的容器。为了制作更多“Hello World”容器，您必须将当前“Hello World”容器保存为镜像。</p>
+<p>首先，停止容器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker stop hardcore_torvalds</span><br></pre></td></tr></table></figure>
+<p>现在列出所有Docker容器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps -a</span><br><span class="line"></span><br><span class="line">CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES</span><br><span class="line">75b28b720835 ubuntu:latest &quot;bash&quot; About an hour ago Exited (0) About an hour ago my_ubuntu_2</span><br><span class="line">a19c770b8621 ubuntu:latest &quot;bash&quot; 2 hours ago Exited (0) About an hour ago my_ubuntu</span><br><span class="line">6162daed25da nginx &quot;nginx -g &apos;daemon of…&quot; 3 hours ago Exited (0) 27 seconds ago hardcore_torvalds</span><br></pre></td></tr></table></figure>
+<p>从STATUS中，您可以看到’hardcore_torvalds ‘容器已停止。使用该  docker commit命令创建新镜像：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker commit 6162daed25da nginx_hello_world_template</span><br><span class="line"></span><br><span class="line">sha256:117d060587a316035ed5a776e613d9cfbeee9fbfe202c6edc9203820c7da987b</span><br></pre></td></tr></table></figure>
+<p>现在，如果您查看镜像，您将看到新镜像：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ docker images</span><br><span class="line"></span><br><span class="line">REPOSITORY TAG IMAGE ID CREATED SIZE</span><br><span class="line">nginx_hello_world_template latest 117d060587a3 40 seconds ago 109MB</span><br><span class="line">ubuntu 16.04 5e8b97a2a082 2 weeks ago 114MB</span><br><span class="line">ubuntu latest 113a43faa138 2 weeks ago 81.2MB</span><br><span class="line">nginx latest cd5239a0906a 2 weeks ago 109MB</span><br></pre></td></tr></table></figure>
+<p>您可以像使用其他镜像一样使用此镜像并启动新的Docker容器。新创建的容器将具有“Hello world”页面，而不是“Welcome nginx ”页面。使用示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -it -d -p 8886:80 nginx_hello_world_template</span><br><span class="line"></span><br><span class="line">4e042d76c39125471951626ba42cd609a65c73f041943298f74f4fc43dc5596a</span><br><span class="line">$</span><br></pre></td></tr></table></figure>
+<p><strong>删除容器与镜像</strong></p>
+<p>Docker容器和镜像会占用硬盘空间，因此需要定期清理。让我们首先停止所有Docker容器，然后列出所有容器。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps -a</span><br><span class="line"></span><br><span class="line">CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES</span><br><span class="line">4e042d76c391 nginx_hello_world_template &quot;nginx -g &apos;daemon of…&quot; 2 minutes ago Exited (0) 8 seconds ago boring_keldysh</span><br><span class="line">75b28b720835 ubuntu:latest &quot;bash&quot; 2 hours ago Exited (0) About an hour ago my_ubuntu_2</span><br><span class="line">a19c770b8621 ubuntu:latest &quot;bash&quot; 2 hours ago Exited (0) About an hour ago my_ubuntu</span><br><span class="line">6162daed25da nginx &quot;nginx -g &apos;daemon of…&quot; 3 hours ago Exited (0) 11 minutes ago hardcore_torvalds</span><br></pre></td></tr></table></figure>
+<p>有4个处于停止状态的容器。您可以使用该  docker rm 命令删除容器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ docker rm 4e042d76c391 75b28b720835 a19c770b8621 6162daed25da</span><br><span class="line"></span><br><span class="line">4e042d76c391</span><br><span class="line">75b28b720835</span><br><span class="line">a19c770b8621</span><br><span class="line">6162daed25da</span><br></pre></td></tr></table></figure>
+<p>除了容器ID之外，还可以使用名称。现在列出容器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps -a</span><br><span class="line"></span><br><span class="line">CONTAINER ID IMAGE COMMAND CREATED STATUS PORTS NAMES</span><br></pre></td></tr></table></figure>
+<p>我们列出Docker镜像：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ docker images</span><br><span class="line"></span><br><span class="line">REPOSITORY TAG IMAGE ID CREATED SIZE</span><br><span class="line">nginx_hello_world_template latest 117d060587a3 11 minutes ago 109MB</span><br><span class="line">ubuntu 16.04 5e8b97a2a082 2 weeks ago 114MB</span><br><span class="line">ubuntu latest 113a43faa138 2 weeks ago 81.2MB</span><br><span class="line">nginx latest cd5239a0906a 2 weeks ago 109MB</span><br></pre></td></tr></table></figure>
+<p>您可以用docker rmi 命令和image ID 删除docker镜像 ：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker rmi 117d060587a3 5e8b97a2a082 113a43faa138 cd5239a0906a</span><br></pre></td></tr></table></figure>
+<p>现在查看docker镜像列表，应该是空的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ docker images</span><br><span class="line"></span><br><span class="line">REPOSITORY TAG IMAGE ID CREATED SIZE</span><br></pre></td></tr></table></figure>
+<p>希望这个文章能让您熟练掌握Docker命令，并在工作中能够对您有所帮助！只要你我都用心去奋斗，去努力，美好的未来在等着我们！</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/weixinlogo.png" alt="LLQ wechat" style="width: 200px; max-width: 100%;">
+    <div>扫一扫上面的二维码可以关注我哦</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="LLQ 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="LLQ 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Docker/" rel="tag"># Docker</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/18/极简机器学习概念入门指南/" rel="next" title="极简机器学习概念入门指南">
+                <i class="fa fa-chevron-left"></i> 极简机器学习概念入门指南
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="LLQ">
+            
+              <p class="site-author-name" itemprop="name">LLQ</p>
+              <p class="site-description motion-element" itemprop="description">加油,少年</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">49</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/llqing" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:244675854@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://llqing.github.io/" title="GIS小站" target="_blank">GIS小站</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://diliren.top" title="地理人" target="_blank">地理人</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LLQ</span>
+
+  
+</div>
+
+<!-- 隐藏底部显示
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+-->
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访问数 <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量 <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'MmISOJnFve0SNjE41MNyGuyT-gzGzoHsz',
+        appKey: 'LQzUzH6ixJqwfSeRRoS5qWFY',
+        placeholder: '随便说点什么吧',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
+
+
+
+<!--崩溃欺骗-->
+<script type="text/javascript" src="/js/src/crash_cheat.js"></script>
