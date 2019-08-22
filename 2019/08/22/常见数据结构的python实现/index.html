@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-center-simple.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="数据结构作为计算机基础的必修内容，也是很多大型互联网企业面试的必考题。可想而知，它在计算机领域的重要性。 然而很多计算机专业的同学，都仅仅是了解数据结构的相关理论，却无法用代码实现各种数据结构。 今日整理了一份常见数据结构的 Python 实现，希望大家能够参考代码，亲自动手通过代码实现各种数据结构，以巩固知识加深理解。 栈123456789101112131415161718192021clas">
+<meta name="keywords" content="GIS,Code">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常见数据结构的python实现">
+<meta property="og:url" content="https://llqing.github.io/2019/08/22/常见数据结构的python实现/index.html">
+<meta property="og:site_name" content="GIS小站">
+<meta property="og:description" content="数据结构作为计算机基础的必修内容，也是很多大型互联网企业面试的必考题。可想而知，它在计算机领域的重要性。 然而很多计算机专业的同学，都仅仅是了解数据结构的相关理论，却无法用代码实现各种数据结构。 今日整理了一份常见数据结构的 Python 实现，希望大家能够参考代码，亲自动手通过代码实现各种数据结构，以巩固知识加深理解。 栈123456789101112131415161718192021clas">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-22T08:03:07.109Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="常见数据结构的python实现">
+<meta name="twitter:description" content="数据结构作为计算机基础的必修内容，也是很多大型互联网企业面试的必考题。可想而知，它在计算机领域的重要性。 然而很多计算机专业的同学，都仅仅是了解数据结构的相关理论，却无法用代码实现各种数据结构。 今日整理了一份常见数据结构的 Python 实现，希望大家能够参考代码，亲自动手通过代码实现各种数据结构，以巩固知识加深理解。 栈123456789101112131415161718192021clas">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://llqing.github.io/2019/08/22/常见数据结构的python实现/">
+
+
+
+
+
+  <title>常见数据结构的python实现 | GIS小站</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?000f0c5c3ac5acce3202c3c17b07cfd8";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">GIS小站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-other">
+          <a href="/other" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br>
+            
+            随意发挥
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-guestbook">
+          <a href="/guestbook/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-comments"></i> <br>
+            
+            留言
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
+            
+            教程资源
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://llqing.github.io/2019/08/22/常见数据结构的python实现/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="LLQ">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="GIS小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">常见数据结构的python实现</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-22T15:55:14+08:00">
+                2019-08-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/" itemprop="url" rel="index">
+                    <span itemprop="name">Python</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/数据结构与算法/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构与算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/08/22/常见数据结构的python实现/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2019/08/22/常见数据结构的python实现/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读数 <i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>次
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.5k 字
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  12 分钟
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>数据结构作为计算机基础的必修内容，也是很多大型互联网企业面试的必考题。可想而知，它在计算机领域的重要性。</p>
+<p>然而很多计算机专业的同学，都仅仅是了解数据结构的相关理论，却无法用代码实现各种数据结构。</p>
+<p>今日整理了一份常见数据结构的 Python 实现，希望大家能够参考代码，亲自动手通过代码实现各种数据结构，以巩固知识加深理解。</p>
+<h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class Stack(object):</span><br><span class="line">    def __init__(self, limit=10):</span><br><span class="line">        self.stack = [] #存放元素</span><br><span class="line">        self.limit = limit #栈容量极限</span><br><span class="line">    def push(self, data): #判断栈是否溢出</span><br><span class="line">        if len(self.stack) &gt;= self.limit:</span><br><span class="line">            print(&apos;StackOverflowError&apos;)</span><br><span class="line">            pass</span><br><span class="line">        self.stack.append(data)</span><br><span class="line">    def pop(self):</span><br><span class="line">        if self.stack:</span><br><span class="line">            return self.stack.pop()</span><br><span class="line">        else:</span><br><span class="line">            raise IndexError(&apos;pop from an empty stack&apos;) #空栈不能被弹出</span><br><span class="line">    def peek(self): #查看堆栈的最上面的元素</span><br><span class="line">        if self.stack:</span><br><span class="line">            return self.stack[-1]</span><br><span class="line">    def is_empty(self): #判断栈是否为空</span><br><span class="line">        return not bool(self.stack)</span><br><span class="line">    def size(self): #返回栈的大小</span><br><span class="line">        return len(self.stack)</span><br></pre></td></tr></table></figure>
+<h3 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line">class Node:  </span><br><span class="line">    def __init__(self, data):</span><br><span class="line">        self.data = data  </span><br><span class="line">        self.next = None  </span><br><span class="line">class Linked_List:</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.head = None</span><br><span class="line">    def initlist(self,data_list):    #链表初始化函数</span><br><span class="line">        self.head=Node(data_list[0])   #创建头结点</span><br><span class="line">        temp=self.head</span><br><span class="line">        for i in data_list[1:]: #逐个为 data 内的数据创建结点, 建立链表</span><br><span class="line">            node=Node(i)</span><br><span class="line">            temp.next=node</span><br><span class="line">            temp=temp.next</span><br><span class="line">    def is_empty(self):  #判断链表是否为空</span><br><span class="line">        if self.head.next==None:</span><br><span class="line">            print(&quot;Linked_list is empty&quot;)</span><br><span class="line">            return True</span><br><span class="line">        else:</span><br><span class="line">            return False</span><br><span class="line">    def get_length(self):  #获取链表的长度</span><br><span class="line">        temp=self.head #临时变量指向队列头部</span><br><span class="line">        length=0 #计算链表的长度变量</span><br><span class="line">        while temp!=None:</span><br><span class="line">            length=length+1</span><br><span class="line">            temp=temp.next</span><br><span class="line">        return length #返回链表的长度</span><br><span class="line">    def insert(self,key,value): #链表插入数据函数</span><br><span class="line">        if key&lt;0 or key&gt;self.get_length()-1:</span><br><span class="line">            print(&quot;insert error&quot;)</span><br><span class="line">        temp=self.head</span><br><span class="line">        i=0</span><br><span class="line">        while i&lt;=key: #遍历找到索引值为 key 的结点后, 在其后面插入结点</span><br><span class="line">            pre=temp</span><br><span class="line">            temp=temp.next</span><br><span class="line">            i=i+1</span><br><span class="line">        node=Node(value)</span><br><span class="line">        pre.next=node</span><br><span class="line">        node.next=temp</span><br><span class="line">    def print_list(self):   #遍历链表，并将元素依次打印出来</span><br><span class="line">        print(&quot;linked_list:&quot;)</span><br><span class="line">        temp=self.head</span><br><span class="line">        new_list=[]</span><br><span class="line">        while temp is not None:</span><br><span class="line">            new_list.append(temp.data)</span><br><span class="line">            temp=temp.next</span><br><span class="line">        print(new_list)</span><br><span class="line">    def remove(self,key):  #链表删除数据函数</span><br><span class="line">        if key&lt;0 or key&gt;self.get_length()-1:</span><br><span class="line">            print(&quot;insert error&quot;)</span><br><span class="line">        i=0</span><br><span class="line">        temp=self.head</span><br><span class="line">        while temp !=None:  #遍历找到索引值为 key 的结点</span><br><span class="line">            pre=temp</span><br><span class="line">            temp=temp.next</span><br><span class="line">            i=i+1</span><br><span class="line">            if i==key:</span><br><span class="line">                pre.next=temp.next</span><br><span class="line">                temp=None</span><br><span class="line">                return True</span><br><span class="line">        pre.next=None</span><br><span class="line">    def reverse(self): #将链表反转</span><br><span class="line">        prev = None</span><br><span class="line">        current = self.head</span><br><span class="line">        while current:</span><br><span class="line">            next_node = current.next</span><br><span class="line">            current.next = prev</span><br><span class="line">            prev = current</span><br><span class="line">            current = next_node</span><br><span class="line">        self.head = prev</span><br></pre></td></tr></table></figure>
+<h3 id="双链表"><a href="#双链表" class="headerlink" title="双链表"></a>双链表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br></pre></td><td class="code"><pre><span class="line">class Node(object):</span><br><span class="line">    # 双向链表节点</span><br><span class="line">    def __init__(self, item):</span><br><span class="line">        self.item = item</span><br><span class="line">        self.next = None</span><br><span class="line">        self.prev = None</span><br><span class="line">class DLinkList(object):</span><br><span class="line">    # 双向链表</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self._head = None</span><br><span class="line">    def is_empty(self):</span><br><span class="line">        # 判断链表是否为空</span><br><span class="line">        return self._head == None</span><br><span class="line">    def get_length(self):</span><br><span class="line">        # 返回链表的长度</span><br><span class="line">        cur = self._head</span><br><span class="line">        count = 0</span><br><span class="line">        while cur != None:</span><br><span class="line">            count=count+1</span><br><span class="line">            cur = cur.next</span><br><span class="line">        return count</span><br><span class="line">    def travel(self):</span><br><span class="line">        # 遍历链表</span><br><span class="line">        cur = self._head</span><br><span class="line">        while cur != None:</span><br><span class="line">            print(cur.item)</span><br><span class="line">            cur = cur.next</span><br><span class="line">        print(&quot;&quot;)</span><br><span class="line">    def add(self, item):</span><br><span class="line">        # 头部插入元素</span><br><span class="line">        node = Node(item)</span><br><span class="line">        if self.is_empty():</span><br><span class="line">            # 如果是空链表，将_head指向node</span><br><span class="line">            self._head = node</span><br><span class="line">        else:</span><br><span class="line">            # 将node的next指向_head的头节点</span><br><span class="line">            node.next = self._head</span><br><span class="line">            # 将_head的头节点的prev指向node</span><br><span class="line">            self._head.prev = node</span><br><span class="line">            # 将_head 指向node</span><br><span class="line">            self._head = node</span><br><span class="line">    def append(self, item):</span><br><span class="line">        # 尾部插入元素</span><br><span class="line">        node = Node(item)</span><br><span class="line">        if self.is_empty():</span><br><span class="line">            # 如果是空链表，将_head指向node</span><br><span class="line">            self._head = node</span><br><span class="line">        else:</span><br><span class="line">            # 移动到链表尾部</span><br><span class="line">            cur = self._head</span><br><span class="line">            while cur.next != None:</span><br><span class="line">                cur = cur.next</span><br><span class="line">            # 将尾节点cur的next指向node</span><br><span class="line">            cur.next = node</span><br><span class="line">            # 将node的prev指向cur</span><br><span class="line">            node.prev = cur</span><br><span class="line">    def search(self, item):</span><br><span class="line">        # 查找元素是否存在</span><br><span class="line">        cur = self._head</span><br><span class="line">        while cur != None:</span><br><span class="line">            if cur.item == item:</span><br><span class="line">                return True</span><br><span class="line">            cur = cur.next</span><br><span class="line">        return False</span><br><span class="line">    def insert(self, pos, item):</span><br><span class="line">        # 在指定位置添加节点</span><br><span class="line">        if pos &lt;= 0:</span><br><span class="line">            self.add(item)</span><br><span class="line">        elif pos &gt; (self.length()-1):</span><br><span class="line">            self.append(item)</span><br><span class="line">        else:</span><br><span class="line">            node = Node(item)</span><br><span class="line">            cur = self._head</span><br><span class="line">            count = 0</span><br><span class="line">            # 移动到指定位置的前一个位置</span><br><span class="line">            while count &lt; (pos-1):</span><br><span class="line">                count += 1</span><br><span class="line">                cur = cur.next</span><br><span class="line">            # 将node的prev指向cur</span><br><span class="line">            node.prev = cur</span><br><span class="line">            # 将node的next指向cur的下一个节点</span><br><span class="line">            node.next = cur.next</span><br><span class="line">            # 将cur的下一个节点的prev指向node</span><br><span class="line">            cur.next.prev = node</span><br><span class="line">            # 将cur的next指向node</span><br><span class="line">            cur.next = node</span><br><span class="line">    def remove(self, item):</span><br><span class="line">        # 删除元素</span><br><span class="line">        if self.is_empty():</span><br><span class="line">            return</span><br><span class="line">        else:</span><br><span class="line">            cur = self._head</span><br><span class="line">            if cur.item == item:</span><br><span class="line">                # 如果首节点的元素即是要删除的元素</span><br><span class="line">                if cur.next == None:</span><br><span class="line">                    # 如果链表只有这一个节点</span><br><span class="line">                    self._head = None</span><br><span class="line">                else:</span><br><span class="line">                    # 将第二个节点的prev设置为None</span><br><span class="line">                    cur.next.prev = None</span><br><span class="line">                    # 将_head指向第二个节点</span><br><span class="line">                    self._head = cur.next</span><br><span class="line">                return</span><br><span class="line">            while cur != None:</span><br><span class="line">                if cur.item == item:</span><br><span class="line">                    # 将cur的前一个节点的next指向cur的后一个节点</span><br><span class="line">                    cur.prev.next = cur.next</span><br><span class="line">                    # 将cur的后一个节点的prev指向cur的前一个节点</span><br><span class="line">                    cur.next.prev = cur.prev</span><br><span class="line">                    break</span><br><span class="line">                cur = cur.next</span><br></pre></td></tr></table></figure>
+<h3 id="队列（链表形式实现）"><a href="#队列（链表形式实现）" class="headerlink" title="队列（链表形式实现）"></a>队列（链表形式实现）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">class Node(object):</span><br><span class="line">    def __init__(self,elem,next=None):</span><br><span class="line">        self.elem = elem #表示对应的元素值</span><br><span class="line">        self.next=next #表示下一个链接的链点</span><br><span class="line">class Queue(object):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.head = None #头部链点为 None</span><br><span class="line">        self.rear = None #尾部链点为 None</span><br><span class="line">    def is_empty(self):</span><br><span class="line">        return self.head is None #判断队列是否为空</span><br><span class="line">    def enqueue(self, elem):</span><br><span class="line">        p = Node(elem) #初始化一个新的点</span><br><span class="line">        if self.is_empty():</span><br><span class="line">            self.head = p #队列头部为新的链点</span><br><span class="line">            self.rear = p #队列尾部为新的链点</span><br><span class="line">        else:</span><br><span class="line">            self.rear.next = p #队列尾部的后继是这个新的点</span><br><span class="line">            self.rear =p #然后让队列尾部指针指向这个新的点</span><br><span class="line">    def dequeue(self):</span><br><span class="line">        if self.is_empty(): #判断队列是否为空</span><br><span class="line">            print(&apos;Queue_is_empty&apos;) #若队列为空，则退出 dequeue 操作</span><br><span class="line">        else:</span><br><span class="line">            result = self.head.elem #result为队列头部元素</span><br><span class="line">            self.head = self.head.next #改变队列头部指针位置</span><br><span class="line">            return result #返回队列头部元素</span><br><span class="line">    def peek(self):</span><br><span class="line">        if self.is_empty(): #判断队列是否为空</span><br><span class="line">            print(&apos;NOT_FOUND&apos;) #为空则返回 NOT_FOUND</span><br><span class="line">        else:</span><br><span class="line">            return self.head.elem #返回队列头部元素</span><br><span class="line">    def print_queue(self):</span><br><span class="line">        print(&quot;queue:&quot;)</span><br><span class="line">        temp=self.head</span><br><span class="line">        myqueue=[] #暂时存放队列数据</span><br><span class="line">        while temp is not None:</span><br><span class="line">            myqueue.append(temp.elem)</span><br><span class="line">            temp=temp.next</span><br><span class="line">        print(myqueue)</span><br></pre></td></tr></table></figure>
+<h3 id="队列（数组形式实现）"><a href="#队列（数组形式实现）" class="headerlink" title="队列（数组形式实现）"></a>队列（数组形式实现）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Queue():</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.entries = [] #表示队列内的参数</span><br><span class="line">        self.length = 0 #表示队列的长度</span><br><span class="line">        self.front=0 #表示队列头部位置</span><br><span class="line">    def enqueue(self, item):</span><br><span class="line">        self.entries.append(item) #添加元素到队列里面</span><br><span class="line">        self.length = self.length + 1 #队列长度增加 1</span><br><span class="line">    def dequeue(self):</span><br><span class="line">        self.length = self.length - 1 #队列的长度减少 1</span><br><span class="line">        dequeued = self.entries[self.front] #队首元素为dequeued</span><br><span class="line">        self.front-=1 #队首的位置减少1</span><br><span class="line">        self.entries = self.entries[self.front:] #队列的元素更新为退队之后的队列</span><br><span class="line">        return dequeued</span><br><span class="line">    def peek(self):</span><br><span class="line">        return self.entries[0] #直接返回队列的队首元素</span><br></pre></td></tr></table></figure>
+<h3 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line">class Node(object):</span><br><span class="line">    def __init__(self,item):</span><br><span class="line">        self.item=item #表示对应的元素</span><br><span class="line">        self.left=None #表示左节点</span><br><span class="line">        self.right=None #表示右节点</span><br><span class="line">    def __str__(self):</span><br><span class="line">        return str(self.item)  #print 一个 Node 类时会打印 __str__ 的返回值</span><br><span class="line">class Tree(object):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.root=Node(&apos;root&apos;)  #根节点定义为 root 永不删除，作为哨兵使用。</span><br><span class="line">    def add(self,item):</span><br><span class="line">        node = Node(item)</span><br><span class="line">        if self.root is None:  #如果二叉树为空，那么生成的二叉树最终为新插入树的点</span><br><span class="line">            self.root = node</span><br><span class="line">        else:</span><br><span class="line">            q = [self.root] # 将q列表，添加二叉树的根节点</span><br><span class="line">            while True:</span><br><span class="line">                pop_node = q.pop(0)</span><br><span class="line">                if pop_node.left is None: #左子树为空则将点添加到左子树</span><br><span class="line">                    pop_node.left = node</span><br><span class="line">                    return</span><br><span class="line">                elif pop_node.right is None: #右子树为空则将点添加到右子树</span><br><span class="line">                    pop_node.right = node</span><br><span class="line">                    return</span><br><span class="line">                else:</span><br><span class="line">                    q.append(pop_node.left)</span><br><span class="line">                    q.append(pop_node.right)</span><br><span class="line">    def get_parent(self, item):</span><br><span class="line">        if self.root.item == item:</span><br><span class="line">            return None  # 根节点没有父节点</span><br><span class="line">        tmp = [self.root] # 将tmp列表，添加二叉树的根节点</span><br><span class="line">        while tmp:</span><br><span class="line">            pop_node = tmp.pop(0)</span><br><span class="line">            if pop_node.left and pop_node.left.item == item: #某点的左子树为寻找的点</span><br><span class="line">                return pop_node #返回某点，即为寻找点的父节点</span><br><span class="line">            if pop_node.right and pop_node.right.item == item: #某点的右子树为寻找的点</span><br><span class="line">                return pop_node #返回某点，即为寻找点的父节点</span><br><span class="line">            if pop_node.left is not None: #添加tmp 元素</span><br><span class="line">                tmp.append(pop_node.left)</span><br><span class="line">            if pop_node.right is not None:</span><br><span class="line">                tmp.append(pop_node.right)</span><br><span class="line">        return None</span><br><span class="line">    def delete(self, item):</span><br><span class="line">        if self.root is None:  # 如果根为空，就什么也不做</span><br><span class="line">            return False</span><br><span class="line"></span><br><span class="line">        parent = self.get_parent(item)</span><br><span class="line">        if parent:</span><br><span class="line">            del_node = parent.left if parent.left.item == item else parent.right  # 待删除节点</span><br><span class="line">            if del_node.left is None:</span><br><span class="line">                if parent.left.item == item:</span><br><span class="line">                    parent.left = del_node.right</span><br><span class="line">                else:</span><br><span class="line">                    parent.right = del_node.right</span><br><span class="line">                del del_node</span><br><span class="line">                return True</span><br><span class="line">            elif del_node.right is None:</span><br><span class="line">                if parent.left.item == item:</span><br><span class="line">                    parent.left = del_node.left</span><br><span class="line">                else:</span><br><span class="line">                    parent.right = del_node.left</span><br><span class="line">                del del_node</span><br><span class="line">                return True</span><br><span class="line">            else:  # 左右子树都不为空</span><br><span class="line">                tmp_pre = del_node</span><br><span class="line">                tmp_next = del_node.right</span><br><span class="line">                if tmp_next.left is None:</span><br><span class="line">                    # 替代</span><br><span class="line">                    tmp_pre.right = tmp_next.right</span><br><span class="line">                    tmp_next.left = del_node.left</span><br><span class="line">                    tmp_next.right = del_node.right</span><br><span class="line"></span><br><span class="line">                else:</span><br><span class="line">                    while tmp_next.left:  # 让tmp指向右子树的最后一个叶子</span><br><span class="line">                        tmp_pre = tmp_next</span><br><span class="line">                        tmp_next = tmp_next.left</span><br><span class="line">                    # 替代</span><br><span class="line">                    tmp_pre.left = tmp_next.right</span><br><span class="line">                    tmp_next.left = del_node.left</span><br><span class="line">                    tmp_next.right = del_node.right</span><br><span class="line">                if parent.left.item == item:</span><br><span class="line">                    parent.left = tmp_next</span><br><span class="line">                else:</span><br><span class="line">                    parent.right = tmp_next</span><br><span class="line">                del del_node</span><br><span class="line">                return True</span><br><span class="line">        else:</span><br><span class="line">            return False</span><br></pre></td></tr></table></figure>
+<h3 id="字典树"><a href="#字典树" class="headerlink" title="字典树"></a>字典树</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class TrieNode:</span><br><span class="line">    def __init__(self):</span><br><span class="line">        self.nodes = dict()  # 构建字典</span><br><span class="line">        self.is_leaf = False</span><br><span class="line">    def insert(self, word: str):  </span><br><span class="line">        curr = self</span><br><span class="line">        for char in word:</span><br><span class="line">            if char not in curr.nodes:</span><br><span class="line">                curr.nodes[char] = TrieNode()</span><br><span class="line">            curr = curr.nodes[char]</span><br><span class="line">        curr.is_leaf = True</span><br><span class="line">    def insert_many(self, words: [str]):</span><br><span class="line">        for word in words:</span><br><span class="line">            self.insert(word)</span><br><span class="line">    def search(self, word: str):</span><br><span class="line">        curr = self</span><br><span class="line">        for char in word:</span><br><span class="line">            if char not in curr.nodes:</span><br><span class="line">                return False</span><br><span class="line">            curr = curr.nodes[char]</span><br><span class="line">        return curr.is_leaf</span><br></pre></td></tr></table></figure>
+<h3 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">class heap(object):</span><br><span class="line">    def __init__(self):</span><br><span class="line">        #初始化一个空堆，使用数组来在存放堆元素，节省存储</span><br><span class="line">        self.data_list = []</span><br><span class="line">    def get_parent_index(self,index):</span><br><span class="line">        #返回父节点的下标</span><br><span class="line">        if index == 0 or index &gt; len(self.data_list) -1:</span><br><span class="line">            return None</span><br><span class="line">        else:</span><br><span class="line">            return (index -1) &gt;&gt; 1</span><br><span class="line">    def swap(self,index_a,index_b):</span><br><span class="line">        #交换数组中的两个元素</span><br><span class="line">        self.data_list[index_a],self.data_list[index_b] = self.data_list[index_b],self.data_list[index_a]</span><br><span class="line">    def insert(self,data):</span><br><span class="line">        #先把元素放在最后，然后从后往前依次堆化</span><br><span class="line">        #这里以大顶堆为例，如果插入元素比父节点大，则交换，直到最后</span><br><span class="line">        self.data_list.append(data)</span><br><span class="line">        index = len(self.data_list) -1 </span><br><span class="line">        parent = self.get_parent_index(index)</span><br><span class="line">        #循环，直到该元素成为堆顶，或小于父节点（对于大顶堆) </span><br><span class="line">        while parent is not None and self.data_list[parent] &lt; self.data_list[index]:</span><br><span class="line">            #交换操作</span><br><span class="line">            self.swap(parent,index)</span><br><span class="line">            index = parent</span><br><span class="line">            parent = self.get_parent_index(parent)</span><br><span class="line">    def removeMax(self):</span><br><span class="line">        #删除堆顶元素，然后将最后一个元素放在堆顶，再从上往下依次堆化</span><br><span class="line">        remove_data = self.data_list[0]</span><br><span class="line">        self.data_list[0] = self.data_list[-1]</span><br><span class="line">        del self.data_list[-1]</span><br><span class="line"></span><br><span class="line">        #堆化</span><br><span class="line">        self.heapify(0)</span><br><span class="line">        return remove_data</span><br><span class="line">    def heapify(self,index):</span><br><span class="line">        #从上往下堆化，从index 开始堆化操作 (大顶堆)</span><br><span class="line">        total_index = len(self.data_list) -1</span><br><span class="line">        while True:</span><br><span class="line">            maxvalue_index = index</span><br><span class="line">            if 2*index +1 &lt;=  total_index and self.data_list[2*index +1] &gt; self.data_list[maxvalue_index]:</span><br><span class="line">                maxvalue_index = 2*index +1</span><br><span class="line">            if 2*index +2 &lt;=  total_index and self.data_list[2*index +2] &gt; self.data_list[maxvalue_index]:</span><br><span class="line">                maxvalue_index = 2*index +2</span><br><span class="line">            if maxvalue_index == index:</span><br><span class="line">                break</span><br><span class="line">            self.swap(index,maxvalue_index)</span><br><span class="line">            index = maxvalue_index</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    <img id="wechat_subscriber_qcode" src="/images/weixinlogo.png" alt="LLQ wechat" style="width: 200px; max-width: 100%;">
+    <div>扫一扫上面的二维码可以关注我哦</div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="LLQ 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="LLQ 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/20/常用docker命令/" rel="next" title="常用docker命令">
+                <i class="fa fa-chevron-left"></i> 常用docker命令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+        
+  <script>
+    window._bd_share_config = {
+      "common": {
+        "bdText": "",
+        "bdMini": "1",
+        "bdMiniList": false,
+        "bdPic": ""
+      },
+      "image": {
+        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
+        "viewText": "分享到：",
+        "viewSize": "16"
+      },
+      "slide": {
+        "bdImg": "5",
+        "bdPos": "left",
+        "bdTop": "100"
+      }
+    }
+  </script>
+
+<script>
+  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="LLQ">
+            
+              <p class="site-author-name" itemprop="name">LLQ</p>
+              <p class="site-description motion-element" itemprop="description">加油,少年</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">50</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">46</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/llqing" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:244675854@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-block">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                友情链接
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://llqing.github.io/" title="GIS小站" target="_blank">GIS小站</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://diliren.top" title="地理人" target="_blank">地理人</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#栈"><span class="nav-number">1.</span> <span class="nav-text">栈</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单链表"><span class="nav-number">2.</span> <span class="nav-text">单链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#双链表"><span class="nav-number">3.</span> <span class="nav-text">双链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#队列（链表形式实现）"><span class="nav-number">4.</span> <span class="nav-text">队列（链表形式实现）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#队列（数组形式实现）"><span class="nav-number">5.</span> <span class="nav-text">队列（数组形式实现）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二叉树"><span class="nav-number">6.</span> <span class="nav-text">二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字典树"><span class="nav-number">7.</span> <span class="nav-text">字典树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#堆"><span class="nav-number">8.</span> <span class="nav-text">堆</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">LLQ</span>
+
+  
+</div>
+
+<!-- 隐藏底部显示
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+-->
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      本站访问数 <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站总访问量 <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'MmISOJnFve0SNjE41MNyGuyT-gzGzoHsz',
+        appKey: 'LQzUzH6ixJqwfSeRRoS5qWFY',
+        placeholder: '随便说点什么吧',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
+
+
+
+<!--崩溃欺骗-->
+<script type="text/javascript" src="/js/src/crash_cheat.js"></script>
