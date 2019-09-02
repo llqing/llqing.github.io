@@ -86,18 +86,18 @@
 
 
 
-<meta name="description" content="一、行列式的概念 行列式是一个数，它是不同行不同列元素乘积的代数和  例如，大家所熟悉的三阶行列式  \left|\begin{array}{lll}{a_{1}} &amp; {a_{2}} &amp; {a_{3}} \\ {b_{1}} &amp; {b_{2}} &amp; {b_{3}} \\ {c_{1}} &amp; {c_{2}} &amp; {c_{3}}\end{array}\right|=a_{1} b_{2} c_{3}">
+<meta name="description" content="一、行列式的概念行列式是一个数，它是不同行不同列元素乘积的代数和 例如，大家所熟悉的三阶行列式 $$\left|\begin{array}{lll}{a_{1}} &amp;amp; {a_{2}} &amp;amp; {a_{3}} \ {b_{1}} &amp;amp; {b_{2}} &amp;amp; {b_{3}} \ {c_{1}} &amp;amp; {c_{2}} &amp;amp; {c_{3}}\end{array}\rig">
 <meta name="keywords" content="线代">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性代数-行列式">
 <meta property="og:url" content="https://llqing.github.io/2019/07/10/线性代数-行列式/index.html">
 <meta property="og:site_name" content="GIS小站">
-<meta property="og:description" content="一、行列式的概念 行列式是一个数，它是不同行不同列元素乘积的代数和  例如，大家所熟悉的三阶行列式  \left|\begin{array}{lll}{a_{1}} &amp; {a_{2}} &amp; {a_{3}} \\ {b_{1}} &amp; {b_{2}} &amp; {b_{3}} \\ {c_{1}} &amp; {c_{2}} &amp; {c_{3}}\end{array}\right|=a_{1} b_{2} c_{3}">
+<meta property="og:description" content="一、行列式的概念行列式是一个数，它是不同行不同列元素乘积的代数和 例如，大家所熟悉的三阶行列式 $$\left|\begin{array}{lll}{a_{1}} &amp;amp; {a_{2}} &amp;amp; {a_{3}} \ {b_{1}} &amp;amp; {b_{2}} &amp;amp; {b_{3}} \ {c_{1}} &amp;amp; {c_{2}} &amp;amp; {c_{3}}\end{array}\rig">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2019-07-13T05:23:19.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性代数-行列式">
-<meta name="twitter:description" content="一、行列式的概念 行列式是一个数，它是不同行不同列元素乘积的代数和  例如，大家所熟悉的三阶行列式  \left|\begin{array}{lll}{a_{1}} &amp; {a_{2}} &amp; {a_{3}} \\ {b_{1}} &amp; {b_{2}} &amp; {b_{3}} \\ {c_{1}} &amp; {c_{2}} &amp; {c_{3}}\end{array}\right|=a_{1} b_{2} c_{3}">
+<meta name="twitter:description" content="一、行列式的概念行列式是一个数，它是不同行不同列元素乘积的代数和 例如，大家所熟悉的三阶行列式 $$\left|\begin{array}{lll}{a_{1}} &amp;amp; {a_{2}} &amp;amp; {a_{3}} \ {b_{1}} &amp;amp; {b_{2}} &amp;amp; {b_{3}} \ {c_{1}} &amp;amp; {c_{2}} &amp;amp; {c_{3}}\end{array}\rig">
 
 
 
@@ -440,7 +440,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  472 字
+                  502 字
                 </span>
               
 
@@ -477,31 +477,14 @@
       
 
       
-        <h3 id="一、行列式的概念"><a href="#一、行列式的概念" class="headerlink" title="一、行列式的概念"></a>一、行列式的概念</h3><pre><code> 行列式是一个数，它是不同行不同列元素乘积的代数和
- 例如，大家所熟悉的三阶行列式
-</code></pre><script type="math/tex; mode=display">
-\left|\begin{array}{lll}{a_{1}} & {a_{2}} & {a_{3}} \\ {b_{1}} & {b_{2}} & {b_{3}} \\ {c_{1}} & {c_{2}} & {c_{3}}\end{array}\right|=a_{1} b_{2} c_{3}+a_{2} b_{3} c_{1}+a_{3} b_{1} c_{2}-a_{3} b_{2} c_{1}-a_{2} b_{1} c_{3}-a_{1} b_{3} c_{2}</script><p>​    <strong>n阶行列式</strong></p>
-<script type="math/tex; mode=display">
-\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {a_{21}} & {a_{22}} & {\cdots} & {a_{2 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{m}}\end{array}\right|</script><pre><code> 是所有取自不同行不同列的n个元素的乘积
-</code></pre><script type="math/tex; mode=display">
-a_{1 j_{1}} a_{2 j_{2}} \cdots a_{n j_{n}}</script><pre><code> 的代数和，这里 $$
-</code></pre><p>j_{1} j_{2} \cdots j_{n}<br>​<script type="math/tex">是</script><br>1,2, \cdots, n<br>​<script type="math/tex">的一个排列.当</script><br>j_{1} j_{2} \cdots j_{n}<br>​<script type="math/tex">是偶排列时，该项的前面带正
-     号;当</script><br>j_{1} j_{2} \cdots j_{n}<br>​$$ 是奇排列时，该项的前面带负号，即</p>
-<script type="math/tex; mode=display">
-\left|\begin{array}{cccc}{a_{11}} & {a_{12}} & {\cdots} & {a_{1 n}} \\ {a_{21}} & {a_{22}} & {\cdots} & {a_{2 n}} \\ {\vdots} & {\vdots} & {} & {\vdots} \\ {a_{n 1}} & {a_{n 2}} & {\cdots} & {a_{m}}\end{array}\right|=\sum_{j_{1} j_{2} \cdots j_{n}}(-1)^{r\left(j_{1} j_{2} \cdots j_{n}\right)} a_{1 j_{1}} a_{2 j_{2}} \cdots a_{n j_{n}}</script><pre><code> 这里 $$ 
-</code></pre><p>\sum_{i_{1} j_{2} \cdots j_{n}}</p>
-<script type="math/tex; mode=display">表示对所有n阶排列求和. 上式称为n阶行列式的完全展开式.
-
-
-
-### 二、行列式的性质
-
-     记</script><p>|\boldsymbol{A}|=\left|\begin{array}{cccc}{a_{11}} &amp; {a_{12}} &amp; {\cdots} &amp; {a_{1 n}} \\ {a_{21}} &amp; {a_{22}} &amp; {\cdots} &amp; {a_{2 n}} \\ {\vdots} &amp; {\vdots} &amp; {} &amp; {\vdots} \\ {a_{n 1}} &amp; {a_{n 2}} &amp; {\cdots} &amp; {a_{m}}\end{array}\right|,\left|\boldsymbol{A}^{\mathrm{T}}\right|=\left|\begin{array}{cccc}{a_{11}} &amp; {a_{21}} &amp; {\cdots} &amp; {a_{n 1}} \\ {a_{12}} &amp; {a_{22}} &amp; {\cdots} &amp; {a_{n 2}} \\ {\vdots} &amp; {\vdots} &amp; {} &amp; {\vdots} \\ {a_{1 n}} &amp; {a_{2 n}} &amp; {\cdots} &amp; {a_{m}}\end{array}\right|</p>
-<script type="math/tex; mode=display">
-
-     行列式</script><p>\left|A^{\mathrm{T}}\right|</p>
-<script type="math/tex; mode=display">称为</script><p>|A|</p>
-<p>$$ 的转置行列式</p>
+        <h3 id="一、行列式的概念"><a href="#一、行列式的概念" class="headerlink" title="一、行列式的概念"></a>一、行列式的概念</h3><pre><code>行列式是一个数，它是不同行不同列元素乘积的代数和
+例如，大家所熟悉的三阶行列式
+</code></pre><p>$$<br>\left|\begin{array}{lll}{a_{1}} &amp; {a_{2}} &amp; {a_{3}} \ {b_{1}} &amp; {b_{2}} &amp; {b_{3}} \ {c_{1}} &amp; {c_{2}} &amp; {c_{3}}\end{array}\right|=a_{1} b_{2} c_{3}+a_{2} b_{3} c_{1}+a_{3} b_{1} c_{2}-a_{3} b_{2} c_{1}-a_{2} b_{1} c_{3}-a_{1} b_{3} c_{2}<br>$$</p>
+<p>​    <strong>n阶行列式</strong><br>$$<br>\left|\begin{array}{cccc}{a_{11}} &amp; {a_{12}} &amp; {\cdots} &amp; {a_{1 n}} \ {a_{21}} &amp; {a_{22}} &amp; {\cdots} &amp; {a_{2 n}} \ {\vdots} &amp; {\vdots} &amp; {} &amp; {\vdots} \ {a_{n 1}} &amp; {a_{n 2}} &amp; {\cdots} &amp; {a_{m}}\end{array}\right|<br>$$<br>     是所有取自不同行不同列的n个元素的乘积<br>$$<br>a_{1 j_{1}} a_{2 j_{2}} \cdots a_{n j_{n}}<br>$$<br>     的代数和，这里 $$<br>j_{1} j_{2} \cdots j_{n}<br>​$$ 是 $$<br>1,2, \cdots, n<br>​$$ 的一个排列.当 $$<br>j_{1} j_{2} \cdots j_{n}<br>​$$ 是偶排列时，该项的前面带正<br>     号;当 $$<br>j_{1} j_{2} \cdots j_{n}<br>​$$ 是奇排列时，该项的前面带负号，即<br>$$<br>\left|\begin{array}{cccc}{a_{11}} &amp; {a_{12}} &amp; {\cdots} &amp; {a_{1 n}} \ {a_{21}} &amp; {a_{22}} &amp; {\cdots} &amp; {a_{2 n}} \ {\vdots} &amp; {\vdots} &amp; {} &amp; {\vdots} \ {a_{n 1}} &amp; {a_{n 2}} &amp; {\cdots} &amp; {a_{m}}\end{array}\right|=\sum_{j_{1} j_{2} \cdots j_{n}}(-1)^{r\left(j_{1} j_{2} \cdots j_{n}\right)} a_{1 j_{1}} a_{2 j_{2}} \cdots a_{n j_{n}}<br>$$<br>     这里 $$<br>\sum_{i_{1} j_{2} \cdots j_{n}}<br>$$表示对所有n阶排列求和. 上式称为n阶行列式的完全展开式.</p>
+<h3 id="二、行列式的性质"><a href="#二、行列式的性质" class="headerlink" title="二、行列式的性质"></a>二、行列式的性质</h3><pre><code>记 $$
+</code></pre><p>|\boldsymbol{A}|=\left|\begin{array}{cccc}{a_{11}} &amp; {a_{12}} &amp; {\cdots} &amp; {a_{1 n}} \ {a_{21}} &amp; {a_{22}} &amp; {\cdots} &amp; {a_{2 n}} \ {\vdots} &amp; {\vdots} &amp; {} &amp; {\vdots} \ {a_{n 1}} &amp; {a_{n 2}} &amp; {\cdots} &amp; {a_{m}}\end{array}\right|,\left|\boldsymbol{A}^{\mathrm{T}}\right|=\left|\begin{array}{cccc}{a_{11}} &amp; {a_{21}} &amp; {\cdots} &amp; {a_{n 1}} \ {a_{12}} &amp; {a_{22}} &amp; {\cdots} &amp; {a_{n 2}} \ {\vdots} &amp; {\vdots} &amp; {} &amp; {\vdots} \ {a_{1 n}} &amp; {a_{2 n}} &amp; {\cdots} &amp; {a_{m}}\end{array}\right|<br>$$ </p>
+<pre><code>行列式 $$
+</code></pre><p>\left|A^{\mathrm{T}}\right|<br>$$ 称为 $$<br>|A|<br>$$ 的转置行列式</p>
 
       
     </div>
@@ -779,7 +762,7 @@ a_{1 j_{1}} a_{2 j_{2}} \cdots a_{n j_{n}}</script><pre><code> 的代数和，�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、行列式的概念"><span class="nav-number">1.</span> <span class="nav-text">一、行列式的概念</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一、行列式的概念"><span class="nav-number">1.</span> <span class="nav-text">一、行列式的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二、行列式的性质"><span class="nav-number">2.</span> <span class="nav-text">二、行列式的性质</span></a></li></ol></div>
             
 
           </div>
